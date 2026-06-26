@@ -63,8 +63,8 @@ const canonical = "https://clixerfy.com/";
       --text: #f0f0f0;
       --muted: #888;
       /* System stack first = instant LCP text render, web font swaps in */
-      --font-head: 'Bebas Neue', 'Arial Narrow', Arial, sans-serif;
-      --font-body: 'DM Sans', system-ui, -apple-system, sans-serif;
+      --font-head: 'Montserrat', 'Arial Narrow', Arial, sans-serif;
+      --font-body: 'Montserrat', system-ui, -apple-system, sans-serif;
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
@@ -108,7 +108,7 @@ const canonical = "https://clixerfy.com/";
       function loadFonts(){
         var l=document.createElement('link');
         l.rel='stylesheet';
-        l.href='https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600&display=swap';
+        l.href='https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap';
         document.head.appendChild(l);
       }
       if('requestIdleCallback' in window){ window.requestIdleCallback(loadFonts); }
@@ -116,7 +116,7 @@ const canonical = "https://clixerfy.com/";
     })();
   </script>
   <noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" />
   </noscript>
 </head>
 <body>
