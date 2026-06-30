@@ -1,13 +1,27 @@
 ---
+import { getSeoDefaults, getGlobalSettings, getNavigation, getFooter } from '../lib/content';
+import Header from '../components/ui/Header.astro';
+import Footer from '../components/ui/Footer.astro';
+import '../styles/global.css';
+
 export interface Props {
   title?: string;
   description?: string;
+  ogImage?: string;
 }
+
+const [seo, settings, nav, footer] = await Promise.all([
+  getSeoDefaults(),
+  getGlobalSettings(),
+  getNavigation(),
+  getFooter(),
+]);
 const {
-  title = "Clixerfy – Protect Your Website from Attacks, Malware & Ad Fraud",
-  description = "Clixerfy provides modular security tools to keep your website safe, fast and trusted. Real-time threat detection, malware removal, WAF, and more.",
+  title = seo.title,
+  description = seo.description,
+  ogImage = seo.ogImage,
 } = Astro.props;
-const canonical = "https://clixerfy.com/";
+const canonical = seo.canonical;
 ---
 <!doctype html>
 <html lang="en">
@@ -23,86 +37,41 @@ const canonical = "https://clixerfy.com/";
   <meta property="og:url" content={canonical} />
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
-  <meta property="og:image" content="/og-image.webp" />
+  <meta property="og:image" content={ogImage} />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content={description} />
-  <meta name="twitter:image" content="/og-image.webp" />
+  <meta name="twitter:image" content={ogImage} />
 
   <!-- Structured Data -->
-  <script type="application/ld+json" set:html={JSON.stringify({
+  <!-- <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    "name": "Clixerfy",
-    "applicationCategory": "SecurityApplication",
+    "name": seo.structuredData.name,
+    "applicationCategory": seo.structuredData.applicationCategory,
     "description": description,
     "url": canonical,
-    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD", "description": "Free 7-Day Trial" },
-    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "1000" }
-  })} />
+    "offers": { "@type": "Offer", "price": seo.structuredData.price, "priceCurrency": seo.structuredData.priceCurrency, "description": seo.structuredData.offerDescription },
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": seo.structuredData.ratingValue, "reviewCount": seo.structuredData.reviewCount }
+  })} /> -->
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <meta name="theme-color" content="#0a0a0a" />
+  <meta name="theme-color" content={settings.themeColor} />
 
-  <!--
-    FIX 1: All CSS is now fully inlined — zero render-blocking external stylesheets.
-    Fonts use system-stack fallback first so LCP text paints immediately,
-    then the web font is loaded async and swapped in.
-  -->
-  <style>
-    /* ── Tokens ── */
+  <!-- Dynamic brand colors from Strapi (overrides global.css defaults) -->
+  <style is:inline>
     :root {
-      --red: #e63030;
-      --red-dim: #b82222;
-      --bg: #0a0a0a;
-      --card: #111111;
-      --border: rgba(255,255,255,.07);
-      --text: #f0f0f0;
-      --muted: #888;
-      /* System stack first = instant LCP text render, web font swaps in */
-      --font-head: 'Montserrat', 'Arial Narrow', Arial, sans-serif;
-      --font-body: 'Montserrat', system-ui, -apple-system, sans-serif;
-    }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
-    body { background: var(--bg); color: var(--text); font-family: var(--font-body); line-height: 1.6; overflow-x: hidden; }
-    img, svg { display: block; max-width: 100%; }
-    a { color: inherit; text-decoration: none; }
-    button { cursor: pointer; border: none; background: none; font: inherit; }
-
-    /* ── FIX 2: Only transform/opacity animations — GPU composited, zero reflow ── */
-    /* Removed: blob pulse (scale causes reflow), ring spin (causes reflow on mobile) */
-    /* Kept: float (translateY only), blink (opacity+scale on isolated elements) */
-    @keyframes float {
-      0%,100% { transform: translateY(0); }
-      50%      { transform: translateY(-10px); }
-    }
-    @keyframes blink {
-      0%,100% { opacity: .3; }
-      50%      { opacity: 1; }
-    }
-    /* FIX 3: Reveal uses will-change to promote layers ahead of paint */
-    .reveal {
-      opacity: 0;
-      transform: translateY(18px);
-      transition: opacity .5s ease, transform .5s ease;
-      will-change: opacity, transform;
-    }
-    .reveal.visible { opacity: 1; transform: none; will-change: auto; }
-    @media (prefers-reduced-motion: reduce) {
-      .reveal { opacity: 1; transform: none; transition: none; }
-      .shield-icon { animation: none; }
-      .dot { animation: none; opacity: 1; }
+      --brand-color: {settings.brandColor || '#e63030'};
+      --brand-color-hover: {settings.brandColorHover || settings.brandColor || '#e63030'};
+      --bg: {settings.accentColor || '#0a0a0a'};
+      --card: {settings.accentColor || '#0a0a0a'}ee;
     }
   </style>
 
-  <!--
-    FIX 4: Fonts loaded with font-display:swap so system font paints LCP text
-    immediately. requestIdleCallback defers font fetch until after first paint.
-  -->
+  <!-- Fonts loaded with font-display:swap so system font paints LCP text immediately. -->
   <script>
     (function(){
       function loadFonts(){
@@ -120,41 +89,42 @@ const canonical = "https://clixerfy.com/";
   </noscript>
 </head>
 <body>
+  <Header nav={nav} />
+
   <slot />
 
-  <!--
-    FIX 5: All JS at end of body, deferred.
-    IntersectionObserver wrapped in requestIdleCallback so it never blocks TBT.
-  -->
+  <Footer nav={nav} footer={footer} />
+
+  <!-- All JS at end of body, deferred. -->
   <script>
-    // Nav toggle — tiny, inline
+    // Nav toggle
     (function(){
-      var t=document.getElementById('nav-toggle');
-      var m=document.getElementById('nav-menu');
-      if(!t||!m) return;
-      t.addEventListener('click',function(){
-        var open=m.getAttribute('aria-hidden')==='false';
-        m.setAttribute('aria-hidden', open?'true':'false');
-        t.setAttribute('aria-expanded', open?'false':'true');
-        m.classList.toggle('open',!open);
+      var t = document.getElementById('nav-toggle');
+      var m = document.getElementById('nav-menu');
+      if (!t || !m) return;
+      t.addEventListener('click', function(){
+        var open = m!.getAttribute('aria-hidden') === 'false';
+        m!.setAttribute('aria-hidden', open ? 'true' : 'false');
+        t!.setAttribute('aria-expanded', open ? 'false' : 'true');
+        m!.classList.toggle('open', !open);
       });
     })();
 
-    // Scroll reveal — deferred to idle so it never contributes to TBT
+    // Scroll reveal
     function initReveal(){
-      if(!('IntersectionObserver' in window)){
+      if (!('IntersectionObserver' in window)) {
         document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('visible'); });
         return;
       }
-      var io=new IntersectionObserver(function(entries){
+      var io = new IntersectionObserver(function(entries){
         entries.forEach(function(e){
-          if(e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target); }
+          if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
         });
-      },{threshold:0.08,rootMargin:'0px 0px -40px 0px'});
+      }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
       document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
     }
-    if('requestIdleCallback' in window){ requestIdleCallback(initReveal); }
-    else { setTimeout(initReveal,200); }
+    var ric = window.requestIdleCallback || function(cb: () => void){ setTimeout(cb, 200); };
+    ric(initReveal);
   </script>
 </body>
 </html>

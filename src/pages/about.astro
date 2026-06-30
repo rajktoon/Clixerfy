@@ -1,0 +1,339 @@
+---
+import Base from '../layouts/Base.astro';
+import { getAboutPage } from '../lib/content';
+
+const about = await getAboutPage();
+// console.log(about);
+---
+<Base>
+
+<main>
+
+  <!-- ── HERO ── -->
+  <section class="hero" aria-labelledby="hero-heading">
+    <div class="hero-bg" aria-hidden="true">
+      <div class="hero-particles" aria-hidden="true"></div>
+    </div>
+    <div class="container hero-inner">
+      <div class="hero-content">
+        {about.hero.badge && (
+          <div class="hero-badge">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2L3 7v9c0 5 4.5 9.7 9 11 4.5-1.3 9-6 9-11V7L12 2z"/></svg>
+            {about.hero.badge}
+          </div>
+        )}
+        <h1 id="hero-heading">
+          {about.hero.titleText}<em>{about.hero.titleHighlight}</em>
+        </h1>
+        <p class="hero-sub">{about.hero.subtitle}</p>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="hero-visual-frame">
+          <img src={about.hero.illustrationUrl} alt="About Clixerfy illustration" class="about-illustration" width="600" height="400" loading="eager" />
+          <div class="hero-visual-badge">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L3 7v9c0 5 4.5 9.7 9 11 4.5-1.3 9-6 9-11V7L12 2z"/></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── MISSION ── -->
+  {about.mission.sectionTitle && (
+    <section class="section mission-section" aria-labelledby="mission-heading">
+      <div class="container">
+        <div class="mission-inner">
+          <div class="mission-copy reveal">
+            <h2 id="mission-heading" set:html={about.mission.sectionTitle}></h2>
+            <div class="mission-body reveal" set:html={about.mission.body}></div>
+          </div>
+          {about.mission.stats.length > 0 && (
+            <div class="mission-stats" role="list">
+              {about.mission.stats.map((s, i) => (
+                <div class="mission-stat reveal" style={`transition-delay:${i*80}ms`} role="listitem">
+                  <strong class="mission-stat-value">{s.value}</strong>
+                  <span class="mission-stat-label">{s.label}</span>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- ── STORY / TIMELINE ── -->
+  {about.story.highlights.length > 0 && (
+    <section class="section story-section" aria-labelledby="story-heading">
+      <div class="story-glow" aria-hidden="true"></div>
+      <div class="container">
+        <h2 id="story-heading" class="section-title reveal" set:html={about.story.sectionTitle}></h2>
+        {about.story.body && <div class="story-body reveal" set:html={about.story.body}></div>}
+        <div class="timeline">
+          {about.story.highlights.map((h, i) => (
+            <div class="timeline-item reveal" style={`transition-delay:${i*80}ms`}>
+              <div class="timeline-marker" aria-hidden="true">
+                <span class="timeline-year">{h.year}</span>
+              </div>
+              <div class="timeline-content">
+                <h3 class="timeline-title">{h.title}</h3>
+                <p class="timeline-desc">{h.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- ── VALUES ── -->
+  {about.values.items.length > 0 && (
+    <section class="section values-section" aria-labelledby="values-heading">
+      <div class="container">
+        <h2 id="values-heading" class="section-title reveal" set:html={about.values.sectionTitle}></h2>
+        {about.values.sectionSubtitle && <p class="section-sub reveal">{about.values.sectionSubtitle}</p>}
+        <div class="values-grid">
+          {about.values.items.map((v, i) => (
+            <article class={`value-card reveal ${i === 0 ? 'value-card--lead' : ''}`} style={`transition-delay:${i*70}ms`}>
+              <div class="value-icon" aria-hidden="true">
+                {v.iconUrl
+                  ? <img src={v.iconUrl} alt="" width="24" height="24" />
+                  : <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L3 7v9c0 5 4.5 9.7 9 11 4.5-1.3 9-6 9-11V7L12 2z"/></svg>}
+              </div>
+              <h3 class="value-title">{v.title}</h3>
+              <p class="value-desc">{v.desc}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- ── CTA BANNER ── -->
+  {about.cta.title && (
+    <section class="cta-section" aria-labelledby="cta-heading">
+      <div class="cta-bg" aria-hidden="true"></div>
+      <div class="container cta-inner">
+        <h2 id="cta-heading" class="reveal">{about.cta.title}</h2>
+        <p class="reveal">{about.cta.subtitle}</p>
+        <a href={about.cta.ctaHref} class="btn-primary btn-lg reveal">{about.cta.ctaLabel}</a>
+      </div>
+    </section>
+  )}
+
+</main>
+
+</Base>
+
+<style>
+  .section { padding-block: clamp(3.5rem, 7vw, 6rem); }
+
+  .section-title {
+    font-family: var(--font-head);
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 800;
+    letter-spacing: .04em;
+    text-align: center;
+    margin-bottom: .5rem;
+  }
+  .section-title.text-left { text-align: left; }
+  .section-title em { font-style: normal; color: var(--red); }
+  .section-sub {
+    text-align: center; color: var(--muted);
+    max-width: 600px; margin-inline: auto; margin-bottom: 2.75rem; font-size: .93rem;
+  }
+
+  /* ─ HERO ── */
+  .hero {
+    position: relative; overflow: hidden;
+    padding-block: clamp(4rem, 10vw, 7rem);
+  }
+  .hero-bg {
+    position: absolute; inset: 0; pointer-events: none;
+    background:
+      radial-gradient(ellipse 60% 50% at 70% 40%, rgba(230,48,48,.14) 0%, transparent 70%),
+      linear-gradient(180deg, #0a0a0a 0%, #0d0000 60%, #0a0a0a 100%);
+  }
+  .hero-particles {
+    position: absolute; inset: 0;
+    background-image:
+      radial-gradient(circle, rgba(230,48,48,.65) 1px, transparent 1px),
+      radial-gradient(circle, rgba(230,48,48,.4) 1.5px, transparent 1.5px),
+      radial-gradient(circle, rgba(230,48,48,.3) 1px, transparent 1px);
+    background-size: 120px 80px, 200px 150px, 90px 120px;
+    background-position: 10% 20%, 30% 60%, 50% 10%;
+    opacity: .7;
+  }
+  .hero-inner {
+    position: relative;
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 3rem; align-items: center;
+  }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 7px;
+    border: 1px solid rgba(230,48,48,.28); color: var(--muted);
+    font-size: .8rem; padding: 5px 13px; border-radius: 30px;
+    background: rgba(230,48,48,.06); margin-bottom: 1.4rem;
+  }
+  .hero-content h1 {
+    font-family: var(--font-head);
+    font-size: clamp(2.2rem, 5vw, 3.6rem);
+    font-weight: 800; line-height: 1.1;
+    letter-spacing: .03em;
+    margin-bottom: 1.1rem; max-width: 540px;
+  }
+  .hero-content h1 em { font-style: normal; color: var(--red); }
+  .hero-sub { color: var(--muted); max-width: 430px; margin-bottom: 1.8rem; font-size: .97rem; }
+  .hero-visual { display: flex; align-items: center; justify-content: center; }
+  .hero-visual-frame {
+    position: relative; width: 100%; max-width: 560px;
+    border-radius: 16px; overflow: hidden;
+    border: 1px solid rgba(230,48,48,.22);
+    box-shadow: 0 0 50px rgba(230,48,48,.18);
+  }
+  .about-illustration {
+    width: 100%; height: auto; display: block;
+    filter: saturate(1.05);
+  }
+  .hero-visual-badge {
+    position: absolute; top: 14px; right: 14px;
+    width: 46px; height: 46px; border-radius: 50%;
+    background: rgba(230,48,48,.92); color: #fff;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 6px 18px rgba(230,48,48,.45);
+  }
+
+  @media (max-width: 768px) {
+    .hero-inner { grid-template-columns: 1fr; text-align: center; }
+    .hero-content h1 { max-width: 100%; }
+    .hero-sub { max-width: 100%; margin-inline: auto; }
+    .hero-visual { order: -1; }
+    .hero-visual-frame { max-width: 320px; }
+  }
+
+  /* ── MISSION ── */
+  .mission-section { background: var(--card); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  .mission-inner { display: grid; grid-template-columns: 1.2fr 1fr; gap: 4rem; align-items: start; }
+  .mission-copy h2 {
+    font-family: var(--font-head); font-size: clamp(1.6rem, 3.2vw, 2.4rem);
+    font-weight: 800; margin-bottom: .9rem;
+  }
+  .mission-copy h2 em { font-style: normal; color: var(--red); }
+  .mission-copy p, .mission-body { color: var(--muted); font-size: .93rem; line-height: 1.8; }
+  .mission-body p { margin-bottom: .8rem; }
+  .mission-body p:last-child { margin-bottom: 0; }
+  .mission-body strong { color: var(--text, #fff); }
+  .mission-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  .mission-stat { display: flex; flex-direction: column; gap: .2rem; }
+  .mission-stat-value { font-family: var(--font-head); font-size: 2rem; font-weight: 800; letter-spacing: .02em; color: var(--red); }
+  .mission-stat-label { font-size: .8rem; color: var(--muted); }
+
+  @media (max-width: 768px) { .mission-inner { grid-template-columns: 1fr; gap: 2.5rem; } }
+
+  /* ── STORY (centered, with red glow shape like the reference) ── */
+  .story-section { position: relative; overflow: hidden; }
+  .story-glow {
+    position: absolute; top: 10%; left: 50%; transform: translateX(-50%);
+    width: 260px; height: 70%; border-radius: 50%;
+    background: radial-gradient(ellipse at center, rgba(230,48,48,.35) 0%, rgba(230,48,48,.08) 55%, transparent 75%);
+    filter: blur(10px); pointer-events: none; z-index: 0;
+  }
+  .story-section .section-title,
+  .story-section .story-body { position: relative; z-index: 1; text-align: center; }
+  .story-body { color: var(--muted); font-size: .95rem; line-height: 1.9; max-width: 760px; margin: 0 auto 2.5rem; }
+  .story-body strong { color: #fff; }
+
+  .timeline { position: relative; padding-left: 2.5rem; margin-top: 1rem; z-index: 1; }
+  .timeline::before {
+    content: ''; position: absolute; left: 8px; top: 0; bottom: 0;
+    width: 2px; background: var(--border);
+  }
+  .timeline-item {
+    position: relative; display: grid;
+    grid-template-columns: auto 1fr; gap: 1.5rem;
+    padding-bottom: 2.5rem;
+  }
+  .timeline-item:last-child { padding-bottom: 0; }
+  .timeline-marker {
+    position: relative; display: flex; align-items: flex-start;
+  }
+  .timeline-marker::before {
+    content: ''; position: absolute; left: -2.5rem; top: 4px;
+    width: 18px; height: 18px; border-radius: 50%;
+    background: var(--red); border: 3px solid var(--bg);
+    z-index: 1;
+  }
+  .timeline-year {
+    font-family: var(--font-head); font-size: .78rem; font-weight: 700;
+    color: var(--red); text-transform: uppercase; letter-spacing: .06em;
+    min-width: 60px;
+  }
+  .timeline-title {
+    font-family: var(--font-head); font-size: .95rem; font-weight: 700;
+    letter-spacing: .03em; margin-bottom: .3rem;
+  }
+  .timeline-desc { font-size: .85rem; color: var(--muted); line-height: 1.7; }
+
+  @media (max-width: 480px) {
+    .timeline { padding-left: 2rem; }
+    .timeline-marker::before { left: -2rem; width: 14px; height: 14px; }
+  }
+
+  /* ── VALUES (asymmetric: first card full-width, rest two-up) ── */
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem; margin-top: 2.75rem;
+  }
+  .value-card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 14px; padding: 1.9rem;
+    display: flex; flex-direction: column; gap: .7rem;
+    transition: border-color .18s, transform .18s;
+  }
+  .value-card--lead { grid-column: 1 / -1; }
+  .value-card:hover { border-color: rgba(230,48,48,.3); transform: translateY(-2px); }
+  .value-icon {
+    width: 42px; height: 42px; border-radius: 50%;
+    background: rgba(230,48,48,.08); border: 1px solid rgba(230,48,48,.16);
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: .4rem;
+  }
+  .value-icon img { width: 22px; height: 22px; }
+  .value-title {
+    font-family: var(--font-head); font-size: .9rem; font-weight: 700;
+    letter-spacing: .04em; text-transform: uppercase;
+  }
+  .value-desc { font-size: .87rem; color: var(--muted); line-height: 1.75; }
+
+  @media (max-width: 768px) { .values-grid { grid-template-columns: 1fr; } }
+
+  /* ── CTA ── */
+  .cta-section {
+    padding-block: clamp(3.5rem, 8vw, 5.5rem); text-align: center;
+    position: relative; overflow: hidden;
+    border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+  }
+  .cta-bg {
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, #0a0a0a 0%, #1a0303 50%, #0a0a0a 100%);
+  }
+  .cta-bg::before {
+    content: ''; position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 60% 100% at 50% 0%, rgba(230,48,48,.25) 0%, transparent 65%);
+    background-size: 100%, 60px 60px;
+  }
+  .cta-bg::after {
+    content: ''; position: absolute; inset: 0; opacity: .35;
+    background-image: repeating-linear-gradient(115deg, rgba(230,48,48,.25) 0px, rgba(230,48,48,.25) 1px, transparent 1px, transparent 60px);
+  }
+  .cta-inner {
+    position: relative; display: flex; flex-direction: column;
+    align-items: center; gap: 1.1rem;
+  }
+  .cta-inner h2 { font-family: var(--font-head); font-size: clamp(1.9rem, 4.5vw, 3.2rem); font-weight: 800; letter-spacing: .04em; color: #fff; }
+  .cta-inner p  { color: rgba(255,255,255,.7); max-width: 560px; font-size: .93rem; }
+  .cta-inner p strong, .cta-inner p em { color: var(--red); font-style: normal; }
+</style>

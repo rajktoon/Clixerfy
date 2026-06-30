@@ -1,0 +1,312 @@
+---
+import Base from '../layouts/Base.astro';
+import { getSeoPage, getSeoPageSlugs } from '../lib/content';
+import { richTextToHtml } from '../lib/strapi';
+import type { SeoPageData } from '../lib/types';
+
+export async function getStaticPaths() {
+  const slugs = await getSeoPageSlugs();
+  return slugs.map((slug) => ({
+    params: { city: slug },
+    props: { slug },
+  }));
+}
+
+const { slug } = Astro.props;
+const page: SeoPageData = await getSeoPage(slug);
+
+const heroHtml = richTextToHtml(page.heroDescription);
+const contentHtml = richTextToHtml(page.content);
+---
+<Base
+  title={page.metaTitle}
+  description={page.metaDescription}
+  ogImage={page.featuredImageUrl || undefined}
+>
+
+<main>
+
+  <!-- ─ HERO ── -->
+  <section class="seo-hero" aria-labelledby="seo-hero-heading">
+    <div class="seo-hero-bg" aria-hidden="true"></div>
+    <div class="container seo-hero-inner">
+      <div class="seo-hero-content">
+        <a href="/" class="seo-breadcrumb">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          Back to Home
+        </a>
+        <h1 id="seo-hero-heading">{page.heroTitle}</h1>
+        <div class="seo-hero-desc" set:html={heroHtml}></div>
+        <a href="#contact" class="btn-primary btn-lg">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTENT ── -->
+  <section class="seo-content-section" aria-labelledby="seo-content-heading">
+    <div class="container seo-content-inner">
+      {page.featuredImageUrl && (
+        <div class="seo-featured-image">
+          <img src={page.featuredImageUrl} alt={page.title} loading="lazy" />
+        </div>
+      )}
+      <div class="seo-body" set:html={contentHtml}></div>
+    </div>
+  </section>
+
+  <!-- ── STATS ── -->
+  {page.stats.length > 0 && (
+    <section class="section stats-section" aria-labelledby="stats-heading">
+      <div class="container">
+        <h2 id="stats-heading" class="section-title reveal">By the Numbers</h2>
+        <div class="stats-row" role="list">
+          {page.stats.map((s, i) => (
+            <div class="stat-item reveal" style={`transition-delay:${i*55}ms`} role="listitem">
+              <strong class="stat-value">{s.value}</strong>
+              <span class="stat-label">{s.label}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- ── SERVICES ── -->
+  {page.services.length > 0 && (
+    <section class="section services-section" aria-labelledby="services-heading">
+      <div class="container">
+        <h2 id="services-heading" class="section-title reveal">Our Services</h2>
+        <div class="services-grid">
+          {page.services.map((s, i) => (
+            <article class="service-card reveal" style={`transition-delay:${i*60}ms`}>
+              <h3 class="service-title">{s.title}</h3>
+              <p class="service-desc">{s.description}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- ── FAQ ── -->
+  {page.faq.length > 0 && (
+    <section class="section faq-section" aria-labelledby="faq-heading">
+      <div class="container">
+        <h2 id="faq-heading" class="section-title reveal">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          {page.faq.map((item, i) => (
+            <details class="faq-item reveal" style={`transition-delay:${i*50}ms`}>
+              <summary class="faq-question">{item.question}</summary>
+              <div class="faq-answer" set:html={richTextToHtml(item.answer)}></div>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- ── TESTIMONIALS ── -->
+  {page.testimonials.length > 0 && (
+    <section class="section" aria-labelledby="testi-heading">
+      <div class="container">
+        <h2 id="testi-heading" class="section-title reveal">What Our Clients Say</h2>
+        <div class="testimonials" role="list">
+          {page.testimonials.map((t, i) => (
+            <article class="testi-card reveal" style={`transition-delay:${i*70}ms`} role="listitem">
+              <div class="testi-meta">
+                <strong class="testi-name">{t.name}</strong>
+                <span class="testi-role">{t.role}</span>
+              </div>
+              <p class="testi-text">{t.text}</p>
+              <div class="stars" role="img" aria-label={`${t.stars} out of 5 stars`}>{"★".repeat(t.stars)}</div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- ── CTA ── -->
+  <section class="cta-section" id="contact" aria-labelledby="cta-heading">
+    <div class="cta-bg" aria-hidden="true"></div>
+    <div class="container cta-inner">
+      <h2 id="cta-heading" class="reveal">Ready to Secure Your Business?</h2>
+      <p class="reveal">Contact us today for a free security consultation.</p>
+      <a href="#contact" class="btn-primary btn-lg reveal">Contact Us</a>
+    </div>
+  </section>
+
+</main>
+
+</Base>
+
+<style>
+  /* ── SEO HERO ── */
+  .seo-hero {
+    position: relative; overflow: hidden;
+    padding-block: clamp(4rem, 10vw, 7rem);
+  }
+  .seo-hero-bg {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 60% 50% at 50% 60%, rgba(230,48,48,.10) 0%, transparent 70%),
+      linear-gradient(180deg, #0a0a0a 0%, #0d0000 60%, #0a0a0a 100%);
+  }
+  .seo-hero-inner { position: relative; }
+  .seo-hero-content { max-width: 720px; }
+
+  .seo-breadcrumb {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: .82rem; color: var(--muted);
+    margin-bottom: 1.5rem;
+    transition: color .15s;
+  }
+  .seo-breadcrumb:hover { color: var(--red); }
+
+  .seo-hero-content h1 {
+    font-family: var(--font-head);
+    font-size: clamp(2rem, 5vw, 3.4rem);
+    font-weight: 800; line-height: 1.15;
+    letter-spacing: .03em;
+    margin-bottom: 1.2rem;
+  }
+
+  .seo-hero-desc {
+    color: var(--muted); font-size: 1.05rem; line-height: 1.75;
+    margin-bottom: 2rem;
+  }
+  .seo-hero-desc p { margin-bottom: .8rem; }
+  .seo-hero-desc p:last-child { margin-bottom: 0; }
+
+  /* ── SEO CONTENT ── */
+  .seo-content-section {
+    padding-block: clamp(3rem, 6vw, 5rem);
+    border-top: 1px solid var(--border);
+  }
+  .seo-content-inner { max-width: 800px; }
+
+  .seo-featured-image {
+    margin-bottom: 2.5rem;
+    border-radius: 14px; overflow: hidden;
+    border: 1px solid var(--border);
+  }
+  .seo-featured-image img {
+    display: block; width: 100%; height: auto;
+  }
+
+  .seo-body {
+    font-size: .97rem; line-height: 1.8; color: var(--muted);
+  }
+  .seo-body p { margin-bottom: 1.2rem; }
+  .seo-body p:last-child { margin-bottom: 0; }
+  .seo-body h2 {
+    font-family: var(--font-head);
+    font-size: clamp(1.4rem, 3vw, 1.8rem);
+    font-weight: 700; color: var(--text);
+    margin-top: 2.5rem; margin-bottom: .8rem;
+  }
+  .seo-body h3 {
+    font-family: var(--font-head);
+    font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+    font-weight: 700; color: var(--text);
+    margin-top: 2rem; margin-bottom: .6rem;
+  }
+  .seo-body strong { color: var(--text); font-weight: 600; }
+  .seo-body em { font-style: italic; }
+  .seo-body a { color: var(--red); text-decoration: underline; }
+  .seo-body ul, .seo-body ol {
+    margin: 1rem 0 1.2rem 1.5rem;
+  }
+  .seo-body li { margin-bottom: .4rem; }
+  .seo-body blockquote {
+    border-left: 3px solid var(--red);
+    padding-left: 1.2rem; margin: 1.5rem 0;
+    color: var(--text); font-style: italic;
+  }
+  .seo-body pre {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 8px; padding: 1rem; overflow-x: auto;
+    margin: 1.2rem 0;
+  }
+  .seo-body code {
+    font-family: 'SF Mono', 'Fira Code', monospace; font-size: .88rem;
+  }
+
+  /* ── CTA ── */
+  .cta-section {
+    padding-block: clamp(3.5rem, 8vw, 5.5rem); text-align: center;
+    position: relative; overflow: hidden;
+  }
+  .cta-bg {
+    position: absolute; inset: 0;
+    background:
+      linear-gradient(135deg, #0a3d5c 0%, #0d5a7a 25%, #1a1a2e 50%, #3d0a0a 75%, #1a0202 100%);
+  }
+  .cta-bg::before {
+    content: ''; position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 50% 80% at 20% 50%, rgba(10,80,120,.6) 0%, transparent 70%),
+      radial-gradient(ellipse 50% 80% at 80% 50%, rgba(120,10,10,.5) 0%, transparent 70%);
+  }
+  .cta-inner {
+    position: relative; display: flex; flex-direction: column;
+    align-items: center; gap: 1.1rem;
+  }
+  .cta-inner h2 { font-family: var(--font-head); font-size: clamp(1.9rem, 4.5vw, 3.2rem); font-weight: 800; letter-spacing: .04em; color: #fff; }
+  .cta-inner p  { color: rgba(255,255,255,.7); max-width: 420px; font-size: .93rem; }
+
+  /* ── Section helpers ── */
+  .section { padding-block: clamp(3.5rem, 7vw, 6rem); }
+  .section-title {
+    font-family: var(--font-head); font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 800; letter-spacing: .04em; text-align: center; margin-bottom: 2.5rem;
+  }
+
+  /* ── STATS ── */
+  .stats-section { background: var(--card); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  .stats-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1.5rem; }
+  .stat-item { display: flex; flex-direction: column; gap: .2rem; text-align: center; }
+  .stat-value { font-family: var(--font-head); font-size: 1.9rem; font-weight: 800; letter-spacing: .02em; }
+  .stat-label { font-size: .8rem; color: var(--muted); }
+
+  /* ── SERVICES ── */
+  .services-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem; }
+  .service-card {
+    background: var(--card); border: 1px solid var(--border); border-radius: 13px;
+    padding: 1.6rem; display: flex; flex-direction: column; gap: .7rem;
+    transition: border-color .18s;
+  }
+  .service-card:hover { border-color: rgba(230,48,48,.28); }
+  .service-title { font-family: var(--font-head); font-size: .9rem; font-weight: 700; letter-spacing: .03em; }
+  .service-desc { font-size: .85rem; color: var(--muted); line-height: 1.7; }
+
+  /* ── FAQ ── */
+  .faq-section { background: var(--card); border-top: 1px solid var(--border); }
+  .faq-list { max-width: 800px; display: flex; flex-direction: column; gap: .75rem; }
+  .faq-item {
+    background: var(--bg); border: 1px solid var(--border); border-radius: 10px;
+    padding: 1.2rem 1.4rem; transition: border-color .18s;
+  }
+  .faq-item[open] { border-color: rgba(230,48,48,.25); }
+  .faq-question {
+    font-family: var(--font-head); font-size: .92rem; font-weight: 700;
+    cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center;
+  }
+  .faq-question::after { content: '+'; font-size: 1.2rem; color: var(--red); transition: transform .2s; }
+  .faq-item[open] .faq-question::after { content: '−'; }
+  .faq-answer { margin-top: .8rem; font-size: .88rem; color: var(--muted); line-height: 1.75; }
+  .faq-answer p { margin-bottom: .6rem; }
+  .faq-answer p:last-child { margin-bottom: 0; }
+
+  /* ── Testimonials ── */
+  .testimonials { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.1rem; }
+  .testi-card {
+    background: var(--card); border: 1px solid var(--border); border-radius: 13px;
+    padding: 1.6rem; display: flex; flex-direction: column; gap: .7rem;
+  }
+  .testi-meta { display: flex; flex-direction: column; gap: .1rem; }
+  .testi-name { display: block; font-weight: 600; font-size: .88rem; }
+  .testi-role { display: block; font-size: .76rem; color: var(--muted); }
+  .testi-text { font-size: .86rem; color: var(--muted); line-height: 1.72; }
+  .stars { color: var(--red); font-size: .82rem; letter-spacing: 2px; margin-top: auto; }
+</style>
