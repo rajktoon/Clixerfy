@@ -36,12 +36,30 @@ async function loadSnapshot(name: string) {
 
 // ── Helpers ──
 
+/** Check if we should skip Strapi and use snapshots only (CI/deployment) */
+function shouldUseSnapshots(): boolean {
+  // Common CI environment variables
+  return !!(
+    process.env.CI ||
+    process.env.VERCEL ||
+    process.env.NETLIFY ||
+    process.env.USE_SNAPSHOTS
+  );
+}
+
 function getStrapiUrl(): string {
   return import.meta.env.STRAPI_URL ?? "http://localhost:1337";
 }
 
 /** Fetch a Strapi Single Type (returns data.attributes) with snapshot fallback */
 async function fetchSingle<T>(endpoint: string, deepPopulate = false): Promise<T> {
+  // Skip Strapi entirely in CI/deployment
+  if (shouldUseSnapshots()) {
+    const snapshot = await loadSnapshot(endpoint);
+    if (!snapshot) throw new Error(`No snapshot for ${endpoint}`);
+    return snapshot.data?.attributes ?? snapshot.data;
+  }
+
   let url = `${getStrapiUrl()}/api/${endpoint}?populate=*`;
   if (deepPopulate) {
     // Deep populate for nested components
@@ -68,6 +86,13 @@ async function fetchSingle<T>(endpoint: string, deepPopulate = false): Promise<T
 
 /** Fetch a Strapi Collection Type (returns array of entries) with snapshot fallback */
 async function fetchCollection(endpoint: string, query = ""): Promise<any[]> {
+  // Skip Strapi entirely in CI/deployment
+  if (shouldUseSnapshots()) {
+    const snapshot = await loadSnapshot(endpoint);
+    if (!snapshot) return [];
+    return Array.isArray(snapshot.data) ? snapshot.data : [];
+  }
+
   const url = `${getStrapiUrl()}/api/${endpoint}?populate=*${query}`;
   try {
     const res = await fetch(url, { headers: { "Content-Type": "application/json" } });
@@ -206,6 +231,17 @@ function mapSeoPage(raw: StrapiSeoPageRaw & { id: number }): SeoPageData {
 // ── Public content loaders (Strapi-only, with safe defaults) ──
 
 export async function getNavigation(): Promise<NavigationData> {
+  // Skip Strapi entirely in CI/deployment
+  if (shouldUseSnapshots()) {
+    const snapshot = await loadSnapshot("navigation");
+    if (snapshot) {
+      const raw: StrapiNavigationRaw = snapshot.data?.attributes ?? snapshot.data;
+      return mapNavigation(raw);
+    }
+    console.warn("[content] navigation snapshot not found, using defaults.");
+    return { logoText: "Clixerfy", logoImageUrl: "", links: [], ctaLabel: "Contact", ctaHref: "#contact" };
+  }
+
   try {
     const params = new URLSearchParams();
     params.set('populate[links][populate]', '*');
@@ -228,6 +264,17 @@ export async function getNavigation(): Promise<NavigationData> {
 }
 
 export async function getFooter(): Promise<FooterData> {
+  // Skip Strapi entirely in CI/deployment
+  if (shouldUseSnapshots()) {
+    const snapshot = await loadSnapshot("footer");
+    if (snapshot) {
+      const raw: StrapiFooterRaw = snapshot.data?.attributes ?? snapshot.data;
+      return mapFooter(raw);
+    }
+    console.warn("[content] footer snapshot not found, using defaults.");
+    return { tagline: "", socials: [], linkGroups: [], newsletter: { title: "", description: "", placeholder: "", buttonLabel: "Subscribe" }, copyright: "" };
+  }
+
   try {
     const params = new URLSearchParams();
     params.set('populate[linkGroups][populate]', '*');
@@ -471,6 +518,27 @@ function mapDynamicZoneSection(section: any): SolutionSection | null {
 }
 
 export async function getSolutionPage(slug: string): Promise<SolutionPageData> {
+  // Skip Strapi entirely in CI/deployment
+  if (shouldUseSnapshots()) {
+    const snapshot = await loadSnapshot("solutions");
+    if (!snapshot) throw new Error(`No snapshot for solutions`);
+    const entries = Array.isArray(snapshot.data) ? snapshot.data : [];
+    const match = entries.find((e: any) => (e.attributes?.slug ?? e.slug) === slug);
+    if (!match) throw new Error(`[content] No solution found for slug "${slug}" in snapshot`);
+    const raw = match.attributes ?? match;
+    const sections = (raw.sections ?? [])
+      .map(mapDynamicZoneSection)
+      .filter(Boolean) as SolutionSection[];
+    return {
+      id: match.id,
+      title: raw.title ?? "",
+      slug: raw.slug ?? slug,
+      metaTitle: raw.metaTitle ?? "",
+      metaDescription: raw.metaDescription ?? "",
+      sections,
+    };
+  }
+
   try {
     const url = `${getStrapiUrl()}/api/solutions?filters[slug][$eq]=${slug}&populate[sections][populate]=*`;
     const res = await fetch(url, { headers: { "Content-Type": "application/json" } });
