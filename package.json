@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "export-content": "node scripts/export-content.js"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.3",

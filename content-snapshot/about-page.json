@@ -1,0 +1,128 @@
+{
+  "data": {
+    "id": 2,
+    "documentId": "a3bgn18q0hts6adfqshriehk",
+    "createdAt": "2026-06-30T11:25:45.911Z",
+    "updatedAt": "2026-06-30T11:25:45.911Z",
+    "publishedAt": "2026-06-30T11:25:45.934Z",
+    "CTA": {
+      "id": 2,
+      "title": "Ready to Transform Your Security Strategy?",
+      "subtitle": "Connect with our experts to discover how Clixerfy can help your organization build a stronger digital future.",
+      "ctaLabel": "Contact Us Today",
+      "ctaHref": "/contact"
+    },
+    "Hero": {
+      "id": 2,
+      "badge": "About Clixerfy",
+      "titleText": "Building Secure",
+      "titleHighlight": "Digital Futures",
+      "subtitle": "Clixerfy helps organizations strengthen cybersecurity, accelerate digital transformation, and confidently embrace modern technology solutions.",
+      "illustrationUrl": null
+    },
+    "Mission": {
+      "id": 2,
+      "sectionTitle": "Our Mission",
+      "body": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "text": "Our mission is to empower businesses through secure technology solutions, helping them innovate while minimizing cyber risk."
+            }
+          ]
+        }
+      ],
+      "stats": [
+        {
+          "id": 28,
+          "value": "500+",
+          "label": "Clients Served",
+          "iconUrl": null
+        },
+        {
+          "id": 29,
+          "value": "1200+",
+          "label": "Projects Delivered",
+          "iconUrl": null
+        },
+        {
+          "id": 30,
+          "value": "15+",
+          "label": "Years Experience",
+          "iconUrl": null
+        }
+      ]
+    },
+    "Values": [
+      {
+        "id": 2,
+        "sectionTitle": "Our Core Values",
+        "sectionSubtitle": "These principles guide every decision we make and every client relationship we build.",
+        "items": [
+          {
+            "id": 23,
+            "title": "Integrity",
+            "description": "We maintain transparency, honesty, and accountability in everything we do.",
+            "iconUrl": null
+          },
+          {
+            "id": 24,
+            "title": "Innovation",
+            "description": "We continuously evolve our methods and technologies to deliver better outcomes.",
+            "iconUrl": null
+          },
+          {
+            "id": 25,
+            "title": "Excellence",
+            "description": "We strive to exceed expectations through quality, expertise, and dedication.",
+            "iconUrl": null
+          },
+          {
+            "id": 26,
+            "title": "Collaboration",
+            "description": "We work closely with our clients to achieve long-term success together.",
+            "iconUrl": null
+          }
+        ]
+      }
+    ],
+    "Story": {
+      "id": 2,
+      "sectionTitle": "Our Journey",
+      "body": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "text": "Since our founding, Clixerfy has focused on helping organizations build secure, resilient, and future-ready digital environments."
+            }
+          ]
+        }
+      ],
+      "timeline": [
+        {
+          "id": 4,
+          "year": "2015",
+          "title": "Company Founded",
+          "desc": "Clixerfy was established with a vision to simplify cybersecurity and digital transformation."
+        },
+        {
+          "id": 5,
+          "year": "2019",
+          "title": "Expanded Services",
+          "desc": "Added managed security services and cloud consulting solutions."
+        },
+        {
+          "id": 6,
+          "year": "2023",
+          "title": "Global Expansion",
+          "desc": "Began supporting organizations across North America and international markets."
+        }
+      ]
+    }
+  },
+  "meta": {}
+}

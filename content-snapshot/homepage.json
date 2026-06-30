@@ -1,0 +1,49 @@
+{
+  "data": {
+    "id": 3,
+    "documentId": "zrv44i96tjiyhzob0wf1eupi",
+    "createdAt": "2026-06-26T18:15:44.336Z",
+    "updatedAt": "2026-06-29T19:35:59.560Z",
+    "publishedAt": "2026-06-29T19:35:59.568Z",
+    "hero": {
+      "id": 2,
+      "badge": "Trusted by 500+ businesses",
+      "titleText": "Secure Your Business with ",
+      "titleHighlight": "Clixerfy",
+      "subtitle": "Enterprise-grade cybersecurity solutions tailored for modern businesses. Protect your data, your customers, and your reputation.",
+      "ctaLabel": "Start Free Assessment",
+      "ctaHref": "#contact"
+    },
+    "features": {
+      "id": 2,
+      "sectionTitle": "Why Choose Clixerfy?"
+    },
+    "trust": {
+      "id": 2,
+      "sectionTitle": "Trusted by Industry Leaders",
+      "body": "We have been protecting businesses across North America for over a decade. Our team of certified security experts combines cutting-edge technology with proven methodologies to deliver unmatched protection."
+    },
+    "products": {
+      "id": 2,
+      "sectionTitle": "Our Security Products"
+    },
+    "threatCards": {
+      "id": 2,
+      "sectionTitle": "Emerging Threats",
+      "sectionSubtitle": "Stay ahead of the latest cybersecurity threats targeting businesses like yours."
+    },
+    "cta": {
+      "id": 2,
+      "title": "Ready to Secure Your Future?",
+      "subtitle": "Get a free security assessment and discover how we can protect your business.",
+      "ctaLabel": "Book Free Consultation",
+      "ctaHref": "#contact"
+    },
+    "testimonials": {
+      "id": 2,
+      "sectionTitle": "What Our Clients Say",
+      "sectionSubtitle": "Hear from businesses that trust Clixerfy with their cybersecurity."
+    }
+  },
+  "meta": {}
+}

@@ -1,35 +1,97 @@
 ---
-import type { NavigationData } from '../../lib/types';
+import type { NavigationData } from "../../lib/types";
+import {getNavigation} from "../../lib/content";
 
-interface Props {
-  nav: NavigationData;
-}
 
-const { nav } = Astro.props;
+const nav = await getNavigation();
+
 const currentPath = Astro.url.pathname;
 ---
 
 <header class="nav-wrap">
   <nav class="nav container" aria-label="Main navigation">
     <a href="/" class="logo" aria-label={`${nav.logoText} home`}>
-      {nav.logoImageUrl
-        ? <img src={nav.logoImageUrl} alt={`${nav.logoText} logo`} width="120" height="32" />
-        : <img src="/image-removebg-preview.png" alt={`${nav.logoText} logo`} width="120" height="32" />}
+      {
+        nav.logoImageUrl ? (
+          <img
+            src={nav.logoImageUrl}
+            alt={`${nav.logoText} logo`}
+            width="120"
+            height="32"
+          />
+        ) : (
+          <img
+            src="/image-removebg-preview.png"
+            alt={`${nav.logoText} logo`}
+            width="120"
+            height="32"
+          />
+        )
+      }
     </a>
 
-    <div class="nav-pill">
-      <button id="nav-toggle" class="nav-hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">
+    <div class="nav-pill-wrapper">
+          <div class="nav-pill">
+      <button
+        id="nav-toggle"
+        class="nav-hamburger"
+        aria-label="Toggle menu"
+        aria-expanded="false"
+        aria-controls="nav-menu"
+      >
         <span></span><span></span><span></span>
       </button>
 
-      <ul id="nav-menu" class="nav-links" role="list" aria-hidden="false">
-        {nav.links.map(link => {
-          const isActive = currentPath === link.href || (link.href !== '/' && currentPath.startsWith(link.href));
-          return (
-            <li><a href={link.href} class={`nav-link${isActive ? ' active' : ''}`}>{link.label}</a></li>
-          );
-        })}
+<ul id="nav-menu" class="nav-links" role="list" aria-hidden="false">
+  {
+    nav.links.map((link) => {
+      const isActive =
+        currentPath === link.href ||
+        (link.href !== "/" && currentPath.startsWith(link.href));
+
+      return (
+<li class="nav-item">
+  <div class="nav-parent">
+    <a
+      href={link.href}
+      class={`nav-link${isActive ? " active" : ""}`}
+    >
+      {link.label}
+    </a>
+
+    {
+      link.children?.length ? (
+        <button
+          class="submenu-toggle"
+          type="button"
+          aria-expanded="false"
+        >
+          ▾
+        </button>
+      ) : null
+    }
+  </div>
+
+  {
+    link.children?.length ? (
+      <ul class="dropdown">
+        {link.children.map((child) => (
+          <li>
+            <a href={child.href} class="dropdown-link">
+              {child.label}
+            </a>
+          </li>
+        ))}
       </ul>
+    ) : null
+  }
+</li>
+      );
+    })
+  }
+</ul>
+    </div>
+
     </div>
 
     <a href={nav.ctaHref} class="btn-primary nav-cta">{nav.ctaLabel}</a>
@@ -38,58 +100,285 @@ const currentPath = Astro.url.pathname;
 
 <style>
   .nav-wrap {
-    position: sticky; top: 0; z-index: 100;
+    position: sticky;
+    top: 0;
+    z-index: 100;
     padding: 12px 0;
   }
   .nav {
-    display: flex; align-items: center; gap: 1.25rem; height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+    gap: 1.25rem;
+    height: 52px;
   }
-  .logo { display: flex; align-items: center; gap: 8px; flex-shrink: 0; z-index: 1; }
-  .logo img { display: block; height: 28px; width: auto; }
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+    z-index: 1;
+  }
+  .logo img {
+    display: block;
+    height: 28px;
+    width: auto;
+  }
+
+
+.nav-item {
+  position: relative;
+  list-style: none;
+  padding-bottom: 10px;
+  margin-bottom: -10px;
+}
+
+.dropdown {
+  position: absolute;
+  top: calc(100%);
+  left: 0;
+
+  min-width: 240px;
+
+  display: none;
+  flex-direction: column;
+
+  padding: 8px;
+
+  background: rgba(15,15,15,.98);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 14px;
+
+  backdrop-filter: blur(20px);
+
+  list-style: none;
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,.35);
+
+  z-index: 1000;
+}
+
+.nav-item:hover > .dropdown {
+  display: flex;
+}
+
+.dropdown-link {
+  display: block;
+
+  padding: 10px 14px;
+
+  border-radius: 10px;
+
+  color: var(--muted);
+
+  transition: .2s;
+}
+
+.dropdown-link:hover {
+  background: rgba(255,255,255,.06);
+  color: var(--text);
+}
+
+.dropdown-arrow {
+  margin-left: 6px;
+  font-size: .7rem;
+}
 
   /* ── Pill nav ── */
+
+  .nav-pill-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
   .nav-pill {
-    display: flex; align-items: center;
-    margin-inline: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
     padding: 5px 6px;
     border-radius: 50px;
     background: rgba(255, 255, 255, 0.04);
     border: 1px solid rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(20px);
-    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    box-shadow:
+      0 4px 24px rgba(0, 0, 0, 0.2),
+      inset 0 1px 0 rgba(255, 255, 255, 0.05);
   }
-  .nav-links { display: flex; list-style: none; gap: 2px; }
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2px;
+  }
   .nav-link {
-    padding: 8px 18px; border-radius: 40px;
-    font-size: .84rem; font-weight: 500; color: var(--muted);
-    transition: color .2s, background .2s, box-shadow .2s;
+    padding: 8px 18px;
+    border-radius: 40px;
+    font-size: 0.84rem;
+    font-weight: 500;
+    color: var(--muted);
+    transition:
+      color 0.2s,
+      background 0.2s,
+      box-shadow 0.2s;
     white-space: nowrap;
   }
-  .nav-link:hover { color: var(--text); background: rgba(255, 255, 255, 0.06); }
+  .nav-link:hover {
+    color: var(--text);
+    background: rgba(255, 255, 255, 0.06);
+  }
   .nav-link.active {
     color: #fff;
     background: var(--brand-color);
     box-shadow: 0 2px 12px rgba(197, 36, 81, 0.35);
   }
 
-  .nav-hamburger { display: none; flex-direction: column; gap: 5px; padding: 8px; }
-  .nav-hamburger span { display: block; width: 21px; height: 2px; background: var(--text); border-radius: 2px; }
-  .nav-cta { margin-left: auto; white-space: nowrap; flex-shrink: 0; }
-
-  @media (max-width: 768px) {
-    .nav-wrap { padding: 10px 0; }
-    .nav-pill {
-      position: absolute; top: 56px; left: 12px; right: 12px;
-      flex-direction: column; padding: 12px;
-      border-radius: 16px;
-    }
-    .nav-hamburger { display: flex; }
-    .nav-links {
-      display: none; flex-direction: column; width: 100%;
-      gap: 4px; padding-top: 8px;
-    }
-    .nav-links.open { display: flex; }
-    .nav-link { width: 100%; text-align: center; padding: 10px 16px; }
-    .nav-cta { display: none; }
+  .nav-hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    padding: 8px;
   }
+  .nav-hamburger span {
+    display: block;
+    width: 21px;
+    height: 2px;
+    background: var(--text);
+    border-radius: 2px;
+  }
+  .nav-cta {
+    margin-left: auto;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+@media (max-width: 768px) {
+  .nav {
+    position: relative;
+    justify-content: space-between;
+    height: 60px;
+  }
+
+  .logo {
+    margin-right: auto;
+  }
+
+ .nav-pill-wrapper {
+    position: static;
+    flex: initial;
+    margin: 0;
+  }
+
+  .nav-pill {
+    position: static;
+    background: none;
+    border: none;
+    box-shadow: none;
+    backdrop-filter: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+
+    top: 70px;
+    left: 0;
+    right: 0;
+
+    width: 100%;
+    box-sizing: border-box;
+
+    flex-direction: column;
+    gap: 6px;
+
+    padding: 16px;
+
+    background: rgba(20,20,20,.98);
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 16px;
+    backdrop-filter: blur(20px);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-hamburger {
+    display: flex;
+    margin-left: auto;
+  }
+
+    .nav-link.active {
+    background: transparent;
+    box-shadow: none;
+    color: var(--brand-color);
+  }
+
+  .nav-link {
+    width: 100%;
+    /* text-align: center; */
+    padding: 12px 18px;
+  }
+
+  .nav-cta {
+    display: none;
+  }
+
+  .dropdown {
+    position: static;
+    display: none;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding-left: 16px;
+    min-width: auto;
+  }
+
+  .dropdown.open {
+    display: flex;
+  }
+
+  /* Disable hover behavior on mobile - only use click toggle */
+  .nav-item:hover > .dropdown {
+    display: none;
+  }
+
+  .nav-item:hover > .dropdown.open {
+    display: flex;
+  }
+
+  .submenu-toggle {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 8px 12px;
+    font-size: 0.8rem;
+  }
+
+  .nav-parent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+
 </style>
+
+<script is:inline>
+  document.querySelectorAll(".submenu-toggle").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const dropdown = btn.parentElement?.nextElementSibling;
+      if (dropdown) {
+        dropdown.classList.toggle("open");
+        btn.setAttribute("aria-expanded", dropdown.classList.contains("open"));
+      }
+    });
+  });
+</script>

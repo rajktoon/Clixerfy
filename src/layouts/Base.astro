@@ -16,6 +16,7 @@ const [seo, settings, nav, footer] = await Promise.all([
   getNavigation(),
   getFooter(),
 ]);
+
 const {
   title = seo.title,
   description = seo.description,

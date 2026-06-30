@@ -25,7 +25,7 @@ export interface StrapiMediaItem {
 export interface StrapiNavigationRaw {
   logoText: string;
   logoImageUrl: string;
-  links: Array<{ label: string; href: string; active: boolean }>;
+  links: Array<{ label: string; href: string; active: boolean; submenu?: Array<{ label: string; href: string }> }>;
   ctaLabel: string;
   ctaHref: string;
 }
@@ -136,10 +136,20 @@ export interface StrapiRichTextNode {
 
 // ── Normalized App Types (camelCase, used by components) ──
 
+export interface NavLink {
+  label: string;
+  href: string;
+  active?: boolean;
+  children?: {
+    label: string;
+    href: string;
+  }[];
+}
+
 export interface NavigationData {
   logoText: string;
-  logoImageUrl: string;
-  links: Array<{ label: string; href: string; active: boolean }>;
+  logoImageUrl?: string;
+  links: NavLink[];
   ctaLabel: string;
   ctaHref: string;
 }
@@ -296,4 +306,124 @@ export interface AboutPageData {
     ctaLabel: string;
     ctaHref: string;
   };
+}
+
+// ── Solution Page (Dynamic Zone) ──
+
+export interface SolutionHeroSection {
+  __component: 'sections.hero';
+  badge: string;
+  title: string;
+  subtitle: string;
+  ctaLabel: string;
+  ctaHref: string;
+  imageUrl: string;
+}
+
+export interface SolutionContentSection {
+  __component: 'sections.content';
+  title: string;
+  body: string;
+  imageUrl: string;
+}
+
+export interface SolutionFeatureItem {
+  title: string;
+  description: string;
+  iconUrl: string;
+  imageUrl: string;
+}
+
+export interface SolutionFeatureGridSection {
+  __component: 'sections.feature-grid';
+  sectionTitle: string;
+  sectionSubtitle: string;
+  items: SolutionFeatureItem[];
+}
+
+export interface SolutionProcessStep {
+  title: string;
+  description: string;
+  imageUrl: string;
+}
+
+export interface SolutionProcessSection {
+  __component: 'sections.process';
+  title: string;
+  steps: SolutionProcessStep[];
+}
+
+export interface SolutionProtectionLevel {
+  title: string;
+  description: string;
+  iconUrl: string;
+}
+
+export interface SolutionProtectionLevelsSection {
+  __component: 'sections.protection-levels';
+  title: string;
+  items: SolutionProtectionLevel[];
+}
+
+export interface SolutionBenefitItem {
+  title: string;
+  description: string;
+  iconUrl: string;
+}
+
+export interface SolutionBenefitsSection {
+  __component: 'sections.benefits';
+  title: string;
+  items: SolutionBenefitItem[];
+}
+
+export interface SolutionStat {
+  value: string;
+  label: string;
+  iconUrl: string;
+}
+
+export interface SolutionStatsSection {
+  __component: 'sections.stats';
+  items: SolutionStat[];
+}
+
+export interface SolutionFaqItem {
+  question: string;
+  answer: string;
+}
+
+export interface SolutionFaqSection {
+  __component: 'sections.faq';
+  title: string;
+  items: SolutionFaqItem[];
+}
+
+export interface SolutionCtaSection {
+  __component: 'sections.cta';
+  title: string;
+  subtitle: string;
+  buttonLabel: string;
+  buttonHref: string;
+  imageUrl: string;
+}
+
+export type SolutionSection =
+  | SolutionHeroSection
+  | SolutionContentSection
+  | SolutionFeatureGridSection
+  | SolutionProcessSection
+  | SolutionProtectionLevelsSection
+  | SolutionBenefitsSection
+  | SolutionStatsSection
+  | SolutionFaqSection
+  | SolutionCtaSection;
+
+export interface SolutionPageData {
+  id: number;
+  title: string;
+  slug: string;
+  metaTitle: string;
+  metaDescription: string;
+  sections: SolutionSection[];
 }

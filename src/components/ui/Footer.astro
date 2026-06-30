@@ -30,7 +30,7 @@ const { nav, footer } = Astro.props;
       <div class="footer-col">
         <h3 class="footer-heading">{group.title}</h3>
         <ul role="list">
-          {group.links.map(link => <li><a href={link.href} class="footer-link">{link.label}</a></li>)}
+          {(group.links ?? []).map(link => <li><a href={link.href} class="footer-link">{link.label}</a></li>)}
         </ul>
       </div>
     ))}

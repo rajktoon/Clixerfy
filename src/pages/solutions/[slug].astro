@@ -1,0 +1,231 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getSolutionPage, getSolutionSlugs } from '../../lib/content';
+
+export async function getStaticPaths() {
+  try {
+    const slugs = await getSolutionSlugs();
+    return slugs.map(slug => ({ params: { slug } }));
+  } catch { return []; }
+}
+
+const { slug } = Astro.params;
+const solution = await getSolutionPage(slug!);
+const sections = solution.sections;
+---
+<Base title={solution.metaTitle || solution.title} description={solution.metaDescription}>
+<main>
+{sections.map((s: any) => {
+  const comp = s.__component;
+
+  if (comp === 'sections.hero') return (
+    <section class="sol-hero">
+      <div class="sol-hero-bg" aria-hidden="true"><div class="sol-hero-particles" aria-hidden="true"></div></div>
+      <div class="container sol-hero-inner">
+        <div class="sol-hero-content">
+          {s.badge && <div class="sol-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L3 7v9c0 5 4.5 9.7 9 11 4.5-1.3 9-6 9-11V7L12 2z"/></svg>{s.badge}</div>}
+          <h1>{s.title}</h1>
+          <div class="sol-hero-sub" set:html={s.subtitle}></div>
+          {s.ctaLabel && <a href={s.ctaHref} class="btn-primary btn-lg">{s.ctaLabel}</a>}
+        </div>
+        {s.imageUrl && <div class="sol-hero-visual"><div class="sol-hero-frame"><img src={s.imageUrl} alt={s.title} width="600" height="400" loading="eager" /></div></div>}
+      </div>
+    </section>
+  );
+
+  if (comp === 'sections.content') return (
+    <section class="section sol-content-section">
+      <div class="container sol-content-inner">
+        <div class="sol-content-copy reveal"><h2>{s.title}</h2><div set:html={s.body}></div></div>
+        {s.imageUrl && <div class="sol-content-image reveal"><img src={s.imageUrl} alt={s.title} width="520" height="360" loading="lazy" /></div>}
+      </div>
+    </section>
+  );
+
+  if (comp === 'sections.feature-grid') return (
+    <section class="section sol-features-section">
+      <div class="container">
+        <h2 class="section-title reveal">{s.sectionTitle}</h2>
+        {s.sectionSubtitle && <p class="section-sub reveal">{s.sectionSubtitle}</p>}
+        <div class="sol-features-grid">
+          {(s.items ?? []).map((item: any, i: number) => (
+            <article class="sol-feature-card reveal" style={`transition-delay:${i * 70}ms`}>
+              {item.iconUrl && <div class="sol-feature-icon"><img src={item.iconUrl} alt="" width="28" height="28" /></div>}
+              <h3 class="sol-feature-title">{item.title}</h3>
+              <div class="sol-feature-desc" set:html={item.description}></div>
+              {item.imageUrl && <div class="sol-feature-img"><img src={item.imageUrl} alt={item.title} width="400" height="240" loading="lazy" /></div>}
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+
+  if (comp === 'sections.process') return (
+    <section class="section sol-process-section">
+      <div class="container">
+        <h2 class="section-title reveal">{s.title}</h2>
+        <div class="sol-process-steps">
+          {(s.steps ?? []).map((step: any, i: number) => (
+            <div class="sol-process-step reveal" style={`transition-delay:${i * 100}ms`}>
+              <div class="sol-step-number">{String(i + 1).padStart(2, '0')}</div>
+              <div class="sol-step-content"><h3>{step.title}</h3><div set:html={step.description}></div></div>
+              {step.imageUrl && <div class="sol-step-image"><img src={step.imageUrl} alt={step.title} width="200" height="160" loading="lazy" /></div>}
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+
+  if (comp === 'sections.protection-levels') return (
+    <section class="section sol-levels-section">
+      <div class="container">
+        <h2 class="section-title reveal">{s.title}</h2>
+        <div class="sol-levels-grid">
+          {(s.items ?? []).map((item: any, i: number) => (
+            <article class={`sol-level-card reveal sol-level-${i}`} style={`transition-delay:${i * 80}ms`}>
+              {item.iconUrl && <div class="sol-level-icon"><img src={item.iconUrl} alt="" width="32" height="32" /></div>}
+              <h3>{item.title}</h3><p>{item.description}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+
+  if (comp === 'sections.benefits') return (
+    <section class="section sol-benefits-section">
+      <div class="container">
+        <h2 class="section-title reveal">{s.title}</h2>
+        <div class="sol-benefits-grid">
+          {(s.items ?? []).map((item: any, i: number) => (
+            <div class="sol-benefit-item reveal" style={`transition-delay:${i * 60}ms`}>
+              {item.iconUrl && <div class="sol-benefit-icon"><img src={item.iconUrl} alt="" width="24" height="24" /></div>}
+              <div><h3>{item.title}</h3><p>{item.description}</p></div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+
+  if (comp === 'sections.stats') return (
+    <section class="sol-stats-section">
+      <div class="container">
+        <div class="sol-stats-row">
+          {(s.items ?? []).map((item: any, i: number) => (
+            <div class="sol-stat reveal" style={`transition-delay:${i * 60}ms`}>
+              <strong class="sol-stat-value">{item.value}</strong><span class="sol-stat-label">{item.label}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+
+  if (comp === 'sections.faq') return (
+    <section class="section sol-faq-section">
+      <div class="container">
+        <h2 class="section-title reveal">{s.title}</h2>
+        <div class="sol-faq-list">
+          {(s.items ?? []).map((item: any, i: number) => (
+            <details class="sol-faq-item reveal" style={`transition-delay:${i * 60}ms`}>
+              <summary>{item.question}</summary><div set:html={item.answer}></div>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+
+  if (comp === 'sections.cta') return (
+    <section class="sol-cta-section">
+      <div class="sol-cta-bg" aria-hidden="true"></div>
+      <div class="container sol-cta-inner">
+        <h2 class="reveal">{s.title}</h2>
+        <p class="reveal">{s.subtitle}</p>
+        <a href={s.buttonHref} class="btn-primary btn-lg reveal">{s.buttonLabel}</a>
+        {s.imageUrl && <div class="sol-cta-image reveal"><img src={s.imageUrl} alt={s.title} width="600" height="340" loading="lazy" /></div>}
+      </div>
+    </section>
+  );
+
+  return null;
+})}
+</main>
+</Base>
+
+<style>
+  .section { padding-block: clamp(3.5rem, 7vw, 6rem); }
+  .section-title { font-family: var(--font-head); font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; letter-spacing: .04em; text-align: center; margin-bottom: .5rem; }
+  .section-sub { text-align: center; color: var(--muted); max-width: 600px; margin-inline: auto; margin-bottom: 2.75rem; font-size: .93rem; }
+  .sol-hero { position: relative; overflow: hidden; padding-block: clamp(4rem, 10vw, 7rem); }
+  .sol-hero-bg { position: absolute; inset: 0; pointer-events: none; background: radial-gradient(ellipse 60% 50% at 70% 40%, rgba(230,48,48,.14) 0%, transparent 70%), linear-gradient(180deg, #0a0a0a 0%, #0d0000 60%, #0a0a0a 100%); }
+  .sol-hero-particles { position: absolute; inset: 0; background-image: radial-gradient(circle, rgba(230,48,48,.65) 1px, transparent 1px), radial-gradient(circle, rgba(230,48,48,.4) 1.5px, transparent 1.5px); background-size: 120px 80px, 200px 150px; opacity: .7; }
+  .sol-hero-inner { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+  .sol-badge { display: inline-flex; align-items: center; gap: 7px; border: 1px solid rgba(230,48,48,.28); color: var(--muted); font-size: .8rem; padding: 5px 13px; border-radius: 30px; background: rgba(230,48,48,.06); margin-bottom: 1.4rem; }
+  .sol-hero-content h1 { font-family: var(--font-head); font-size: clamp(2.2rem, 5vw, 3.6rem); font-weight: 800; line-height: 1.1; margin-bottom: 1.1rem; max-width: 540px; }
+  .sol-hero-sub { color: var(--muted); max-width: 480px; margin-bottom: 1.8rem; font-size: .97rem; line-height: 1.7; }
+  .sol-hero-sub p { margin-bottom: .6rem; } .sol-hero-sub strong { color: #fff; }
+  .sol-hero-visual { display: flex; align-items: center; justify-content: center; }
+  .sol-hero-frame { width: 100%; max-width: 560px; border-radius: 16px; overflow: hidden; border: 1px solid rgba(230,48,48,.22); box-shadow: 0 0 50px rgba(230,48,48,.18); }
+  .sol-hero-frame img { width: 100%; height: auto; display: block; }
+  @media (max-width: 768px) { .sol-hero-inner { grid-template-columns: 1fr; text-align: center; } .sol-hero-content h1, .sol-hero-sub { max-width: 100%; } .sol-hero-sub { margin-inline: auto; } .sol-hero-visual { order: -1; } .sol-hero-frame { max-width: 320px; } }
+  .sol-content-section { background: var(--card); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  .sol-content-inner { display: grid; grid-template-columns: 1.2fr 1fr; gap: 4rem; align-items: center; }
+  .sol-content-copy h2 { font-family: var(--font-head); font-size: clamp(1.6rem, 3.2vw, 2.4rem); font-weight: 800; margin-bottom: .9rem; }
+  .sol-content-copy div { color: var(--muted); font-size: .93rem; line-height: 1.8; } .sol-content-copy strong { color: #fff; }
+  .sol-content-image { border-radius: 14px; overflow: hidden; border: 1px solid var(--border); } .sol-content-image img { width: 100%; height: auto; display: block; }
+  @media (max-width: 768px) { .sol-content-inner { grid-template-columns: 1fr; gap: 2.5rem; } }
+  .sol-features-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.2rem; margin-top: 2.75rem; }
+  .sol-feature-card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 2rem; display: flex; flex-direction: column; gap: .7rem; transition: border-color .18s, transform .18s; }
+  .sol-feature-card:hover { border-color: rgba(230,48,48,.3); transform: translateY(-2px); }
+  .sol-feature-icon { width: 48px; height: 48px; border-radius: 12px; background: rgba(230,48,48,.08); border: 1px solid rgba(230,48,48,.16); display: flex; align-items: center; justify-content: center; } .sol-feature-icon img { width: 26px; height: 26px; }
+  .sol-feature-title { font-family: var(--font-head); font-size: 1rem; font-weight: 700; }
+  .sol-feature-desc { font-size: .88rem; color: var(--muted); line-height: 1.75; } .sol-feature-desc strong { color: #fff; }
+  .sol-feature-img { border-radius: 10px; overflow: hidden; margin-top: .5rem; border: 1px solid var(--border); } .sol-feature-img img { width: 100%; height: auto; display: block; }
+  @media (max-width: 768px) { .sol-features-grid { grid-template-columns: 1fr; } }
+  .sol-process-steps { display: flex; flex-direction: column; gap: 2.5rem; margin-top: 2.75rem; max-width: 800px; margin-inline: auto; }
+  .sol-process-step { display: grid; grid-template-columns: auto 1fr auto; gap: 1.5rem; align-items: center; background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 1.8rem; transition: border-color .18s; }
+  .sol-process-step:hover { border-color: rgba(230,48,48,.3); }
+  .sol-step-number { font-family: var(--font-head); font-size: 2.4rem; font-weight: 800; color: var(--brand-color); opacity: .5; line-height: 1; min-width: 50px; }
+  .sol-step-content h3 { font-family: var(--font-head); font-size: 1.05rem; font-weight: 700; margin-bottom: .4rem; }
+  .sol-step-content div { font-size: .88rem; color: var(--muted); line-height: 1.7; } .sol-step-content strong { color: #fff; }
+  .sol-step-image { border-radius: 10px; overflow: hidden; max-width: 180px; } .sol-step-image img { width: 100%; height: auto; display: block; }
+  @media (max-width: 768px) { .sol-process-step { grid-template-columns: auto 1fr; } .sol-step-image { grid-column: 1 / -1; max-width: 100%; } }
+  .sol-levels-section { background: var(--card); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  .sol-levels-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; margin-top: 2.75rem; }
+  .sol-level-card { border: 1px solid var(--border); border-radius: 14px; padding: 2rem; display: flex; flex-direction: column; gap: .7rem; text-align: center; transition: transform .18s; }
+  .sol-level-card:hover { transform: translateY(-3px); }
+  .sol-level-0 { border-color: rgba(230,48,48,.15); } .sol-level-1 { border-color: rgba(230,48,48,.35); background: rgba(230,48,48,.04); } .sol-level-2 { border-color: rgba(230,48,48,.55); background: rgba(230,48,48,.08); }
+  .sol-level-icon { width: 56px; height: 56px; border-radius: 50%; margin: 0 auto; background: rgba(230,48,48,.08); border: 1px solid rgba(230,48,48,.16); display: flex; align-items: center; justify-content: center; } .sol-level-icon img { width: 28px; height: 28px; }
+  .sol-level-card h3 { font-family: var(--font-head); font-size: 1.1rem; font-weight: 700; } .sol-level-card p { font-size: .88rem; color: var(--muted); line-height: 1.7; }
+  @media (max-width: 768px) { .sol-levels-grid { grid-template-columns: 1fr; } }
+  .sol-benefits-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.2rem; margin-top: 2.75rem; }
+  .sol-benefit-item { display: flex; align-items: flex-start; gap: 1rem; background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; transition: border-color .18s; }
+  .sol-benefit-item:hover { border-color: rgba(230,48,48,.25); }
+  .sol-benefit-icon { width: 42px; height: 42px; border-radius: 10px; flex-shrink: 0; background: rgba(230,48,48,.08); border: 1px solid rgba(230,48,48,.16); display: flex; align-items: center; justify-content: center; } .sol-benefit-icon img { width: 22px; height: 22px; }
+  .sol-benefit-item h3 { font-family: var(--font-head); font-size: .92rem; font-weight: 700; margin-bottom: .3rem; } .sol-benefit-item p { font-size: .85rem; color: var(--muted); line-height: 1.65; }
+  @media (max-width: 768px) { .sol-benefits-grid { grid-template-columns: 1fr; } }
+  .sol-stats-section { padding-block: clamp(3rem, 6vw, 4.5rem); background: var(--card); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  .sol-stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; text-align: center; }
+  .sol-stat { display: flex; flex-direction: column; gap: .3rem; }
+  .sol-stat-value { font-family: var(--font-head); font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 800; color: var(--brand-color); }
+  .sol-stat-label { font-size: .82rem; color: var(--muted); }
+  @media (max-width: 768px) { .sol-stats-row { grid-template-columns: 1fr 1fr; } }
+  .sol-faq-list { display: flex; flex-direction: column; gap: .8rem; margin-top: 2.75rem; max-width: 760px; margin-inline: auto; }
+  .sol-faq-item { background: var(--card); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; transition: border-color .18s; }
+  .sol-faq-item[open] { border-color: rgba(230,48,48,.3); }
+  .sol-faq-item summary { padding: 1.2rem 1.5rem; cursor: pointer; font-weight: 600; font-size: .93rem; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+  .sol-faq-item summary::-webkit-details-marker { display: none; }
+  .sol-faq-item summary::after { content: '+'; font-size: 1.2rem; color: var(--muted); } .sol-faq-item[open] summary::after { content: '\2212'; }
+  .sol-faq-item div { padding: 0 1.5rem 1.2rem; font-size: .88rem; color: var(--muted); line-height: 1.75; } .sol-faq-item strong { color: #fff; }
+  .sol-cta-section { padding-block: clamp(3.5rem, 8vw, 5.5rem); text-align: center; position: relative; overflow: hidden; border-top: 1px solid var(--border); }
+  .sol-cta-bg { position: absolute; inset: 0; background: linear-gradient(180deg, #0a0a0a 0%, #1a0303 50%, #0a0a0a 100%); }
+  .sol-cta-bg::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 60% 100% at 50% 0%, rgba(230,48,48,.25) 0%, transparent 65%); }
+  .sol-cta-inner { position: relative; display: flex; flex-direction: column; align-items: center; gap: 1.1rem; }
+  .sol-cta-inner h2 { font-family: var(--font-head); font-size: clamp(1.9rem, 4.5vw, 3.2rem); font-weight: 800; color: #fff; }
+  .sol-cta-inner p { color: rgba(255,255,255,.7); max-width: 560px; font-size: .93rem; }
+  .sol-cta-image { margin-top: 1.5rem; border-radius: 14px; overflow: hidden; border: 1px solid rgba(230,48,48,.22); max-width: 600px; } .sol-cta-image img { width: 100%; height: auto; display: block; }
+</style>

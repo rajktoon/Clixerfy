@@ -1,0 +1,103 @@
+{
+  "data": {
+    "id": 2,
+    "documentId": "ocia5hpp2t1pd0zcgqmkh4m5",
+    "tagline": "Empowering businesses with cutting-edge cybersecurity solutions. Protecting your digital assets 24/7.",
+    "newsletterTitle": "Stay Updated",
+    "newsletterDescription": "Get the latest cybersecurity insights delivered to your inbox.\n",
+    "newsletterPlaceholder": "your@email.com",
+    "newsletterButtonLabel": "Subscribe",
+    "copyright": "© 2026 Clixerfy. All rights reserved.",
+    "createdAt": "2026-06-30T13:46:06.615Z",
+    "updatedAt": "2026-06-30T13:46:06.615Z",
+    "publishedAt": "2026-06-30T13:46:06.632Z",
+    "socials": [
+      {
+        "id": 9,
+        "label": "LinkedIn",
+        "href": "#"
+      },
+      {
+        "id": 10,
+        "label": "X",
+        "href": "#"
+      }
+    ],
+    "linkGroups": [
+      {
+        "id": 10,
+        "title": "Company",
+        "links": [
+          {
+            "id": 30,
+            "label": "About Us",
+            "href": "#"
+          },
+          {
+            "id": 31,
+            "label": "Careers",
+            "href": "#"
+          },
+          {
+            "id": 32,
+            "label": "Blog",
+            "href": "#"
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "title": "Services",
+        "links": [
+          {
+            "id": 33,
+            "label": "Adfraud Blocker",
+            "href": "#"
+          },
+          {
+            "id": 34,
+            "label": " Vulnerability Scanner",
+            "href": "#"
+          },
+          {
+            "id": 35,
+            "label": "Malware Scanner",
+            "href": "#"
+          },
+          {
+            "id": 36,
+            "label": "WP File Scanner",
+            "href": "#"
+          },
+          {
+            "id": 37,
+            "label": "WAF Tester",
+            "href": "#"
+          }
+        ]
+      },
+      {
+        "id": 12,
+        "title": "Support",
+        "links": [
+          {
+            "id": 38,
+            "label": "Contact",
+            "href": "#"
+          },
+          {
+            "id": 39,
+            "label": "FAQ",
+            "href": "#"
+          },
+          {
+            "id": 40,
+            "label": "Privacy Policy",
+            "href": null
+          }
+        ]
+      }
+    ]
+  },
+  "meta": {}
+}
