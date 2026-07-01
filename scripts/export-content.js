@@ -55,7 +55,18 @@ await save("global-settings", "global-settings", "populate=*");
 // seo-pages: populate=*
 await save("seo-pages", "seo-pages", "populate=*");
 
-// solutions: populate[sections][populate]=* (for Dynamic Zone)
-await save("solutions", "solutions", "populate[sections][populate]=*");
+// solutions: deep populate all nested component fields
+const solutionParams = [
+  "populate[herosection][populate]=*",
+  "populate[Content][populate]=*",
+  "populate[feature][populate]=*",
+  "populate[process][populate]=*",
+  "populate[protections][populate]=*",
+  "populate[benefits][populate]=*",
+  "populate[stats][populate]=*",
+  "populate[faqs][populate]=*",
+  "populate[cta][populate]=*",
+].join("&");
+await save("solutions", "solutions", solutionParams);
 
 console.log("\n✓ All content exported to ./content-snapshot/");

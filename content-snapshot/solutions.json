@@ -1,0 +1,295 @@
+{
+  "data": [
+    {
+      "id": 3,
+      "documentId": "veisjei5g4bmvjsoh6efpck0",
+      "createdAt": "2026-07-01T11:52:27.341Z",
+      "updatedAt": "2026-07-01T12:22:38.222Z",
+      "publishedAt": "2026-07-01T12:22:38.245Z",
+      "title": "The Clixerfy Fraudulent Click Blocker",
+      "slug": "ad-fraud-blocker",
+      "metaTitle": "adfraud blocker",
+      "metaDescription": "mm",
+      "herosection": [
+        {
+          "id": 5,
+          "badge": "The Clixerfy Fraudulent Click Blocker",
+          "titleText": "Complete Ad Immunity",
+          "titleHighlight": null,
+          "subtitle": "Don't just track fraud. Terminate it. Clixerfy proactively detects and blocks sophisticated click fraud before it drains your marketing budget.\n",
+          "illustrationUrl": null,
+          "__component": "shared.sections-about-hero"
+        }
+      ],
+      "Content": [
+        {
+          "id": 3,
+          "title": "Why Traditional Invalid Traffic Filters Fail",
+          "body": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Most advertisers rely on the basic invalid traffic filters provided by advertising platforms. These systems protect the ad networks first and leave campaigns vulnerable to sophisticated click fraud."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "text": ""
+                }
+              ]
+            }
+          ],
+          "image": "https://clixerfy.com/wp-content/uploads/2026/02/About-Clixerfy.jpg",
+          "__component": "shared.sections-imagewithcontent"
+        }
+      ],
+      "faqs": [
+        {
+          "id": 21,
+          "question": "How does Clixerfy integrate with my website?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Simply add our asynchronous JavaScript snippet through your website or tag manager."
+                }
+              ]
+            }
+          ],
+          "__component": "shared.faq-item"
+        }
+      ],
+      "cta": [
+        {
+          "id": 5,
+          "title": "Take Absolute Control of Your Ad Account Today",
+          "subtitle": "Stop letting fake clicks dictate your marketing performance.",
+          "ctaLabel": "Request a Live Demo & Consultation",
+          "ctaHref": "/contact",
+          "__component": "shared.homepage-cta"
+        }
+      ],
+      "feature": [
+        {
+          "id": 13,
+          "title": "Features of Our Product",
+          "desc": "....",
+          "iconUrl": null,
+          "large": false,
+          "item": [
+            {
+              "id": 17,
+              "title": "Professional Competitor Attacks",
+              "desc": "Clixerfy tracks repeat clickers and corporate networks and instantly excludes malicious entities after custom thresholds are reached.\n",
+              "color": null,
+              "linkText": null
+            },
+            {
+              "id": 18,
+              "title": "Sophisticated Botnets",
+              "desc": "Behavioral biometrics identify mathematically perfect automated interactions, even when hidden behind residential proxies.\n",
+              "color": null,
+              "linkText": null
+            },
+            {
+              "id": 19,
+              "title": "Global Click Farms",
+              "desc": "Device fingerprinting identifies coordinated fraud operations and neutralizes entire click farm networks.\n",
+              "color": null,
+              "linkText": null
+            },
+            {
+              "id": 20,
+              "title": "Malicious Scrapers & Spiders",
+              "desc": "Separate legitimate search crawlers from harmful scrapers and data harvesters.\n",
+              "color": null,
+              "linkText": null
+            }
+          ],
+          "__component": "shared.feature-item"
+        }
+      ],
+      "process": [
+        {
+          "id": 3,
+          "title": "Our Process",
+          "steps": [
+            {
+              "id": 21,
+              "title": "Deep Structural Inspection",
+              "description": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Analyzes connection architecture, browser environment, and global reputation data in under 100 milliseconds."
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": ""
+                    }
+                  ]
+                }
+              ],
+              "image": null
+            },
+            {
+              "id": 22,
+              "title": "Automated Real-Time Neutralization",
+              "description": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Synchronizes malicious IPs directly with Google, Meta, and Microsoft Ads exclusion lists."
+                    }
+                  ]
+                }
+              ],
+              "image": null
+            },
+            {
+              "id": 23,
+              "title": "Proactive Budget Redirection",
+              "description": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Preserves ad spend and redirects budget toward real human buyers."
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": ""
+                    }
+                  ]
+                }
+              ],
+              "image": null
+            }
+          ],
+          "__component": "shared.sections-process"
+        }
+      ],
+      "protections": [
+        {
+          "id": 3,
+          "level": [
+            {
+              "id": 24,
+              "title": "Low Protection",
+              "description": null,
+              "image": null
+            },
+            {
+              "id": 25,
+              "title": "Medium Protection",
+              "description": null,
+              "image": null
+            },
+            {
+              "id": 26,
+              "title": "High Protection",
+              "description": null,
+              "image": null
+            }
+          ],
+          "__component": "shared.sections-protection-levels"
+        }
+      ],
+      "benefits": [
+        {
+          "id": 3,
+          "benefit": [
+            {
+              "id": 27,
+              "title": "Unified Financial Dashboards",
+              "description": null,
+              "image": null
+            },
+            {
+              "id": 28,
+              "title": "Enterprise Compliance & Auditing",
+              "description": null,
+              "image": null
+            },
+            {
+              "id": 29,
+              "title": "Team-Based Access Controls",
+              "description": null,
+              "image": null
+            },
+            {
+              "id": 30,
+              "title": "Data Privacy Management",
+              "description": null,
+              "image": null
+            }
+          ],
+          "__component": "shared.sections-benefits"
+        }
+      ],
+      "stats": [
+        {
+          "id": 3,
+          "stats": [
+            {
+              "id": 39,
+              "value": "10+",
+              "label": "Fraudulent Clicks Blocked Daily",
+              "iconUrl": null
+            },
+            {
+              "id": 40,
+              "value": "100ms",
+              "label": "Detection Time",
+              "iconUrl": null
+            },
+            {
+              "id": 41,
+              "value": "24/7",
+              "label": "Monitoring",
+              "iconUrl": null
+            },
+            {
+              "id": 42,
+              "value": "$50+",
+              "label": "Potential CPC Savings",
+              "iconUrl": null
+            }
+          ],
+          "__component": "shared.sections-stats"
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "pagination": {
+      "page": 1,
+      "pageSize": 25,
+      "pageCount": 1,
+      "total": 1
+    }
+  }
+}

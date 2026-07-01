@@ -526,38 +526,29 @@ export async function getSolutionPage(slug: string): Promise<SolutionPageData> {
     const match = entries.find((e: any) => (e.attributes?.slug ?? e.slug) === slug);
     if (!match) throw new Error(`[content] No solution found for slug "${slug}" in snapshot`);
     const raw = match.attributes ?? match;
-    const sections = (raw.sections ?? [])
-      .map(mapDynamicZoneSection)
-      .filter(Boolean) as SolutionSection[];
-    return {
-      id: match.id,
-      title: raw.title ?? "",
-      slug: raw.slug ?? slug,
-      metaTitle: raw.metaTitle ?? "",
-      metaDescription: raw.metaDescription ?? "",
-      sections,
-    };
+    return mapSolutionPage(match.id, raw, slug);
   }
 
   try {
-    const url = `${getStrapiUrl()}/api/solutions?filters[slug][$eq]=${slug}&populate[sections][populate]=*`;
+    // Deep populate all nested component fields
+    const params = new URLSearchParams();
+    params.set('populate[herosection][populate]', '*');
+    params.set('populate[Content][populate]', '*');
+    params.set('populate[feature][populate]', '*');
+    params.set('populate[process][populate]', '*');
+    params.set('populate[protections][populate]', '*');
+    params.set('populate[benefits][populate]', '*');
+    params.set('populate[stats][populate]', '*');
+    params.set('populate[faqs][populate]', '*');
+    params.set('populate[cta][populate]', '*');
+    const url = `${getStrapiUrl()}/api/solutions?filters[slug][$eq]=${slug}&${params.toString()}`;
     const res = await fetch(url, { headers: { "Content-Type": "application/json" } });
     if (!res.ok) throw new Error(`Strapi fetch failed: ${url} (${res.status})`);
     const json = await res.json();
     const entries = Array.isArray(json.data) ? json.data : json.data ? [json.data] : [];
     if (!entries.length) throw new Error(`[content] No solution found for slug "${slug}"`);
     const raw = entries[0].attributes ?? entries[0];
-    const sections = (raw.sections ?? [])
-      .map(mapDynamicZoneSection)
-      .filter(Boolean) as SolutionSection[];
-    return {
-      id: entries[0].id,
-      title: raw.title ?? "",
-      slug: raw.slug ?? slug,
-      metaTitle: raw.metaTitle ?? "",
-      metaDescription: raw.metaDescription ?? "",
-      sections,
-    };
+    return mapSolutionPage(entries[0].id, raw, slug);
   } catch (err) {
     console.warn(`[content] Strapi unavailable for solutions, trying snapshot...`);
     const snapshot = await loadSnapshot("solutions");
@@ -566,22 +557,29 @@ export async function getSolutionPage(slug: string): Promise<SolutionPageData> {
     const match = entries.find((e: any) => (e.attributes?.slug ?? e.slug) === slug);
     if (!match) throw new Error(`[content] No solution found for slug "${slug}" in snapshot`);
     const raw = match.attributes ?? match;
-    const sections = (raw.sections ?? [])
-      .map(mapDynamicZoneSection)
-      .filter(Boolean) as SolutionSection[];
-    return {
-      id: match.id,
-      title: raw.title ?? "",
-      slug: raw.slug ?? slug,
-      metaTitle: raw.metaTitle ?? "",
-      metaDescription: raw.metaDescription ?? "",
-      sections,
-    };
+    return mapSolutionPage(match.id, raw, slug);
   }
 }
 
-export async function getSolutionSlugs(): Promise<string[]> {
-  const entries = await fetchCollection("solutions", "&fields[0]=slug");
-  return entries.map((e: any) => e.attributes?.slug ?? e.slug).filter(Boolean);
+function mapSolutionPage(id: number, raw: any, slug: string): SolutionPageData {
+  return {
+    id,
+    title: raw.title ?? "",
+    slug: raw.slug ?? slug,
+    metaTitle: raw.metaTitle ?? "",
+    metaDescription: raw.metaDescription ?? "",
+    herosection: raw.herosection ?? [],
+    Content: raw.Content ?? [],
+    feature: raw.feature ?? [],
+    process: raw.process ?? [],
+    protections: raw.protections ?? [],
+    benefits: raw.benefits ?? [],
+    stats: raw.stats ?? [],
+    faqs: raw.faqs ?? [],
+    cta: raw.cta ?? [],
+  };
 }
 
+export async function getSolutionSlugs(): Promise<string[]> {
+  const entries = await fetchCollection("solutions", "&fields[0]=slug");  return entries.map((e: any) => e.attributes?.slug ?? e.slug).filter(Boolean);
+}

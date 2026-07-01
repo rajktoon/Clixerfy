@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import { getSolutionPage, getSolutionSlugs } from '../../lib/content';
+import { richTextToHtml } from '../../lib/strapi';
 
 export async function getStaticPaths() {
   try {
@@ -11,148 +12,169 @@ export async function getStaticPaths() {
 
 const { slug } = Astro.params;
 const solution = await getSolutionPage(slug!);
-const sections = solution.sections;
+
+// Extract data from each section array
+const hero = solution.herosection?.[0] ?? null;
+const contentBlocks = solution.Content ?? [];
+const featureItems = solution.feature ?? [];
+const processBlocks = solution.process ?? [];
+const protectionBlocks = solution.protections ?? [];
+const benefitBlocks = solution.benefits ?? [];
+const statsBlocks = solution.stats ?? [];
+const faqItems = solution.faqs ?? [];
+const ctaBlock = solution.cta?.[0] ?? null;
 ---
 <Base title={solution.metaTitle || solution.title} description={solution.metaDescription}>
 <main>
-{sections.map((s: any) => {
-  const comp = s.__component;
 
-  if (comp === 'sections.hero') return (
+  {/* Hero Section */}
+  {hero && (
     <section class="sol-hero">
       <div class="sol-hero-bg" aria-hidden="true"><div class="sol-hero-particles" aria-hidden="true"></div></div>
       <div class="container sol-hero-inner">
         <div class="sol-hero-content">
-          {s.badge && <div class="sol-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L3 7v9c0 5 4.5 9.7 9 11 4.5-1.3 9-6 9-11V7L12 2z"/></svg>{s.badge}</div>}
-          <h1>{s.title}</h1>
-          <div class="sol-hero-sub" set:html={s.subtitle}></div>
-          {s.ctaLabel && <a href={s.ctaHref} class="btn-primary btn-lg">{s.ctaLabel}</a>}
+          {hero.badge && <div class="sol-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L3 7v9c0 5 4.5 9.7 9 11 4.5-1.3 9-6 9-11V7L12 2z"/></svg>{hero.badge}</div>}
+          <h1>{hero.titleText}</h1>
+          {hero.subtitle && <div class="sol-hero-sub" set:html={richTextToHtml(hero.subtitle)}></div>}
         </div>
-        {s.imageUrl && <div class="sol-hero-visual"><div class="sol-hero-frame"><img src={s.imageUrl} alt={s.title} width="600" height="400" loading="eager" /></div></div>}
+        {hero.illustrationUrl && <div class="sol-hero-visual"><div class="sol-hero-frame"><img src={hero.illustrationUrl} alt={hero.titleText} width="600" height="400" loading="eager" /></div></div>}
       </div>
     </section>
-  );
+  )}
 
-  if (comp === 'sections.content') return (
+  {/* Content Sections */}
+  {contentBlocks.map((block: any) => (
     <section class="section sol-content-section">
       <div class="container sol-content-inner">
-        <div class="sol-content-copy reveal"><h2>{s.title}</h2><div set:html={s.body}></div></div>
-        {s.imageUrl && <div class="sol-content-image reveal"><img src={s.imageUrl} alt={s.title} width="520" height="360" loading="lazy" /></div>}
+        <div class="sol-content-copy reveal">
+          <h2>{block.title}</h2>
+          {block.body && <div set:html={richTextToHtml(block.body)}></div>}
+        </div>
+        {block.image && <div class="sol-content-image reveal"><img src={block.image} alt={block.title} width="520" height="360" loading="lazy" /></div>}
       </div>
     </section>
-  );
+  ))}
 
-  if (comp === 'sections.feature-grid') return (
+  {/* Features Section */}
+  {featureItems.length > 0 && (
     <section class="section sol-features-section">
       <div class="container">
-        <h2 class="section-title reveal">{s.sectionTitle}</h2>
-        {s.sectionSubtitle && <p class="section-sub reveal">{s.sectionSubtitle}</p>}
         <div class="sol-features-grid">
-          {(s.items ?? []).map((item: any, i: number) => (
+          {featureItems.flatMap((item: any) => item.item ?? []).map((feat: any, i: number) => (
             <article class="sol-feature-card reveal" style={`transition-delay:${i * 70}ms`}>
-              {item.iconUrl && <div class="sol-feature-icon"><img src={item.iconUrl} alt="" width="28" height="28" /></div>}
-              <h3 class="sol-feature-title">{item.title}</h3>
-              <div class="sol-feature-desc" set:html={item.description}></div>
-              {item.imageUrl && <div class="sol-feature-img"><img src={item.imageUrl} alt={item.title} width="400" height="240" loading="lazy" /></div>}
+              {feat.iconUrl && <div class="sol-feature-icon"><img src={feat.iconUrl} alt="" width="28" height="28" /></div>}
+              <h3 class="sol-feature-title">{feat.title}</h3>
+              {feat.desc && <div class="sol-feature-desc">{feat.desc}</div>}
             </article>
           ))}
         </div>
       </div>
     </section>
-  );
+  )}
 
-  if (comp === 'sections.process') return (
+  {/* Process Section */}
+  {processBlocks.length > 0 && processBlocks.map((block: any) => (
     <section class="section sol-process-section">
       <div class="container">
-        <h2 class="section-title reveal">{s.title}</h2>
-        <div class="sol-process-steps">
-          {(s.steps ?? []).map((step: any, i: number) => (
-            <div class="sol-process-step reveal" style={`transition-delay:${i * 100}ms`}>
-              <div class="sol-step-number">{String(i + 1).padStart(2, '0')}</div>
-              <div class="sol-step-content"><h3>{step.title}</h3><div set:html={step.description}></div></div>
-              {step.imageUrl && <div class="sol-step-image"><img src={step.imageUrl} alt={step.title} width="200" height="160" loading="lazy" /></div>}
-            </div>
-          ))}
-        </div>
+        {block.title && <h2 class="section-title reveal">{block.title}</h2>}
+        {block.steps && block.steps.length > 0 && (
+          <div class="sol-process-steps">
+            {block.steps.map((step: any, i: number) => (
+              <div class="sol-process-step reveal" style={`transition-delay:${i * 100}ms`}>
+                <div class="sol-step-number">{String(i + 1).padStart(2, '0')}</div>
+                <div class="sol-step-content"><h3>{step.title}</h3>{step.description && <div set:html={richTextToHtml(step.description)}></div>}</div>
+                {step.imageUrl && <div class="sol-step-image"><img src={step.imageUrl} alt={step.title} width="200" height="160" loading="lazy" /></div>}
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     </section>
-  );
+  ))}
 
-  if (comp === 'sections.protection-levels') return (
+  {/* Protection Levels Section */}
+  {protectionBlocks.length > 0 && protectionBlocks.map((block: any) => (
     <section class="section sol-levels-section">
       <div class="container">
-        <h2 class="section-title reveal">{s.title}</h2>
-        <div class="sol-levels-grid">
-          {(s.items ?? []).map((item: any, i: number) => (
-            <article class={`sol-level-card reveal sol-level-${i}`} style={`transition-delay:${i * 80}ms`}>
-              {item.iconUrl && <div class="sol-level-icon"><img src={item.iconUrl} alt="" width="32" height="32" /></div>}
-              <h3>{item.title}</h3><p>{item.description}</p>
-            </article>
-          ))}
-        </div>
+        {block.title && <h2 class="section-title reveal">{block.title}</h2>}
+        {block.level && block.level.length > 0 && (
+          <div class="sol-levels-grid">
+            {block.level.map((item: any, i: number) => (
+              <article class={`sol-level-card reveal sol-level-${i}`} style={`transition-delay:${i * 80}ms`}>
+                {item.iconUrl && <div class="sol-level-icon"><img src={item.iconUrl} alt="" width="32" height="32" /></div>}
+                <h3>{item.title}</h3><p>{item.description}</p>
+              </article>
+            ))}
+          </div>
+        )}
       </div>
     </section>
-  );
+  ))}
 
-  if (comp === 'sections.benefits') return (
+  {/* Benefits Section */}
+  {benefitBlocks.length > 0 && benefitBlocks.map((block: any) => (
     <section class="section sol-benefits-section">
       <div class="container">
-        <h2 class="section-title reveal">{s.title}</h2>
-        <div class="sol-benefits-grid">
-          {(s.items ?? []).map((item: any, i: number) => (
-            <div class="sol-benefit-item reveal" style={`transition-delay:${i * 60}ms`}>
-              {item.iconUrl && <div class="sol-benefit-icon"><img src={item.iconUrl} alt="" width="24" height="24" /></div>}
-              <div><h3>{item.title}</h3><p>{item.description}</p></div>
-            </div>
-          ))}
-        </div>
+        {block.title && <h2 class="section-title reveal">{block.title}</h2>}
+        {block.benefit && block.benefit.length > 0 && (
+          <div class="sol-benefits-grid">
+            {block.benefit.map((item: any, i: number) => (
+              <div class="sol-benefit-item reveal" style={`transition-delay:${i * 60}ms`}>
+                {item.iconUrl && <div class="sol-benefit-icon"><img src={item.iconUrl} alt="" width="24" height="24" /></div>}
+                <div><h3>{item.title}</h3><p>{item.description}</p></div>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     </section>
-  );
+  ))}
 
-  if (comp === 'sections.stats') return (
+  {/* Stats Section */}
+  {statsBlocks.length > 0 && statsBlocks.map((block: any) => (
     <section class="sol-stats-section">
       <div class="container">
-        <div class="sol-stats-row">
-          {(s.items ?? []).map((item: any, i: number) => (
-            <div class="sol-stat reveal" style={`transition-delay:${i * 60}ms`}>
-              <strong class="sol-stat-value">{item.value}</strong><span class="sol-stat-label">{item.label}</span>
-            </div>
-          ))}
-        </div>
+        {block.stats && block.stats.length > 0 && (
+          <div class="sol-stats-row">
+            {block.stats.map((item: any, i: number) => (
+              <div class="sol-stat reveal" style={`transition-delay:${i * 60}ms`}>
+                <strong class="sol-stat-value">{item.value}</strong><span class="sol-stat-label">{item.label}</span>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     </section>
-  );
+  ))}
 
-  if (comp === 'sections.faq') return (
+  {/* FAQ Section */}
+  {faqItems.length > 0 && (
     <section class="section sol-faq-section">
       <div class="container">
-        <h2 class="section-title reveal">{s.title}</h2>
+        <h2 class="section-title reveal">Frequently Asked Questions</h2>
         <div class="sol-faq-list">
-          {(s.items ?? []).map((item: any, i: number) => (
+          {faqItems.map((item: any, i: number) => (
             <details class="sol-faq-item reveal" style={`transition-delay:${i * 60}ms`}>
-              <summary>{item.question}</summary><div set:html={item.answer}></div>
+              <summary>{item.question}</summary>{item.answer && <div set:html={richTextToHtml(item.answer)}></div>}
             </details>
           ))}
         </div>
       </div>
     </section>
-  );
+  )}
 
-  if (comp === 'sections.cta') return (
+  {/* CTA Section - only render if has title */}
+  {ctaBlock && ctaBlock.title && (
     <section class="sol-cta-section">
       <div class="sol-cta-bg" aria-hidden="true"></div>
       <div class="container sol-cta-inner">
-        <h2 class="reveal">{s.title}</h2>
-        <p class="reveal">{s.subtitle}</p>
-        <a href={s.buttonHref} class="btn-primary btn-lg reveal">{s.buttonLabel}</a>
-        {s.imageUrl && <div class="sol-cta-image reveal"><img src={s.imageUrl} alt={s.title} width="600" height="340" loading="lazy" /></div>}
+        <h2 class="reveal">{ctaBlock.title}</h2>
+        {ctaBlock.subtitle && <p class="reveal">{ctaBlock.subtitle}</p>}
+        {ctaBlock.ctaLabel && <a href={ctaBlock.ctaHref} class="btn-primary btn-lg reveal">{ctaBlock.ctaLabel}</a>}
       </div>
     </section>
-  );
+  )}
 
-  return null;
-})}
 </main>
 </Base>
 
@@ -184,7 +206,6 @@ const sections = solution.sections;
   .sol-feature-icon { width: 48px; height: 48px; border-radius: 12px; background: rgba(230,48,48,.08); border: 1px solid rgba(230,48,48,.16); display: flex; align-items: center; justify-content: center; } .sol-feature-icon img { width: 26px; height: 26px; }
   .sol-feature-title { font-family: var(--font-head); font-size: 1rem; font-weight: 700; }
   .sol-feature-desc { font-size: .88rem; color: var(--muted); line-height: 1.75; } .sol-feature-desc strong { color: #fff; }
-  .sol-feature-img { border-radius: 10px; overflow: hidden; margin-top: .5rem; border: 1px solid var(--border); } .sol-feature-img img { width: 100%; height: auto; display: block; }
   @media (max-width: 768px) { .sol-features-grid { grid-template-columns: 1fr; } }
   .sol-process-steps { display: flex; flex-direction: column; gap: 2.5rem; margin-top: 2.75rem; max-width: 800px; margin-inline: auto; }
   .sol-process-step { display: grid; grid-template-columns: auto 1fr auto; gap: 1.5rem; align-items: center; background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 1.8rem; transition: border-color .18s; }
@@ -227,5 +248,4 @@ const sections = solution.sections;
   .sol-cta-inner { position: relative; display: flex; flex-direction: column; align-items: center; gap: 1.1rem; }
   .sol-cta-inner h2 { font-family: var(--font-head); font-size: clamp(1.9rem, 4.5vw, 3.2rem); font-weight: 800; color: #fff; }
   .sol-cta-inner p { color: rgba(255,255,255,.7); max-width: 560px; font-size: .93rem; }
-  .sol-cta-image { margin-top: 1.5rem; border-radius: 14px; overflow: hidden; border: 1px solid rgba(230,48,48,.22); max-width: 600px; } .sol-cta-image img { width: 100%; height: auto; display: block; }
 </style>

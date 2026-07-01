@@ -45,9 +45,12 @@ const currentPath = Astro.url.pathname;
 <ul id="nav-menu" class="nav-links" role="list" aria-hidden="false">
   {
     nav.links.map((link) => {
+      // Check if current path matches this nav item
+      // Also handle /solutions/* pages for Products link
       const isActive =
         currentPath === link.href ||
-        (link.href !== "/" && currentPath.startsWith(link.href));
+        (link.href !== "/" && currentPath.startsWith(link.href)) ||
+        (link.label.toLowerCase() === 'products' && currentPath.startsWith('/solutions/'));
 
       return (
 <li class="nav-item">
@@ -75,13 +78,16 @@ const currentPath = Astro.url.pathname;
   {
     link.children?.length ? (
       <ul class="dropdown">
-        {link.children.map((child) => (
-          <li>
-            <a href={child.href} class="dropdown-link">
-              {child.label}
-            </a>
-          </li>
-        ))}
+        {link.children.map((child) => {
+          const isChildActive = currentPath === child.href;
+          return (
+            <li>
+              <a href={child.href} class={`dropdown-link${isChildActive ? ' active' : ''}`}>
+                {child.label}
+              </a>
+            </li>
+          );
+        })}
       </ul>
     ) : null
   }
@@ -178,6 +184,14 @@ const currentPath = Astro.url.pathname;
 .dropdown-link:hover {
   background: rgba(255,255,255,.06);
   color: var(--text);
+}
+
+/* Ensure dropdown links never get pill styling */
+.dropdown-link.active,
+.dropdown-link:active {
+  background: rgba(197, 36, 81, 0.1);
+  box-shadow: none;
+  color: var(--brand-color);
 }
 
 .dropdown-arrow {

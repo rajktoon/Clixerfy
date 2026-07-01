@@ -425,5 +425,30 @@ export interface SolutionPageData {
   slug: string;
   metaTitle: string;
   metaDescription: string;
-  sections: SolutionSection[];
+  herosection: any[];
+  Content: any[];
+  feature: any[];
+  process: any[];
+  protections: any[];
+  benefits: any[];
+  stats: any[];
+  faqs: any[];
+  cta: any[];
+}
+
+export interface StrapiSolutionRaw {
+  id: number;
+  title: string;
+  slug: string;
+  metaTitle: string;
+  metaDescription: string;
+  herosection: any[];
+  Content: any[];
+  feature: any[];
+  process: any[];
+  protections: any[];
+  benefits: any[];
+  stats: any[];
+  faqs: any[];
+  cta: any[];
 }
