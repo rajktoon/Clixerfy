@@ -3,6 +3,7 @@ import Base from '../layouts/Base.astro';
 import { getSeoPage, getSeoPageSlugs } from '../lib/content';
 import { richTextToHtml } from '../lib/strapi';
 import type { SeoPageData } from '../lib/types';
+import { getResponsiveSrcSet, getResponsiveSizes } from '../lib/images';
 
 export async function getStaticPaths() {
   const slugs = await getSeoPageSlugs();
@@ -47,7 +48,7 @@ const contentHtml = richTextToHtml(page.content);
     <div class="container seo-content-inner">
       {page.featuredImageUrl && (
         <div class="seo-featured-image">
-          <img src={page.featuredImageUrl} alt={page.title} />
+          <img src={page.featuredImageUrl} alt={page.title} srcset={getResponsiveSrcSet(page.featuredImageUrl)} sizes={getResponsiveSizes(800)} />
         </div>
       )}
       <div class="seo-body" set:html={contentHtml}></div>

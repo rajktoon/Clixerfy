@@ -2,6 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import { getSolutionPage, getSolutionSlugs } from '../../lib/content';
 import { richTextToHtml } from '../../lib/strapi';
+import { getResponsiveSrcSet, getResponsiveSizes } from '../../lib/images';
 
 export async function getStaticPaths() {
   try {
@@ -37,7 +38,7 @@ const ctaBlock = solution.cta?.[0] ?? null;
           <h1>{hero.titleText}</h1>
           {hero.subtitle && <div class="sol-hero-sub" set:html={richTextToHtml(hero.subtitle)}></div>}
         </div>
-        {hero.illustrationUrl && <div class="sol-hero-visual"><div class="sol-hero-frame"><img src={hero.illustrationUrl} alt={hero.titleText} width="600" height="400" loading="eager" decoding="async" fetchpriority="high" /></div></div>}
+        {hero.illustrationUrl && <div class="sol-hero-visual"><div class="sol-hero-frame"><img src={hero.illustrationUrl} alt={hero.titleText} width="600" height="400" loading="eager" decoding="async" fetchpriority="high" srcset={getResponsiveSrcSet(hero.illustrationUrl)} sizes={getResponsiveSizes(600)} /></div></div>}
       </div>
     </section>
   )}
@@ -50,7 +51,7 @@ const ctaBlock = solution.cta?.[0] ?? null;
           <h2>{block.title}</h2>
           {block.body && <div set:html={richTextToHtml(block.body)}></div>}
         </div>
-        {block.image && <div class="sol-content-image reveal"><img src={block.image} alt={block.title} width="520" height="360" /></div>}
+        {block.image && <div class="sol-content-image reveal"><img src={block.image} alt={block.title} width="520" height="360" srcset={getResponsiveSrcSet(block.image)} sizes={getResponsiveSizes(660)} /></div>}
       </div>
     </section>
   ))}
