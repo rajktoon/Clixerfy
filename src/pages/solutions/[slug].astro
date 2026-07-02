@@ -63,7 +63,12 @@ const ctaBlock = solution.cta?.[0] ?? null;
         <div class="sol-features-grid">
           {featureItems.flatMap((item: any) => item.item ?? []).map((feat: any, i: number) => (
             <article class="sol-feature-card reveal" style={`transition-delay:${i * 70}ms`}>
-              {feat.iconUrl && <div class="sol-feature-icon"><img src={feat.iconUrl} alt="" width="28" height="28" /></div>}
+              {feat.astroicon?.iconData && (
+                <div class="sol-feature-icon">
+                  <svg width={feat.astroicon.width || 28} height={feat.astroicon.height || 28} viewBox={`0 0 ${feat.astroicon.width || 28} ${feat.astroicon.height || 28}`} set:html={feat.astroicon.iconData} />
+                </div>
+              )}
+              {!feat.astroicon?.iconData && feat.iconUrl && <div class="sol-feature-icon"><img src={feat.iconUrl} alt="" width="28" height="28" /></div>}
               <h3 class="sol-feature-title">{feat.title}</h3>
               {feat.desc && <div class="sol-feature-desc">{feat.desc}</div>}
             </article>
