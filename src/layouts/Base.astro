@@ -98,6 +98,15 @@ const canonical = seo.canonical;
 
   <!-- All JS at end of body, deferred. -->
   <script>
+    // Auto lazy-load all images not explicitly marked as eager
+    (function(){
+      document.querySelectorAll('img:not([loading="eager"])').forEach(function(el){
+        var img = el as HTMLImageElement;
+        if (!img.loading) img.loading = 'lazy';
+        if (!img.decoding) img.decoding = 'async';
+      });
+    })();
+
     // Nav toggle
     (function(){
       var t = document.getElementById('nav-toggle');

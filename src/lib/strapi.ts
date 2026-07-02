@@ -110,7 +110,7 @@ export function richTextToHtml(doc: unknown): string {
           case "image": {
             if (!block.url) return "";
             const alt = block.alternativeText ?? "";
-            return `<img src="${block.url}" alt="${alt}" loading="lazy" />`;
+            return `<img src="${block.url}" alt="${alt}" />`;
           }
           default:
             return "";

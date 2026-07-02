@@ -47,7 +47,7 @@ const contentHtml = richTextToHtml(page.content);
     <div class="container seo-content-inner">
       {page.featuredImageUrl && (
         <div class="seo-featured-image">
-          <img src={page.featuredImageUrl} alt={page.title} loading="lazy" />
+          <img src={page.featuredImageUrl} alt={page.title} />
         </div>
       )}
       <div class="seo-body" set:html={contentHtml}></div>

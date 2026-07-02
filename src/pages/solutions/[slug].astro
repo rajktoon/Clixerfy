@@ -37,7 +37,7 @@ const ctaBlock = solution.cta?.[0] ?? null;
           <h1>{hero.titleText}</h1>
           {hero.subtitle && <div class="sol-hero-sub" set:html={richTextToHtml(hero.subtitle)}></div>}
         </div>
-        {hero.illustrationUrl && <div class="sol-hero-visual"><div class="sol-hero-frame"><img src={hero.illustrationUrl} alt={hero.titleText} width="600" height="400" loading="eager" /></div></div>}
+        {hero.illustrationUrl && <div class="sol-hero-visual"><div class="sol-hero-frame"><img src={hero.illustrationUrl} alt={hero.titleText} width="600" height="400" loading="eager" decoding="async" fetchpriority="high" /></div></div>}
       </div>
     </section>
   )}
@@ -50,7 +50,7 @@ const ctaBlock = solution.cta?.[0] ?? null;
           <h2>{block.title}</h2>
           {block.body && <div set:html={richTextToHtml(block.body)}></div>}
         </div>
-        {block.image && <div class="sol-content-image reveal"><img src={block.image} alt={block.title} width="520" height="360" loading="lazy" /></div>}
+        {block.image && <div class="sol-content-image reveal"><img src={block.image} alt={block.title} width="520" height="360" /></div>}
       </div>
     </section>
   ))}
@@ -83,7 +83,7 @@ const ctaBlock = solution.cta?.[0] ?? null;
               <div class="sol-process-step reveal" style={`transition-delay:${i * 100}ms`}>
                 <div class="sol-step-number">{String(i + 1).padStart(2, '0')}</div>
                 <div class="sol-step-content"><h3>{step.title}</h3>{step.description && <div set:html={richTextToHtml(step.description)}></div>}</div>
-                {step.imageUrl && <div class="sol-step-image"><img src={step.imageUrl} alt={step.title} width="200" height="160" loading="lazy" /></div>}
+                {step.imageUrl && <div class="sol-step-image"><img src={step.imageUrl} alt={step.title} width="200" height="160" /></div>}
               </div>
             ))}
           </div>
