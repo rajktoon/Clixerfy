@@ -18,21 +18,15 @@ import type {
   StrapiAboutPageRaw,
 } from "./types";
 
-
 async function loadSnapshot(name: string) {
   try {
-    const file = await fs.readFile(
-      `./content-snapshot/${name}.json`,
-      "utf8"
-    );
+    const file = await fs.readFile(`./content-snapshot/${name}.json`, "utf8");
 
     return JSON.parse(file);
   } catch {
     return null;
   }
 }
-
-
 
 // ── Helpers ──
 
@@ -52,7 +46,10 @@ function getStrapiUrl(): string {
 }
 
 /** Fetch a Strapi Single Type (returns data.attributes) with snapshot fallback */
-async function fetchSingle<T>(endpoint: string, deepPopulate = false): Promise<T> {
+async function fetchSingle<T>(
+  endpoint: string,
+  deepPopulate = false,
+): Promise<T> {
   // Skip Strapi entirely in CI/deployment
   if (shouldUseSnapshots()) {
     const snapshot = await loadSnapshot(endpoint);
@@ -64,20 +61,24 @@ async function fetchSingle<T>(endpoint: string, deepPopulate = false): Promise<T
   if (deepPopulate) {
     // Deep populate for nested components
     const params = new URLSearchParams();
-    params.set('populate[Mission][populate]', '*');
-    params.set('populate[Values][populate]', '*');
-    params.set('populate[Story][populate]', '*');
-    params.set('populate[CTA][populate]', '*');
-    params.set('populate[Hero][populate]', '*');
+    params.set("populate[Mission][populate]", "*");
+    params.set("populate[Values][populate]", "*");
+    params.set("populate[Story][populate]", "*");
+    params.set("populate[CTA][populate]", "*");
+    params.set("populate[Hero][populate]", "*");
     url = `${getStrapiUrl()}/api/${endpoint}?${params.toString()}`;
   }
   try {
-    const res = await fetch(url, { headers: { "Content-Type": "application/json" } });
+    const res = await fetch(url, {
+      headers: { "Content-Type": "application/json" },
+    });
     if (!res.ok) throw new Error(`Strapi fetch failed: ${url} (${res.status})`);
     const json = await res.json();
     return json.data?.attributes ?? json.data;
   } catch (err) {
-    console.warn(`[content] Strapi unavailable for ${endpoint}, trying snapshot...`);
+    console.warn(
+      `[content] Strapi unavailable for ${endpoint}, trying snapshot...`,
+    );
     const snapshot = await loadSnapshot(endpoint);
     if (!snapshot) throw new Error(`No snapshot for ${endpoint}`);
     return snapshot.data?.attributes ?? snapshot.data;
@@ -95,12 +96,16 @@ async function fetchCollection(endpoint: string, query = ""): Promise<any[]> {
 
   const url = `${getStrapiUrl()}/api/${endpoint}?populate=*${query}`;
   try {
-    const res = await fetch(url, { headers: { "Content-Type": "application/json" } });
+    const res = await fetch(url, {
+      headers: { "Content-Type": "application/json" },
+    });
     if (!res.ok) throw new Error(`Strapi fetch failed: ${url} (${res.status})`);
     const json = await res.json();
     return Array.isArray(json.data) ? json.data : [];
   } catch (err) {
-    console.warn(`[content] Strapi unavailable for ${endpoint}, trying snapshot...`);
+    console.warn(
+      `[content] Strapi unavailable for ${endpoint}, trying snapshot...`,
+    );
     const snapshot = await loadSnapshot(endpoint);
     if (!snapshot) return [];
     return Array.isArray(snapshot.data) ? snapshot.data : [];
@@ -235,31 +240,49 @@ export async function getNavigation(): Promise<NavigationData> {
   if (shouldUseSnapshots()) {
     const snapshot = await loadSnapshot("navigation");
     if (snapshot) {
-      const raw: StrapiNavigationRaw = snapshot.data?.attributes ?? snapshot.data;
+      const raw: StrapiNavigationRaw =
+        snapshot.data?.attributes ?? snapshot.data;
       return mapNavigation(raw);
     }
     console.warn("[content] navigation snapshot not found, using defaults.");
-    return { logoText: "Clixerfy", logoImageUrl: "", links: [], ctaLabel: "Contact", ctaHref: "#contact" };
+    return {
+      logoText: "Clixerfy",
+      logoImageUrl: "",
+      links: [],
+      ctaLabel: "Contact",
+      ctaHref: "#contact",
+    };
   }
 
   try {
     const params = new URLSearchParams();
-    params.set('populate[links][populate]', '*');
+    params.set("populate[links][populate]", "*");
     const url = `${getStrapiUrl()}/api/navigation?${params.toString()}`;
-    const res = await fetch(url, { headers: { "Content-Type": "application/json" } });
+    const res = await fetch(url, {
+      headers: { "Content-Type": "application/json" },
+    });
     if (!res.ok) throw new Error(`Strapi fetch failed: ${url} (${res.status})`);
     const json = await res.json();
     const raw: StrapiNavigationRaw = json.data?.attributes ?? json.data;
     return mapNavigation(raw);
   } catch (err) {
-    console.warn("[content] Strapi unavailable for navigation, trying snapshot...");
+    console.warn(
+      "[content] Strapi unavailable for navigation, trying snapshot...",
+    );
     const snapshot = await loadSnapshot("navigation");
     if (snapshot) {
-      const raw: StrapiNavigationRaw = snapshot.data?.attributes ?? snapshot.data;
+      const raw: StrapiNavigationRaw =
+        snapshot.data?.attributes ?? snapshot.data;
       return mapNavigation(raw);
     }
     console.warn("[content] navigation snapshot not found, using defaults.");
-    return { logoText: "Clixerfy", logoImageUrl: "", links: [], ctaLabel: "Contact", ctaHref: "#contact" };
+    return {
+      logoText: "Clixerfy",
+      logoImageUrl: "",
+      links: [],
+      ctaLabel: "Contact",
+      ctaHref: "#contact",
+    };
   }
 }
 
@@ -272,15 +295,28 @@ export async function getFooter(): Promise<FooterData> {
       return mapFooter(raw);
     }
     console.warn("[content] footer snapshot not found, using defaults.");
-    return { tagline: "", socials: [], linkGroups: [], newsletter: { title: "", description: "", placeholder: "", buttonLabel: "Subscribe" }, copyright: "" };
+    return {
+      tagline: "",
+      socials: [],
+      linkGroups: [],
+      newsletter: {
+        title: "",
+        description: "",
+        placeholder: "",
+        buttonLabel: "Subscribe",
+      },
+      copyright: "",
+    };
   }
 
   try {
     const params = new URLSearchParams();
-    params.set('populate[linkGroups][populate]', '*');
-    params.set('populate[socials][populate]', '*');
+    params.set("populate[linkGroups][populate]", "*");
+    params.set("populate[socials][populate]", "*");
     const url = `${getStrapiUrl()}/api/footer?${params.toString()}`;
-    const res = await fetch(url, { headers: { "Content-Type": "application/json" } });
+    const res = await fetch(url, {
+      headers: { "Content-Type": "application/json" },
+    });
     if (!res.ok) throw new Error(`Strapi fetch failed: ${url} (${res.status})`);
     const json = await res.json();
     const raw: StrapiFooterRaw = json.data?.attributes ?? json.data;
@@ -293,7 +329,18 @@ export async function getFooter(): Promise<FooterData> {
       return mapFooter(raw);
     }
     console.warn("[content] footer snapshot not found, using defaults.");
-    return { tagline: "", socials: [], linkGroups: [], newsletter: { title: "", description: "", placeholder: "", buttonLabel: "Subscribe" }, copyright: "" };
+    return {
+      tagline: "",
+      socials: [],
+      linkGroups: [],
+      newsletter: {
+        title: "",
+        description: "",
+        placeholder: "",
+        buttonLabel: "Subscribe",
+      },
+      copyright: "",
+    };
   }
 }
 
@@ -302,10 +349,23 @@ export async function getSeoDefaults(): Promise<SeoDefaultsData> {
     const raw = await fetchSingle<StrapiSeoDefaultsRaw>("seo-default");
     return mapSeoDefaults(raw);
   } catch (err) {
-    console.warn("[content] seo-defaults not available in Strapi, using defaults.");
+    console.warn(
+      "[content] seo-defaults not available in Strapi, using defaults.",
+    );
     return {
-      title: "Clixerfy", description: "", canonical: "", ogImage: "",
-      structuredData: { name: "Clixerfy", applicationCategory: "Security", price: "0", priceCurrency: "CAD", offerDescription: "", ratingValue: "5", reviewCount: "0" },
+      title: "Clixerfy",
+      description: "",
+      canonical: "",
+      ogImage: "",
+      structuredData: {
+        name: "Clixerfy",
+        applicationCategory: "Security",
+        price: "0",
+        priceCurrency: "CAD",
+        offerDescription: "",
+        ratingValue: "5",
+        reviewCount: "0",
+      },
     };
   }
 }
@@ -317,7 +377,15 @@ export async function getHomepage(): Promise<HomepageData> {
   } catch (err) {
     console.warn("[content] homepage not available in Strapi, using defaults.");
     return {
-      hero: { badge: "", titleText: "", titleHighlight: "", subtitle: "", ctaLabel: "", ctaHref: "#", trustBadges: [] },
+      hero: {
+        badge: "",
+        titleText: "",
+        titleHighlight: "",
+        subtitle: "",
+        ctaLabel: "",
+        ctaHref: "#",
+        trustBadges: [],
+      },
       features: { sectionTitle: "", items: [] },
       trust: { sectionTitle: "", body: "", stats: [] },
       products: { sectionTitle: "", items: [] },
@@ -344,17 +412,30 @@ function mapAboutPage(raw: StrapiAboutPageRaw): AboutPageData {
     mission: {
       sectionTitle: raw.Mission?.sectionTitle ?? "",
       body: richTextToHtml(raw.Mission?.body),
-      stats: (raw.Mission?.stats ?? []).map(s => ({ value: s.value, label: s.label })),
+      stats: (raw.Mission?.stats ?? []).map((s) => ({
+        value: s.value,
+        label: s.label,
+      })),
     },
     values: {
       sectionTitle: valuesEntry?.sectionTitle ?? "",
       sectionSubtitle: valuesEntry?.sectionSubtitle ?? "",
-      items: (valuesEntry?.items ?? []).map(i => ({ title: i.title, desc: i.description ?? i.desc ?? "", iconUrl: i.iconUrl ?? "" })),
+      items: (valuesEntry?.items ?? []).map((i) => ({
+        title: i.title,
+        desc: i.description ?? i.desc ?? "",
+        iconUrl: i.iconUrl ?? "",
+      })),
     },
     story: {
       sectionTitle: raw.Story?.sectionTitle ?? "",
       body: richTextToHtml(raw.Story?.body),
-      highlights: (raw.Story?.timeline ?? raw.Story?.highlights ?? []).map(h => ({ year: h.year, title: h.title, desc: h.desc ?? h.description ?? "" })),
+      highlights: (raw.Story?.timeline ?? raw.Story?.highlights ?? []).map(
+        (h) => ({
+          year: h.year,
+          title: h.title,
+          desc: h.desc ?? h.description ?? "",
+        }),
+      ),
     },
     cta: {
       title: raw.CTA?.title ?? "",
@@ -370,9 +451,17 @@ export async function getAboutPage(): Promise<AboutPageData> {
     const raw = await fetchSingle<StrapiAboutPageRaw>("about-page", true); // deep populate
     return mapAboutPage(raw);
   } catch (err) {
-    console.warn("[content] about-page not available in Strapi, using defaults.");
+    console.warn(
+      "[content] about-page not available in Strapi, using defaults.",
+    );
     return {
-      hero: { badge: "", titleText: "", titleHighlight: "", subtitle: "", illustrationUrl: "/About Us.svg" },
+      hero: {
+        badge: "",
+        titleText: "",
+        titleHighlight: "",
+        subtitle: "",
+        illustrationUrl: "/About Us.svg",
+      },
       mission: { sectionTitle: "", body: "", stats: [] },
       values: { sectionTitle: "", sectionSubtitle: "", items: [] },
       story: { sectionTitle: "", body: "", highlights: [] },
@@ -381,11 +470,20 @@ export async function getAboutPage(): Promise<AboutPageData> {
   }
 }
 
-
 /** Fetch global settings (themeColor, siteName, brandColor, accentColor) from Strapi */
-export async function getGlobalSettings(): Promise<{ siteName: string; themeColor: string; brandColor: string; accentColor: string }> {
+export async function getGlobalSettings(): Promise<{
+  siteName: string;
+  themeColor: string;
+  brandColor: string;
+  accentColor: string;
+}> {
   try {
-    const raw = await fetchSingle<{ siteName: string; themeColor: string; brandColor: string; accentColor: string }>("global-settings");
+    const raw = await fetchSingle<{
+      siteName: string;
+      themeColor: string;
+      brandColor: string;
+      accentColor: string;
+    }>("global-settings");
     return {
       siteName: raw.siteName ?? "Clixerfy",
       themeColor: raw.themeColor ?? "#0a0a0a",
@@ -393,14 +491,22 @@ export async function getGlobalSettings(): Promise<{ siteName: string; themeColo
       accentColor: raw.accentColor ?? "#0a0a0a",
     };
   } catch {
-    return { siteName: "Clixerfy", themeColor: "#0a0a0a", brandColor: "#e63030", accentColor: "#0a0a0a" };
+    return {
+      siteName: "Clixerfy",
+      themeColor: "#0a0a0a",
+      brandColor: "#e63030",
+      accentColor: "#0a0a0a",
+    };
   }
 }
 
 // ── SEO Page loaders ──
 
 export async function getSeoPage(slug: string): Promise<SeoPageData> {
-  const entries = await fetchCollection("seo-pages", `&filters[Slug][$eq]=${slug}`);
+  const entries = await fetchCollection(
+    "seo-pages",
+    `&filters[Slug][$eq]=${slug}`,
+  );
   if (!entries.length) {
     throw new Error(`[content] No SEO page found for slug "${slug}"`);
   }
@@ -523,8 +629,13 @@ export async function getSolutionPage(slug: string): Promise<SolutionPageData> {
     const snapshot = await loadSnapshot("solutions");
     if (!snapshot) throw new Error(`No snapshot for solutions`);
     const entries = Array.isArray(snapshot.data) ? snapshot.data : [];
-    const match = entries.find((e: any) => (e.attributes?.slug ?? e.slug) === slug);
-    if (!match) throw new Error(`[content] No solution found for slug "${slug}" in snapshot`);
+    const match = entries.find(
+      (e: any) => (e.attributes?.slug ?? e.slug) === slug,
+    );
+    if (!match)
+      throw new Error(
+        `[content] No solution found for slug "${slug}" in snapshot`,
+      );
     const raw = match.attributes ?? match;
     return mapSolutionPage(match.id, raw, slug);
   }
@@ -532,30 +643,44 @@ export async function getSolutionPage(slug: string): Promise<SolutionPageData> {
   try {
     // Deep populate all nested component fields
     const params = new URLSearchParams();
-    params.set('populate[herosection][populate]', '*');
-    params.set('populate[Content][populate]', '*');
-    params.set('populate[feature][populate]', '*');
-    params.set('populate[process][populate]', '*');
-    params.set('populate[protections][populate]', '*');
-    params.set('populate[benefits][populate]', '*');
-    params.set('populate[stats][populate]', '*');
-    params.set('populate[faqs][populate]', '*');
-    params.set('populate[cta][populate]', '*');
+    params.set("populate[herosection][populate]", "*");
+    params.set("populate[Content][populate]", "*");
+    params.set("populate[feature][populate]", "*");
+    params.set("populate[process][populate]", "*");
+    params.set("populate[protections][populate]", "*");
+    params.set("populate[benefits][populate]", "*");
+    params.set("populate[stats][populate]", "*");
+    params.set("populate[faqs][populate]", "*");
+    params.set("populate[cta][populate]", "*");
     const url = `${getStrapiUrl()}/api/solutions?filters[slug][$eq]=${slug}&${params.toString()}`;
-    const res = await fetch(url, { headers: { "Content-Type": "application/json" } });
+    const res = await fetch(url, {
+      headers: { "Content-Type": "application/json" },
+    });
     if (!res.ok) throw new Error(`Strapi fetch failed: ${url} (${res.status})`);
     const json = await res.json();
-    const entries = Array.isArray(json.data) ? json.data : json.data ? [json.data] : [];
-    if (!entries.length) throw new Error(`[content] No solution found for slug "${slug}"`);
+    const entries = Array.isArray(json.data)
+      ? json.data
+      : json.data
+        ? [json.data]
+        : [];
+    if (!entries.length)
+      throw new Error(`[content] No solution found for slug "${slug}"`);
     const raw = entries[0].attributes ?? entries[0];
     return mapSolutionPage(entries[0].id, raw, slug);
   } catch (err) {
-    console.warn(`[content] Strapi unavailable for solutions, trying snapshot...`);
+    console.warn(
+      `[content] Strapi unavailable for solutions, trying snapshot...`,
+    );
     const snapshot = await loadSnapshot("solutions");
     if (!snapshot) throw new Error(`No snapshot for solutions`);
     const entries = Array.isArray(snapshot.data) ? snapshot.data : [];
-    const match = entries.find((e: any) => (e.attributes?.slug ?? e.slug) === slug);
-    if (!match) throw new Error(`[content] No solution found for slug "${slug}" in snapshot`);
+    const match = entries.find(
+      (e: any) => (e.attributes?.slug ?? e.slug) === slug,
+    );
+    if (!match)
+      throw new Error(
+        `[content] No solution found for slug "${slug}" in snapshot`,
+      );
     const raw = match.attributes ?? match;
     return mapSolutionPage(match.id, raw, slug);
   }
@@ -581,5 +706,6 @@ function mapSolutionPage(id: number, raw: any, slug: string): SolutionPageData {
 }
 
 export async function getSolutionSlugs(): Promise<string[]> {
-  const entries = await fetchCollection("solutions", "&fields[0]=slug");  return entries.map((e: any) => e.attributes?.slug ?? e.slug).filter(Boolean);
+  const entries = await fetchCollection("solutions", "&fields[0]=slug");
+  return entries.map((e: any) => e.attributes?.slug ?? e.slug).filter(Boolean);
 }

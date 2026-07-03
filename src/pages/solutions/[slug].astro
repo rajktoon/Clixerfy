@@ -207,9 +207,9 @@ const ctaBlock = solution.cta?.[0] ?? null;
   .sol-content-image { border-radius: 14px; overflow: hidden; border: 1px solid var(--border); } .sol-content-image img { width: 100%; height: auto; display: block; }
   @media (max-width: 768px) { .sol-content-inner { grid-template-columns: 1fr; gap: 2.5rem; } }
   .sol-features-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.2rem; margin-top: 2.75rem; }
-  .sol-feature-card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 2rem; display: flex; flex-direction: column; gap: .7rem; transition: border-color .18s, transform .18s; }
-  .sol-feature-card:hover { border-color: rgba(230,48,48,.3); transform: translateY(-2px); }
-  .sol-feature-icon { width: 48px; height: 48px; border-radius: 12px; background: rgba(230,48,48,.08); border: 1px solid rgba(230,48,48,.16); display: flex; align-items: center; justify-content: center; } .sol-feature-icon img { width: 26px; height: 26px; }
+  .sol-feature-card { background: var(--card); border: 1px solid white; border-radius: 14px; padding: 2rem; display: flex; flex-direction: column; gap: .7rem; transition: border-color .18s, transform .18s; }
+  .sol-feature-card:hover { border-color: rgba(255, 255, 255, 0.3); transform: translateY(-2px); }
+  .sol-feature-icon { width: 48px; height: 48px; border-radius: 12px; background: rgba(230,48,48,.08); border: 1px solid ; display: flex; align-items: center; justify-content: center; } .sol-feature-icon img { width: 26px; height: 26px; }
   .sol-feature-title { font-family: var(--font-head); font-size: 1rem; font-weight: 700; }
   .sol-feature-desc { font-size: .88rem; color: var(--muted); line-height: 1.75; } .sol-feature-desc strong { color: #fff; }
   @media (max-width: 768px) { .sol-features-grid { grid-template-columns: 1fr; } }

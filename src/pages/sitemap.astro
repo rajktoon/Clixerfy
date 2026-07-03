@@ -1,0 +1,149 @@
+---
+import Base from '../layouts/Base.astro';
+import { getSolutionSlugs } from '../lib/content';
+import { getSeoPageSlugs } from '../lib/content';
+
+const solutionSlugs = await getSolutionSlugs().catch(() => []);
+const seoSlugs = await getSeoPageSlugs().catch(() => []);
+
+const siteUrl = 'https://clixerfy.com';
+
+const staticPages = [
+  { url: '/', label: 'Home', description: 'Clixerfy - Advanced Ad Fraud Protection' },
+  { url: '/about/', label: 'About Us', description: 'Learn about Clixerfy\'s mission and values' },
+];
+
+const solutionPages = solutionSlugs.map(slug => ({
+  url: `/solutions/${slug}/`,
+  label: slug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' '),
+  description: 'Product solution page',
+}));
+
+const seoPages = seoSlugs.map(slug => ({
+  url: `/${slug}/`,
+  label: slug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' '),
+  description: 'Service location page',
+}));
+---
+
+<Base title="Sitemap - Clixerfy" description="Site map for Clixerfy.com">
+  <main class="sitemap-page">
+    <div class="container">
+      <h1 class="sitemap-title">Sitemap</h1>
+      <p class="sitemap-subtitle">A complete overview of all pages on Clixerfy.com</p>
+
+      <section class="sitemap-section">
+        <h2 class="sitemap-heading">Main Pages</h2>
+        <ul class="sitemap-list">
+          {staticPages.map(page => (
+            <li class="sitemap-item">
+              <a href={page.url} class="sitemap-link">{page.label}</a>
+              <span class="sitemap-desc">{page.description}</span>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      {solutionPages.length > 0 && (
+        <section class="sitemap-section">
+          <h2 class="sitemap-heading">Products &amp; Solutions</h2>
+          <ul class="sitemap-list">
+            {solutionPages.map(page => (
+              <li class="sitemap-item">
+                <a href={page.url} class="sitemap-link">{page.label}</a>
+                <span class="sitemap-desc">{page.description}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
+      {seoPages.length > 0 && (
+        <section class="sitemap-section">
+          <h2 class="sitemap-heading">Service Locations</h2>
+          <ul class="sitemap-list">
+            {seoPages.map(page => (
+              <li class="sitemap-item">
+                <a href={page.url} class="sitemap-link">{page.label}</a>
+                <span class="sitemap-desc">{page.description}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
+      <!-- <section class="sitemap-section">
+        <h2 class="sitemap-heading">XML Sitemap</h2>
+        <p class="sitemap-info">
+          For search engines, our XML sitemap is available at{' '}
+          <a href="/sitemap-index.xml" class="sitemap-link">sitemap-index.xml</a>
+        </p>
+      </section> -->
+    </div>
+  </main>
+</Base>
+
+<style>
+  .sitemap-page {
+    padding: 4rem 0 5rem;
+    min-height: 60vh;
+  }
+  .sitemap-title {
+    font-family: var(--font-head);
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+  }
+  .sitemap-subtitle {
+    color: var(--muted);
+    font-size: 1rem;
+    margin-bottom: 3rem;
+  }
+  .sitemap-section {
+    margin-bottom: 2.5rem;
+  }
+  .sitemap-heading {
+    font-family: var(--font-head);
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .sitemap-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+  .sitemap-item {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+  .sitemap-link {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text);
+    transition: color 0.15s;
+  }
+  .sitemap-link:hover {
+    color: var(--brand-color);
+  }
+  .sitemap-desc {
+    font-size: 0.82rem;
+    color: var(--muted);
+  }
+  .sitemap-info {
+    font-size: 0.9rem;
+    color: var(--muted);
+  }
+  .sitemap-info a {
+    color: var(--brand-color);
+    font-weight: 600;
+  }
+  .sitemap-info a:hover {
+    text-decoration: underline;
+  }
+</style>

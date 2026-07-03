@@ -48,6 +48,7 @@ const { nav, footer } = Astro.props;
   <div class="footer-bottom">
     <div class="container">
       <p>{footer.copyright}</p>
+      <a href="/sitemap" class="footer-sitemap-link">Sitemap</a>
     </div>
   </div>
 </footer>
@@ -92,7 +93,10 @@ const { nav, footer } = Astro.props;
   .newsletter-form input::placeholder { color: var(--muted); }
   .newsletter-btn { width: 100%; justify-content: center; }
   .footer-bottom { border-top: 1px solid var(--border); padding-block: 1.1rem; }
+  .footer-bottom .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; }
   .footer-bottom p { font-size: .78rem; color: var(--muted); text-align: center; }
+  .footer-sitemap-link { font-size: .78rem; color: var(--muted); transition: color .15s; }
+  .footer-sitemap-link:hover { color: var(--brand-color); }
 
   @media (max-width: 1024px) {
     .footer-inner { grid-template-columns: 1fr 1fr 1fr; }

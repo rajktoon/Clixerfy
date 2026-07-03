@@ -1,6 +1,7 @@
 ---
 import type { NavigationData } from "../../lib/types";
 import {getNavigation} from "../../lib/content";
+import logo from "../../assets/logo.png";
 
 
 const nav = await getNavigation();
@@ -13,25 +14,25 @@ const currentPath = Astro.url.pathname;
     <a href="/" class="logo" aria-label={`${nav.logoText} home`}>
       {
         nav.logoImageUrl ? (
-          <img
-            src={nav.logoImageUrl}
-            alt={`${nav.logoText} logo`}
-            width="120"
-            height="32"
-            loading="eager"
-            decoding="async"
-            fetchpriority="high"
-          />
+  <img
+    src="/logo.png"
+    alt={`${nav.logoText} logo`}
+    width="200"
+    height="60"
+    loading="eager"
+    decoding="async"
+    fetchpriority="high"
+  />
         ) : (
-          <img
-            src="/image-removebg-preview.png"
-            alt={`${nav.logoText} logo`}
-            width="120"
-            height="32"
-            loading="eager"
-            decoding="async"
-            fetchpriority="high"
-          />
+ <img
+    src="/logo.png"
+    alt={`${nav.logoText} logo`}
+    width="200"
+    height="60"
+    loading="eager"
+    decoding="async"
+    fetchpriority="high"
+  />
         )
       }
     </a>
@@ -116,6 +117,12 @@ const currentPath = Astro.url.pathname;
     top: 0;
     z-index: 100;
     padding: 12px 0;
+    transition: background 0.3s, box-shadow 0.3s;
+  }
+  .nav-wrap.scrolled {
+    background: rgba(10, 10, 10, 0.95);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
   }
   .nav {
     display: flex;
@@ -133,7 +140,7 @@ const currentPath = Astro.url.pathname;
   }
   .logo img {
     display: block;
-    height: 28px;
+    height: 50px;
     width: auto;
   }
 
@@ -392,6 +399,17 @@ const currentPath = Astro.url.pathname;
 </style>
 
 <script is:inline>
+  // Scroll background effect
+  (function(){
+    var nav = document.querySelector('.nav-wrap');
+    if (!nav) return;
+    function onScroll(){
+      nav.classList.toggle('scrolled', window.scrollY > 10);
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  })();
+
   document.querySelectorAll(".submenu-toggle").forEach(btn => {
     btn.addEventListener("click", () => {
       const dropdown = btn.parentElement?.nextElementSibling;

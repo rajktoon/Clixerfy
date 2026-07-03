@@ -35,7 +35,8 @@ interface RtLinkNode {
 type RtInlineNode = RtTextNode | RtLinkNode;
 
 interface RtBlock {
-  type: "paragraph" | "heading" | "list" | "list-item" | "quote" | "code" | "image";
+  type:
+    "paragraph" | "heading" | "list" | "list-item" | "quote" | "code" | "image";
   level?: number;
   format?: "ordered" | "unordered";
   children: RtInlineNode[];
@@ -102,9 +103,10 @@ export function richTextToHtml(doc: unknown): string {
             return `<blockquote>${inner}</blockquote>`;
           }
           case "code": {
-            const inner = block.children
-              ?.map((n) => (n.type === "text" ? n.text : "") ?? "")
-              .join("") ?? "";
+            const inner =
+              block.children
+                ?.map((n) => (n.type === "text" ? n.text : "") ?? "")
+                .join("") ?? "";
             return `<pre><code>${inner}</code></pre>`;
           }
           case "image": {

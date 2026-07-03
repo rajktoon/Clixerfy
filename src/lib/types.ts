@@ -25,7 +25,12 @@ export interface StrapiMediaItem {
 export interface StrapiNavigationRaw {
   logoText: string;
   logoImageUrl: string;
-  links: Array<{ label: string; href: string; active: boolean; submenu?: Array<{ label: string; href: string }> }>;
+  links: Array<{
+    label: string;
+    href: string;
+    active: boolean;
+    submenu?: Array<{ label: string; href: string }>;
+  }>;
   ctaLabel: string;
   ctaHref: string;
 }
@@ -70,7 +75,12 @@ export interface StrapiHomepageRaw {
   };
   features: {
     sectionTitle: string;
-    items: Array<{ title: string; desc: string; iconUrl: string; large: boolean }>;
+    items: Array<{
+      title: string;
+      desc: string;
+      iconUrl: string;
+      large: boolean;
+    }>;
   };
   trust: {
     sectionTitle: string;
@@ -79,12 +89,22 @@ export interface StrapiHomepageRaw {
   };
   products: {
     sectionTitle: string;
-    items: Array<{ title: string; desc: string; iconUrl: string; linkText: string }>;
+    items: Array<{
+      title: string;
+      desc: string;
+      iconUrl: string;
+      linkText: string;
+    }>;
   };
   threatCards: {
     sectionTitle: string;
     sectionSubtitle: string;
-    items: Array<{ title: string; desc: string; color: string; linkText: string }>;
+    items: Array<{
+      title: string;
+      desc: string;
+      color: string;
+      linkText: string;
+    }>;
   };
   cta: {
     title: string;
@@ -110,7 +130,12 @@ export interface StrapiSeoPageRaw {
   FeaturedImage: StrapiAttr<StrapiMediaItem>[];
   Faq: Array<{ question: string; answer: StrapiRichTextBlock[] }>;
   Services: Array<{ title: string; description: string; iconUrl: string }>;
-  Testimonials: Array<{ name: string; role: string; stars: number; text: string }>;
+  Testimonials: Array<{
+    name: string;
+    role: string;
+    stars: number;
+    text: string;
+  }>;
   Stats: Array<{ value: string; label: string; iconUrl: string }>;
 }
 
@@ -198,7 +223,12 @@ export interface HomepageData {
   };
   features: {
     sectionTitle: string;
-    items: Array<{ title: string; desc: string; iconUrl: string; large: boolean }>;
+    items: Array<{
+      title: string;
+      desc: string;
+      iconUrl: string;
+      large: boolean;
+    }>;
   };
   trust: {
     sectionTitle: string;
@@ -207,12 +237,22 @@ export interface HomepageData {
   };
   products: {
     sectionTitle: string;
-    items: Array<{ title: string; desc: string; iconUrl: string; linkText: string }>;
+    items: Array<{
+      title: string;
+      desc: string;
+      iconUrl: string;
+      linkText: string;
+    }>;
   };
   threatCards: {
     sectionTitle: string;
     sectionSubtitle: string;
-    items: Array<{ title: string; desc: string; color: string; linkText: string }>;
+    items: Array<{
+      title: string;
+      desc: string;
+      color: string;
+      linkText: string;
+    }>;
   };
   cta: {
     title: string;
@@ -239,7 +279,12 @@ export interface SeoPageData {
   featuredImageUrl: string;
   faq: Array<{ question: string; answer: StrapiRichTextBlock[] }>;
   services: Array<{ title: string; description: string; iconUrl: string }>;
-  testimonials: Array<{ name: string; role: string; stars: number; text: string }>;
+  testimonials: Array<{
+    name: string;
+    role: string;
+    stars: number;
+    text: string;
+  }>;
   stats: Array<{ value: string; label: string; iconUrl: string }>;
 }
 
@@ -261,13 +306,28 @@ export interface StrapiAboutPageRaw {
   Values: Array<{
     sectionTitle: string;
     sectionSubtitle: string;
-    items?: Array<{ title: string; description?: string; desc?: string; iconUrl?: string | null }>;
+    items?: Array<{
+      title: string;
+      description?: string;
+      desc?: string;
+      iconUrl?: string | null;
+    }>;
   }>;
   Story: {
     sectionTitle: string;
     body: any; // rich text array or string
-    timeline?: Array<{ year: string; title: string; desc?: string; description?: string }>;
-    highlights?: Array<{ year: string; title: string; desc?: string; description?: string }>;
+    timeline?: Array<{
+      year: string;
+      title: string;
+      desc?: string;
+      description?: string;
+    }>;
+    highlights?: Array<{
+      year: string;
+      title: string;
+      desc?: string;
+      description?: string;
+    }>;
   };
   CTA: {
     title: string;
@@ -311,7 +371,7 @@ export interface AboutPageData {
 // ── Solution Page (Dynamic Zone) ──
 
 export interface SolutionHeroSection {
-  __component: 'sections.hero';
+  __component: "sections.hero";
   badge: string;
   title: string;
   subtitle: string;
@@ -321,7 +381,7 @@ export interface SolutionHeroSection {
 }
 
 export interface SolutionContentSection {
-  __component: 'sections.content';
+  __component: "sections.content";
   title: string;
   body: string;
   imageUrl: string;
@@ -335,7 +395,7 @@ export interface SolutionFeatureItem {
 }
 
 export interface SolutionFeatureGridSection {
-  __component: 'sections.feature-grid';
+  __component: "sections.feature-grid";
   sectionTitle: string;
   sectionSubtitle: string;
   items: SolutionFeatureItem[];
@@ -348,7 +408,7 @@ export interface SolutionProcessStep {
 }
 
 export interface SolutionProcessSection {
-  __component: 'sections.process';
+  __component: "sections.process";
   title: string;
   steps: SolutionProcessStep[];
 }
@@ -360,7 +420,7 @@ export interface SolutionProtectionLevel {
 }
 
 export interface SolutionProtectionLevelsSection {
-  __component: 'sections.protection-levels';
+  __component: "sections.protection-levels";
   title: string;
   items: SolutionProtectionLevel[];
 }
@@ -372,7 +432,7 @@ export interface SolutionBenefitItem {
 }
 
 export interface SolutionBenefitsSection {
-  __component: 'sections.benefits';
+  __component: "sections.benefits";
   title: string;
   items: SolutionBenefitItem[];
 }
@@ -384,7 +444,7 @@ export interface SolutionStat {
 }
 
 export interface SolutionStatsSection {
-  __component: 'sections.stats';
+  __component: "sections.stats";
   items: SolutionStat[];
 }
 
@@ -394,13 +454,13 @@ export interface SolutionFaqItem {
 }
 
 export interface SolutionFaqSection {
-  __component: 'sections.faq';
+  __component: "sections.faq";
   title: string;
   items: SolutionFaqItem[];
 }
 
 export interface SolutionCtaSection {
-  __component: 'sections.cta';
+  __component: "sections.cta";
   title: string;
   subtitle: string;
   buttonLabel: string;
