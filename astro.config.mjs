@@ -1,17 +1,17 @@
-import { defineConfig } from 'astro/config';
-import sitemap from '@astrojs/sitemap';
+import { defineConfig } from "astro/config";
+import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
   integrations: [sitemap()],
-  site: 'https://clixerfy.com',
+  site: "https://clixerfy.com",
   compressHTML: true,
   build: {
-    inlineStylesheets: 'always',
+    inlineStylesheets: "always",
   },
   vite: {
     build: {
       cssMinify: true,
-      minify: 'esbuild',
+      minify: "esbuild",
     },
   },
 });

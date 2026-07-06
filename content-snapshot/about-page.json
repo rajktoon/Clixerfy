@@ -14,11 +14,11 @@
     },
     "Hero": {
       "id": 2,
-      "badge": "About Clixerfy",
       "titleText": "Building Secure",
-      "titleHighlight": "Digital Futures",
       "subtitle": "Clixerfy helps organizations strengthen cybersecurity, accelerate digital transformation, and confidently embrace modern technology solutions.",
-      "illustrationUrl": null
+      "richtext": null,
+      "bgimage": null,
+      "featuredimage": null
     },
     "Mission": {
       "id": 2,

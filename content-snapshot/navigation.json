@@ -1,61 +1,61 @@
 {
   "data": {
-    "id": 9,
+    "id": 10,
     "documentId": "o4z4m4czj91hdvvb36w4usmj",
     "logoText": "Clixerfy",
     "logoImageUrl": "/image-removebg-preview.png",
     "ctaLabel": "Get Started",
     "ctaHref": "#contact",
     "createdAt": "2026-06-29T19:02:01.198Z",
-    "updatedAt": "2026-07-01T12:40:55.187Z",
-    "publishedAt": "2026-07-01T12:40:55.194Z",
+    "updatedAt": "2026-07-06T12:13:26.514Z",
+    "publishedAt": "2026-07-06T12:13:26.527Z",
     "links": [
       {
-        "id": 45,
+        "id": 50,
         "label": "Home",
         "href": "/",
         "active": true,
         "children": []
       },
       {
-        "id": 46,
+        "id": 51,
         "label": "About",
         "href": "/about",
         "active": false,
         "children": []
       },
       {
-        "id": 47,
+        "id": 52,
         "label": "Why Us",
         "href": "/#why",
         "active": false,
         "children": []
       },
       {
-        "id": 49,
+        "id": 54,
         "label": "Products",
         "href": "#",
         "active": false,
         "children": [
           {
-            "id": 56,
+            "id": 59,
             "label": "Ad-Fraud Blocker",
-            "href": "/solutions/ad-fraud-blocker"
+            "href": "/solution/ad-fraud-blocker"
           },
           {
-            "id": 57,
+            "id": 60,
             "label": "WAF Tester",
-            "href": "/waf-tester"
+            "href": "/solution/waf-tester"
           },
           {
-            "id": 58,
+            "id": 61,
             "label": "Vulnerability Scanner",
-            "href": "vulnerability-scanner"
+            "href": "/solution/vulnerability-scanner"
           }
         ]
       },
       {
-        "id": 48,
+        "id": 53,
         "label": "Contact",
         "href": "/#contact",
         "active": false,

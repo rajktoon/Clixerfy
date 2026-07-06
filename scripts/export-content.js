@@ -3,7 +3,9 @@ import fs from "fs/promises";
 const STRAPI = process.env.STRAPI_URL || "http://localhost:1337";
 
 async function save(endpoint, file, queryParams = "") {
-  const url = `${STRAPI}/api/${endpoint}${queryParams ? `?${queryParams}` : ""}`;
+  // URL encode brackets to avoid globbing issues
+  const encodedParams = queryParams.replace(/\[/g, '%5B').replace(/\]/g, '%5D');
+  const url = `${STRAPI}/api/${endpoint}${encodedParams ? `?${encodedParams}` : ""}`;
   console.log("→", endpoint);
 
   const res = await fetch(url);
@@ -17,7 +19,7 @@ async function save(endpoint, file, queryParams = "") {
 
   await fs.writeFile(
     `./content-snapshot/${file}.json`,
-    JSON.stringify(json, null, 2)
+    JSON.stringify(json, null, 2),
   );
 
   console.log("✓", file);
@@ -29,7 +31,11 @@ async function save(endpoint, file, queryParams = "") {
 await save("navigation", "navigation", "populate[links][populate]=*");
 
 // footer: populate[linkGroups][populate]=* & populate[socials][populate]=*
-await save("footer", "footer", "populate[linkGroups][populate]=*&populate[socials][populate]=*");
+await save(
+  "footer",
+  "footer",
+  "populate[linkGroups][populate]=*&populate[socials][populate]=*",
+);
 
 // seo-default: simple populate=*
 await save("seo-default", "seo-default", "populate=*");
@@ -58,12 +64,9 @@ await save("seo-pages", "seo-pages", "populate=*");
 // solutions: deep populate all nested component fields
 const solutionParams = [
   "populate[herosection][populate]=*",
-  "populate[Content][populate]=*",
-  "populate[feature][populate]=*",
+  "populate[features][populate]=*",
+  "populate[Richtext][populate]=*",
   "populate[process][populate]=*",
-  "populate[protections][populate]=*",
-  "populate[benefits][populate]=*",
-  "populate[stats][populate]=*",
   "populate[faqs][populate]=*",
   "populate[cta][populate]=*",
 ].join("&");

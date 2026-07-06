@@ -486,8 +486,8 @@ export interface SolutionPageData {
   metaTitle: string;
   metaDescription: string;
   herosection: any[];
-  Content: any[];
-  feature: any[];
+  features: any[];
+  Richtext: any[];
   process: any[];
   protections: any[];
   benefits: any[];
@@ -503,8 +503,8 @@ export interface StrapiSolutionRaw {
   metaTitle: string;
   metaDescription: string;
   herosection: any[];
-  Content: any[];
-  feature: any[];
+  features: any[];
+  Richtext: any[];
   process: any[];
   protections: any[];
   benefits: any[];

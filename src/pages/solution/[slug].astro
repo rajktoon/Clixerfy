@@ -15,14 +15,15 @@ const { slug } = Astro.params;
 const solution = await getSolutionPage(slug!);
 
 // Extract data from each section array
-const hero = solution.herosection?.[0] ?? null;
-const contentBlocks = solution.Content ?? [];
-const featureItems = solution.feature ?? [];
+// Find hero with featured image, or use first one
+const hero = solution.herosection?.find((h: any) => h.featuredimage) ?? solution.herosection?.[0] ?? null;
+const richtextBlocks = solution.Richtext ?? [];
+const featureBlocks = solution.features ?? [];
 const processBlocks = solution.process ?? [];
 const protectionBlocks = solution.protections ?? [];
 const benefitBlocks = solution.benefits ?? [];
 const statsBlocks = solution.stats ?? [];
-const faqItems = solution.faqs ?? [];
+const faqItems = solution.faqs?.[0]?.faq ?? [];
 const ctaBlock = solution.cta?.[0] ?? null;
 ---
 <Base title={solution.metaTitle || solution.title} description={solution.metaDescription}>
@@ -31,52 +32,69 @@ const ctaBlock = solution.cta?.[0] ?? null;
   {/* Hero Section */}
   {hero && (
     <section class="sol-hero">
-      <div class="sol-hero-bg" aria-hidden="true"><div class="sol-hero-particles" aria-hidden="true"></div></div>
+      <div class="sol-hero-bg" aria-hidden="true" style={hero.bgimage ? `background-image: url(${hero.bgimage}); background-size: cover; background-position: center;` : ''}><div class="sol-hero-particles" aria-hidden="true"></div></div>
       <div class="container sol-hero-inner">
         <div class="sol-hero-content">
-          {hero.badge && <div class="sol-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L3 7v9c0 5 4.5 9.7 9 11 4.5-1.3 9-6 9-11V7L12 2z"/></svg>{hero.badge}</div>}
-          <h1>{hero.titleText}</h1>
+          {hero.titleText && <h1>{hero.titleText}</h1>}
           {hero.subtitle && <div class="sol-hero-sub" set:html={richTextToHtml(hero.subtitle)}></div>}
+          {hero.richtext && <div class="sol-hero-richtext" set:html={richTextToHtml(hero.richtext)}></div>}
         </div>
-        {hero.illustrationUrl && <div class="sol-hero-visual"><div class="sol-hero-frame"><img src={hero.illustrationUrl} alt={hero.titleText} width="600" height="400" loading="eager" decoding="async" fetchpriority="high" srcset={getResponsiveSrcSet(hero.illustrationUrl)} sizes={getResponsiveSizes(600)} /></div></div>}
+        {hero.featuredimage && <div class="sol-hero-visual"><div class="sol-hero-frame"><img src={hero.featuredimage} alt={hero.titleText} width="600" height="400" loading="eager" decoding="async" fetchpriority="high" srcset={getResponsiveSrcSet(hero.featuredimage)} sizes={getResponsiveSizes(600)} /></div></div>}
       </div>
     </section>
   )}
 
-  {/* Content Sections */}
-  {contentBlocks.map((block: any) => (
-    <section class="section sol-content-section">
-      <div class="container sol-content-inner">
-        <div class="sol-content-copy reveal">
-          <h2>{block.title}</h2>
-          {block.body && <div set:html={richTextToHtml(block.body)}></div>}
-        </div>
-        {block.image && <div class="sol-content-image reveal"><img src={block.image} alt={block.title} width="520" height="360" srcset={getResponsiveSrcSet(block.image)} sizes={getResponsiveSizes(660)} /></div>}
+  {/* Richtext Sections */}
+  {richtextBlocks.map((block: any) => (
+    <section class="section sol-richtext-section">
+      <div class="container">
+        {block.title && <h2 class="section-title reveal">{block.title}</h2>}
+        {block.subtitle && <p class="section-sub reveal">{block.subtitle}</p>}
+        {block.bodycontent && <div class="sol-richtext-content reveal" set:html={richTextToHtml(block.bodycontent)}></div>}
+        {block.child && block.child.length > 0 && (
+          <div class="sol-richtext-grid">
+            {block.child.map((item: any, i: number) => (
+              <article class="sol-richtext-card reveal" style={`transition-delay:${i * 80}ms`}>
+                {item.icon?.iconData && (
+                  <div class="sol-richtext-icon">
+                    <svg viewBox={`0 0 ${item.icon.width || 28} ${item.icon.height || 28}`} set:html={item.icon.iconData} />
+                  </div>
+                )}
+                {item.title && <h3 class="sol-richtext-title">{item.title}</h3>}
+                {item.subtitle && <p class="sol-richtext-sub">{item.subtitle}</p>}
+                {item.body && <div class="sol-richtext-body" set:html={richTextToHtml(item.body)}></div>}
+              </article>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   ))}
 
-  {/* Features Section */}
-  {featureItems.length > 0 && (
+  {/* Features Sections */}
+  {featureBlocks.map((block: any) => (
     <section class="section sol-features-section">
       <div class="container">
-        <div class="sol-features-grid">
-          {featureItems.flatMap((item: any) => item.item ?? []).map((feat: any, i: number) => (
-            <article class="sol-feature-card reveal" style={`transition-delay:${i * 70}ms`}>
-              {feat.astroicon?.iconData && (
-                <div class="sol-feature-icon">
-                  <svg width={feat.astroicon.width || 28} height={feat.astroicon.height || 28} viewBox={`0 0 ${feat.astroicon.width || 28} ${feat.astroicon.height || 28}`} set:html={feat.astroicon.iconData} />
-                </div>
-              )}
-              {!feat.astroicon?.iconData && feat.iconUrl && <div class="sol-feature-icon"><img src={feat.iconUrl} alt="" width="28" height="28" /></div>}
-              <h3 class="sol-feature-title">{feat.title}</h3>
-              {feat.desc && <div class="sol-feature-desc">{feat.desc}</div>}
-            </article>
-          ))}
-        </div>
+        {block.sectionTitle && <h2 class="section-title reveal">{block.sectionTitle}</h2>}
+        {block.body && <div class="sol-features-body reveal" set:html={richTextToHtml(block.body)}></div>}
+        {block.items && block.items.length > 0 && (
+          <div class="sol-features-grid">
+            {block.items.map((item: any, i: number) => (
+              <article class="sol-feature-card reveal" style={`transition-delay:${i * 70}ms`}>
+                {item.icon?.iconData && (
+                  <div class="sol-feature-icon">
+                    <svg viewBox={`0 0 ${item.icon.width || 28} ${item.icon.height || 28}`} set:html={item.icon.iconData} />
+                  </div>
+                )}
+                {item.title && <h3 class="sol-feature-title">{item.title}</h3>}
+                {item.desc && <div class="sol-feature-desc">{item.desc}</div>}
+              </article>
+            ))}
+          </div>
+        )}
       </div>
     </section>
-  )}
+  ))}
 
   {/* Process Section */}
   {processBlocks.length > 0 && processBlocks.map((block: any) => (
@@ -87,7 +105,7 @@ const ctaBlock = solution.cta?.[0] ?? null;
           <div class="sol-process-steps">
             {block.steps.map((step: any, i: number) => (
               <div class="sol-process-step reveal" style={`transition-delay:${i * 100}ms`}>
-                <div class="sol-step-number">{String(i + 1).padStart(2, '0')}</div>
+                {/* <div class="sol-step-number">{String(i + 1).padStart(2, '0')}</div> */}
                 <div class="sol-step-content"><h3>{step.title}</h3>{step.description && <div set:html={richTextToHtml(step.description)}></div>}</div>
                 {step.imageUrl && <div class="sol-step-image"><img src={step.imageUrl} alt={step.title} width="200" height="160" /></div>}
               </div>
@@ -157,7 +175,7 @@ const ctaBlock = solution.cta?.[0] ?? null;
   {faqItems.length > 0 && (
     <section class="section sol-faq-section">
       <div class="container">
-        <h2 class="section-title reveal">Frequently Asked Questions</h2>
+        <h2 class="section-title reveal">{solution.faqs?.[0]?.title || 'Frequently Asked Questions'}</h2>
         <div class="sol-faq-list">
           {faqItems.map((item: any, i: number) => (
             <details class="sol-faq-item reveal" style={`transition-delay:${i * 60}ms`}>
@@ -189,7 +207,9 @@ const ctaBlock = solution.cta?.[0] ?? null;
   .section-title { font-family: var(--font-head); font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; letter-spacing: .04em; text-align: center; margin-bottom: .5rem; }
   .section-sub { text-align: center; color: var(--muted); max-width: 600px; margin-inline: auto; margin-bottom: 2.75rem; font-size: .93rem; }
   .sol-hero { position: relative; overflow: hidden; padding-block: clamp(4rem, 10vw, 7rem); }
-  .sol-hero-bg { position: absolute; inset: 0; pointer-events: none; background: radial-gradient(ellipse 60% 50% at 70% 40%, rgba(230,48,48,.14) 0%, transparent 70%), linear-gradient(180deg, #0a0a0a 0%, #0d0000 60%, #0a0a0a 100%); }
+  .sol-hero-bg { position: absolute; inset: 0; pointer-events: none; background: radial-gradient(ellipse 60% 50% at 70% 40%, rgba(230,48,48,.14) 0%, transparent 70%), linear-gradient(180deg, #0a0a0a 0%, #0d0000 60%, #0a0a0a 100%); background-blend-mode: overlay; }
+  .sol-hero-bg::before { content: ''; position: absolute; inset: 0; background: inherit; background-size: cover; background-position: center; opacity: 0.4; }
+  .sol-hero-bg::after { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 60% 50% at 70% 40%, rgba(230,48,48,.14) 0%, transparent 70%), linear-gradient(180deg, rgba(10,10,10,0.85) 0%, rgba(13,0,0,0.9) 60%, rgba(10,10,10,0.95) 100%); }
   .sol-hero-particles { position: absolute; inset: 0; background-image: radial-gradient(circle, rgba(230,48,48,.65) 1px, transparent 1px), radial-gradient(circle, rgba(230,48,48,.4) 1.5px, transparent 1.5px); background-size: 120px 80px, 200px 150px; opacity: .7; }
   .sol-hero-inner { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
   .sol-badge { display: inline-flex; align-items: center; gap: 7px; border: 1px solid rgba(230,48,48,.28); color: var(--muted); font-size: .8rem; padding: 5px 13px; border-radius: 30px; background: rgba(230,48,48,.06); margin-bottom: 1.4rem; }
@@ -206,16 +226,24 @@ const ctaBlock = solution.cta?.[0] ?? null;
   .sol-content-copy div { color: var(--muted); font-size: .93rem; line-height: 1.8; } .sol-content-copy strong { color: #fff; }
   .sol-content-image { border-radius: 14px; overflow: hidden; border: 1px solid var(--border); } .sol-content-image img { width: 100%; height: auto; display: block; }
   @media (max-width: 768px) { .sol-content-inner { grid-template-columns: 1fr; gap: 2.5rem; } }
-  .sol-features-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.2rem; margin-top: 2.75rem; }
+  .sol-features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; margin-top: 2.75rem; }
   .sol-feature-card { background: var(--card); border: 1px solid white; border-radius: 14px; padding: 2rem; display: flex; flex-direction: column; gap: .7rem; transition: border-color .18s, transform .18s; }
-  .sol-feature-card:hover { border-color: rgba(255, 255, 255, 0.3); transform: translateY(-2px); }
-  .sol-feature-icon { width: 48px; height: 48px; border-radius: 12px; background: rgba(230,48,48,.08); border: 1px solid ; display: flex; align-items: center; justify-content: center; } .sol-feature-icon img { width: 26px; height: 26px; }
+  .sol-feature-card:hover { border-color: var(--brand-color); transform: translateY(-2px); } .sol-feature-card:hover .sol-feature-icon svg { color: var(--brand-color); }
+  .sol-feature-icon { width: 48px; height: 48px; border-radius: 12px; background: rgba(230,48,48,.08); border: 1px solid ; display: flex; align-items: center; justify-content: center; } .sol-feature-icon svg { width: 26px; height: 26px; }
   .sol-feature-title { font-family: var(--font-head); font-size: 1rem; font-weight: 700; }
   .sol-feature-desc { font-size: .88rem; color: var(--muted); line-height: 1.75; } .sol-feature-desc strong { color: #fff; }
   @media (max-width: 768px) { .sol-features-grid { grid-template-columns: 1fr; } }
+    .sol-richtext-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.4rem; margin-top: 2.75rem; }
+    .sol-richtext-card { background: var(--card); border: 1px solid white; border-radius: 14px; padding: 2rem; display: flex; flex-direction: column; gap: .8rem; transition: border-color .18s, transform .18s; }
+    .sol-richtext-card:hover { border-color: var(--brand-color); transform: translateY(-2px); } .sol-richtext-card:hover .sol-richtext-icon svg { color: var(--brand-color); }
+    .sol-richtext-icon { width: 48px; height: 48px; border-radius: 12px; background: rgba(230,48,48,.08); border: 1px solid; display: flex; align-items: center; justify-content: center; } .sol-richtext-icon svg { width: 26px; height: 26px; }
+    .sol-richtext-title { font-family: var(--font-head); font-size: 1.05rem; font-weight: 700; }
+    .sol-richtext-sub { font-size: .85rem; color: var(--muted); line-height: 1.7; }
+    .sol-richtext-body { font-size: .88rem; color: var(--muted); line-height: 1.75; } .sol-richtext-body strong { color: #fff; }
+    @media (max-width: 768px) { .sol-richtext-grid { grid-template-columns: 1fr; } }
   .sol-process-steps { display: flex; flex-direction: column; gap: 2.5rem; margin-top: 2.75rem; max-width: 800px; margin-inline: auto; }
   .sol-process-step { display: grid; grid-template-columns: auto 1fr auto; gap: 1.5rem; align-items: center; background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 1.8rem; transition: border-color .18s; }
-  .sol-process-step:hover { border-color: rgba(230,48,48,.3); }
+  .sol-process-step:hover { border-color: var(--brand-color); }
   .sol-step-number { font-family: var(--font-head); font-size: 2.4rem; font-weight: 800; color: var(--brand-color); opacity: .5; line-height: 1; min-width: 50px; }
   .sol-step-content h3 { font-family: var(--font-head); font-size: 1.05rem; font-weight: 700; margin-bottom: .4rem; }
   .sol-step-content div { font-size: .88rem; color: var(--muted); line-height: 1.7; } .sol-step-content strong { color: #fff; }
@@ -231,7 +259,7 @@ const ctaBlock = solution.cta?.[0] ?? null;
   @media (max-width: 768px) { .sol-levels-grid { grid-template-columns: 1fr; } }
   .sol-benefits-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.2rem; margin-top: 2.75rem; }
   .sol-benefit-item { display: flex; align-items: flex-start; gap: 1rem; background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; transition: border-color .18s; }
-  .sol-benefit-item:hover { border-color: rgba(230,48,48,.25); }
+  .sol-benefit-item:hover { border-color: var(--brand-color); }
   .sol-benefit-icon { width: 42px; height: 42px; border-radius: 10px; flex-shrink: 0; background: rgba(230,48,48,.08); border: 1px solid rgba(230,48,48,.16); display: flex; align-items: center; justify-content: center; } .sol-benefit-icon img { width: 22px; height: 22px; }
   .sol-benefit-item h3 { font-family: var(--font-head); font-size: .92rem; font-weight: 700; margin-bottom: .3rem; } .sol-benefit-item p { font-size: .85rem; color: var(--muted); line-height: 1.65; }
   @media (max-width: 768px) { .sol-benefits-grid { grid-template-columns: 1fr; } }
@@ -243,7 +271,7 @@ const ctaBlock = solution.cta?.[0] ?? null;
   @media (max-width: 768px) { .sol-stats-row { grid-template-columns: 1fr 1fr; } }
   .sol-faq-list { display: flex; flex-direction: column; gap: .8rem; margin-top: 2.75rem; max-width: 760px; margin-inline: auto; }
   .sol-faq-item { background: var(--card); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; transition: border-color .18s; }
-  .sol-faq-item[open] { border-color: rgba(230,48,48,.3); }
+  .sol-faq-item[open] { border-color: var(--brand-color); }
   .sol-faq-item summary { padding: 1.2rem 1.5rem; cursor: pointer; font-weight: 600; font-size: .93rem; list-style: none; display: flex; justify-content: space-between; align-items: center; }
   .sol-faq-item summary::-webkit-details-marker { display: none; }
   .sol-faq-item summary::after { content: '+'; font-size: 1.2rem; color: var(--muted); } .sol-faq-item[open] summary::after { content: '\2212'; }

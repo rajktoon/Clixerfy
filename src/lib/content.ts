@@ -644,8 +644,8 @@ export async function getSolutionPage(slug: string): Promise<SolutionPageData> {
     // Deep populate all nested component fields
     const params = new URLSearchParams();
     params.set("populate[herosection][populate]", "*");
-    params.set("populate[Content][populate]", "*");
-    params.set("populate[feature][populate]", "*");
+    params.set("populate[features][populate]", "*");
+    params.set("populate[Richtext][populate]", "*");
     params.set("populate[process][populate]", "*");
     params.set("populate[protections][populate]", "*");
     params.set("populate[benefits][populate]", "*");
@@ -694,8 +694,8 @@ function mapSolutionPage(id: number, raw: any, slug: string): SolutionPageData {
     metaTitle: raw.metaTitle ?? "",
     metaDescription: raw.metaDescription ?? "",
     herosection: raw.herosection ?? [],
-    Content: raw.Content ?? [],
-    feature: raw.feature ?? [],
+    features: raw.features ?? [],
+    Richtext: raw.Richtext ?? [],
     process: raw.process ?? [],
     protections: raw.protections ?? [],
     benefits: raw.benefits ?? [],
