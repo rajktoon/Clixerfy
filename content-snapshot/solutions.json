@@ -1334,6 +1334,1401 @@
           }
         ]
       }
+    },
+    {
+      "id": 17,
+      "documentId": "o8c7o04sdy79trplpluy9qhx",
+      "createdAt": "2026-07-08T12:11:08.743Z",
+      "updatedAt": "2026-07-08T12:29:30.756Z",
+      "publishedAt": "2026-07-08T12:29:30.788Z",
+      "title": "Vulnerability Scanner",
+      "slug": "vulnerability-scanner",
+      "metaTitle": "Continuous Vulnerability Scanner | Automated Attack Surface Mapping | Clixerfy",
+      "metaDescription": "Discover, map, and secure your digital perimeter. Clixerfy Continuous Vulnerability Scanner integrates subdomain mapping, web crawling, and Git secret auditing into one engine.",
+      "herosection": [
+        {
+          "id": 28,
+          "titleText": "The Clixerfy Continuous Vulnerability Scanner",
+          "subtitle": "Uncompromising Attack Surface Intelligence",
+          "richtext": [
+            {
+              "type": "heading",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Don’t Just Fix Flaws. Unearth Them Continuously."
+                }
+              ],
+              "level": 2
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Most organizations only scan the digital assets they know exist. The reality? Over time, expanding infrastructure leads to shadow IT—untracked testing subdomains, abandoned staging servers, and exposed internal API routes. Standard, scheduled point-in-time vulnerability assessments fail to catch these perimeter expansions, leaving your network open to exploitation."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Clixerfy Continuous Vulnerability Scanner is your automated eye in the sky. Engineered as a multi-tenant, cloud-native architecture, it acts as an ongoing security engine that constantly maps your real-world attack surface. It chains multi-stage asset discovery, deep web crawling, full application vulnerability scanning, and code-level leak checks into a unified platform."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "text": ""
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "text": ""
+                }
+              ]
+            }
+          ],
+          "bgimage": "https://clixerfy.com/wp-content/uploads/2026/07/The-Clixerfy-Fraudulent-Click-Blocker-Complete-Ad-Immunity.webp",
+          "featuredimage": "https://clixerfy.com/wp-content/uploads/2026/07/The-Clixerfy-Continuous-Vulnerability-Scanner.jpg",
+          "__component": "shared.sections-about-hero"
+        }
+      ],
+      "features": [
+        {
+          "id": 22,
+          "sectionTitle": "Engineered for Technical Precision & Enterprise Operations",
+          "body": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "text": ""
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "text": ""
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "text": ""
+                }
+              ]
+            }
+          ],
+          "items": [
+            {
+              "id": 67,
+              "title": "Automated Pipeline Chaining",
+              "desc": "Configure it once, secure it forever. Clixerfy supports deep pipeline chaining flags, meaning an initial crawling run automatically enqueues a vulnerability assessment, which can seamlessly chain a full web app scan sequentially.",
+              "icon": {
+                "iconName": "tabler:pipeline",
+                "iconData": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M3 4h8M4 4v5a6 6 0 0 0 6 6h3a1 1 0 0 1 1 1v4M10 4v4a1 1 0 0 0 1 1h3a6 6 0 0 1 6 6v5m-7 0h8M12 9v6\"/>",
+                "width": 24,
+                "height": 24,
+                "isSvgEditable": false,
+                "isIconNameEditable": false
+              }
+            },
+            {
+              "id": 68,
+              "title": "Deduplicated Finding Repositories",
+              "desc": "Security operations shouldn't be buried under thousands of duplicate alerts. Our backend utilizes intelligent finding clustering, checking unique template IDs, severities, and target host footprints to deliver clear, actionable items.",
+              "icon": {
+                "iconName": "mdi:source-repository",
+                "iconData": "<path fill=\"currentColor\" d=\"M6 2h12a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2m6.75 11.5c2.75 0 3.49-2.03 3.68-3.1c.91-.29 1.57-1.14 1.57-2.15C18 7 17 6 15.75 6S13.5 7 13.5 8.25c0 .94.57 1.75 1.39 2.08C14.67 11 14 12 12 12c-1.38 0-2.34.35-3 .84V8.87c.87-.31 1.5-1.14 1.5-2.12c0-1.25-1-2.25-2.25-2.25S6 5.5 6 6.75c0 .98.63 1.81 1.5 2.12v6.26c-.87.31-1.5 1.14-1.5 2.12c0 1.25 1 2.25 2.25 2.25s2.25-1 2.25-2.25c0-.93-.56-1.75-1.37-2.07c.28-.68 1.1-1.68 3.62-1.68m-4.5 3a.75.75 0 0 1 .75.75a.75.75 0 0 1-.75.75a.75.75 0 0 1-.75-.75a.75.75 0 0 1 .75-.75m0-10.5a.75.75 0 0 1 .75.75a.75.75 0 0 1-.75.75a.75.75 0 0 1-.75-.75a.75.75 0 0 1 .75-.75m7.5 1.5a.75.75 0 0 1 .75.75a.75.75 0 0 1-.75.75a.75.75 0 0 1-.75-.75a.75.75 0 0 1 .75-.75\"/>",
+                "width": 24,
+                "height": 24,
+                "isSvgEditable": false,
+                "isIconNameEditable": false
+              }
+            },
+            {
+              "id": 69,
+              "title": "Modern Architecture",
+              "desc": "Built on highly concurrent TypeScript worker engines, our backend delegates scanning tasks over resilient Redis-backed job queues, running heavy analytical scans smoothly without affecting dashboard operations.",
+              "icon": {
+                "iconName": "pixel:technology",
+                "iconData": "<path fill=\"currentColor\" d=\"M17.504 7.501H7.5v10.003h10.003z\"/><path fill=\"currentColor\" d=\"M21.505 5.5v-2h-2v-2h-2.001v2h-2v-2h-2.001v2h-2v-2H9.501v2h-2v-2H5.5v2h-2v2h-2v2.001h2v2h-2v2.001h2v2h-2v2.001h2v2h-2v2.001h2v2h2v2.001h2.001v-2h2v2h2.001v-2h2v2h2.001v-2h2v2h2.001v-2h2v-2h2.001v-2.001h-2v-2h2v-2.001h-2v-2h2V9.501h-2v-2h2V5.5zm-2 14.004H5.5V5.501h14.003z\"/>",
+                "width": 24,
+                "height": 24,
+                "isSvgEditable": false,
+                "isIconNameEditable": false
+              }
+            }
+          ]
+        }
+      ],
+      "cta": [
+        {
+          "id": 19,
+          "title": "Map and Eliminate Your Perimeter Blind Spots Today",
+          "subtitle": "Automate your security scanning pipeline and catch hidden infrastructure risks before malicious entities do.\n",
+          "ctaLabel": "Request a Platform Demo",
+          "ctaHref": "/contact",
+          "__component": "shared.homepage-cta"
+        }
+      ],
+      "Richtext": [
+        {
+          "id": 14,
+          "title": "Built-in GitHub Secret Scanning",
+          "subtitle": null,
+          "bodycontent": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Security doesn’t stop at the server boundary; a single credential leaked in source code can bypass the strongest perimeter firewalls. Clixerfy includes a dedicated internal GitHub Secret Scanning tab deeply integrated into your project dashboards."
+                }
+              ]
+            }
+          ],
+          "child": [
+            {
+              "id": 49,
+              "title": "Commit History Auditing",
+              "subtitle": null,
+              "body": [
+                {
+                  "type": "list",
+                  "format": "unordered",
+                  "children": [
+                    {
+                      "type": "list-item",
+                      "children": [
+                        {
+                          "type": "text",
+                          "bold": true,
+                          "text": "Using an asynchronous secret extraction processor (BetterLeaks), Clixerfy clones code repositories and audits your entire historical Git commit chain to uncover accidentally leaked API keys, database passwords, and access tokens."
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "bgimage": null,
+              "icon": {
+                "iconName": "fe:git",
+                "iconData": "<path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M21.623 11.11L12.89 2.376a1.29 1.29 0 0 0-1.821 0L9.256 4.191l2.3 2.3a1.53 1.53 0 0 1 1.937 1.95l2.217 2.217a1.532 1.532 0 1 1-.918.864l-2.068-2.068v5.441a1.533 1.533 0 1 1-1.26-.045V9.36a1.53 1.53 0 0 1-.832-2.01L8.365 5.081l-5.988 5.987a1.29 1.29 0 0 0 0 1.822l8.733 8.732a1.29 1.29 0 0 0 1.821 0l8.692-8.692a1.29 1.29 0 0 0 0-1.822\"/>",
+                "width": 24,
+                "height": 24,
+                "isSvgEditable": false,
+                "isIconNameEditable": false
+              }
+            },
+            {
+              "id": 50,
+              "title": "Secure Private Repository Integration",
+              "subtitle": null,
+              "body": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Securely scan corporate, private code arrays. Clixerfy safely manages encrypted organization-level Personal Access Tokens (PAT) to preserve code privacy during processing.",
+                      "bold": true
+                    }
+                  ]
+                }
+              ],
+              "bgimage": null,
+              "icon": {
+                "iconName": "oui:token-key",
+                "iconData": "<path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M12.667 6.542A3.208 3.208 0 0 1 8.86 9.694l-.438.492a.44.44 0 0 1-.327.147h-.678v.73a.437.437 0 0 1-.438.437H6.25v.73a.437.437 0 0 1-.437.437H3.77a.437.437 0 0 1-.438-.438v-1.423a.44.44 0 0 1 .128-.31l2.95-2.949a3.208 3.208 0 0 1 3.047-4.214a3.2 3.2 0 0 1 3.209 3.209m-3.209-.875a.875.875 0 1 0 1.75 0a.875.875 0 0 0-1.75 0\"/>",
+                "width": 16,
+                "height": 16,
+                "isSvgEditable": false,
+                "isIconNameEditable": false
+              }
+            },
+            {
+              "id": 51,
+              "title": "Real-Time SSE Progress Tracking",
+              "subtitle": null,
+              "body": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Built on Server-Sent Events (SSE), our interactive dashboards stream immediate repository scanning data, lines parsed, and commit counts directly to security teams, populating a dedicated github_secret findings dashboard with exact file and line-number evidence bundles.",
+                      "bold": true
+                    }
+                  ]
+                }
+              ],
+              "bgimage": null,
+              "icon": {
+                "iconName": "solar:server-bold",
+                "iconData": "<path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M2 7c0-1.886 0-2.828.586-3.414S4.114 3 6 3h12c1.886 0 2.828 0 3.414.586S22 5.114 22 7s0 2.828-.586 3.414S19.886 11 18 11H6c-1.886 0-2.828 0-3.414-.586S2 8.886 2 7m4-.75a.75.75 0 0 0 0 1.5h2a.75.75 0 0 0 0-1.5zm4.25.75a.75.75 0 0 1 .75-.75h7a.75.75 0 0 1 0 1.5h-7a.75.75 0 0 1-.75-.75M2 17c0-1.886 0-2.828.586-3.414S4.114 13 6 13h12c1.886 0 2.828 0 3.414.586S22 15.114 22 17s0 2.828-.586 3.414S19.886 21 18 21H6c-1.886 0-2.828 0-3.414-.586S2 18.886 2 17m4-.75a.75.75 0 0 0 0 1.5h2a.75.75 0 0 0 0-1.5zm4.25.75a.75.75 0 0 1 .75-.75h7a.75.75 0 0 1 0 1.5h-7a.75.75 0 0 1-.75-.75\" clip-rule=\"evenodd\"/>",
+                "width": 24,
+                "height": 24,
+                "isSvgEditable": false,
+                "isIconNameEditable": false
+              }
+            }
+          ],
+          "__component": "shared.formattedrichtextgrid"
+        }
+      ],
+      "process": [
+        {
+          "id": 17,
+          "title": "The 3-Tier Core Scan Pipeline",
+          "steps": [
+            {
+              "id": 77,
+              "title": "Perimeter Asset Discovery Pipeline",
+              "description": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Before running a scan, the platform uses domain verification (via DNS TXT tokens or cryptographic HTTP file checks) to guarantee tenant isolation. Once cleared, our discovery phase initiates:"
+                    }
+                  ]
+                },
+                {
+                  "type": "list",
+                  "format": "unordered",
+                  "children": [
+                    {
+                      "type": "list-item",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Subdomain Enumeration",
+                          "bold": true
+                        },
+                        {
+                          "type": "text",
+                          "text": ": Using high-velocity network probing tools (Subfinder), Clixerfy instantly maps out your active and hidden subdomain architectures."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "list-item",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Live Host Probing",
+                          "bold": true
+                        },
+                        {
+                          "type": "text",
+                          "text": ": The output flows straight into a live verification layer (HTTPX), extracting live host response codes, page titles, active server paths, and underlying technology configurations."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": ""
+                    }
+                  ]
+                }
+              ],
+              "image": null
+            },
+            {
+              "id": 78,
+              "title": "Deep-Web Crawling & Target Mapping Pipeline",
+              "description": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Once your live web properties are established, the platform deploys autonomous web crawlers (Katana) to parse code and identify functional assets."
+                    }
+                  ]
+                },
+                {
+                  "type": "list",
+                  "format": "unordered",
+                  "children": [
+                    {
+                      "type": "list-item",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Endpoint Discovery",
+                          "bold": true
+                        },
+                        {
+                          "type": "text",
+                          "text": ": It indexes full directory trees, identifying critical endpoints that developers might assume are well-hidden."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "list-item",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Security-Interesting Filtering",
+                          "bold": true
+                        },
+                        {
+                          "type": "text",
+                          "text": ": Clixerfy intelligently separates background static assets from paths that present real security risk—automatically flagging and prioritizing directories like /admin, /api, /config, and /backup folders for immediate vulnerability assessment."
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "image": null
+            },
+            {
+              "id": 79,
+              "title": "Deep Vulnerability & Web Application Assessment",
+              "description": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "The discovered pathways are dynamically routed into twin security execution engines:"
+                    }
+                  ]
+                },
+                {
+                  "type": "list",
+                  "format": "unordered",
+                  "children": [
+                    {
+                      "type": "list-item",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Template-Based Threat Scans",
+                          "bold": true
+                        },
+                        {
+                          "type": "text",
+                          "text": ": Utilizing industry-standard, continuously updated template arrays (Nuclei), the engine tests for millions of known CVE configurations, configuration mistakes, and web system flaws."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "list-item",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Active API Web Application Scanning",
+                          "bold": true
+                        },
+                        {
+                          "type": "text",
+                          "text": ": Clixerfy hooks directly into robust web application testing layers (OWASP ZAP/Burpsuite). It controls automated active scanning and active spiders to systematically evaluate web input fields, forms, and headers."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": ""
+                    }
+                  ]
+                }
+              ],
+              "image": null
+            }
+          ],
+          "__component": "shared.sections-process"
+        }
+      ],
+      "faqs": [
+        {
+          "id": 9,
+          "title": "Frequently Asked Questions",
+          "faq": [
+            {
+              "id": 25,
+              "question": "How often do continuous scans run?",
+              "answer": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "You can define exact intervals (daily, weekly, or monthly) through our automated scan scheduler, which handles repeatable background jobs using custom cron expressions."
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": 26,
+              "question": "How does Clixerfy prevent duplicate vulnerability alerts?",
+              "answer": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Our system includes a native database deduplication layer. Findings are clustered based on their template signatures, exploit URLs, and severity ratings, giving your developers a clean list of issues to remediate."
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": 27,
+              "question": "Are my stored GitHub tokens safe within the platform?",
+              "answer": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Yes. Organization Personal Access Tokens (PATs) are encrypted at rest inside isolated tables, strictly mapped via multi-tenant permissions, and used only within temporary worker execution environments during a scan."
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "__component": "shared.faqs"
+        }
+      ],
+      "PricingTable": {
+        "id": 8,
+        "title": "Predictable Vulnerability Scanner Pricing Plans",
+        "subtitle": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "text": "Clixerfy provides simple tier options built to scale efficiently along with your network scope, project footprint, and team structure."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "text": ""
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "text": ""
+              }
+            ]
+          }
+        ],
+        "plans": [
+          {
+            "id": 24,
+            "name": "Security Starter",
+            "monthlyPrice": "$199 / mo",
+            "annualPrice": "$169 / mo (billed annually)",
+            "featured": null,
+            "features": [
+              {
+                "id": 141,
+                "label": "Monitored Projects",
+                "value": "Up to 2 Active Projects"
+              },
+              {
+                "id": 142,
+                "label": "Target URL Workspaces",
+                "value": "Max 50 Targets"
+              },
+              {
+                "id": 143,
+                "label": "Pipeline Chaining Flags",
+                "value": "Standard Discovery Runs"
+              },
+              {
+                "id": 144,
+                "label": "GitHub Secret Scanning",
+                "value": "Included (Public Repos)"
+              },
+              {
+                "id": 145,
+                "label": "Repeat Scan Schedules",
+                "value": "Weekly Configuration"
+              },
+              {
+                "id": 146,
+                "label": "Platform Multi-Tenancy",
+                "value": "Single Member Mode"
+              }
+            ]
+          },
+          {
+            "id": 25,
+            "name": "Professional Perimter",
+            "monthlyPrice": "$499 / mo",
+            "annualPrice": "$419 / mo (billed annually)",
+            "featured": true,
+            "features": [
+              {
+                "id": 147,
+                "label": "Monitored Projects",
+                "value": "Up to 10 Active Projects"
+              },
+              {
+                "id": 148,
+                "label": "Target URL Workspaces",
+                "value": "Max 250 Targets"
+              },
+              {
+                "id": 149,
+                "label": "Pipeline Chaining Flags",
+                "value": "Fully Automated Chaining"
+              },
+              {
+                "id": 150,
+                "label": "GitHub Secret Scanning",
+                "value": "Included (Public & Private)"
+              },
+              {
+                "id": 151,
+                "label": "Repeat Scan Schedules",
+                "value": "Custom Cron Schedules"
+              },
+              {
+                "id": 152,
+                "label": "Platform Multi-Tenancy",
+                "value": "Team Workspace (RBAC)"
+              }
+            ]
+          },
+          {
+            "id": 26,
+            "name": "Enterprise Workspace",
+            "monthlyPrice": "Contact Sales",
+            "annualPrice": "Custom Quote Available",
+            "featured": null,
+            "features": [
+              {
+                "id": 153,
+                "label": "Monitored Projects",
+                "value": "Unlimited Managed Projects"
+              },
+              {
+                "id": 154,
+                "label": "Target URL Workspaces",
+                "value": "Unlimited Scanned Targets"
+              },
+              {
+                "id": 155,
+                "label": "Pipeline Chaining Flags",
+                "value": "Custom Pipeline Webhooks"
+              },
+              {
+                "id": 156,
+                "label": "GitHub Secret Scanning",
+                "value": "Multi-Org Token Sync"
+              },
+              {
+                "id": 157,
+                "label": "Repeat Scan Schedules",
+                "value": "On-Demand + API Triggered"
+              },
+              {
+                "id": 158,
+                "label": "Platform Multi-Tenancy",
+                "value": "Federated SSO"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 20,
+      "documentId": "imz6y45u87ddr1ji4n146738",
+      "createdAt": "2026-07-08T12:31:13.639Z",
+      "updatedAt": "2026-07-08T12:55:02.082Z",
+      "publishedAt": "2026-07-08T12:55:02.104Z",
+      "title": "WP Monitor",
+      "slug": "wordpress-file-scanner",
+      "metaTitle": "Centralized WordPress File Scanner & Malware Monitor | Clixerfy WP Monitor",
+      "metaDescription": "Secure your WordPress infrastructure with centralized, zero-overhead security. Clixerfy WP Monitor uses off-server YARA scanning, file integrity checks, and user auditing.",
+      "herosection": [
+        {
+          "id": 31,
+          "titleText": "Clixerfy WP Monitor",
+          "subtitle": "Enterprise-Grade Server-Side WordPress Security",
+          "richtext": [
+            {
+              "type": "heading",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Zero Site Overhead. Maximum Threat Detection."
+                }
+              ],
+              "level": 2
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Traditional WordPress security plugins execute heavy scans directly on your web server, creating severe resource strain that degrades site speed and exposes a critical vulnerability—if an attacker drops a web shell, they can simply delete or mute the local plugin to blind your defenses. Clixerfy WP Monitor completely shifts this paradigm by utilizing a lightweight local agent solely to gather file hashes while safely offloading all resource-intensive file comparison, YARA signature matching, behavioral heuristics, and database auditing to our centralized cloud API servers. Because the analytical brain sits entirely outside the hacker's reach, this architecture delivers a completely tamper-proof, silent, and zero-overhead security ecosystem that protects your entire enterprise or agency portfolio without ever sacrificing site performance."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "text": ""
+                }
+              ]
+            }
+          ],
+          "bgimage": "https://clixerfy.com/wp-content/uploads/2026/07/The-Clixerfy-Fraudulent-Click-Blocker-Complete-Ad-Immunity.webp",
+          "featuredimage": "https://clixerfy.com/wp-content/uploads/2026/07/WP-Monitor.jpg",
+          "__component": "shared.sections-about-hero"
+        }
+      ],
+      "features": [],
+      "cta": [
+        {
+          "id": 22,
+          "title": "Secure Your WordPress Portfolio Without Compromising Performance",
+          "subtitle": "Offload heavy security analysis to our centralized monitoring engine. Get deep, silent, and zero-impact visibility across every single site you manage.\n",
+          "ctaLabel": "Schedule Your Technical Portfolio Demo",
+          "ctaHref": "/contact",
+          "__component": "shared.homepage-cta"
+        }
+      ],
+      "Richtext": [
+        {
+          "id": 17,
+          "title": "Complete Feature Framework",
+          "subtitle": null,
+          "bodycontent": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Beyond scanning files, Clixerfy WP Monitor coordinates every aspect of your site's operational and architectural security posture from a single centralized platform."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "text": ""
+                }
+              ]
+            }
+          ],
+          "child": [
+            {
+              "id": 60,
+              "title": "Advanced File Integrity Monitoring (FIM)",
+              "subtitle": null,
+              "body": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "The client-side plugin generates cryptographic hashes of your WordPress core files, active themes, and plugins. These hashes are immediately compared against our baseline repository, which pulls pristine code copies directly from WordPress.org. The system instantly categorizes changes into modified, missing, or newly created files."
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "To eliminate background noise, clean filters make sure translations, media uploads, and standard data files are omitted, focusing exclusively on executable logic like .php and .js files. When an alteration is flagged, our dashboard serves up a granular visual diff, matching the modified file line-by-line against a fresh baseline copy so your team can pinpoint unauthorized injections."
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": ""
+                    }
+                  ]
+                }
+              ],
+              "bgimage": null,
+              "icon": {
+                "iconName": "rivet-icons:filter",
+                "iconData": "<path fill=\"currentColor\" d=\"M6 1a3 3 0 0 0-2.83 2H0v2h3.17a3.001 3.001 0 0 0 5.66 0H16V3H8.83A3 3 0 0 0 6 1M5 4a1 1 0 1 1 2 0a1 1 0 0 1-2 0m5 5a3 3 0 0 0-2.83 2H0v2h7.17a3.001 3.001 0 0 0 5.66 0H16v-2h-3.17A3 3 0 0 0 10 9m-1 3a1 1 0 1 1 2 0a1 1 0 0 1-2 0\"/>",
+                "width": 16,
+                "height": 16,
+                "isSvgEditable": false,
+                "isIconNameEditable": false
+              }
+            },
+            {
+              "id": 61,
+              "title": "Deep Database Audits & Permission Checks",
+              "subtitle": null,
+              "body": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Attackers frequently bypass file scanners by injecting backdoors directly into your database or creating hidden administrative accounts. Clixerfy WP Monitor executes thorough database scans targeting key rows like wp_options, wp_posts, and wp_usermeta to spot unauthorized users or malicious code loops.",
+                      "bold": true
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "bold": true,
+                      "text": "Concurrently, the scanner verifies your host file permissions, warning your administrators about insecure, world-writable files (777 permissions), loose config permissions (wp-config.php), or script components exposed in public-facing locations."
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "bold": true,
+                      "text": ""
+                    }
+                  ]
+                }
+              ],
+              "bgimage": null,
+              "icon": {
+                "iconName": "mdi:database",
+                "iconData": "<path fill=\"currentColor\" d=\"M12 3C7.58 3 4 4.79 4 7s3.58 4 8 4s8-1.79 8-4s-3.58-4-8-4M4 9v3c0 2.21 3.58 4 8 4s8-1.79 8-4V9c0 2.21-3.58 4-8 4s-8-1.79-8-4m0 5v3c0 2.21 3.58 4 8 4s8-1.79 8-4v-3c0 2.21-3.58 4-8 4s-8-1.79-8-4\"/>",
+                "width": 24,
+                "height": 24,
+                "isSvgEditable": false,
+                "isIconNameEditable": false
+              }
+            },
+            {
+              "id": 62,
+              "title": "Real-Time User Activity Auditing",
+              "subtitle": null,
+              "body": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "The system captures and centralizes internal system events to give you a complete, searchable log of user activity. It tracks successful log-ins, failed authentication attempts, role modifications, profile edits, and fresh user additions.",
+                      "bold": true
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "bold": true,
+                      "text": "Advanced pattern matching automatically recognizes brute-force trends. To prevent alert fatigue and inbox flooding, our notification system uses an intelligent cooldown cache (limiting standard login notifications to 15-minute windows and grouping brute-force logs into 30-minute blocks) while maintaining an easily filtered audit trail on your dashboard."
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "bold": true,
+                      "text": ""
+                    }
+                  ]
+                }
+              ],
+              "bgimage": null,
+              "icon": {
+                "iconName": "streamline-freehand:apps-monitor-user",
+                "iconData": "<path fill=\"currentColor\" d=\"M6.852 13a.3.3 0 0 0 .59 0a4.45 4.45 0 0 1 4.871-4.162a3.66 3.66 0 0 1 3.001 3.821a.342.342 0 0 0 .335.398a.34.34 0 0 0 .335-.398a4.57 4.57 0 0 0-2.47-4.571c1-.65 2.13-2 1.87-3.181a3.17 3.17 0 0 0-1.71-1.91c-1.8-1.061-1.61.26-1.11.26c.336.095.648.266.91.5c.64.48 1.29 1.12.94 1.84a.4.4 0 0 1-.05.08c-.12-.15-.46-.21-.76-.34c-.76-.32-.72-.55-.8-.8c-.57-1.63-2.381.48-3.672.94a2.32 2.32 0 0 1 1.73-2.36a.3.3 0 1 0-.08-.59a3.17 3.17 0 0 0-1.23 5.7A5.35 5.35 0 0 0 6.852 13m4.751-7.663c.9-.48.21.18 1.07.53a5.5 5.5 0 0 0 1.32.34c-1.27 1.7-4 2.07-4.75-.06a7.2 7.2 0 0 0 2.36-.82z\"/><path fill=\"currentColor\" d=\"M23.627 5.477c-.13-1.16-.07-3.501-.91-4.151c-1.921-1.48-6.132-1.09-8.813-1.2c-3.501-.13-7.162.14-10.614.24a.34.34 0 1 0 0 .68c3.452-.05 7.073-.28 10.574-.05c2.47.14 6.672-.14 8.252 1.13c.4.32.41 2.67.49 3.491c.342 2.913.369 5.854.08 8.773c-.048.98-.199 1.952-.45 2.9c-2.48 1.371-19.666 2.331-20.706.54a6.7 6.7 0 0 1-.35-1.67c.42-.06-.67.06 4.601 0c3.901.13 9.693-.32 14.635-.07c.4 0 .43-.65 0-.68c-5.352-.56-9.373-.65-18.156.09a6.3 6.3 0 0 0-1.21 0a42.8 42.8 0 0 1 0-10.603c0-.51.09-1 .16-1.54a7.8 7.8 0 0 1 .25-1.861a.3.3 0 0 0-.42-.42c-.42.42-.34 1.75-.41 2.22s-.14 1-.2 1.57a44.6 44.6 0 0 0-.37 8.473c.03 1.658.255 3.307.67 4.912c.81 1.47 5.911 1.57 7.642 1.59c-.56 1.33-1.26 2.551-.6 3.281a3 3 0 0 0 1.91.58c3.121.25 3.422.4 5.932-.32a.87.87 0 0 0 .5-.68a8.4 8.4 0 0 0-.67-3.11c2.094-.14 4.174-.44 6.222-.9c1.45-.401 1.69-.791 1.88-1.932a38.8 38.8 0 0 0 .08-11.283m-8.493 17.005c-2.44.48-3 .17-5.402.11c-1.74-.02-1.64.26-.74-2.74c2 0 4.001-.08 5.832-.22c.241.94.345 1.91.31 2.88z\"/>",
+                "width": 24,
+                "height": 24,
+                "isSvgEditable": false,
+                "isIconNameEditable": false
+              }
+            },
+            {
+              "id": 63,
+              "title": "Encrypted, Compliant Quarantine & Remediation",
+              "subtitle": null,
+              "body": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "When a malicious payload is found, administrators can take immediate action directly from the central dashboard—allowing you to quarantine threats, delete files, or completely restore a broken asset back to its verified default state. Every single action is tracked alongside critical system metadata, including original system permissions, file sizes, and cryptographic hashes."
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "To stay compliant with GDPR and HIPAA guidelines, our system strips out sensitive consumer information (such as email strings, payment keys, phone numbers, or passwords) from the code fragments before storing the threat evidence. Furthermore, file path strings are fully pseudonymized using {WEBROOT} path tokens, and all threat evidence stored at rest is locked down using field-level AES-256-GCM encryption."
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": ""
+                    }
+                  ]
+                }
+              ],
+              "bgimage": null,
+              "icon": {
+                "iconName": "fluent-mdl2:compliance-audit",
+                "iconData": "<path fill=\"currentColor\" d=\"M1033 1280q-14 30-21 62t-13 66H384v-128zm-649 384v-128h613q5 33 14 65t23 63zm-128 256h1349l127 128H128V0h1115l549 549v568q-29-26-61-47t-67-37V640h-512V128H256zM1280 219v293h293zm24 805q-109 41-187 128H384v-128zM384 512h640v128H384zm1152 256v128H384V768zm512 1216q0 26-19 45t-45 19t-45-19l-291-290q-39 26-84 39t-92 14q-66 0-124-25t-102-68t-69-102t-25-125t25-124t68-101t102-69t125-26t124 25t101 69t69 102t26 124q0 47-13 92t-40 84l290 291q19 19 19 45m-768-512q0 40 15 75t41 61t61 41t75 15t75-15t61-41t41-61t15-75t-15-75t-41-61t-61-41t-75-15t-75 15t-61 41t-41 61t-15 75\"/>",
+                "width": 2048,
+                "height": 2048,
+                "isSvgEditable": false,
+                "isIconNameEditable": false
+              }
+            }
+          ],
+          "__component": "shared.formattedrichtextgrid"
+        }
+      ],
+      "process": [
+        {
+          "id": 21,
+          "title": "4-Engine Multi-Layer Malware Detection",
+          "steps": [
+            {
+              "id": 91,
+              "title": "Centralized YARA Signatures Engine",
+              "description": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "The first defensive layer executes over 1,600 specialized, hot-reloadable YARA rules. This engine flags known bad fragments, web shells, rootkits, backdoors, obfuscated functions, code injectors, black-hat SEO spam scripts, and stealthy cryptocurrency miners. These rules can be updated instantly across our entire network via administrative APIs without forcing a plugin update on your sites."
+                    }
+                  ]
+                }
+              ],
+              "image": null
+            },
+            {
+              "id": 92,
+              "title": "Behavioral Heuristic Systems",
+              "description": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "This module analyzes files for suspicious structural code logic rather than exact text strings. It evaluates raw file entropy and watches for high-risk execution pathways—such as dynamic code evaluation (eval), nested runtime data decoding (base64_decode), unverified file-system write commands, execution of external system commands, and malicious SQL strings. It includes intelligent exclusion filters to white-list known developer frameworks."
+                    }
+                  ]
+                }
+              ],
+              "image": null
+            },
+            {
+              "id": 93,
+              "title": "Location Context Profiling",
+              "description": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "This layer matches files against their deployment paths. For example, any standalone PHP script hiding inside your public /wp-content/uploads/ directory is automatically classified as a critical anomaly. This component also matches file extensions against actual file headers (MIME types) and references an active index of over 200 known malicious file names."
+                    }
+                  ]
+                }
+              ],
+              "image": null
+            },
+            {
+              "id": 94,
+              "title": "Macro Anomaly Detection Engine",
+              "description": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "This scanner takes a broader view of the entire installation post-scan. Instead of looking at solitary items, it searches for sweeping system changes, such as synchronized mass code modifications, simultaneous file uploads across disconnected directories (coordinated dropping), or unprompted alterations to core system files without a valid WordPress core update."
+                    }
+                  ]
+                }
+              ],
+              "image": null
+            }
+          ],
+          "__component": "shared.sections-process"
+        }
+      ],
+      "faqs": [
+        {
+          "id": 12,
+          "title": "Frequently Asked Questions",
+          "faq": [
+            {
+              "id": 34,
+              "question": "How does off-server analysis protect my site performance?",
+              "answer": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "The local plugin only maps file paths, calculates quick cryptographic hashes, and tracks system events. This metadata is compressed using gzip optimization—reducing bandwidth usage by 70% to 90%. Because all heavy signature processing and behavioral heuristics run on Clixerfy's external cloud infrastructure, your sites keep running at peak speed."
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": 35,
+              "question": "What happens if an attacker blocks communication with the API server?",
+              "answer": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Clixerfy tracks consistent heartbeat checkpoints from your sites every 5 to 15 minutes. If a site misses its check-in interval, our server instantly flags the instance as offline and dispatches an automated downtime alert, notifying you that communications have been broken or tampered with."
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": 36,
+              "question": "How does Clixerfy keep false positives from overwhelming my team?",
+              "answer": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Our platform uses an intelligent white-list engine that combines global allowances with site-specific rules. Verified assets pulled directly from WordPress.org receive an automatic false-positive deduction. Known, safe plugin update chains are recognized automatically, preventing harmless updates from triggering security alerts."
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "__component": "shared.faqs"
+        }
+      ],
+      "PricingTable": {
+        "id": 11,
+        "title": "Predictable Vulnerability Scanner Pricing Plans",
+        "subtitle": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "text": "Clixerfy WP Monitor scales perfectly whether you are an enterprise organization managing public portfolios or a web agency safeguarding dozens of client client workspaces."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "text": ""
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "text": ""
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "text": ""
+              }
+            ]
+          }
+        ],
+        "plans": [
+          {
+            "id": 34,
+            "name": "Single Guard",
+            "monthlyPrice": "$49 / mo",
+            "annualPrice": "$39 / mo (billed annually)",
+            "featured": null,
+            "features": [
+              {
+                "id": 203,
+                "label": "Monitored WordPress Sites",
+                "value": "1 Site Workspace"
+              },
+              {
+                "id": 204,
+                "label": "Analysis Platform Model",
+                "value": "Managed Off-Server Cloud"
+              },
+              {
+                "id": 205,
+                "label": "Core Core Integrity Checks",
+                "value": "Daily Scheduled Passes"
+              },
+              {
+                "id": 206,
+                "label": "YARA Signature Database",
+                "value": "Standard Threat Set"
+              },
+              {
+                "id": 207,
+                "label": "User Activity Caching",
+                "value": "Standard Alerts"
+              },
+              {
+                "id": 208,
+                "label": "Administrative Access",
+                "value": "Single Admin Login"
+              }
+            ]
+          },
+          {
+            "id": 35,
+            "name": "Agency Suite",
+            "monthlyPrice": "$199 / mo",
+            "annualPrice": "$159 / mo (billed annually)",
+            "featured": null,
+            "features": [
+              {
+                "id": 209,
+                "label": "Monitored WordPress Sites",
+                "value": "Up to 25 Sites"
+              },
+              {
+                "id": 210,
+                "label": "Analysis Platform Model",
+                "value": "Managed Off-Server Cloud"
+              },
+              {
+                "id": 211,
+                "label": "Core Core Integrity Checks",
+                "value": "Daily / Configurable"
+              },
+              {
+                "id": 212,
+                "label": "YARA Signature Database",
+                "value": "Full 1,600+ Shell Rules"
+              },
+              {
+                "id": 213,
+                "label": "User Activity Caching",
+                "value": "30-Day Audit Trail Logs"
+              },
+              {
+                "id": 214,
+                "label": "Administrative Access",
+                "value": "Organization Multi-Tenant"
+              }
+            ]
+          },
+          {
+            "id": 36,
+            "name": "Enterprise Network",
+            "monthlyPrice": "Contact Sales",
+            "annualPrice": "Custom Enterprise Quote",
+            "featured": null,
+            "features": [
+              {
+                "id": 215,
+                "label": "Monitored WordPress Sites",
+                "value": "Custom / Unlimited Sites"
+              },
+              {
+                "id": 216,
+                "label": "Analysis Platform Model",
+                "value": "Private API Server Option"
+              },
+              {
+                "id": 217,
+                "label": "Core Core Integrity Checks",
+                "value": "Real-Time Hook Analysis"
+              },
+              {
+                "id": 218,
+                "label": "Core Core Integrity Checks",
+                "value": "Real-Time Hook Analysis"
+              },
+              {
+                "id": 219,
+                "label": "YARA Signature Database",
+                "value": "Custom Rule Imports"
+              },
+              {
+                "id": 220,
+                "label": "User Activity Caching",
+                "value": "Permanent Audits + SIEM Sync"
+              },
+              {
+                "id": 221,
+                "label": "Administrative Access",
+                "value": null
+              }
+            ]
+          }
+        ]
+      }
     }
   ],
   "meta": {
@@ -1341,7 +2736,7 @@
       "page": 1,
       "pageSize": 25,
       "pageCount": 1,
-      "total": 2
+      "total": 4
     }
   }
 }

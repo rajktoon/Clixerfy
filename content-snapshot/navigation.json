@@ -1,61 +1,66 @@
 {
   "data": {
-    "id": 10,
+    "id": 13,
     "documentId": "o4z4m4czj91hdvvb36w4usmj",
     "logoText": "Clixerfy",
     "logoImageUrl": "/image-removebg-preview.png",
     "ctaLabel": "Get Started",
     "ctaHref": "#contact",
     "createdAt": "2026-06-29T19:02:01.198Z",
-    "updatedAt": "2026-07-06T12:13:26.514Z",
-    "publishedAt": "2026-07-06T12:13:26.527Z",
+    "updatedAt": "2026-07-08T12:52:53.182Z",
+    "publishedAt": "2026-07-08T12:52:53.191Z",
     "links": [
       {
-        "id": 50,
+        "id": 65,
         "label": "Home",
         "href": "/",
         "active": true,
         "children": []
       },
       {
-        "id": 51,
+        "id": 66,
         "label": "About",
         "href": "/about",
         "active": false,
         "children": []
       },
       {
-        "id": 52,
+        "id": 67,
         "label": "Why Us",
         "href": "/#why",
         "active": false,
         "children": []
       },
       {
-        "id": 54,
-        "label": "Products",
+        "id": 69,
+        "label": "Solutions",
         "href": "#",
         "active": false,
         "children": [
           {
-            "id": 59,
+            "id": 71,
             "label": "Ad-Fraud Blocker",
             "href": "/solution/ad-fraud-blocker"
           },
           {
-            "id": 60,
+            "id": 72,
             "label": "WAF Tester",
             "href": "/solution/waf-tester"
           },
           {
-            "id": 61,
+            "id": 73,
             "label": "Vulnerability Scanner",
             "href": "/solution/vulnerability-scanner"
+          },
+          {
+            "id": 74,
+            "label": "WP Monitor",
+            "href": "/solution/wordpress-file-scanner"
           }
         ]
       },
       {
-        "id": 53,
+        "id": 68,
         "label": "Contact",
         "href": "/#contact",
         "active": false,
