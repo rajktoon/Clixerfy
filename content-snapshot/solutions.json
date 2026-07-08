@@ -1,18 +1,18 @@
 {
   "data": [
     {
-      "id": 10,
+      "id": 11,
       "documentId": "veisjei5g4bmvjsoh6efpck0",
       "createdAt": "2026-07-01T11:52:27.341Z",
-      "updatedAt": "2026-07-06T12:30:43.121Z",
-      "publishedAt": "2026-07-06T12:30:43.140Z",
+      "updatedAt": "2026-07-08T11:23:54.599Z",
+      "publishedAt": "2026-07-08T11:23:54.620Z",
       "title": "The Clixerfy Fraudulent Click Blocker",
       "slug": "ad-fraud-blocker",
       "metaTitle": "Advanced Adfraud Blocker | Stop Fake Traffic & Save Ad Budget | Clixerfy",
       "metaDescription": "Protect your ad spend from bots, competitors, and click farms. Clixerfy Adfraud Blocker stops invalid traffic in real-time with direct ad platform API sync.",
       "herosection": [
         {
-          "id": 18,
+          "id": 20,
           "titleText": "Complete Ad Immunity",
           "subtitle": "Don't just track fraud. Terminate it. Clixerfy proactively detects and blocks sophisticated click fraud before it drains your marketing budget.\n",
           "richtext": null,
@@ -21,7 +21,7 @@
           "__component": "shared.sections-about-hero"
         },
         {
-          "id": 19,
+          "id": 21,
           "titleText": "The Clixerfy Fraudulent Click Blocker: Complete Ad Immunity",
           "subtitle": "Don’t Just Track Fraud. Terminate It.",
           "richtext": [
@@ -51,7 +51,7 @@
       ],
       "features": [
         {
-          "id": 9,
+          "id": 11,
           "sectionTitle": "Why Standard Filters Aren't Enough",
           "body": [
             {
@@ -84,7 +84,7 @@
           ],
           "items": [
             {
-              "id": 30,
+              "id": 35,
               "title": "Low Protection",
               "desc": "Blocks known, high-concurrency malicious botnets.",
               "icon": {
@@ -97,7 +97,7 @@
               }
             },
             {
-              "id": 31,
+              "id": 36,
               "title": "Medium Protection (Recommended)",
               "desc": "Filters out persistent repeat clickers, scrapers, and high-risk commercial VPNs.",
               "icon": {
@@ -110,7 +110,7 @@
               }
             },
             {
-              "id": 32,
+              "id": 37,
               "title": "High Protection",
               "desc": "Restricts any suspicious behavioral deviations, ensuring your ad budget feeds purely verified human interactions.",
               "icon": {
@@ -125,7 +125,7 @@
           ]
         },
         {
-          "id": 10,
+          "id": 12,
           "sectionTitle": "Designed for Enterprise Security, Built for Marketing ROI",
           "body": [
             {
@@ -149,7 +149,7 @@
           ],
           "items": [
             {
-              "id": 33,
+              "id": 38,
               "title": "Unified Financial Dashboards",
               "desc": "See exactly which threat vectors were stopped, where they originated, and precisely how much ad spend was preserved.",
               "icon": {
@@ -162,7 +162,7 @@
               }
             },
             {
-              "id": 34,
+              "id": 39,
               "title": "Enterprise Compliance & Auditing",
               "desc": "Complete with strict Team-Based Access Controls (RBAC), internal audit logs, and data privacy tools (DSAR handling), making it fully compatible for fast-growing agencies and enterprise marketing networks.",
               "icon": {
@@ -179,7 +179,7 @@
       ],
       "cta": [
         {
-          "id": 12,
+          "id": 13,
           "title": "Take Absolute Control of Your Ad Account Today",
           "subtitle": "Stop letting fake clicks dictate your marketing performance. See exactly who is interacting with your campaigns and preserve your budget for real customers.\n",
           "ctaLabel": "Request a Live Demo & Consultation",
@@ -189,7 +189,7 @@
       ],
       "Richtext": [
         {
-          "id": 7,
+          "id": 8,
           "title": "What We Block: The 4 Pillars of Click Fraud",
           "subtitle": null,
           "bodycontent": [
@@ -205,7 +205,7 @@
           ],
           "child": [
             {
-              "id": 25,
+              "id": 29,
               "title": "1. Professional Competitor Attacks",
               "subtitle": "In highly competitive industries (such as Legal, Real Estate, Locksmiths, and SaaS), rival companies frequently click your ads to intentionally deplete your daily budget and push your business out of the search auctions.",
               "body": [
@@ -235,7 +235,7 @@
               }
             },
             {
-              "id": 26,
+              "id": 30,
               "title": "2. Sophisticated Botnets",
               "subtitle": "Modern malicious bots don't just click links and leave; they are programmed to mimic human behavior by scrolling pages, pausing, and executing micro-movements with the mouse. They utilize residential proxies to blend in with genuine home users.",
               "body": [
@@ -265,7 +265,7 @@
               }
             },
             {
-              "id": 27,
+              "id": 31,
               "title": "3. Global Click Farms",
               "subtitle": "Click farms employ low-wage workers to manually search for your keywords and interact with your paid ad placements. Because these are real humans sitting at real devices, traditional anti-bot software fails to flag them.",
               "body": [
@@ -295,7 +295,7 @@
               }
             },
             {
-              "id": 28,
+              "id": 32,
               "title": "4. Malicious Scrapers & Spiders",
               "subtitle": "Competitors and scrapers use automated programs to crawl your landing pages via paid search or display ads to steal your pricing models, catalog information, and ad copies.",
               "body": [
@@ -339,11 +339,11 @@
       ],
       "process": [
         {
-          "id": 10,
+          "id": 11,
           "title": "How the Clixerfy Blocker Works",
           "steps": [
             {
-              "id": 56,
+              "id": 59,
               "title": "Step 1: Deep Structural Inspection",
               "description": [
                 {
@@ -422,7 +422,7 @@
               "image": null
             },
             {
-              "id": 57,
+              "id": 60,
               "title": "Step 2: Automated Real-Time Neutralization",
               "description": [
                 {
@@ -438,7 +438,7 @@
               "image": null
             },
             {
-              "id": 58,
+              "id": 61,
               "title": "Step 3: Proactive Budget Redirection",
               "description": [
                 {
@@ -459,11 +459,11 @@
       ],
       "faqs": [
         {
-          "id": 2,
+          "id": 3,
           "title": "Frequently Asked Questions",
           "faq": [
             {
-              "id": 4,
+              "id": 7,
               "question": "How does Clixerfy integrate with my current website or landing pages?",
               "answer": [
                 {
@@ -487,7 +487,7 @@
               ]
             },
             {
-              "id": 5,
+              "id": 8,
               "question": "Will this block my legitimate users who happen to use VPNs?",
               "answer": [
                 {
@@ -511,7 +511,7 @@
               ]
             },
             {
-              "id": 6,
+              "id": 9,
               "question": "What ad networks do you support?",
               "answer": [
                 {
@@ -537,7 +537,803 @@
           ],
           "__component": "shared.faqs"
         }
-      ]
+      ],
+      "PricingTable": {
+        "id": 2,
+        "title": "Transparent, Predictable Pricing",
+        "subtitle": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "text": "Clixerfy fits seamlessly into any budget framework, returning its cost multiple times over by salvaging your native ad spend. Select the tier tailored to your active ad click volume."
+              }
+            ]
+          }
+        ],
+        "plans": [
+          {
+            "id": 4,
+            "name": "Pro Blocker",
+            "monthlyPrice": "$99 / mo",
+            "annualPrice": "$84 / mo (billed annually)",
+            "featured": null,
+            "features": [
+              {
+                "id": 19,
+                "label": "Monthly Ad Click Volume",
+                "value": "Up to 10,000 clicks"
+              },
+              {
+                "id": 20,
+                "label": "Protected Domains",
+                "value": "1 Domain"
+              },
+              {
+                "id": 21,
+                "label": "Real-Time API Exclusions",
+                "value": "Included (Google)"
+              },
+              {
+                "id": 22,
+                "label": "Behavioral Biometrics",
+                "value": "Standard"
+              },
+              {
+                "id": 23,
+                "label": "Multi-Tenant Controls",
+                "value": "Personal Mode Only"
+              },
+              {
+                "id": 24,
+                "label": "Support SLA",
+                "value": "Email (24h)"
+              }
+            ]
+          },
+          {
+            "id": 5,
+            "name": "Agency Workspace",
+            "monthlyPrice": "$149 / mo",
+            "annualPrice": "$124 / mo (billed annually)",
+            "featured": true,
+            "features": [
+              {
+                "id": 25,
+                "label": "Monthly Ad Click Volume",
+                "value": "Up to 50,000 clicks"
+              },
+              {
+                "id": 26,
+                "label": "Protected Domains",
+                "value": "Up to 10 Domains"
+              },
+              {
+                "id": 27,
+                "label": "Real-Time API Exclusions",
+                "value": "Included (All Networks)"
+              },
+              {
+                "id": 28,
+                "label": "Behavioral Biometrics",
+                "value": "Advanced"
+              },
+              {
+                "id": 29,
+                "label": "Multi-Tenant Controls",
+                "value": "Agency Mode (RBAC)"
+              },
+              {
+                "id": 30,
+                "label": "Support SLA",
+                "value": "Priority Chat (2h)"
+              }
+            ]
+          },
+          {
+            "id": 6,
+            "name": "Enterprise Shield",
+            "monthlyPrice": "Contact Sales",
+            "annualPrice": "Contact Sales",
+            "featured": null,
+            "features": [
+              {
+                "id": 31,
+                "label": "Monthly Ad Click Volume",
+                "value": "Custom / Unlimited"
+              },
+              {
+                "id": 32,
+                "label": "Protected Domains",
+                "value": "Unlimited"
+              },
+              {
+                "id": 33,
+                "label": "Real-Time API Exclusions",
+                "value": "Dedicated API Channel"
+              },
+              {
+                "id": 34,
+                "label": "Behavioral Biometrics",
+                "value": "Custom ML Profiling"
+              },
+              {
+                "id": 35,
+                "label": "Multi-Tenant Controls",
+                "value": "Federated / SSO"
+              },
+              {
+                "id": 36,
+                "label": "Support SLA",
+                "value": "Dedicated TAM / 15m"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "documentId": "k2kp3ihdjpeljxowl4ic79s8",
+      "createdAt": "2026-07-08T11:43:11.941Z",
+      "updatedAt": "2026-07-08T12:05:59.479Z",
+      "publishedAt": "2026-07-08T12:05:59.499Z",
+      "title": "WAF Tester",
+      "slug": "waf-tester",
+      "metaTitle": "Advanced WAF Tester | Autonomous Firewall Security Validation | Clixerfy",
+      "metaDescription": "Validate your Web Application Firewall's defensive edge. Clixerfy WAF Tester uses multi-engine differential probing and objective-driven playbooks to expose bypass flaws.\n",
+      "herosection": [
+        {
+          "id": 25,
+          "titleText": "The Clixerfy WAF Tester: Autonomous Firewall Validation",
+          "subtitle": "Don’t Just Assume Your WAF Works. Prove It.\n",
+          "richtext": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Don’t Just Assume Your WAF Works. Prove It."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Most enterprises deploy a Web Application Firewall (WAF) and rely on out-of-the-box rule sets to block malicious traffic. The flaw? Threat actors don’t attack blindly; they mutate their payloads, exploit protocol ambiguities, and look for differential blind spots between core firewall parsing engines. If your security validation relies on manual penetration testing or static vulnerability scans, you are missing hidden bypass vulnerabilities."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Clixerfy WAF Tester provides absolute visibility. Engineered as an objective-driven, multi-engine security validation platform, it continuously probes your web application defenses with multi-layered, adaptive attack sequences. It uncovers precise WAF bypass opportunities before malicious entities can exploit them."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "text": ""
+                }
+              ]
+            }
+          ],
+          "bgimage": "https://clixerfy.com/wp-content/uploads/2026/07/The-Clixerfy-Fraudulent-Click-Blocker-Complete-Ad-Immunity.webp",
+          "featuredimage": "https://clixerfy.com/wp-content/uploads/2026/07/Autonomous-Firewall-Validation.jpg",
+          "__component": "shared.sections-about-hero"
+        }
+      ],
+      "features": [
+        {
+          "id": 17,
+          "sectionTitle": "Enterprise-Grade Intelligence and Reporting",
+          "body": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Clixerfy scales seamlessly from an autonomous standalone testing environment to an integrated infrastructure component within modern engineering operations."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "text": ""
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "text": ""
+                }
+              ]
+            }
+          ],
+          "items": [
+            {
+              "id": 52,
+              "title": "WAF Coverage & Effectiveness Scoring",
+              "desc": "Rather than delivering an endless list of unorganized alerts, Clixerfy calculates a normalized Protection Score (0–100) across your distinct application pathways, letting management visualize precise defensive posture improvements over time.",
+              "icon": {
+                "iconName": "icon-park-outline:scoreboard",
+                "iconData": "<g fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\" stroke-width=\"4\"><rect width=\"40\" height=\"28\" x=\"4\" y=\"12\" rx=\"3\"/><path stroke-linecap=\"round\" d=\"M14 6v6m20-6v6M10.227 24L15 19.017V33m9-21v28\"/><ellipse cx=\"34\" cy=\"26\" rx=\"3\" ry=\"7\"/><path stroke-linecap=\"round\" d=\"M21 12h6m-6 28h6\"/></g>",
+                "width": 48,
+                "height": 48,
+                "isSvgEditable": false,
+                "isIconNameEditable": false
+              }
+            },
+            {
+              "id": 53,
+              "title": "Deterministic Learning Lab",
+              "desc": "Our platform learns from your defensive behaviors. By running controlled validation cycles, the system maps successful mutations into localized profiles, identifying exactly what rule tweaks are required to seal exposure points.",
+              "icon": {
+                "iconName": "fluent-mdl2:learning-tools",
+                "iconData": "<path fill=\"currentColor\" d=\"M384 1536h128v128H256V384H128v1408h384v128H0V256h256V128h384q88 0 169 27t151 81q69-54 150-81t170-27h384v128h256v819l-128-58V384h-128v575l-128-59V256h-256q-71 0-136 24t-120 71v608l-128 58V351q-54-46-119-70t-137-25H384zm1408 255l-448 225l-448-225q0-36 1-76t8-81t20-77t36-67l-193-88v582H640v-640l704-320l704 320l-321 146l8 11q21 31 32 67t17 73t7 76t1 74m-448-627l-395 180l395 180l395-180zm0 709l320-161q-1-26-4-47t-11-41t-16-39t-23-42l-266 121l-266-121q-15 24-24 43t-16 38t-9 40t-4 49z\"/>",
+                "width": 2048,
+                "height": 2048,
+                "isSvgEditable": false,
+                "isIconNameEditable": false
+              }
+            },
+            {
+              "id": 54,
+              "title": "Kubernetes Native Engineering",
+              "desc": "Built for modern cloud infrastructure, Clixerfy includes a native K8s Operator CRD architecture (WAFScan + ScheduledScan). Security pipelines can be defined as code, deployed via YAML manifests, and scheduled seamlessly across enterprise staging platforms.",
+              "icon": {
+                "iconName": "mdi:kubernetes",
+                "iconData": "<path fill=\"currentColor\" d=\"M13.95 13.5h-.23c-.18.11-.26.32-.18.5l.86 2.11c.83-.53 1.46-1.32 1.79-2.25l-2.23-.36zm-3.45.29a.415.415 0 0 0-.38-.29h-.08l-2.22.37c.33.92.96 1.7 1.79 2.23l.85-2.07V14c.04-.05.04-.14.04-.21m1.83.81a.38.38 0 0 0-.51-.15c-.07.05-.12.08-.15.15h-.01l-1.09 1.97c.78.26 1.62.31 2.43.12c.14-.03.29-.07.43-.12l-1.09-1.97zm3.45-4.57L14.1 11.5l.01.03a.37.37 0 0 0-.04.53q.075.09.18.12l.01.01l2.17.62c.07-.97-.14-1.95-.65-2.78m-3.11.16c.01.21.18.37.39.36c.08 0 .15-.02.21-.05h.01l1.83-1.31a4.45 4.45 0 0 0-2.57-1.24zm-1.94.31c.17.11.4.08.52-.09c.05-.06.07-.13.08-.21h.01l.12-2.25c-.15.02-.3.05-.46.08c-.8.18-1.54.58-2.12 1.16l1.84 1.31zm-.99 1.69c.2-.05.32-.26.26-.46c0-.08-.05-.14-.11-.19v-.01L8.21 10c-.52.86-.74 1.84-.63 2.82l2.16-.62zm1.64.66l.62.3l.62-.3l.15-.67l-.43-.53h-.69l-.43.53zm10.89 1.32L20.5 6.5c-.09-.42-.37-.76-.74-.94l-7.17-3.43c-.37-.17-.81-.17-1.19 0L4.24 5.56c-.37.18-.65.52-.74.94l-1.77 7.67c-.05.2-.05.4 0 .59c.01.06.03.12.05.18c.03.09.08.19.13.27c.03.04.05.08.09.11l4.95 6.18c.02 0 .05.04.05.06c.1.09.19.16.28.22c.12.08.26.14.4.17c.11.05.23.05.32.05h8.12c.07 0 .14-.03.2-.05c.05-.01.1-.03.14-.04c.04-.02.07-.03.11-.05c.05-.02.1-.05.15-.08c.12-.08.23-.18.33-.28l.15-.2l4.8-5.98c.1-.12.17-.25.22-.38c.02-.06.04-.12.05-.18c.05-.19.05-.4 0-.59m-7.43 2.99c.02.06.04.12.07.17c-.04.08-.06.17-.03.26c.12.24.23.46.38.68c.08.11.16.23.24.34c0 .03.03.08.04.12c.12.2.06.46-.15.59s-.47.05-.59-.15c-.01-.03-.02-.05-.03-.08c-.02-.03-.04-.09-.06-.09c-.05-.15-.09-.28-.12-.41c-.09-.25-.17-.49-.3-.72a.38.38 0 0 0-.21-.14l-.08-.16c-1.29.48-2.7.48-3.97-.01l-.1.18c-.07.01-.14.04-.19.09c-.14.24-.24.49-.33.77c-.03.13-.07.26-.12.4c-.02 0-.04.07-.06.1a.43.43 0 0 1-.81-.29c.01-.03.03-.05.04-.08c.04-.03.04-.08.04-.11c.09-.12.16-.23.24-.35c.16-.21.29-.45.39-.69a.54.54 0 0 0-.03-.25l.07-.18a5.6 5.6 0 0 1-2.47-3.09l-.2.03a.4.4 0 0 0-.23-.09c-.27.05-.51.13-.77.22c-.11.06-.24.11-.37.15c-.03.01-.07.02-.13.03a.44.44 0 0 1-.54-.27c-.07-.23.04-.47.28-.55c.02 0 .05-.01.08-.01v-.01h.01l.11-.02c.14-.04.28-.04.41-.04c.26 0 .52-.06.77-.12c.08-.05.14-.11.19-.19l.19-.05c-.21-1.36.1-2.73.86-3.87l-.14-.12c0-.09-.03-.18-.08-.25c-.2-.17-.41-.32-.64-.45q-.18-.09-.36-.21c-.02-.02-.06-.05-.08-.07l-.01-.01c-.2-.16-.25-.42-.11-.63c.09-.1.21-.15.35-.15q.165.015.3.12l.09.07c.1.09.19.2.28.3c.18.19.37.37.58.52c.08.04.17.05.26.03l.15.11c.75-.8 1.73-1.36 2.8-1.6c.25-.06.52-.1.78-.12l.01-.18a.45.45 0 0 0 .14-.23c.01-.26-.01-.52-.05-.77c-.03-.13-.05-.27-.06-.41V5.1c-.02-.24.15-.45.39-.48s.44.15.47.38v.22c-.01.14-.03.28-.06.41c-.04.25-.06.51-.05.77c.02.1.07.17.14.22l.01.19c1.36.12 2.62.73 3.56 1.72l.16-.12c.09.02.18.01.26-.03c.21-.15.41-.33.58-.52c.09-.1.18-.2.28-.3c.03-.02.07-.06.1-.06c.17-.18.44-.18.59 0c.19.16.18.43 0 .6c0 .02-.03.04-.06.06a2.5 2.5 0 0 1-.44.28c-.23.13-.45.28-.64.45c-.06.07-.09.15-.08.24l-.16.14a5.44 5.44 0 0 1 .88 3.86l.19.05c.04.08.11.14.19.18c.25.07.51.11.77.14h.41c.03.03.08.04.12.05c.24.03.4.25.37.49c-.05.23-.24.4-.48.37c-.03-.01-.07-.01-.07-.02v-.01c-.06 0-.1-.01-.14-.02q-.195-.06-.36-.15c-.26-.1-.5-.17-.77-.21c-.09 0-.17 0-.23.08c-.07-.01-.13-.02-.19-.03c-.41 1.31-1.31 2.41-2.47 3.11\"/>",
+                "width": 24,
+                "height": 24,
+                "isSvgEditable": false,
+                "isIconNameEditable": false
+              }
+            }
+          ]
+        },
+        {
+          "id": 18,
+          "sectionTitle": "Why Compliance and AppSec Teams Trust Clixerfy",
+          "body": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Standard network vulnerability tools check if your patches are current. Clixerfy validates if your active defenses actually work."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "text": ""
+                }
+              ]
+            }
+          ],
+          "items": [
+            {
+              "id": 55,
+              "title": "Audit-Ready Evidence Custody Chains",
+              "desc": "Export verifiable, compliance-grade security logs complete with raw curl requests, Python replay scripts, and cryptographic evidence bundles.",
+              "icon": {
+                "iconName": "hugeicons:audit-02",
+                "iconData": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-width=\"1.5\"><path stroke-linejoin=\"round\" d=\"M19 11v-1c0-3.771 0-5.657-1.172-6.828S14.771 2 11 2S5.343 2 4.172 3.172S3 6.229 3 10v4c0 3.771 0 5.657 1.172 6.828S7.229 22 11 22\"/><path d=\"m21 22l-1.714-1.714m.571-2.857a3.429 3.429 0 1 1-6.857 0a3.429 3.429 0 0 1 6.857 0Z\"/><path stroke-linejoin=\"round\" d=\"M7 7h8m-8 4h4\"/></g>",
+                "width": 24,
+                "height": 24,
+                "isSvgEditable": false,
+                "isIconNameEditable": false
+              }
+            },
+            {
+              "id": 56,
+              "title": "WAF-Specific Rule Recommendations",
+              "desc": "When a bypass is confirmed, Clixerfy doesn't just say you're vulnerable; it provides localized rule configuration advice tailored to your firewall stack to speed up mitigation.",
+              "icon": {
+                "iconName": "gravity-ui:firewall",
+                "iconData": "<g fill=\"currentColor\"><path d=\"M6.5 12a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-1a1 1 0 0 1 1-1zm7.5 0a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H9.5a1 1 0 0 1-1-1v-1a1 1 0 0 1 1-1zM3 8a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H1.5a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 1 .5-.5zm5-6.966c.341 0 .68.076.987.223l2.91 1.388c.575.274.943.855.943 1.493v.329l-.014.438a6.87 6.87 0 0 1-1.868 4.283l.042-.04V10a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-.853l.041.041a6.87 6.87 0 0 1-1.866-4.283l-.014-.438v-.33c0-.597.322-1.145.837-1.438l.106-.054l2.91-1.388A2.3 2.3 0 0 1 8 1.034M14.504 8a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5h-1.5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1zM5.887 9.944l.105.08zm4.12.08l.105-.08zm-4.488-.378q.068.06.14.12zm4.82.12q.073-.06.141-.12zM8 2.535a.8.8 0 0 0-.34.077L4.748 3.998a.16.16 0 0 0-.088.14v.329c0 1.838.94 3.549 2.491 4.535l.697.442a.28.28 0 0 0 .303 0l.697-.442a5.38 5.38 0 0 0 2.49-4.535v-.33a.16.16 0 0 0-.087-.139l-2.91-1.387A.8.8 0 0 0 8 2.534M5.208 9.357q.066.067.134.131q-.068-.064-.134-.13m5.45.131q.068-.064.133-.13q-.065.066-.133.13\"/><path d=\"M6.5 12a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-1a1 1 0 0 1 1-1zm7.5 0a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H9.5a1 1 0 0 1-1-1v-1a1 1 0 0 1 1-1zM3 8a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H1.5a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 1 .5-.5z\"/><path fill-rule=\"evenodd\" d=\"M8 1.034c.341 0 .68.076.987.223l2.91 1.388c.575.274.943.855.943 1.493v.329l-.014.438a6.87 6.87 0 0 1-1.868 4.283l.042-.04V10a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-.853l.041.041a6.87 6.87 0 0 1-1.866-4.283l-.014-.438v-.33c0-.597.322-1.145.837-1.438l.106-.054l2.91-1.388A2.3 2.3 0 0 1 8 1.034m0 1.5a.8.8 0 0 0-.34.077L4.748 3.998a.16.16 0 0 0-.088.14v.329c0 1.838.94 3.549 2.491 4.535l.697.442a.28.28 0 0 0 .303 0l.697-.442a5.38 5.38 0 0 0 2.49-4.535v-.33a.16.16 0 0 0-.087-.139l-2.91-1.387A.8.8 0 0 0 8 2.534\" clip-rule=\"evenodd\"/><path d=\"M14.504 8a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5h-1.5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z\"/></g>",
+                "width": 16,
+                "height": 16,
+                "isSvgEditable": false,
+                "isIconNameEditable": false
+              }
+            },
+            {
+              "id": 57,
+              "title": "Multi-Tenant Dashboard Isolation",
+              "desc": "Securely handle isolated target applications, distinct developer groups, or segmented client organizations with robust multi-tenant authorization headers and access filters.",
+              "icon": {
+                "iconName": "boxicons:dashboard-filled",
+                "iconData": "<rect width=\"8\" height=\"10\" x=\"13\" y=\"11\" fill=\"currentColor\" rx=\"1\" ry=\"1\"/><rect width=\"8\" height=\"6\" x=\"3\" y=\"15\" fill=\"currentColor\" rx=\"1\" ry=\"1\"/><rect width=\"8\" height=\"6\" x=\"13\" y=\"3\" fill=\"currentColor\" rx=\"1\" ry=\"1\"/><rect width=\"8\" height=\"10\" x=\"3\" y=\"3\" fill=\"currentColor\" rx=\"1\" ry=\"1\"/>",
+                "width": 24,
+                "height": 24,
+                "isSvgEditable": false,
+                "isIconNameEditable": false
+              }
+            }
+          ]
+        }
+      ],
+      "cta": [
+        {
+          "id": 16,
+          "title": "Verify Your Firewall Defenses Before Attackers Do",
+          "subtitle": "Uncover hidden bypass vulnerabilities and optimize your WAF protection with data-backed, multi-engine differential testing.\n",
+          "ctaLabel": "Schedule a Deep-Dive Technical Demo",
+          "ctaHref": "/contact",
+          "__component": "shared.homepage-cta"
+        }
+      ],
+      "Richtext": [
+        {
+          "id": 11,
+          "title": "How the Clixerfy WAF Tester Operates",
+          "subtitle": null,
+          "bodycontent": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Our architecture executes a rigorous, multi-phased pipeline that moves flawlessly from initial asset discovery to verified mitigation recommendations."
+                }
+              ]
+            }
+          ],
+          "child": [
+            {
+              "id": 40,
+              "title": "Phase 1: Objective-Driven Playbook Engine",
+              "subtitle": "Instead of randomly throwing isolated payloads at your firewall, Clixerfy utilizes 11 built-in, objective-driven attack playbooks. These playbooks systematically run multi-step attack strings across core risk categories, including:",
+              "body": [
+                {
+                  "type": "list",
+                  "format": "unordered",
+                  "children": [
+                    {
+                      "type": "list-item",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Reflected & Stored XSS",
+                          "bold": true
+                        }
+                      ]
+                    },
+                    {
+                      "type": "list-item",
+                      "children": [
+                        {
+                          "type": "text",
+                          "bold": true,
+                          "text": "SQL Injection (SQLi) and Server-Side Request Forgery (SSRF)"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "list-item",
+                      "children": [
+                        {
+                          "type": "text",
+                          "bold": true,
+                          "text": "Remote Code Execution / Command Injection (CMDi)"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "list-item",
+                      "children": [
+                        {
+                          "type": "text",
+                          "bold": true,
+                          "text": "HTTP Request Smuggling and Authentication Bypass"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "bgimage": null,
+              "icon": {
+                "iconName": "ph:engine-bold",
+                "iconData": "<path fill=\"currentColor\" d=\"M236 100h-11l-34.17-34.14A19.86 19.86 0 0 0 176.69 60H144V44h20a12 12 0 0 0 0-24h-64a12 12 0 0 0 0 24h20v16H64a20 20 0 0 0-20 20v48H28v-20a12 12 0 0 0-24 0v64a12 12 0 0 0 24 0v-20h16v16.69a19.86 19.86 0 0 0 5.86 14.14l39.31 39.31a19.86 19.86 0 0 0 14.14 5.86h73.38a19.86 19.86 0 0 0 14.14-5.86L225 188h11a20 20 0 0 0 20-20v-48a20 20 0 0 0-20-20m-4 64h-12a12 12 0 0 0-8.49 3.51L175 204h-70l-37-37V84h107l36.48 36.49A12 12 0 0 0 220 124h12Z\"/>",
+                "width": 256,
+                "height": 256,
+                "isSvgEditable": false,
+                "isIconNameEditable": false
+              }
+            },
+            {
+              "id": 41,
+              "title": "Phase 2: AI Attack Planner & Smart Budgeting",
+              "subtitle": null,
+              "body": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "To mimic a highly determined threat actor without degrading your infrastructure's availability, our AI Attack Planner dynamically scores attack strategies based on your underlying framework (e.g., Node.js, PHP, Java). The system operates under strict budget constraints, using live feedback loops to dynamically rebalance its methods and scale down testing intensity if target response patterns change.",
+                      "bold": true
+                    }
+                  ]
+                }
+              ],
+              "bgimage": null,
+              "icon": {
+                "iconName": "mingcute:robot-line",
+                "iconData": "<g fill=\"none\"><path d=\"m12.594 23.258l-.012.002l-.071.035l-.02.004l-.014-.004l-.071-.036q-.016-.004-.024.006l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.016-.018m.264-.113l-.014.002l-.184.093l-.01.01l-.003.011l.018.43l.005.012l.008.008l.201.092q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.003-.011l.018-.43l-.003-.012l-.01-.01z\"/><path fill=\"currentColor\" d=\"M18 10a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM8 14v-2a1 1 0 1 1 2 0v2a1 1 0 1 1-2 0m6 0v-2a1 1 0 1 1 2 0v2a1 1 0 1 1-2 0m0-10c0 .74-.403 1.383-1 1.73V6h3a4 4 0 0 1 4 4v.05a2.501 2.501 0 0 1 0 4.9V16a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4v-1.05a2.5 2.5 0 0 1 0-4.9V10a4 4 0 0 1 4-4h3v-.27A2 2 0 1 1 14 4\"/></g>",
+                "width": 24,
+                "height": 24,
+                "isSvgEditable": false,
+                "isIconNameEditable": false
+              }
+            },
+            {
+              "id": 42,
+              "title": "Phase 3: Headless Browser & Evidence Validation",
+              "subtitle": "To completely eliminate false positives, Clixerfy incorporates an Evidence-First validation model. Findings progress through a strict 5-level qualification hierarchy (RESEARCH $\\rightarrow$ SUSPICIOUS $\\rightarrow$ VALIDATED $\\rightarrow$ CONFIRMED $\\rightarrow$ VENDOR_READY).",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Critical Security Standard: No Cross-Site Scripting (XSS) payload is ever marked as CONFIRMED without execution verification. Clixerfy deploys automated Playwright headless browsers to physically navigate the target, capture real-time DOM states, catch live console alerts, and log permanent photographic proof of execution.",
+                      "bold": true
+                    }
+                  ]
+                }
+              ],
+              "bgimage": null,
+              "icon": {
+                "iconName": "simple-icons:aiohttp",
+                "iconData": "<path fill=\"currentColor\" d=\"M0 12C.01 5.377 5.377.01 12 0c6.623.01 11.99 5.377 12 12c-.01 6.623-5.377 11.99-12 12C5.377 23.99.01 18.623 0 12m12 11.004a10.95 10.95 0 0 0 6.81-2.367l-.303-.656a.746.746 0 0 1-.621-1.347l-.722-1.563a1.244 1.244 0 0 1-1.543-.734l-2.474.633v.012a.747.747 0 1 1-1.475-.178L8.2 15.31a1.24 1.24 0 0 1-1.278.607l-.748 2.59a.747.747 0 0 1-.17 1.388l.052 1.36A10.94 10.94 0 0 0 12 23.003zM5.75 21.05l-.044-1.142a.747.747 0 0 1 .18-1.482l.749-2.59a1.25 1.25 0 0 1-.759-1.147l-4.674-.566A11.04 11.04 0 0 0 5.75 21.05m13.3-.608a11.1 11.1 0 0 0 2.74-3.421l-3.826-.751a1.25 1.25 0 0 1-.528.672l.732 1.588a.747.747 0 0 1 .598 1.3zm2.878-3.698A10.9 10.9 0 0 0 23.004 12a10.95 10.95 0 0 0-2.492-6.965L19 5.551a.75.75 0 0 1-.726.922a.75.75 0 0 1-.682-.442L14.449 7.1a2.49 2.49 0 0 1-1.015 2.737l2.857 4.901a1.245 1.245 0 0 1 1.732 1.236l3.904.77zm-8.846-.068l2.465-.63a1.24 1.24 0 0 1 .486-1.157l-2.856-4.9a2.48 2.48 0 0 1-2.444-.11l-2.77 3.892a1.24 1.24 0 0 1 .354 1.263l3.483 1.497a.746.746 0 0 1 1.282.143zm-7.17-2.284a1.246 1.246 0 0 1 1.81-.794l2.77-3.89a2.48 2.48 0 0 1-.93-1.94c0-.603.219-1.186.617-1.64L6.476 2.487a11.01 11.01 0 0 0-5.33 11.328l4.765.578zm8.44-7.572l3.174-1.083v-.01a.747.747 0 0 1 1.345-.448l1.433-.489A10.98 10.98 0 0 0 6.745 2.333l3.64 3.581a2.49 2.49 0 0 1 3.967.904l-.002.003z\"/>",
+                "width": 24,
+                "height": 24,
+                "isSvgEditable": false,
+                "isIconNameEditable": false
+              }
+            }
+          ],
+          "__component": "shared.formattedrichtextgrid"
+        }
+      ],
+      "process": [
+        {
+          "id": 14,
+          "title": "Technical Capabilities: Multi-WAF Differential Probing",
+          "steps": [
+            {
+              "id": 68,
+              "title": "Multi-Engine Differential Testing",
+              "description": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Clixerfy simultaneously tests security rules against major firewall ecosystems—including Coraza WAF, ModSecurity v3, and behaviorally simulated cloud environments like Cloudflare. By contrasting how different engines interpret the exact same mutated payload, Clixerfy catches subtle variations in detection logic."
+                    }
+                  ]
+                }
+              ],
+              "image": null
+            },
+            {
+              "id": 69,
+              "title": "Protocol & Parsing Ambiguity Probes",
+              "description": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Attackers regularly bypass firewalls by formatting HTTP requests in unusual ways. Clixerfy evaluates 22 distinct protocol ambiguity vectors, utilizing chunked encoding, multipart boundary mutations, and header rewrites to see if your WAF can be tricked into ignoring malicious web traffic."
+                    }
+                  ]
+                }
+              ],
+              "image": null
+            },
+            {
+              "id": 70,
+              "title": "Vulnerability Intelligence Mapping",
+              "description": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Backed by an internally maintained, real-time vulnerability intelligence database, the tester automatically maps application technologies against historical CVE data to generate highly targeted validation campaigns."
+                    }
+                  ]
+                }
+              ],
+              "image": null
+            }
+          ],
+          "__component": "shared.sections-process"
+        }
+      ],
+      "faqs": [
+        {
+          "id": 6,
+          "title": "Frequently Asked Questions",
+          "faq": [
+            {
+              "id": 16,
+              "question": "Will running a WAF scan disrupt my active web application services?",
+              "answer": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "No. The platform's AI Attack Planner includes rate-limiting systems, adaptive backoff modules, and load protection features to verify defenses safely without degrading production performance."
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": 17,
+              "question": "Can Clixerfy test cloud-native firewalls like Cloudflare and AWS WAF?",
+              "answer": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Yes. Alongside internal testing for Coraza and ModSecurity rules, Clixerfy features dedicated in-process behavioral simulations and direct live integration capabilities to audit cloud-delivered protection sets."
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": 18,
+              "question": "What export formats are supported for security team handoffs?",
+              "answer": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Clixerfy produces compliance-ready documentation across multiple engineering and executive formats, including SARIF, JUnit, HTML summaries, raw JSON logs, and executive-ready PDF analytics."
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "__component": "shared.faqs"
+        }
+      ],
+      "PricingTable": {
+        "id": 5,
+        "title": "Transparent, Predictable WAF Testing Pricing",
+        "subtitle": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "text": "Clixerfy offers flexible plan models designed to scale alongside your cloud application profile and validation frequency requirements."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "text": ""
+              }
+            ]
+          }
+        ],
+        "plans": [
+          {
+            "id": 13,
+            "name": "Core Validator",
+            "monthlyPrice": "$299 / mo",
+            "annualPrice": "$249 / mo (billed annually)",
+            "featured": null,
+            "features": [
+              {
+                "id": 75,
+                "label": "Simultaneous Target Applications",
+                "value": "Up to 3 App Targets"
+              },
+              {
+                "id": 76,
+                "label": "Monthly Validation Runs",
+                "value": "10 Campaigns / mo"
+              },
+              {
+                "id": 77,
+                "label": "Built-in Playbook Arrays",
+                "value": "Standard OWASP Top 10"
+              },
+              {
+                "id": 78,
+                "label": "Browser Execution Verification",
+                "value": "Included (Playwright Go)"
+              },
+              {
+                "id": 79,
+                "label": "Infrastructure Deployment",
+                "value": "Cloud Hosted / Managed"
+              },
+              {
+                "id": 80,
+                "label": "Multi-Tenant Operations",
+                "value": "Single Workspace Mode"
+              }
+            ]
+          },
+          {
+            "id": 14,
+            "name": "AppSec Suite",
+            "monthlyPrice": "$799 / mo",
+            "annualPrice": "$679 / mo (billed annually)",
+            "featured": false,
+            "features": [
+              {
+                "id": 81,
+                "label": "Simultaneous Target Applications",
+                "value": "Up to 15 App Targets"
+              },
+              {
+                "id": 82,
+                "label": "Monthly Validation Runs",
+                "value": "Unlimited Campaigns"
+              },
+              {
+                "id": 83,
+                "label": "Built-in Playbook Arrays",
+                "value": "All 11 Advanced Playbooks"
+              },
+              {
+                "id": 84,
+                "label": "Browser Execution Verification",
+                "value": "Included (Playwright Go)"
+              },
+              {
+                "id": 85,
+                "label": "Infrastructure Deployment",
+                "value": "Cloud Hosted or Docker"
+              },
+              {
+                "id": 86,
+                "label": "Multi-Tenant Operations",
+                "value": "Multi-Tenant Organization"
+              }
+            ]
+          },
+          {
+            "id": 15,
+            "name": "Enterprise Dedicated",
+            "monthlyPrice": "Contact Sales",
+            "annualPrice": "Custom Enterprise Quote",
+            "featured": null,
+            "features": [
+              {
+                "id": 87,
+                "label": "Simultaneous Target Applications",
+                "value": "Custom / Unlimited Targets"
+              },
+              {
+                "id": 88,
+                "label": "Monthly Validation Runs",
+                "value": "Unlimited Campaigns"
+              },
+              {
+                "id": 89,
+                "label": "Built-in Playbook Arrays",
+                "value": "Custom Playbook Architecture"
+              },
+              {
+                "id": 90,
+                "label": "Browser Execution Verification",
+                "value": "Dedicated Headless Browser Pods"
+              },
+              {
+                "id": 91,
+                "label": "Infrastructure Deployment",
+                "value": "Native K8s Operator / On-Prem"
+              },
+              {
+                "id": 92,
+                "label": "Multi-Tenant Operations",
+                "value": "Multi-Tenant + SSO / IAM Sync"
+              }
+            ]
+          }
+        ]
+      }
     }
   ],
   "meta": {
@@ -545,7 +1341,7 @@
       "page": 1,
       "pageSize": 25,
       "pageCount": 1,
-      "total": 1
+      "total": 2
     }
   }
 }
