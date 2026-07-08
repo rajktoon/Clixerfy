@@ -652,6 +652,7 @@ export async function getSolutionPage(slug: string): Promise<SolutionPageData> {
     params.set("populate[stats][populate]", "*");
     params.set("populate[faqs][populate]", "*");
     params.set("populate[cta][populate]", "*");
+    params.set("populate[PricingTable][populate][plans][populate]", "*");
     const url = `${getStrapiUrl()}/api/solutions?filters[slug][$eq]=${slug}&${params.toString()}`;
     const res = await fetch(url, {
       headers: { "Content-Type": "application/json" },
@@ -702,6 +703,7 @@ function mapSolutionPage(id: number, raw: any, slug: string): SolutionPageData {
     stats: raw.stats ?? [],
     faqs: raw.faqs ?? [],
     cta: raw.cta ?? [],
+    PricingTable: raw.PricingTable ?? null,
   };
 }
 

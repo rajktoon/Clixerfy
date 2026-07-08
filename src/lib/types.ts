@@ -494,6 +494,29 @@ export interface SolutionPageData {
   stats: any[];
   faqs: any[];
   cta: any[];
+  PricingTable: PricingTableData | null;
+}
+
+export interface PricingTableData {
+  id: number;
+  title: string;
+  subtitle: any[];
+  plans: PricingPlan[];
+}
+
+export interface PricingPlan {
+  id: number;
+  name: string;
+  monthlyPrice: string;
+  annualPrice: string;
+  featured: boolean | null;
+  features: PricingFeature[];
+}
+
+export interface PricingFeature {
+  id: number;
+  label: string;
+  value: string;
 }
 
 export interface StrapiSolutionRaw {

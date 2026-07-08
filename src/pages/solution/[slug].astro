@@ -25,6 +25,7 @@ const benefitBlocks = solution.benefits ?? [];
 const statsBlocks = solution.stats ?? [];
 const faqItems = solution.faqs?.[0]?.faq ?? [];
 const ctaBlock = solution.cta?.[0] ?? null;
+const pricingTable = solution.PricingTable ?? null;
 ---
 <Base title={solution.metaTitle || solution.title} description={solution.metaDescription}>
 <main>
@@ -171,6 +172,38 @@ const ctaBlock = solution.cta?.[0] ?? null;
     </section>
   ))}
 
+  {/* Pricing Table Section */}
+  {pricingTable && pricingTable.plans && pricingTable.plans.length > 0 && (
+    <section class="section sol-pricing-section">
+      <div class="container">
+        {pricingTable.title && <h2 class="section-title reveal">{pricingTable.title}</h2>}
+        {pricingTable.subtitle && <div class="section-sub reveal" set:html={richTextToHtml(pricingTable.subtitle)}></div>}
+        <div class="sol-pricing-grid">
+          {pricingTable.plans.map((plan: any, i: number) => (
+            <article class={`sol-pricing-card reveal ${plan.featured ? 'sol-pricing-featured' : ''}`} style={`transition-delay:${i * 100}ms`}>
+              {plan.featured && <div class="sol-pricing-badge">Most Popular</div>}
+              {plan.name && <h3 class="sol-pricing-name">{plan.name}</h3>}
+              <div class="sol-pricing-prices">
+                {plan.monthlyPrice && <div class="sol-pricing-monthly">{plan.monthlyPrice}</div>}
+                {plan.annualPrice && <div class="sol-pricing-annual">{plan.annualPrice}</div>}
+              </div>
+              {plan.features && plan.features.length > 0 && (
+                <ul class="sol-pricing-features">
+                  {plan.features.map((f: any) => (
+                    <li class="sol-pricing-feature">
+                      <span class="sol-pricing-feature-label">{f.label}</span>
+                      <span class="sol-pricing-feature-value">{f.value}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
   {/* FAQ Section */}
   {faqItems.length > 0 && (
     <section class="section sol-faq-section">
@@ -269,6 +302,25 @@ const ctaBlock = solution.cta?.[0] ?? null;
   .sol-stat-value { font-family: var(--font-head); font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 800; color: var(--brand-color); }
   .sol-stat-label { font-size: .82rem; color: var(--muted); }
   @media (max-width: 768px) { .sol-stats-row { grid-template-columns: 1fr 1fr; } }
+  .sol-faq-list { display: flex; flex-direction: column; gap: .8rem; margin-top: 2.75rem; max-width: 760px; margin-inline: auto; }
+
+  /* Pricing Table */
+  .sol-pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 2.75rem; align-items: stretch; }
+  .sol-pricing-card { position: relative; background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 16px; padding: 2.5rem 2rem; display: flex; flex-direction: column; align-items: center; text-align: center; transition: border-color .18s, transform .18s, background .18s; box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2); }
+  .sol-pricing-card:hover { border-color: var(--brand-color); transform: translateY(-4px); }
+  .sol-pricing-card.sol-pricing-featured { border-color: var(--brand-color); background: linear-gradient(180deg, rgba(230,48,48,.08) 0%, rgba(255,255,255,0.03) 100%); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); transform: scale(1.05); box-shadow: 0 8px 32px rgba(230,48,48,.15); }
+  .sol-pricing-card.sol-pricing-featured:hover { transform: scale(1.05) translateY(-4px); }
+  .sol-pricing-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--brand-color); color: #fff; font-size: .75rem; font-weight: 700; padding: 4px 14px; border-radius: 20px; white-space: nowrap; }
+  .sol-pricing-name { font-family: var(--font-head); font-size: 1.2rem; font-weight: 700; margin-bottom: 1.5rem; }
+  .sol-pricing-prices { display: flex; flex-direction: column; gap: .5rem; }
+  .sol-pricing-monthly { font-size: 1.4rem; font-weight: 800; color: #fff; }
+  .sol-pricing-annual { font-size: .85rem; color: var(--muted); }
+  .sol-pricing-features { list-style: none; padding: 0; margin: 1.5rem 0 0; width: 100%; border-top: 1px solid var(--border); padding-top: 1.5rem; display: flex; flex-direction: column; gap: .75rem; }
+  .sol-pricing-feature { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; font-size: .85rem; }
+  .sol-pricing-feature-label { color: var(--muted); text-align: left;}
+  .sol-pricing-feature-value { font-weight: 600; color: #fff; text-align: right; }
+  @media (max-width: 768px) { .sol-pricing-grid { grid-template-columns: 1fr; } .sol-pricing-card.sol-pricing-featured { transform: none; } .sol-pricing-card.sol-pricing-featured:hover { transform: translateY(-4px); } }
+
   .sol-faq-list { display: flex; flex-direction: column; gap: .8rem; margin-top: 2.75rem; max-width: 760px; margin-inline: auto; }
   .sol-faq-item { background: var(--card); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; transition: border-color .18s; }
   .sol-faq-item[open] { border-color: var(--brand-color); }

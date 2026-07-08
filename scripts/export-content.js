@@ -69,6 +69,7 @@ const solutionParams = [
   "populate[process][populate]=*",
   "populate[faqs][populate]=*",
   "populate[cta][populate]=*",
+  "populate[PricingTable][populate][plans][populate]=*",
 ].join("&");
 await save("solutions", "solutions", solutionParams);
 
