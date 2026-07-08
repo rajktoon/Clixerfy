@@ -10,7 +10,8 @@ const home = await getHomepage();
 
   <!-- ── HERO ── -->
   <section class="hero" aria-labelledby="hero-heading">
-    <div class="hero-bg" aria-hidden="true">
+    <div class="hero-bg" aria-hidden="true" style={home.hero.BackgroundImage ? `background-image: url(${home.hero.BackgroundImage}); background-size: cover; background-position: center;` : ''}>
+      <div class="hero-bg-overlay"></div>
       <div class="hero-particles" aria-hidden="true"></div>
     </div>
     <div class="container hero-inner">
@@ -29,7 +30,11 @@ const home = await getHomepage();
         <div class="hero-trust">
           {home.hero.trustBadges.map(badge => (
             <span>
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2L3 7v9c0 5 4.5 9.7 9 11 4.5-1.3 9-6 9-11V7L12 2z"/></svg>
+              {badge.icon?.iconData ? (
+                <svg viewBox={`0 0 ${badge.icon.width || 24} ${badge.icon.height || 24}`} width="16" height="16" set:html={badge.icon.iconData} />
+              ) : (
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2L3 7v9c0 5 4.5 9.7 9 11 4.5-1.3 9-6 9-11V7L12 2z"/></svg>
+              )}
               {badge.text}
             </span>
           ))}
@@ -37,14 +42,20 @@ const home = await getHomepage();
       </div>
 
       <div class="hero-visual" aria-hidden="true">
-        <div class="shield-glow"></div>
-        <svg class="shield-icon" width="160" height="190" viewBox="0 0 120 140" fill="none">
-          <path d="M60 5 L110 25 L110 75 C110 105 85 130 60 138 C35 130 10 105 10 75 L10 25 Z" fill="var(--red)" opacity="0.2" stroke="var(--red)" stroke-width="1.5"/>
-          <path d="M60 18 L100 34 L100 75 C100 100 80 122 60 130 C40 122 20 100 20 75 L20 34 Z" fill="var(--red)" opacity="0.35"/>
-          <rect x="48" y="55" width="24" height="30" rx="3" fill="none" stroke="#fff" stroke-width="3"/>
-          <circle cx="60" cy="67" r="4" fill="#fff"/>
-          <line x1="60" y1="71" x2="60" y2="78" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
-        </svg>
+        <!-- {home.hero.FeaturedImage ? (
+          <img src={home.hero.FeaturedImage} alt="Clixerfy Security" class="hero-featured-img" width="400" height="400" loading="eager" decoding="async" fetchpriority="high" />
+        ) : (
+          <>
+            <div class="shield-glow"></div>
+            <svg class="shield-icon" width="160" height="190" viewBox="0 0 120 140" fill="none">
+              <path d="M60 5 L110 25 L110 75 C110 105 85 130 60 138 C35 130 10 105 10 75 L10 25 Z" fill="var(--red)" opacity="0.2" stroke="var(--red)" stroke-width="1.5"/>
+              <path d="M60 18 L100 34 L100 75 C100 100 80 122 60 130 C40 122 20 100 20 75 L20 34 Z" fill="var(--red)" opacity="0.35"/>
+              <rect x="48" y="55" width="24" height="30" rx="3" fill="none" stroke="#fff" stroke-width="3"/>
+              <circle cx="60" cy="67" r="4" fill="#fff"/>
+              <line x1="60" y1="71" x2="60" y2="78" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+          </>
+        )} -->
       </div>
     </div>
   </section>
@@ -52,11 +63,17 @@ const home = await getHomepage();
   <!-- ── FEATURES GRID ── -->
   <section class="section" id="about" aria-labelledby="feat1-heading">
     <div class="container">
-      <h2 id="feat1-heading" class="section-title reveal text-right" set:html={home.features.sectionTitle}></h2>
+      <h2 id="feat1-heading" class="section-title reveal" set:html={home.features.sectionTitle}></h2>
       <div class="feat-grid">
         {home.features.items.map((f, i) => (
           <article class={`feat-card reveal ${f.large ? 'feat-large' : ''}`} style={`transition-delay:${i*60}ms`}>
-            <div class="feat-dot" aria-hidden="true"></div>
+            <div class="feat-icon" aria-hidden="true">
+              {f.icon?.iconData ? (
+                <svg viewBox={`0 0 ${f.icon.width || 24} ${f.icon.height || 24}`} width="24" height="24" set:html={f.icon.iconData} />
+              ) : (
+                <div class="feat-dot"></div>
+              )}
+            </div>
             <h3 class="feat-title">{f.title}</h3>
             <p class="feat-desc">{f.desc}</p>
           </article>
@@ -91,16 +108,20 @@ const home = await getHomepage();
   <!-- ─ PRODUCTS ── -->
   <section class="section" id="products" aria-labelledby="prod-heading">
     <div class="container">
-      <h2 id="prod-heading" class="section-title reveal text-left" set:html={home.products.sectionTitle}></h2>
+      <h2 id="prod-heading" class="section-title reveal" set:html={home.products.sectionTitle}></h2>
       <div class="prod-grid">
         {home.products.items.map((p, i) => (
-          <article class={`prod-card reveal ${i === 1 ? 'prod-tall' : ''}`} style={`transition-delay:${i*55}ms`}>
+          <article class="prod-card reveal" style={`transition-delay:${i*55}ms`}>
             <div class="prod-icon" aria-hidden="true">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              {p.icon?.iconData ? (
+                <svg viewBox={`0 0 ${p.icon.width || 24} ${p.icon.height || 24}`} width="24" height="24" set:html={p.icon.iconData} />
+              ) : (
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              )}
             </div>
             <h3 class="prod-title">{p.title}</h3>
             <p class="prod-desc">{p.desc}</p>
-            <a href="#contact" class="prod-link">{p.linkText} <span aria-hidden="true">→</span></a>
+            <a href={p.linkURL || '/contact'} class="prod-link">{p.linkText || 'Learn More'} <span aria-hidden="true">→</span></a>
           </article>
         ))}
       </div>
@@ -110,17 +131,20 @@ const home = await getHomepage();
   <!-- ── THREAT CARDS ── -->
   <section class="section cards-section" aria-labelledby="cards-heading">
     <div class="container">
-      <h2 id="cards-heading" class="section-title reveal text-right" set:html={home.threatCards.sectionTitle}></h2>
+      <h2 id="cards-heading" class="section-title reveal" set:html={home.threatCards.sectionTitle}></h2>
       <p class="section-sub reveal">{home.threatCards.sectionSubtitle}</p>
       <div class="threat-cards" role="list">
         {home.threatCards.items.map((c, i) => (
-          <article class={`threat-card reveal threat-${i === 0 ? 'red' : i === 1 ? 'white' : 'dark'}`} style={`transition-delay:${i*60}ms`} role="listitem">
+          <article class={`threat-card reveal threat-${c.color || 'dark'}`} style={`transition-delay:${i*60}ms`} role="listitem">
             <div class="tc-icon" aria-hidden="true">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke={i <= 1 ? "var(--red)" : "#fff"} stroke-width="2" stroke-linecap="round"><path d="M12 2L3 7v9c0 5 4.5 9.7 9 11 4.5-1.3 9-6 9-11V7L12 2z"/></svg>
+              {c.astroicon?.iconData ? (
+                <svg viewBox={`0 0 ${c.astroicon.width || 24} ${c.astroicon.height || 24}`} width="20" height="20" fill="currentColor" stroke="none" set:html={c.astroicon.iconData} />
+              ) : (
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 2L3 7v9c0 5 4.5 9.7 9 11 4.5-1.3 9-6 9-11V7L12 2z"/></svg>
+              )}
             </div>
             <h3 class="tc-title">{c.title}</h3>
             <p class="tc-desc">{c.desc}</p>
-            <a href="#contact" class="tc-link">{c.linkText} <span aria-hidden="true">→</span></a>
           </article>
         ))}
       </div>
@@ -196,6 +220,10 @@ const home = await getHomepage();
       radial-gradient(ellipse 60% 50% at 70% 40%, rgba(230,48,48,.12) 0%, transparent 70%),
       linear-gradient(180deg, #0a0a0a 0%, #0d0000 60%, #0a0a0a 100%);
   }
+  .hero-bg-overlay {
+    position: absolute; inset: 0;
+    background: rgba(10, 10, 10, 0.75);
+  }
   /* Scattered red particles */
   .hero-particles {
     position: absolute; inset: 0;
@@ -235,6 +263,7 @@ const home = await getHomepage();
   .hero-actions { margin-bottom: 1.4rem; }
   .hero-trust { display: flex; gap: 1.4rem; flex-wrap: wrap; }
   .hero-trust span { display: flex; align-items: center; gap: 6px; font-size: .8rem; color: var(--muted); }
+  .hero-trust span svg { width: 16px; height: 16px; }
 
   /* Shield visual */
   .hero-visual  { flex-shrink: 0; position: relative; }
@@ -250,6 +279,14 @@ const home = await getHomepage();
     filter: drop-shadow(0 0 40px rgba(230,48,48,.5));
     animation: float 6s ease-in-out infinite;
   }
+  .hero-featured-img {
+    max-width: 100%;
+    width: 400px;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(0,0,0,.4);
+    position: relative; z-index: 1;
+  }
 
   @media (max-width: 768px) {
     .hero-inner { grid-template-columns: 1fr; }
@@ -259,7 +296,7 @@ const home = await getHomepage();
   /* ── FEATURES GRID ── */
   .feat-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
     grid-template-rows: auto auto;
     gap: 1px;
     background: var(--border);
@@ -267,6 +304,10 @@ const home = await getHomepage();
     border-radius: 14px;
     overflow: hidden;
     margin-top: 2.75rem;
+  }
+  /* Last item spans 2 cols when 5 items fill 6-cell grid */
+  .feat-card:last-child:nth-child(3n+2) {
+    grid-column: span 2;
   }
   .feat-card {
     background: var(--card); padding: 1.75rem;
@@ -279,6 +320,12 @@ const home = await getHomepage();
   .feat-dot {
     width: 28px; height: 28px; border-radius: 50%;
     background: #fff; margin-bottom: 1.2rem;
+  }
+  .feat-icon {
+    margin-bottom: 1.2rem;
+  }
+  .feat-icon svg {
+    width: 28px; height: 28px;
   }
   .feat-title {
     font-family: var(--font-head); font-size: .82rem; font-weight: 700;
@@ -306,11 +353,10 @@ const home = await getHomepage();
 
   @media (max-width: 768px) { .trust-inner { grid-template-columns: 1fr; gap: 2.5rem; } }
 
-  /* ── PRODUCTS (masonry-style) ─ */
+  /* ── PRODUCTS ── */
   .prod-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto auto auto;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: .9rem; margin-top: 2.75rem;
   }
   .prod-card {
@@ -318,32 +364,34 @@ const home = await getHomepage();
     border-radius: 13px; padding: 1.6rem;
     display: flex; flex-direction: column; gap: .7rem;
     transition: border-color .18s;
+    min-width: 0;
+    overflow: hidden;
   }
-  .prod-card:hover { border-color: rgba(230,48,48,.28); }
-  .prod-tall {
-    grid-row: 1 / 3;
-    grid-column: 2;
+  .prod-card:hover { border-color: var(--brand-color); }
+  /* Last item spans full width when only 4 items in 3-col grid */
+  .prod-card:last-child:nth-child(3n+1) {
+    grid-column: span 3;
   }
   .prod-icon  {
-    width: 30px; height: 30px; border-radius: 50%;
+    width: 36px; height: 36px; border-radius: 50%;
     background: rgba(230,48,48,.07); border: 1px solid rgba(230,48,48,.14);
     display: flex; align-items: center; justify-content: center;
   }
+  .prod-icon svg { width: 20px; height: 20px; }
   .prod-title { font-family: var(--font-head); font-size: .8rem; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; }
   .prod-desc  { font-size: .81rem; color: var(--muted); flex: 1; line-height: 1.65; }
   .prod-link  { font-size: .8rem; color: var(--red); font-weight: 600; align-self: flex-start; display: flex; gap: 4px; transition: gap .15s; }
   .prod-link:hover { gap: 8px; }
 
   @media (max-width: 768px) {
-    .prod-grid { grid-template-columns: 1fr 1fr; }
-    .prod-tall { grid-row: auto; grid-column: auto; }
+    .prod-grid { grid-template-columns: 1fr; }
+    .prod-card:last-child:nth-child(3n+1) { grid-column: auto; }
   }
-  @media (max-width: 480px) { .prod-grid { grid-template-columns: 1fr; } }
 
   /* ── THREAT CARDS ── */
   .cards-section { background: var(--card); border-top: 1px solid var(--border); }
   .threat-cards  {
-    display: grid; grid-template-columns: repeat(4, 1fr);
+    display: grid; grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: .9rem; margin-top: 2.75rem;
   }
   .threat-card {
@@ -358,30 +406,27 @@ const home = await getHomepage();
   }
   .threat-red .tc-title { color: #fff; }
   .threat-red .tc-desc { color: rgba(255,255,255,.85); }
-  .threat-red .tc-link { color: rgba(255,255,255,.9); }
   .threat-white {
     background: var(--card);
     border-color: var(--border);
   }
   .threat-white .tc-title { color: var(--red); }
   .threat-white .tc-desc { color: var(--muted); }
-  .threat-white .tc-link { color: var(--red); }
   .threat-dark {
     background: var(--card);
   }
   .tc-icon  {
-    width: 30px; height: 30px; border-radius: 7px;
+    width: 36px; height: 36px; border-radius: 8px;
     background: rgba(230,48,48,.09); display: flex; align-items: center; justify-content: center;
+    color: var(--red);
   }
-  .threat-red .tc-icon { background: rgba(255,255,255,.15); }
-  .threat-white .tc-icon { background: rgba(230,48,48,.1); }
+  .threat-red .tc-icon { background: rgba(255,255,255,.15); color: #fff; }
+  .threat-white .tc-icon { background: rgba(230,48,48,.1); color: var(--red); }
+  .threat-dark .tc-icon { background: rgba(230,48,48,.09); color: var(--red); }
   .tc-title { font-family: var(--font-head); font-size: .78rem; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: var(--red); }
   .tc-desc  { font-size: .81rem; color: var(--muted); flex: 1; line-height: 1.65; }
-  .tc-link  { font-size: .8rem; color: var(--muted); font-weight: 600; display: flex; gap: 4px; transition: color .15s; }
-  .tc-link:hover { color: var(--red); }
 
-  @media (max-width: 900px) { .threat-cards { grid-template-columns: 1fr 1fr; } }
-  @media (max-width: 480px) { .threat-cards { grid-template-columns: 1fr; } }
+  @media (max-width: 768px) { .threat-cards { grid-template-columns: 1fr; } }
 
   /* ── CTA ── */
   .cta-section {

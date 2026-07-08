@@ -121,7 +121,7 @@ function mapNavigation(raw: StrapiNavigationRaw): NavigationData {
     logoImageUrl: raw.logoImageUrl ?? "",
     links: raw.links ?? [],
     ctaLabel: raw.ctaLabel ?? "Contact",
-    ctaHref: raw.ctaHref ?? "#contact",
+    ctaHref: raw.ctaHref ?? "/contact",
   };
 }
 
@@ -167,6 +167,8 @@ function mapHomepage(raw: StrapiHomepageRaw): HomepageData {
       subtitle: raw.hero?.subtitle ?? "",
       ctaLabel: raw.hero?.ctaLabel ?? "",
       ctaHref: raw.hero?.ctaHref ?? "#",
+      FeaturedImage: raw.hero?.FeaturedImage ?? null,
+      BackgroundImage: raw.hero?.BackgroundImage ?? null,
       trustBadges: raw.hero?.trustBadges ?? [],
     },
     features: {
@@ -251,7 +253,7 @@ export async function getNavigation(): Promise<NavigationData> {
       logoImageUrl: "",
       links: [],
       ctaLabel: "Contact",
-      ctaHref: "#contact",
+      ctaHref: "/contact",
     };
   }
 
@@ -282,7 +284,7 @@ export async function getNavigation(): Promise<NavigationData> {
       logoImageUrl: "",
       links: [],
       ctaLabel: "Contact",
-      ctaHref: "#contact",
+      ctaHref: "/contact",
     };
   }
 }
@@ -373,10 +375,32 @@ export async function getSeoDefaults(): Promise<SeoDefaultsData> {
 
 export async function getHomepage(): Promise<HomepageData> {
   try {
-    const raw = await fetchSingle<StrapiHomepageRaw>("homepage");
+    const params = new URLSearchParams();
+    params.set("populate[hero][populate]", "*");
+    params.set("populate[features][populate]", "*");
+    params.set("populate[trust][populate]", "*");
+    params.set("populate[products][populate]", "*");
+    params.set("populate[threatCards][populate]", "*");
+    params.set("populate[testimonials][populate]", "*");
+    params.set("populate[cta][populate]", "*");
+    const url = `${getStrapiUrl()}/api/homepage?${params.toString()}`;
+    const res = await fetch(url, {
+      headers: { "Content-Type": "application/json" },
+    });
+    if (!res.ok) throw new Error(`Strapi homepage: ${res.status}`);
+    const json = await res.json();
+    const raw = json.data?.attributes ?? json.data ?? {};
     return mapHomepage(raw);
   } catch (err) {
-    console.warn("[content] homepage not available in Strapi, using defaults.");
+    console.warn("[content] homepage not available in Strapi, trying snapshot...");
+    try {
+      const snapshot = await loadSnapshot("homepage");
+      if (snapshot) {
+        const raw = snapshot.data?.attributes ?? snapshot.data ?? {};
+        return mapHomepage(raw);
+      }
+    } catch {}
+    console.warn("[content] homepage snapshot not available, using defaults.");
     return {
       hero: {
         badge: "",
@@ -385,6 +409,8 @@ export async function getHomepage(): Promise<HomepageData> {
         subtitle: "",
         ctaLabel: "",
         ctaHref: "#",
+        FeaturedImage: null,
+        BackgroundImage: null,
         trustBadges: [],
       },
       features: { sectionTitle: "", items: [] },

@@ -1,5 +1,7 @@
 ---
-import type { NavigationData, FooterData } from '../../lib/types';
+import type { NavigationData, FooterData } from "../../lib/types";
+
+import logo from "../../assets/logo.png";
 
 interface Props {
   nav: NavigationData;
@@ -13,35 +15,90 @@ const { nav, footer } = Astro.props;
   <div class="footer-bg" aria-hidden="true"></div>
   <div class="container footer-inner">
     <div class="footer-brand">
-      <a href="/" class="logo footer-logo" aria-label={`${nav.logoText} home`}>
-        {nav.logoImageUrl
-          ? <img src={nav.logoImageUrl} alt={`${nav.logoText} logo`} width="120" height="32" />
-          : <img src="/image-removebg-preview.png" alt={`${nav.logoText} logo`} width="120" height="32" />}
-      </a>
+      {
+        nav.logoImageUrl ? (
+          <img
+            src="/logo.png"
+            alt={`${nav.logoText} logo`}
+            width="120"
+            height="auto"
+            loading="eager"
+            decoding="async"
+            fetchpriority="high"
+          />
+        ) : (
+          <img
+            src="/logo.png"
+            alt={`${nav.logoText} logo`}
+            width="120"
+            height="auto"
+            loading="eager"
+            decoding="async"
+            fetchpriority="high"
+          />
+        )
+      }
       <p class="footer-tagline">{footer.tagline}</p>
       <div class="socials" aria-label="Social media links">
-        {footer.socials.map(s => (
-          <a href={s.href} class="social-link" aria-label={s.label} rel="noopener noreferrer">{s.label}</a>
-        ))}
+        {
+          footer.socials.map((s) => (
+            <a
+              href={s.href || "#"}
+              class="social-link"
+              aria-label={s.icon?.iconName || "Social link"}
+              rel="noopener noreferrer"
+            >
+              {s.icon?.iconData ? (
+                <svg
+                  viewBox={`0 0 ${s.icon.width || 24} ${s.icon.height || 24}`}
+                  width="16"
+                  height="16"
+                  set:html={s.icon.iconData}
+                />
+              ) : (
+                <span>S</span>
+              )}
+            </a>
+          ))
+        }
       </div>
     </div>
 
-    {footer.linkGroups.map((group) => (
-      <div class="footer-col">
-        <h3 class="footer-heading">{group.title}</h3>
-        <ul role="list">
-          {(group.links ?? []).map(link => <li><a href={link.href} class="footer-link">{link.label}</a></li>)}
-        </ul>
-      </div>
-    ))}
+    {
+      footer.linkGroups.map((group) => (
+        <div class="footer-col">
+          <h3 class="footer-heading">{group.title}</h3>
+          <ul role="list">
+            {(group.links ?? []).map((link) => (
+              <li>
+                <a href={link.href} class="footer-link">
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))
+    }
 
     <div class="footer-newsletter">
       <h3 class="footer-heading">{footer.newsletter.title}</h3>
       <p>{footer.newsletter.description}</p>
-      <div class="newsletter-form" role="form" aria-label="Newsletter subscription">
+      <div
+        class="newsletter-form"
+        role="form"
+        aria-label="Newsletter subscription"
+      >
         <label for="email-input" class="sr-only">Email address</label>
-        <input id="email-input" type="email" placeholder={footer.newsletter.placeholder} autocomplete="email" />
-        <button type="button" class="btn-primary newsletter-btn">{footer.newsletter.buttonLabel}</button>
+        <input
+          id="email-input"
+          type="email"
+          placeholder={footer.newsletter.placeholder}
+          autocomplete="email"
+        />
+        <button type="button" class="btn-primary newsletter-btn"
+          >{footer.newsletter.buttonLabel}</button
+        >
       </div>
     </div>
   </div>
@@ -54,56 +111,169 @@ const { nav, footer } = Astro.props;
 </footer>
 
 <style>
-  .footer { position: relative; background: var(--card); border-top: 1px solid var(--border); padding-top: 3.5rem; }
+  .footer {
+    position: relative;
+    background: var(--card);
+    border-top: 1px solid var(--border);
+    padding-top: 3.5rem;
+  }
   .footer-bg {
-    position: absolute; bottom: 0; left: 0; right: 0; height: 200px;
-    background: linear-gradient(180deg, transparent 0%, rgba(230,48,48,.06) 100%);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    background: linear-gradient(
+      180deg,
+      transparent 0%,
+      rgba(230, 48, 48, 0.06) 100%
+    );
     pointer-events: none;
   }
   .footer-inner {
     position: relative;
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr 2fr;
-    gap: 2.5rem; margin-bottom: 2.75rem;
+    gap: 2.5rem;
+    margin-bottom: 2.75rem;
   }
-  .footer-brand .logo { margin-bottom: .9rem; }
-  .footer-tagline { font-size: .83rem; color: var(--muted); line-height: 1.7; max-width: 210px; margin-bottom: 1.1rem; }
-  .socials { display: flex; gap: .45rem; }
+  .footer-brand .logo {
+    margin-bottom: 0.9rem;
+  }
+  .footer-brand .logo img {
+    width: 120px;
+    height: auto;
+    object-fit: contain;
+  }
+  .footer-tagline {
+    font-size: 0.83rem;
+    color: var(--muted);
+    line-height: 1.7;
+    max-width: 210px;
+    margin-bottom: 1.1rem;
+  }
+  .socials {
+    display: flex;
+    gap: 0.45rem;
+  }
   .social-link {
-    width: 30px; height: 30px; border-radius: 7px;
-    background: rgba(255,255,255,.04); border: 1px solid var(--border);
-    display: flex; align-items: center; justify-content: center;
-    font-size: .68rem; color: var(--muted); text-transform: uppercase;
-    transition: background .15s, color .15s;
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--muted);
+    transition:
+      background 0.15s,
+      color 0.15s,
+      border-color 0.15s;
   }
-  .social-link:hover { background: rgba(230,48,48,.14); color: var(--brand-color); }
-  .footer-heading { font-family: var(--font-head); font-size: .88rem; font-weight: 700; letter-spacing: .04em; margin-bottom: .9rem; }
-  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: .55rem; }
-  .footer-link { font-size: .83rem; color: var(--muted); transition: color .15s; }
-  .footer-link:hover { color: var(--brand-color); }
-  .footer-newsletter p { font-size: .83rem; color: var(--muted); margin-bottom: .9rem; }
-  .newsletter-form { display: flex; gap: .45rem; flex-direction: column; }
+  .social-link svg {
+    width: 16px;
+    height: 16px;
+  }
+  .social-link:hover {
+    background: rgba(230, 48, 48, 0.14);
+    color: var(--brand-color);
+    border-color: var(--brand-color);
+  }
+  .footer-heading {
+    font-family: var(--font-head);
+    font-size: 0.88rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    margin-bottom: 0.9rem;
+  }
+  .footer-col ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+  }
+  .footer-link {
+    font-size: 0.83rem;
+    color: var(--muted);
+    transition: color 0.15s;
+  }
+  .footer-link:hover {
+    color: var(--brand-color);
+  }
+  .footer-newsletter p {
+    font-size: 0.83rem;
+    color: var(--muted);
+    margin-bottom: 0.9rem;
+  }
+  .newsletter-form {
+    display: flex;
+    gap: 0.45rem;
+    flex-direction: column;
+  }
   .newsletter-form input {
-    background: rgba(255,255,255,.04); border: 1px solid var(--border);
-    border-radius: 8px; padding: 9px 13px;
-    color: var(--text); font-family: var(--font-body); font-size: .855rem;
-    outline: none; transition: border-color .15s;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 9px 13px;
+    color: var(--text);
+    font-family: var(--font-body);
+    font-size: 0.855rem;
+    outline: none;
+    transition: border-color 0.15s;
   }
-  .newsletter-form input:focus { border-color: rgba(230,48,48,.38); }
-  .newsletter-form input::placeholder { color: var(--muted); }
-  .newsletter-btn { width: 100%; justify-content: center; }
-  .footer-bottom { border-top: 1px solid var(--border); padding-block: 1.1rem; }
-  .footer-bottom .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; }
-  .footer-bottom p { font-size: .78rem; color: var(--muted); text-align: center; }
-  .footer-sitemap-link { font-size: .78rem; color: var(--muted); transition: color .15s; }
-  .footer-sitemap-link:hover { color: var(--brand-color); }
+  .newsletter-form input:focus {
+    border-color: rgba(230, 48, 48, 0.38);
+  }
+  .newsletter-form input::placeholder {
+    color: var(--muted);
+  }
+  .newsletter-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .footer-bottom {
+    border-top: 1px solid var(--border);
+    padding-block: 1.1rem;
+  }
+  .footer-bottom .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .footer-bottom p {
+    font-size: 0.78rem;
+    color: var(--muted);
+    text-align: center;
+  }
+  .footer-sitemap-link {
+    font-size: 0.78rem;
+    color: var(--muted);
+    transition: color 0.15s;
+  }
+  .footer-sitemap-link:hover {
+    color: var(--brand-color);
+  }
 
   @media (max-width: 1024px) {
-    .footer-inner { grid-template-columns: 1fr 1fr 1fr; }
-    .footer-brand, .footer-newsletter { grid-column: span 3; }
+    .footer-inner {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    .footer-brand,
+    .footer-newsletter {
+      grid-column: span 3;
+    }
   }
   @media (max-width: 600px) {
-    .footer-inner { grid-template-columns: 1fr 1fr; gap: 1.75rem; }
-    .footer-brand, .footer-newsletter { grid-column: span 2; }
+    .footer-inner {
+      grid-template-columns: 1fr 1fr;
+      gap: 1.75rem;
+    }
+    .footer-brand,
+    .footer-newsletter {
+      grid-column: span 2;
+    }
   }
 </style>

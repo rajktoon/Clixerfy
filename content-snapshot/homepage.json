@@ -1,49 +1,321 @@
 {
   "data": {
-    "id": 3,
+    "id": 8,
     "documentId": "zrv44i96tjiyhzob0wf1eupi",
     "createdAt": "2026-06-26T18:15:44.336Z",
-    "updatedAt": "2026-06-29T19:35:59.560Z",
-    "publishedAt": "2026-06-29T19:35:59.568Z",
-    "hero": {
-      "id": 2,
-      "badge": "Trusted by 500+ businesses",
-      "titleText": "Secure Your Business with ",
-      "titleHighlight": "Clixerfy",
-      "subtitle": "Enterprise-grade cybersecurity solutions tailored for modern businesses. Protect your data, your customers, and your reputation.",
-      "ctaLabel": "Start Free Assessment",
-      "ctaHref": "#contact"
-    },
-    "features": {
-      "id": 2,
-      "sectionTitle": "Why Choose Clixerfy?",
-      "body": null
-    },
-    "trust": {
-      "id": 2,
-      "sectionTitle": "Trusted by Industry Leaders",
-      "body": "We have been protecting businesses across North America for over a decade. Our team of certified security experts combines cutting-edge technology with proven methodologies to deliver unmatched protection."
-    },
-    "products": {
-      "id": 2,
-      "sectionTitle": "Our Security Products"
-    },
-    "threatCards": {
-      "id": 2,
-      "sectionTitle": "Emerging Threats",
-      "sectionSubtitle": "Stay ahead of the latest cybersecurity threats targeting businesses like yours."
-    },
+    "updatedAt": "2026-07-08T15:36:04.130Z",
+    "publishedAt": "2026-07-08T15:36:04.153Z",
     "cta": {
-      "id": 2,
+      "id": 27,
       "title": "Ready to Secure Your Future?",
       "subtitle": "Get a free security assessment and discover how we can protect your business.",
       "ctaLabel": "Book Free Consultation",
       "ctaHref": "#contact"
     },
+    "hero": {
+      "id": 10,
+      "badge": "Trusted by 500+ businesses",
+      "titleText": "Secure Your Business with ",
+      "titleHighlight": "Clixerfy",
+      "subtitle": "Enterprise-grade cybersecurity solutions tailored for modern businesses. Protect your data, your customers, and your reputation.",
+      "ctaLabel": "Start Free Assessment",
+      "ctaHref": "#contact",
+      "FeaturedImage": "https://clixerfy.com/wp-content/uploads/2026/07/clixerfy-featured-image.webp",
+      "BackgroundImage": "https://clixerfy.com/wp-content/uploads/2026/07/clxierfy-herobanner.jpg",
+      "trustBadges": [
+        {
+          "id": 19,
+          "text": "SOC 2 Certified",
+          "icon": {
+            "iconName": "mingcute:certificate-fill",
+            "iconData": "<g fill=\"none\" fill-rule=\"evenodd\"><path d=\"m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z\"/><path fill=\"currentColor\" d=\"M10.586 2.1a2 2 0 0 1 2.7-.116l.128.117L15.314 4H18a2 2 0 0 1 1.994 1.85L20 6v2.686l1.9 1.9a2 2 0 0 1 .116 2.701l-.117.127l-1.9 1.9V18a2 2 0 0 1-1.85 1.995L18 20h-2.685l-1.9 1.9a2 2 0 0 1-2.701.116l-.127-.116l-1.9-1.9H6a2 2 0 0 1-1.995-1.85L4 18v-2.686l-1.9-1.9a2 2 0 0 1-.116-2.701l.116-.127l1.9-1.9V6a2 2 0 0 1 1.85-1.994L6 4h2.686zm4.493 6.883l-4.244 4.244l-1.768-1.768a1 1 0 0 0-1.414 1.415l2.404 2.404a1.1 1.1 0 0 0 1.556 0l4.88-4.881a1 1 0 0 0-1.414-1.414\"/></g>",
+            "width": 24,
+            "height": 24,
+            "isSvgEditable": false,
+            "isIconNameEditable": false
+          }
+        },
+        {
+          "id": 20,
+          "text": "24/7 Monitoring",
+          "icon": {
+            "iconName": "icon-park-outline:scanning",
+            "iconData": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"4\" d=\"M16 6H8a2 2 0 0 0-2 2v8m10 26H8a2 2 0 0 1-2-2v-8m26 10h8a2 2 0 0 0 2-2v-8M32 6h8a2 2 0 0 1 2 2v8m-8 8H14m13-8h-6m6 16h-6\"/>",
+            "width": 48,
+            "height": 48,
+            "isSvgEditable": false,
+            "isIconNameEditable": false
+          }
+        },
+        {
+          "id": 21,
+          "text": "ISO 27001",
+          "icon": {
+            "iconName": "tabler:certificate",
+            "iconData": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path d=\"M12 15a3 3 0 1 0 6 0a3 3 0 1 0-6 0\"/><path d=\"M13 17.5V22l2-1.5l2 1.5v-4.5\"/><path d=\"M10 19H5a2 2 0 0 1-2-2V7c0-1.1.9-2 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-1 1.73M6 9h12M6 12h3m-3 3h2\"/></g>",
+            "width": 24,
+            "height": 24,
+            "isSvgEditable": false,
+            "isIconNameEditable": false
+          }
+        }
+      ]
+    },
+    "features": {
+      "id": 28,
+      "sectionTitle": "Why Choose Clixerfy?",
+      "body": null,
+      "items": [
+        {
+          "id": 93,
+          "title": "Threat Detection",
+          "desc": "AI-powered real-time threat detection that identifies vulnerabilities before they become breaches.",
+          "icon": {
+            "iconName": "at-icons:danger",
+            "iconData": "<path fill=\"currentColor\" d=\"M7.134 2.5a1 1 0 0 1 1.732 0L14.928 13a1 1 0 0 1-.866 1.5H1.938a1 1 0 0 1-.866-1.5zM8 11a1 1 0 1 0 0 2a1 1 0 0 0 0-2m0-6a1 1 0 0 0-1 1v3a1 1 0 1 0 2 0V6a1 1 0 0 0-1-1\"/>",
+            "width": 16,
+            "height": 16,
+            "isSvgEditable": false,
+            "isIconNameEditable": false
+          }
+        },
+        {
+          "id": 94,
+          "title": "Cloud Security",
+          "desc": "Comprehensive cloud infrastructure protection across AWS, Azure, and GCP environments.",
+          "icon": {
+            "iconName": "mdi:cloud-security",
+            "iconData": "<path fill=\"currentColor\" d=\"M9.41 20H6.5c-1.5 0-2.82-.5-3.89-1.57C1.54 17.38 1 16.09 1 14.58q0-1.95 1.17-3.48a5.25 5.25 0 0 1 3.08-1.95c.42-1.53 1.25-2.77 2.5-3.72C9 4.5 10.42 4 12 4c1.95 0 3.61.68 4.96 2.04C18.32 7.39 19 9.05 19 11c1.15.13 2.11.63 2.86 1.5c.64.73 1 1.56 1.1 2.5H18a5.01 5.01 0 0 0-4-2c-2.8 0-5 2.2-5 5c0 .72.15 1.39.41 2M23 17v2h-2v2h-2v-2h-2.2c-.4 1.2-1.5 2-2.8 2c-1.7 0-3-1.3-3-3s1.3-3 3-3c1.3 0 2.4.8 2.8 2zm-8 1c0-.5-.4-1-1-1s-1 .5-1 1s.4 1 1 1s1-.5 1-1\"/>",
+            "width": 24,
+            "height": 24,
+            "isSvgEditable": false,
+            "isIconNameEditable": false
+          }
+        },
+        {
+          "id": 95,
+          "title": "Compliance",
+          "desc": "Automated compliance monitoring for SOC 2, HIPAA, PCI-DSS, and GDPR frameworks.",
+          "icon": {
+            "iconName": "grommet-icons:compliance",
+            "iconData": "<path fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" d=\"M8 6h8V1H8zm8-3h5v20H3V3h5m0 11l3 3l6-6\"/>",
+            "width": 24,
+            "height": 24,
+            "isSvgEditable": false,
+            "isIconNameEditable": false
+          }
+        },
+        {
+          "id": 96,
+          "title": "Incident Response",
+          "desc": "Rapid incident response team ready to contain and remediate security breaches within minutes.",
+          "icon": {
+            "iconName": "healthicons:crisis-response-center-person",
+            "iconData": "<g fill=\"currentColor\"><path fill-rule=\"evenodd\" d=\"M23 6H6v12h17zm-8.5 10a1 1 0 1 0 0-2a1 1 0 0 0 0 2m-1-7a1 1 0 1 1 2 0v3a1 1 0 1 1-2 0zM42 6H25v12h17zm-1.793 3.207L34.5 14.914l-2.5-2.5l-2.293 2.293l-1.414-1.414L32 9.586l2.5 2.5l4.293-4.293zM6 32V20h17v4.083A6.002 6.002 0 0 0 18.341 32zm3-7v-2h2v2zm0 2v2h2v-2zm4-2v-2h2v2zm0 2v2h2v-2zm4-2v-2h2v2zm13 5a6 6 0 0 1-.341 2H42V20H25v4.083c2.838.476 5 2.944 5 5.917m2-5h7a1 1 0 1 0 0-2h-7a1 1 0 1 0 0 2m0 3a1 1 0 0 0 1 1h6a1 1 0 1 0 0-2h-6a1 1 0 0 0-1 1\" clip-rule=\"evenodd\"/><path d=\"M28 30a4 4 0 1 1-8 0a4 4 0 0 1 8 0m-4 5a21.5 21.5 0 0 0-4.612.56c-.764.185-1.521.432-2.111.762c-.516.289-1.277.853-1.277 1.8V42h16v-3.879c0-.946-.761-1.51-1.277-1.8c-.59-.329-1.347-.576-2.111-.761A21.5 21.5 0 0 0 24 35\"/></g>",
+            "width": 48,
+            "height": 48,
+            "isSvgEditable": false,
+            "isIconNameEditable": false
+          }
+        },
+        {
+          "id": 97,
+          "title": "Employee Training",
+          "desc": "Custom security awareness programs to transform your team into the first line of defense.",
+          "icon": {
+            "iconName": "oui:training",
+            "iconData": "<path fill=\"currentColor\" d=\"M10.386 9.836a2.5 2.5 0 1 1 3.611.667C15.212 11.173 16 12.46 16 14v1.5a.5.5 0 1 1-1 0V14c0-1.724-1.276-3-3-3c-.91 0-1.298-.02-1.805-.122c-1.25-.254-2.333-1-3.585-2.566a.5.5 0 1 1 .78-.624c.9 1.124 1.653 1.74 2.434 2.043c.155.052.345.083.562.105m1.785.128q.125.015.251.034L12.5 10a1.5 1.5 0 1 0-.33-.036M9.78 11.97a.5.5 0 0 1 .5.5a1 1 0 0 1-.05.231c-.179.38-.23.774-.23 1.302v1.5a.5.5 0 1 1-1 0v-1.5c0-.657.072-1.186.307-1.696a.5.5 0 0 1 .473-.337M5.958 5.772a.5.5 0 0 1-.78.625L3.11 3.812a.5.5 0 1 1 .78-.624zM1 11h5.5a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5V.5A.5.5 0 0 1 .5 0h12a.5.5 0 0 1 .5.5v3a.5.5 0 1 1-1 0V1H1z\"/>",
+            "width": 16,
+            "height": 16,
+            "isSvgEditable": false,
+            "isIconNameEditable": false
+          }
+        }
+      ]
+    },
+    "trust": {
+      "id": 7,
+      "sectionTitle": "Trusted by Industry Leaders",
+      "body": "We have been protecting businesses across North America for over a decade. Our team of certified security experts combines cutting-edge technology with proven methodologies to deliver unmatched protection.",
+      "stats": [
+        {
+          "id": 72,
+          "value": "500+",
+          "label": "Businesses Protected",
+          "iconUrl": ""
+        },
+        {
+          "id": 73,
+          "value": "99.9%",
+          "label": "Threat Detection Rate",
+          "iconUrl": ""
+        },
+        {
+          "id": 74,
+          "value": "24/7",
+          "label": "Monitoring & Support",
+          "iconUrl": ""
+        },
+        {
+          "id": 75,
+          "value": "< 15min",
+          "label": "Average Response Time",
+          "iconUrl": ""
+        }
+      ]
+    },
+    "products": {
+      "id": 7,
+      "sectionTitle": "Our Security Products",
+      "items": [
+        {
+          "id": 30,
+          "title": "Adfraud Blocker",
+          "desc": "A high-velocity, digital advertising protection platform engineered to neutralize invalid click traffic, block automated scrapers, and eliminate malicious interactions that drain marketing capital.",
+          "linkText": "Learn More",
+          "icon": {
+            "iconName": "academicons:ads-square",
+            "iconData": "<path fill=\"currentColor\" d=\"M48 32C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm112.582 64c21.04 0 38.096 17.057 38.096 38.096s-17.055 38.095-38.094 38.095s-38.096-17.056-38.096-38.095c0-21.04 17.053-38.096 38.094-38.096m107.893 9.59c47.872-.261 91.32 23.293 122.232 72.762h-.002c45.457 72.746 23.335 168.568-49.412 214.025c-57.476 35.915-129.358 29.647-179.422-10.447l7.441-4.65c47.287 36.352 114.047 41.57 167.602 8.107c68.878-43.04 89.824-133.767 46.785-202.645c-29.526-47.252-76.56-72.404-128.521-69.355c-14.208.83-26.246 4.947-26.246 4.947s-.628-4.325-1.534-6.969c13.92-3.76 27.672-5.702 41.077-5.775m-12.067 41.137c6.192-.045 12.47.415 18.787 1.416c62.147 9.844 104.545 68.202 94.701 130.35c-9.843 62.146-68.2 104.545-130.347 94.702c-31.116-4.928-57.282-22.021-74.418-45.66l-18.524 11.574c.575 7.13-2.679 14.34-9.1 18.508l-72.753 47.248c-9.32 6.053-21.78 3.405-27.834-5.916c-6.052-9.32-3.403-21.78 5.918-27.834l72.754-47.248c6.35-4.123 14.158-4.204 20.404-.89l19.16-11.975c-10.063-20.392-14.139-43.986-10.31-68.156c2.368-14.95 7.54-28.754 14.9-40.965c12.601.177 25.4-3.147 36.883-10.322c15.351-9.591 25.546-24.312 29.754-40.553a113 113 0 0 1 30.025-4.28m1.336 33.947c-39.612-.216-74.532 28.5-80.92 68.828c-7.048 44.5 23.312 86.29 67.813 93.338c44.5 7.048 86.29-23.311 93.338-67.813c7.048-44.5-23.313-86.29-67.813-93.338a82 82 0 0 0-12.418-1.015m-134.66 4.728c2.456 1.296 6.645 5.86 6.645 5.86c-17.008 30.403-21.889 63.72-14.99 98.25l-7.458 4.66c-8.203-37.135-2.353-75.911 15.803-108.77m134.484 21.957q16.707.001 29.682 6.6q12.973 6.6 12.973 24.906v46.469q-.001 4.835.185 11.71q.28 5.207 1.58 7.065h-.002q1.3 1.86 3.909 3.069v3.902h-28.811q-1.21-3.065-1.674-5.762q-.464-2.695-.742-6.134q-5.517 5.947-12.715 10.128q-8.601 4.926-19.445 4.926c-9.225 0-16.841-2.619-22.856-7.853q-9.02-7.853-9.02-22.258q0-18.68 14.513-27.045q7.959-4.554 23.406-6.506l9.082-1.115q7.394-.93 10.578-2.324q5.709-2.415 5.71-7.528q0-6.225-4.38-8.595q-4.381-2.37-12.86-2.37q-9.514 0-13.47 4.647q-2.827 3.438-3.768 9.293h-25.558q.84-13.288 7.467-21.84q10.546-13.385 36.216-13.385m16.254 54.465a29 29 0 0 1-5.135 2.555q-2.59.977-7.11 1.814l-6.03 1.114q-8.477 1.487-12.174 3.625q-6.256 3.624-6.256 11.246q0 6.785 3.822 9.804t9.295 3.02q8.682.002 15.996-5.018q7.316-5.02 7.596-18.31h-.004z\"/>",
+            "width": 448,
+            "height": 512,
+            "isSvgEditable": false,
+            "isIconNameEditable": false
+          },
+          "linkURL": "/solution/ad-fraud-blocker"
+        },
+        {
+          "id": 31,
+          "title": "WAF Tester",
+          "desc": "An objective-driven, multi-engine security validation framework (AOS-WAF) designed to stress-test your Web Application Firewalls against mutated attack patterns and configuration drift.",
+          "linkText": "Learn More",
+          "icon": {
+            "iconName": "gravity-ui:firewall",
+            "iconData": "<g fill=\"currentColor\"><path d=\"M6.5 12a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-1a1 1 0 0 1 1-1zm7.5 0a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H9.5a1 1 0 0 1-1-1v-1a1 1 0 0 1 1-1zM3 8a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H1.5a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 1 .5-.5zm5-6.966c.341 0 .68.076.987.223l2.91 1.388c.575.274.943.855.943 1.493v.329l-.014.438a6.87 6.87 0 0 1-1.868 4.283l.042-.04V10a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-.853l.041.041a6.87 6.87 0 0 1-1.866-4.283l-.014-.438v-.33c0-.597.322-1.145.837-1.438l.106-.054l2.91-1.388A2.3 2.3 0 0 1 8 1.034M14.504 8a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5h-1.5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1zM5.887 9.944l.105.08zm4.12.08l.105-.08zm-4.488-.378q.068.06.14.12zm4.82.12q.073-.06.141-.12zM8 2.535a.8.8 0 0 0-.34.077L4.748 3.998a.16.16 0 0 0-.088.14v.329c0 1.838.94 3.549 2.491 4.535l.697.442a.28.28 0 0 0 .303 0l.697-.442a5.38 5.38 0 0 0 2.49-4.535v-.33a.16.16 0 0 0-.087-.139l-2.91-1.387A.8.8 0 0 0 8 2.534M5.208 9.357q.066.067.134.131q-.068-.064-.134-.13m5.45.131q.068-.064.133-.13q-.065.066-.133.13\"/><path d=\"M6.5 12a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-1a1 1 0 0 1 1-1zm7.5 0a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H9.5a1 1 0 0 1-1-1v-1a1 1 0 0 1 1-1zM3 8a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H1.5a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 1 .5-.5z\"/><path fill-rule=\"evenodd\" d=\"M8 1.034c.341 0 .68.076.987.223l2.91 1.388c.575.274.943.855.943 1.493v.329l-.014.438a6.87 6.87 0 0 1-1.868 4.283l.042-.04V10a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-.853l.041.041a6.87 6.87 0 0 1-1.866-4.283l-.014-.438v-.33c0-.597.322-1.145.837-1.438l.106-.054l2.91-1.388A2.3 2.3 0 0 1 8 1.034m0 1.5a.8.8 0 0 0-.34.077L4.748 3.998a.16.16 0 0 0-.088.14v.329c0 1.838.94 3.549 2.491 4.535l.697.442a.28.28 0 0 0 .303 0l.697-.442a5.38 5.38 0 0 0 2.49-4.535v-.33a.16.16 0 0 0-.087-.139l-2.91-1.387A.8.8 0 0 0 8 2.534\" clip-rule=\"evenodd\"/><path d=\"M14.504 8a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5h-1.5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z\"/></g>",
+            "width": 16,
+            "height": 16,
+            "isSvgEditable": false,
+            "isIconNameEditable": false
+          },
+          "linkURL": "/solution/waf-tester"
+        },
+        {
+          "id": 32,
+          "title": "Vulnerability Scanner",
+          "desc": "An enterprise-grade, multi-tenant asset mapping platform that continuously crawls and audits your external facing network profile to eradicate shadow IT structures.",
+          "linkText": "Learn More",
+          "icon": {
+            "iconName": "icon-park-outline:scanning",
+            "iconData": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"4\" d=\"M16 6H8a2 2 0 0 0-2 2v8m10 26H8a2 2 0 0 1-2-2v-8m26 10h8a2 2 0 0 0 2-2v-8M32 6h8a2 2 0 0 1 2 2v8m-8 8H14m13-8h-6m6 16h-6\"/>",
+            "width": 48,
+            "height": 48,
+            "isSvgEditable": false,
+            "isIconNameEditable": false
+          },
+          "linkURL": "/solution/vulnerability-scanner"
+        },
+        {
+          "id": 33,
+          "title": "WP Monitor",
+          "desc": "A lightweight client-to-server file integrity monitoring system and behavioral audit logger built specifically to protect WordPress arrays from code injection and lateral movement.",
+          "linkText": "Learn More",
+          "icon": {
+            "iconName": "ic:outline-wordpress",
+            "iconData": "<path fill=\"currentColor\" d=\"M12 2C6.49 2 2 6.49 2 12s4.49 10 10 10s10-4.49 10-10S17.51 2 12 2M3.01 12c0-1.3.28-2.54.78-3.66l4.29 11.75c-3-1.46-5.07-4.53-5.07-8.09M12 20.99c-.88 0-1.73-.13-2.54-.37l2.7-7.84l2.76 7.57c.02.04.04.09.06.12c-.93.34-1.93.52-2.98.52m1.24-13.21c.54-.03 1.03-.09 1.03-.09c.48-.06.43-.77-.06-.74c0 0-1.46.11-2.4.11c-.88 0-2.37-.11-2.37-.11c-.48-.02-.54.72-.05.75c0 0 .46.06.94.09l1.4 3.84l-1.97 5.9l-3.27-9.75c.54-.02 1.03-.08 1.03-.08c.48-.06.43-.77-.06-.74c0 0-1.46.11-2.4.11c-.17 0-.37 0-.58-.01C6.1 4.62 8.86 3.01 12 3.01c2.34 0 4.47.89 6.07 2.36c-.04 0-.08-.01-.12-.01c-.88 0-1.51.77-1.51 1.6c0 .74.43 1.37.88 2.11c.34.6.74 1.37.74 2.48c0 .77-.3 1.66-.68 2.91l-.9 3zm6.65-.09a8.99 8.99 0 0 1-3.37 12.08l2.75-7.94c.51-1.28.68-2.31.68-3.22c0-.33-.02-.64-.06-.92\"/>",
+            "width": 24,
+            "height": 24,
+            "isSvgEditable": false,
+            "isIconNameEditable": false
+          },
+          "linkURL": "/solution/wordpress-file-scanner"
+        }
+      ]
+    },
+    "threatCards": {
+      "id": 7,
+      "sectionTitle": "Emerging Threats",
+      "sectionSubtitle": "Stay ahead of the latest cybersecurity threats targeting businesses like yours.",
+      "items": [
+        {
+          "id": 41,
+          "title": "Ransomware",
+          "desc": "Ransomware attacks increased 74% in 2025. Is your organization prepared?",
+          "astroicon": {
+            "iconName": "simple-icons:malwarebytes",
+            "iconData": "<path fill=\"currentColor\" d=\"M10.87 22.903c.157 0 .28-.124.28-.283c0-.124-.088-.283-.245-.283h-.088l-.193-.035c-3.238-.636-5.635-3.55-5.635-6.96a7.05 7.05 0 0 1 1.19-3.938c.123-.159.315-.283.525-.088l5.111 5.228a.33.33 0 0 0 .193.088c.087 0 .157-.035.192-.088l5.146-5.193c.193-.194.368-.159.473.035a7.1 7.1 0 0 1 1.19 3.939a7.04 7.04 0 0 1-1.803 4.716l-.122.124c0 .035-.035.088-.035.123c0 .16.122.283.28.283h.035c.035 0 .087-.035.122-.035c6.826-2.897 6.512-9.75 6.512-9.75a12.21 12.21 0 0 0-4.674-9.626c-.122-.089-.315-.089-.403.035l-6.703 6.853a.305.305 0 0 1-.438 0L5.023 1.195a.297.297 0 0 0-.402-.035A12.24 12.24 0 0 0 0 10.786c0 6.288 4.709 11.48 10.783 12.117Z\"/>",
+            "width": 24,
+            "height": 24,
+            "isSvgEditable": false,
+            "isIconNameEditable": false
+          }
+        },
+        {
+          "id": 42,
+          "title": "Phishing",
+          "desc": "AI-generated phishing emails are harder to detect than ever. Train your team.",
+          "astroicon": {
+            "iconName": "material-symbols:phishing",
+            "iconData": "<path fill=\"currentColor\" d=\"M6.75 19.25Q5 17.5 5 15V9l5 5l-1.4 1.425l-1.6-1.6V15q0 1.65 1.175 2.825T11 19t2.825-1.175T15 15v-3.175q-.9-.35-1.45-1.112T13 9t.55-1.713T15 6.176V2h2v4.175q.9.35 1.45 1.113T19 9t-.55 1.725t-1.45 1.1V15q0 2.5-1.75 4.25T11 21t-4.25-1.75\"/>",
+            "width": 24,
+            "height": 24,
+            "isSvgEditable": false,
+            "isIconNameEditable": false
+          }
+        },
+        {
+          "id": 43,
+          "title": "Supply Chain",
+          "desc": "Third-party vulnerabilities are the new attack vector for enterprise breaches.",
+          "astroicon": {
+            "iconName": "fa7-solid:chain",
+            "iconData": "<path fill=\"currentColor\" d=\"M451.5 160c-16.6 0-32.7 4.5-46.8 12.7c-15.8-16-34.2-29.4-54.5-39.5c28.2-24 64.1-37.2 101.3-37.2C537.9 96 608 166 608 252.5c0 41.5-16.5 81.3-45.8 110.6l-71.1 71.1C461.8 463.5 422 480 380.5 480C294.1 480 224 410 224 323.5c0-1.5 0-3 .1-4.5c.5-17.7 15.2-31.6 32.9-31.1s31.6 15.2 31.1 32.9v2.6c0 51.1 41.4 92.5 92.5 92.5c24.5 0 48-9.7 65.4-27.1l71.1-71.1c17.3-17.3 27.1-40.9 27.1-65.4c0-51.1-41.4-92.5-92.5-92.5zm-144.3 77.3c-1.9-.8-3.8-1.9-5.5-3.1c-12.6-6.5-27-10.2-42.1-10.2c-24.5 0-48 9.7-65.4 27.1l-71.1 71.1C105.8 339.5 96 363.1 96 387.6c0 51.1 41.4 92.5 92.5 92.5c16.5 0 32.6-4.4 46.7-12.6c15.8 16 34.2 29.4 54.6 39.5c-28.2 23.9-64 37.2-101.3 37.2c-86.4 0-156.5-70-156.5-156.5c0-41.5 16.5-81.3 45.8-110.6l71.1-71.1c29.3-29.3 69.1-45.8 110.6-45.8c86.6 0 156.5 70.6 156.5 156.9v3.9c-.4 17.7-15.1 31.6-32.8 31.2s-31.6-15.1-31.2-32.8v-2.3c0-33.7-18-63.3-44.8-79.6z\"/>",
+            "width": 640,
+            "height": 640,
+            "isSvgEditable": false,
+            "isIconNameEditable": false
+          }
+        },
+        {
+          "id": 44,
+          "title": "Zero-Day",
+          "desc": "Unknown vulnerabilities exploited before patches are available. Stay protected.",
+          "astroicon": {
+            "iconName": "arcticons:day-one",
+            "iconData": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M38.5 5.5h-29a4 4 0 0 0-4 4v29a4 4 0 0 0 4 4h29a4 4 0 0 0 4-4v-29a4 4 0 0 0-4-4\"/><path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"m16.283 29.765l7.222-3.227c.315-.14.675-.14.99 0l7.222 3.227c.395.163.825-.136.825-.574V5.5H15.458v23.69c0 .439.43.738.825.575\"/>",
+            "width": 48,
+            "height": 48,
+            "isSvgEditable": false,
+            "isIconNameEditable": false
+          }
+        }
+      ]
+    },
     "testimonials": {
-      "id": 2,
+      "id": 7,
       "sectionTitle": "What Our Clients Say",
-      "sectionSubtitle": "Hear from businesses that trust Clixerfy with their cybersecurity."
+      "sectionSubtitle": "Hear from businesses that trust Clixerfy with their cybersecurity.",
+      "items": [
+        {
+          "id": 31,
+          "name": "Sarah Mitchell",
+          "role": "CTO, TechVenture Inc.",
+          "stars": 5,
+          "text": "Clixerfy transformed our security posture. Their penetration testing uncovered critical vulnerabilities we never knew existed. Highly recommended."
+        },
+        {
+          "id": 32,
+          "name": "James Rodriguez",
+          "role": "CISO, FinanceFirst Corp.",
+          "stars": 5,
+          "text": "The managed detection service gives us peace of mind. Their team responded to a potential breach within minutes and contained it before any damage."
+        },
+        {
+          "id": 33,
+          "name": "Emily Chen",
+          "role": "CEO, HealthData Solutions",
+          "stars": 5,
+          "text": "Achieving HIPAA compliance seemed daunting until we partnered with Clixerfy. Their automated compliance platform made the process seamless."
+        }
+      ]
     }
   },
   "meta": {}

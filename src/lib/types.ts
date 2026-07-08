@@ -37,7 +37,10 @@ export interface StrapiNavigationRaw {
 
 export interface StrapiFooterRaw {
   tagline: string;
-  socials: Array<{ label: string; href: string }>;
+  socials: Array<{
+    href: string;
+    icon: { iconData: string; width: number; height: number; iconName?: string } | null;
+  }>;
   linkGroups: Array<{
     title: string;
     links: Array<{ label: string; href: string }>;
@@ -71,7 +74,13 @@ export interface StrapiHomepageRaw {
     subtitle: string;
     ctaLabel: string;
     ctaHref: string;
-    trustBadges: Array<{ iconUrl: string; text: string }>;
+    FeaturedImage: string | null;
+    BackgroundImage: string | null;
+    trustBadges: Array<{
+      text: string;
+      iconUrl: string;
+      icon: { iconData: string; width: number; height: number } | null;
+    }>;
   };
   features: {
     sectionTitle: string;
@@ -80,6 +89,7 @@ export interface StrapiHomepageRaw {
       desc: string;
       iconUrl: string;
       large: boolean;
+      icon: { iconData: string; width: number; height: number } | null;
     }>;
   };
   trust: {
@@ -94,6 +104,8 @@ export interface StrapiHomepageRaw {
       desc: string;
       iconUrl: string;
       linkText: string;
+      linkURL: string | null;
+      icon: { iconData: string; width: number; height: number } | null;
     }>;
   };
   threatCards: {
@@ -104,6 +116,7 @@ export interface StrapiHomepageRaw {
       desc: string;
       color: string;
       linkText: string;
+      astroicon: { iconData: string; width: number; height: number; iconName?: string } | null;
     }>;
   };
   cta: {
@@ -181,7 +194,10 @@ export interface NavigationData {
 
 export interface FooterData {
   tagline: string;
-  socials: Array<{ label: string; href: string }>;
+  socials: Array<{
+    href: string;
+    icon: { iconData: string; width: number; height: number; iconName?: string } | null;
+  }>;
   linkGroups: Array<{
     title: string;
     links: Array<{ label: string; href: string }>;
@@ -219,7 +235,13 @@ export interface HomepageData {
     subtitle: string;
     ctaLabel: string;
     ctaHref: string;
-    trustBadges: Array<{ iconUrl: string; text: string }>;
+    FeaturedImage: string | null;
+    BackgroundImage: string | null;
+    trustBadges: Array<{
+      text: string;
+      iconUrl: string;
+      icon: { iconData: string; width: number; height: number } | null;
+    }>;
   };
   features: {
     sectionTitle: string;
@@ -228,6 +250,7 @@ export interface HomepageData {
       desc: string;
       iconUrl: string;
       large: boolean;
+      icon: { iconData: string; width: number; height: number } | null;
     }>;
   };
   trust: {
@@ -242,6 +265,8 @@ export interface HomepageData {
       desc: string;
       iconUrl: string;
       linkText: string;
+      linkURL: string | null;
+      icon: { iconData: string; width: number; height: number } | null;
     }>;
   };
   threatCards: {
@@ -252,6 +277,7 @@ export interface HomepageData {
       desc: string;
       color: string;
       linkText: string;
+      astroicon: { iconData: string; width: number; height: number; iconName?: string } | null;
     }>;
   };
   cta: {

@@ -40,8 +40,17 @@ await save(
 // seo-default: simple populate=*
 await save("seo-default", "seo-default", "populate=*");
 
-// homepage: simple populate=*
-await save("homepage", "homepage", "populate=*");
+// homepage: deep populate hero with trustBadges icons
+const homepageParams = [
+  "populate[hero][populate]=*",
+  "populate[features][populate]=*",
+  "populate[trust][populate]=*",
+  "populate[products][populate]=*",
+  "populate[threatCards][populate]=*",
+  "populate[testimonials][populate]=*",
+  "populate[cta][populate]=*",
+].join("&");
+await save("homepage", "homepage", homepageParams);
 
 // about-page: deep populate for Mission, Values, Story, CTA, Hero
 const aboutParams = [

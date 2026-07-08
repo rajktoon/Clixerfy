@@ -34,10 +34,8 @@ const about = await getAboutPage();
 
       <div class="hero-visual" aria-hidden="true">
         <div class="hero-visual-frame">
-          {about.hero.featuredimage ? (
+          {about.hero.featuredimage && (
             <img src={about.hero.featuredimage} alt="About Clixerfy" class="about-illustration" width="600" height="400" loading="eager" decoding="async" fetchpriority="high" srcset={getResponsiveSrcSet(about.hero.featuredimage)} sizes={getResponsiveSizes(600)} />
-          ) : (
-            <img src={about.hero.illustrationUrl} alt="About Clixerfy illustration" class="about-illustration" width="600" height="400" loading="eager" decoding="async" fetchpriority="high" srcset={getResponsiveSrcSet(about.hero.illustrationUrl)} sizes={getResponsiveSizes(600)} />
           )}
           <div class="hero-visual-badge">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L3 7v9c0 5 4.5 9.7 9 11 4.5-1.3 9-6 9-11V7L12 2z"/></svg>
@@ -296,7 +294,7 @@ const about = await getAboutPage();
   /* ── VALUES (4 columns desktop, 2 columns mobile) ── */
   .values-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 1rem; margin-top: 2.75rem;
   }
   .value-card {
@@ -304,6 +302,8 @@ const about = await getAboutPage();
     border-radius: 14px; padding: 1.9rem;
     display: flex; flex-direction: column; gap: .7rem;
     transition: border-color .18s, transform .18s;
+    min-width: 0;
+    overflow: hidden;
   }
   .value-card:hover { border-color: var(--brand-color); transform: translateY(-2px); }
   .value-card:hover .value-icon svg { color: var(--brand-color); }
@@ -322,7 +322,7 @@ const about = await getAboutPage();
   }
   .value-desc { font-size: .87rem; color: var(--muted); line-height: 1.75; }
 
-  @media (max-width: 768px) { .values-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 768px) { .values-grid { grid-template-columns: 1fr; } }
 
   /* ── CTA ── */
   .cta-section {
