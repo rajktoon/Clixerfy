@@ -297,6 +297,9 @@ export interface StrapiAboutPageRaw {
     titleHighlight: string;
     subtitle: string;
     illustrationUrl: string | null;
+    featuredimage: string | null;
+    CTAButtonText: string | null;
+    CTAButtonLink: string | null;
   };
   Mission: {
     sectionTitle: string;
@@ -311,6 +314,7 @@ export interface StrapiAboutPageRaw {
       description?: string;
       desc?: string;
       iconUrl?: string | null;
+      icon?: { iconData: string; width: number; height: number } | null;
     }>;
   }>;
   Story: {
@@ -344,6 +348,9 @@ export interface AboutPageData {
     titleHighlight: string;
     subtitle: string;
     illustrationUrl: string;
+    featuredimage: string | null;
+    CTAButtonText: string | null;
+    CTAButtonLink: string | null;
   };
   mission: {
     sectionTitle: string;
@@ -353,7 +360,12 @@ export interface AboutPageData {
   values: {
     sectionTitle: string;
     sectionSubtitle: string;
-    items: Array<{ title: string; desc: string; iconUrl: string }>;
+    items: Array<{
+      title: string;
+      desc: string;
+      iconUrl: string;
+      icon: { iconData: string; width: number; height: number } | null;
+    }>;
   };
   story: {
     sectionTitle: string;

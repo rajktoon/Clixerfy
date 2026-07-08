@@ -409,6 +409,9 @@ function mapAboutPage(raw: StrapiAboutPageRaw): AboutPageData {
       titleHighlight: raw.Hero?.titleHighlight ?? "",
       subtitle: raw.Hero?.subtitle ?? "",
       illustrationUrl: raw.Hero?.illustrationUrl ?? "/About Us.svg",
+      featuredimage: raw.Hero?.featuredimage ?? null,
+      CTAButtonText: raw.Hero?.CTAButtonText ?? null,
+      CTAButtonLink: raw.Hero?.CTAButtonLink ?? null,
     },
     mission: {
       sectionTitle: raw.Mission?.sectionTitle ?? "",
@@ -425,6 +428,7 @@ function mapAboutPage(raw: StrapiAboutPageRaw): AboutPageData {
         title: i.title,
         desc: i.description ?? i.desc ?? "",
         iconUrl: i.iconUrl ?? "",
+        icon: i.icon ?? null,
       })),
     },
     story: {

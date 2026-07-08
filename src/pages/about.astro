@@ -27,11 +27,18 @@ const about = await getAboutPage();
           {about.hero.titleText}<em>{about.hero.titleHighlight}</em>
         </h1>
         <p class="hero-sub">{about.hero.subtitle}</p>
+        {about.hero.CTAButtonText && about.hero.CTAButtonLink && (
+          <a href={about.hero.CTAButtonLink} class="btn-primary btn-lg hero-cta">{about.hero.CTAButtonText}</a>
+        )}
       </div>
 
       <div class="hero-visual" aria-hidden="true">
         <div class="hero-visual-frame">
-          <img src={about.hero.illustrationUrl} alt="About Clixerfy illustration" class="about-illustration" width="600" height="400" loading="eager" decoding="async" fetchpriority="high" srcset={getResponsiveSrcSet(about.hero.illustrationUrl)} sizes={getResponsiveSizes(600)} />
+          {about.hero.featuredimage ? (
+            <img src={about.hero.featuredimage} alt="About Clixerfy" class="about-illustration" width="600" height="400" loading="eager" decoding="async" fetchpriority="high" srcset={getResponsiveSrcSet(about.hero.featuredimage)} sizes={getResponsiveSizes(600)} />
+          ) : (
+            <img src={about.hero.illustrationUrl} alt="About Clixerfy illustration" class="about-illustration" width="600" height="400" loading="eager" decoding="async" fetchpriority="high" srcset={getResponsiveSrcSet(about.hero.illustrationUrl)} sizes={getResponsiveSizes(600)} />
+          )}
           <div class="hero-visual-badge">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L3 7v9c0 5 4.5 9.7 9 11 4.5-1.3 9-6 9-11V7L12 2z"/></svg>
           </div>
@@ -96,11 +103,15 @@ const about = await getAboutPage();
         {about.values.sectionSubtitle && <p class="section-sub reveal">{about.values.sectionSubtitle}</p>}
         <div class="values-grid">
           {about.values.items.map((v, i) => (
-            <article class={`value-card reveal ${i === 0 ? 'value-card--lead' : ''}`} style={`transition-delay:${i*70}ms`}>
+            <article class="value-card reveal" style={`transition-delay:${i*70}ms`}>
               <div class="value-icon" aria-hidden="true">
-                {v.iconUrl
-                  ? <img src={v.iconUrl} alt="" width="24" height="24" />
-                  : <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L3 7v9c0 5 4.5 9.7 9 11 4.5-1.3 9-6 9-11V7L12 2z"/></svg>}
+                {v.icon?.iconData ? (
+                  <svg viewBox={`0 0 ${v.icon.width || 24} ${v.icon.height || 24}`} width="24" height="24" set:html={v.icon.iconData} />
+                ) : v.iconUrl ? (
+                  <img src={v.iconUrl} alt="" width="24" height="24" />
+                ) : (
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L3 7v9c0 5 4.5 9.7 9 11 4.5-1.3 9-6 9-11V7L12 2z"/></svg>
+                )}
               </div>
               <h3 class="value-title">{v.title}</h3>
               <p class="value-desc">{v.desc}</p>
@@ -186,6 +197,7 @@ const about = await getAboutPage();
   }
   .hero-content h1 em { font-style: normal; color: var(--red); }
   .hero-sub { color: var(--muted); max-width: 430px; margin-bottom: 1.8rem; font-size: .97rem; }
+    .hero-cta { margin-top: .5rem; }
   .hero-visual { display: flex; align-items: center; justify-content: center; }
   .hero-visual-frame {
     position: relative; width: 100%; max-width: 560px;
@@ -281,10 +293,10 @@ const about = await getAboutPage();
     .timeline-marker::before { left: -2rem; width: 14px; height: 14px; }
   }
 
-  /* ── VALUES (asymmetric: first card full-width, rest two-up) ── */
+  /* ── VALUES (4 columns desktop, 2 columns mobile) ── */
   .values-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 1rem; margin-top: 2.75rem;
   }
   .value-card {
@@ -293,22 +305,24 @@ const about = await getAboutPage();
     display: flex; flex-direction: column; gap: .7rem;
     transition: border-color .18s, transform .18s;
   }
-  .value-card--lead { grid-column: 1 / -1; }
-  .value-card:hover { border-color: rgba(230,48,48,.3); transform: translateY(-2px); }
+  .value-card:hover { border-color: var(--brand-color); transform: translateY(-2px); }
+  .value-card:hover .value-icon svg { color: var(--brand-color); }
   .value-icon {
     width: 42px; height: 42px; border-radius: 50%;
     background: rgba(230,48,48,.08); border: 1px solid rgba(230,48,48,.16);
     display: flex; align-items: center; justify-content: center;
     margin-bottom: .4rem;
+    transition: all .18s;
   }
   .value-icon img { width: 22px; height: 22px; }
+  .value-icon svg { width: 22px; height: 22px; transition: color .18s; }
   .value-title {
     font-family: var(--font-head); font-size: .9rem; font-weight: 700;
     letter-spacing: .04em; text-transform: uppercase;
   }
   .value-desc { font-size: .87rem; color: var(--muted); line-height: 1.75; }
 
-  @media (max-width: 768px) { .values-grid { grid-template-columns: 1fr; } }
+  @media (max-width: 768px) { .values-grid { grid-template-columns: repeat(2, 1fr); } }
 
   /* ── CTA ── */
   .cta-section {
