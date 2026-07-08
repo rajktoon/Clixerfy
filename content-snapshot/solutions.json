@@ -18,6 +18,8 @@
           "richtext": null,
           "bgimage": null,
           "featuredimage": null,
+          "CTAButtonText": null,
+          "CTAButtonLink": null,
           "__component": "shared.sections-about-hero"
         },
         {
@@ -46,6 +48,8 @@
           ],
           "bgimage": "https://clixerfy.com/wp-content/uploads/2026/07/The-Clixerfy-Fraudulent-Click-Blocker-Complete-Ad-Immunity.webp",
           "featuredimage": "https://clixerfy.com/wp-content/uploads/2026/07/Complete-Ad-Immunity.jpg",
+          "CTAButtonText": null,
+          "CTAButtonLink": null,
           "__component": "shared.sections-about-hero"
         }
       ],
@@ -728,6 +732,8 @@
           ],
           "bgimage": "https://clixerfy.com/wp-content/uploads/2026/07/The-Clixerfy-Fraudulent-Click-Blocker-Complete-Ad-Immunity.webp",
           "featuredimage": "https://clixerfy.com/wp-content/uploads/2026/07/Autonomous-Firewall-Validation.jpg",
+          "CTAButtonText": null,
+          "CTAButtonLink": null,
           "__component": "shared.sections-about-hero"
         }
       ],
@@ -1400,6 +1406,8 @@
           ],
           "bgimage": "https://clixerfy.com/wp-content/uploads/2026/07/The-Clixerfy-Fraudulent-Click-Blocker-Complete-Ad-Immunity.webp",
           "featuredimage": "https://clixerfy.com/wp-content/uploads/2026/07/The-Clixerfy-Continuous-Vulnerability-Scanner.jpg",
+          "CTAButtonText": null,
+          "CTAButtonLink": null,
           "__component": "shared.sections-about-hero"
         }
       ],
@@ -2115,6 +2123,8 @@
           ],
           "bgimage": "https://clixerfy.com/wp-content/uploads/2026/07/The-Clixerfy-Fraudulent-Click-Blocker-Complete-Ad-Immunity.webp",
           "featuredimage": "https://clixerfy.com/wp-content/uploads/2026/07/WP-Monitor.jpg",
+          "CTAButtonText": null,
+          "CTAButtonLink": null,
           "__component": "shared.sections-about-hero"
         }
       ],

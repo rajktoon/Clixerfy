@@ -107,19 +107,19 @@
           "id": 4,
           "title": "Web Application Penetration Testing",
           "description": "Identify vulnerabilities in customer-facing and internal web applications through comprehensive security assessments.",
-          "iconUrl": null
+          "icon": null
         },
         {
           "id": 5,
           "title": "API Security Testing",
           "description": "Evaluate REST, GraphQL, and SOAP APIs for authentication, authorization, and business logic vulnerabilities.",
-          "iconUrl": null
+          "icon": null
         },
         {
           "id": 6,
           "title": "Network Penetration Testing",
           "description": "Assess internal and external network infrastructure for exploitable security weaknesses.",
-          "iconUrl": null
+          "icon": null
         }
       ],
       "Testimonials": [
@@ -266,19 +266,19 @@
           "id": 10,
           "title": "OWASP Security Testing",
           "description": "Comprehensive assessments based on the latest OWASP Top 10 vulnerabilities and security standards.",
-          "iconUrl": null
+          "icon": null
         },
         {
           "id": 11,
           "title": "Authentication Security Reviews",
           "description": "Evaluate login systems, session management, authorization controls, and identity management workflows.",
-          "iconUrl": null
+          "icon": null
         },
         {
           "id": 12,
           "title": "Business Logic Testing",
           "description": "Identify flaws in business processes that traditional automated scanners often miss.",
-          "iconUrl": null
+          "icon": null
         }
       ],
       "Testimonials": [
@@ -389,19 +389,19 @@
           "id": 16,
           "title": "AWS Security Assessments",
           "description": "Review AWS environments for identity management, storage, networking, and security configuration issues.",
-          "iconUrl": null
+          "icon": null
         },
         {
           "id": 17,
           "title": "Azure Security Reviews",
           "description": "Assess Microsoft Azure environments for security gaps, compliance risks, and configuration weaknesses.",
-          "iconUrl": null
+          "icon": null
         },
         {
           "id": 18,
           "title": "Cloud Compliance Consulting",
           "description": "Cloud Compliance Consulting",
-          "iconUrl": null
+          "icon": null
         }
       ],
       "Testimonials": [

@@ -1,27 +1,29 @@
 {
   "data": {
-    "id": 2,
+    "id": 3,
     "documentId": "a3bgn18q0hts6adfqshriehk",
     "createdAt": "2026-06-30T11:25:45.911Z",
-    "updatedAt": "2026-06-30T11:25:45.911Z",
-    "publishedAt": "2026-06-30T11:25:45.934Z",
+    "updatedAt": "2026-07-08T14:13:58.685Z",
+    "publishedAt": "2026-07-08T14:13:58.828Z",
     "CTA": {
-      "id": 2,
+      "id": 3,
       "title": "Ready to Transform Your Security Strategy?",
       "subtitle": "Connect with our experts to discover how Clixerfy can help your organization build a stronger digital future.",
       "ctaLabel": "Contact Us Today",
       "ctaHref": "/contact"
     },
     "Hero": {
-      "id": 2,
+      "id": 34,
       "titleText": "Building Secure",
       "subtitle": "Clixerfy helps organizations strengthen cybersecurity, accelerate digital transformation, and confidently embrace modern technology solutions.",
       "richtext": null,
       "bgimage": null,
-      "featuredimage": null
+      "featuredimage": null,
+      "CTAButtonText": null,
+      "CTAButtonLink": null
     },
     "Mission": {
-      "id": 2,
+      "id": 3,
       "sectionTitle": "Our Mission",
       "body": [
         {
@@ -36,19 +38,19 @@
       ],
       "stats": [
         {
-          "id": 28,
+          "id": 47,
           "value": "500+",
           "label": "Clients Served",
           "iconUrl": null
         },
         {
-          "id": 29,
+          "id": 48,
           "value": "1200+",
           "label": "Projects Delivered",
           "iconUrl": null
         },
         {
-          "id": 30,
+          "id": 49,
           "value": "15+",
           "label": "Years Experience",
           "iconUrl": null
@@ -57,39 +59,67 @@
     },
     "Values": [
       {
-        "id": 2,
+        "id": 3,
         "sectionTitle": "Our Core Values",
         "sectionSubtitle": "These principles guide every decision we make and every client relationship we build.",
         "items": [
           {
-            "id": 23,
+            "id": 27,
             "title": "Integrity",
             "description": "We maintain transparency, honesty, and accountability in everything we do.",
-            "iconUrl": null
+            "icon": {
+              "iconName": "arcticons:play-integrity-api-checker",
+              "iconData": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M24 43.5c3.883 0 14.68-7.263 15.658-19.893v-13.48L24 4.5L8.342 10.127v13.48C8.906 35.517 19.834 43.5 24 43.5\"/><circle cx=\"24\" cy=\"24.044\" r=\"5.846\" fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"m35.531 35.117l-7.179-7.18\"/>",
+              "width": 48,
+              "height": 48,
+              "isSvgEditable": false,
+              "isIconNameEditable": false
+            }
           },
           {
-            "id": 24,
+            "id": 28,
             "title": "Innovation",
             "description": "We continuously evolve our methods and technologies to deliver better outcomes.",
-            "iconUrl": null
+            "icon": {
+              "iconName": "hugeicons:ai-innovation-01",
+              "iconData": "<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path stroke-linecap=\"round\" d=\"M11 2C6.582 2 3 5.545 3 9.919c0 1.493.417 2.89 1.143 4.081\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M17 5h-2c-.943 0-1.414 0-1.707.293S13 6.057 13 7v2c0 .943 0 1.414.293 1.707S14.057 11 15 11h2c.943 0 1.414 0 1.707-.293S19 9.943 19 9V7c0-.943 0-1.414-.293-1.707S17.943 5 17 5m-2.5 6v2m3-2v2m-3-10v2m3-2v2M13 6.5h-2m2 3h-2m10-3h-2m2 3h-2\"/><path d=\"M6.383 17.098c-.092-.276-.138-.415-.133-.527a.6.6 0 0 1 .382-.53c.104-.041.25-.041.54-.041h7.656c.291 0 .436 0 .54.04a.6.6 0 0 1 .382.531c.005.112-.041.25-.133.527c-.17.511-.255.767-.386.974a2 2 0 0 1-1.2.869c-.238.059-.506.059-1.043.059H9.012c-.537 0-.806 0-1.043-.06a2 2 0 0 1-1.2-.868c-.131-.207-.216-.463-.386-.974ZM14 19l-.13.647c-.14.707-.211 1.06-.37 1.34a2 2 0 0 1-1.113.912C12.082 22 11.72 22 11 22s-1.082 0-1.387-.1a2 2 0 0 1-1.113-.913c-.159-.28-.23-.633-.37-1.34L8 19\"/></g>",
+              "width": 24,
+              "height": 24,
+              "isSvgEditable": false,
+              "isIconNameEditable": false
+            }
           },
           {
-            "id": 25,
+            "id": 29,
             "title": "Excellence",
             "description": "We strive to exceed expectations through quality, expertise, and dedication.",
-            "iconUrl": null
+            "icon": {
+              "iconName": "icon-park-twotone:file-quality-one",
+              "iconData": "<defs><mask id=\"SVGvDzqBcpF\"><g fill=\"none\" stroke=\"#fff\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"4\"><path d=\"M40 23v-9L31 4H10a2 2 0 0 0-2 2v36a2 2 0 0 0 2 2h12\"/><path fill=\"#555\" d=\"M28.2 30h9.6l3.2 4.118L33 44l-8-9.882z\"/><path d=\"M30 4v10h10\"/></g></mask></defs><path fill=\"currentColor\" d=\"M0 0h48v48H0z\" mask=\"url(#SVGvDzqBcpF)\"/>",
+              "width": 48,
+              "height": 48,
+              "isSvgEditable": false,
+              "isIconNameEditable": false
+            }
           },
           {
-            "id": 26,
+            "id": 30,
             "title": "Collaboration",
             "description": "We work closely with our clients to achieve long-term success together.",
-            "iconUrl": null
+            "icon": {
+              "iconName": "carbon:collaborate",
+              "iconData": "<path fill=\"currentColor\" d=\"M6 21v-1H4v1a7 7 0 0 0 7 7h3v-2h-3a5 5 0 0 1-5-5m18-10v1h2v-1a7 7 0 0 0-7-7h-3v2h3a5 5 0 0 1 5 5m-13 0H5a3 3 0 0 0-3 3v2h2v-2a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2h2v-2a3 3 0 0 0-3-3m-3-1a4 4 0 1 0-4-4a4 4 0 0 0 4 4m0-6a2 2 0 1 1-2 2a2 2 0 0 1 2-2m19 21h-6a3 3 0 0 0-3 3v2h2v-2a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2h2v-2a3 3 0 0 0-3-3m-7-5a4 4 0 1 0 4-4a4 4 0 0 0-4 4m6 0a2 2 0 1 1-2-2a2 2 0 0 1 2 2\"/>",
+              "width": 32,
+              "height": 32,
+              "isSvgEditable": false,
+              "isIconNameEditable": false
+            }
           }
         ]
       }
     ],
     "Story": {
-      "id": 2,
+      "id": 3,
       "sectionTitle": "Our Journey",
       "body": [
         {
@@ -104,19 +134,19 @@
       ],
       "timeline": [
         {
-          "id": 4,
+          "id": 7,
           "year": "2015",
           "title": "Company Founded",
           "desc": "Clixerfy was established with a vision to simplify cybersecurity and digital transformation."
         },
         {
-          "id": 5,
+          "id": 8,
           "year": "2019",
           "title": "Expanded Services",
           "desc": "Added managed security services and cloud consulting solutions."
         },
         {
-          "id": 6,
+          "id": 9,
           "year": "2023",
           "title": "Global Expansion",
           "desc": "Began supporting organizations across North America and international markets."

@@ -56,6 +56,14 @@ await save("about-page", "about-page", aboutParams);
 // global-settings: simple populate=*
 await save("global-settings", "global-settings", "populate=*");
 
+// contact: deep populate hero, contact items with icons
+const contactParams = [
+  "populate[hero][populate]=*",
+  "populate[Contact][populate][items][populate]=*",
+  "populate[form][populate]=*",
+].join("&");
+await save("contact", "contact", contactParams);
+
 // ── Collection Types ──
 
 // seo-pages: populate=*

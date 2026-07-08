@@ -535,3 +535,41 @@ export interface StrapiSolutionRaw {
   faqs: any[];
   cta: any[];
 }
+
+export interface ContactPageData {
+  id: number;
+  hero: ContactHero[];
+  Contact: ContactInfo | null;
+  form: any;
+}
+
+export interface ContactHero {
+  id: number;
+  titleText: string;
+  subtitle: string;
+  richtext: any[];
+  bgimage: string | null;
+  featuredimage: string | null;
+  CTAButtonText: string;
+  CTAButtonLink: string;
+}
+
+export interface ContactInfo {
+  id: number;
+  CompanyName: string;
+  items: ContactItem[];
+}
+
+export interface ContactItem {
+  id: number;
+  icon: ContactIcon | null;
+  label: string | null;
+  value: string;
+}
+
+export interface ContactIcon {
+  iconName: string;
+  iconData: string;
+  width: number;
+  height: number;
+}
