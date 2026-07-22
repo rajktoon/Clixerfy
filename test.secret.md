@@ -5,8 +5,7 @@ AWS_SECRET_ACCESS_KEY=je7MtGbClwBF/2Zp9Utk/h3yCo8nvbEXAMPLEKEY8
 
 # GitHub PAT
 
-GITHUB_TOKEN=ghp_R4nd0mStr1ngTh4tL00ksL1keAT0ken123458
-
+GITHUB_TOKEN=ghp_R4nd0mStr1ngTh4tL00ksL1keAT0ken123454
  # test
 
 # Private key

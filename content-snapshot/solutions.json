@@ -1,683 +1,6 @@
 {
   "data": [
     {
-      "id": 11,
-      "documentId": "veisjei5g4bmvjsoh6efpck0",
-      "createdAt": "2026-07-01T11:52:27.341Z",
-      "updatedAt": "2026-07-08T11:23:54.599Z",
-      "publishedAt": "2026-07-08T11:23:54.620Z",
-      "title": "The Clixerfy Fraudulent Click Blocker",
-      "slug": "ad-fraud-blocker",
-      "metaTitle": "Advanced Adfraud Blocker | Stop Fake Traffic & Save Ad Budget | Clixerfy",
-      "metaDescription": "Protect your ad spend from bots, competitors, and click farms. Clixerfy Adfraud Blocker stops invalid traffic in real-time with direct ad platform API sync.",
-      "herosection": [
-        {
-          "id": 20,
-          "titleText": "Complete Ad Immunity",
-          "subtitle": "Don't just track fraud. Terminate it. Clixerfy proactively detects and blocks sophisticated click fraud before it drains your marketing budget.\n",
-          "richtext": null,
-          "bgimage": null,
-          "featuredimage": null,
-          "CTAButtonText": null,
-          "CTAButtonLink": null,
-          "__component": "shared.sections-about-hero"
-        },
-        {
-          "id": 21,
-          "titleText": "The Clixerfy Fraudulent Click Blocker: Complete Ad Immunity",
-          "subtitle": "Don’t Just Track Fraud. Terminate It.",
-          "richtext": [
-            {
-              "type": "paragraph",
-              "children": [
-                {
-                  "type": "text",
-                  "text": "Most advertisers blindly rely on the basic \"Invalid Traffic\" filters provided natively by major ad networks. The problem? Those filters are built to protect the advertising platform's bottom line, not yours. While they catch basic, outdated bots, they leave your campaigns completely exposed to highly sophisticated, human-like click fraud."
-                }
-              ]
-            },
-            {
-              "type": "paragraph",
-              "children": [
-                {
-                  "type": "text",
-                  "text": "Clixerfy is your proactive defense system. Our advanced Adfraud Blocker acts as a 24/7 digital sentry. By analyzing visitor behavior in less than 100 milliseconds, we identify malicious intent and block threats before fake traffic drains your daily marketing budget."
-                }
-              ]
-            }
-          ],
-          "bgimage": "https://clixerfy.com/wp-content/uploads/2026/07/The-Clixerfy-Fraudulent-Click-Blocker-Complete-Ad-Immunity.webp",
-          "featuredimage": "https://clixerfy.com/wp-content/uploads/2026/07/Complete-Ad-Immunity.jpg",
-          "CTAButtonText": null,
-          "CTAButtonLink": null,
-          "__component": "shared.sections-about-hero"
-        }
-      ],
-      "features": [
-        {
-          "id": 11,
-          "sectionTitle": "Why Standard Filters Aren't Enough",
-          "body": [
-            {
-              "type": "paragraph",
-              "children": [
-                {
-                  "type": "text",
-                  "text": "Platform-native invalid traffic filters are naturally conservative. Ad networks only filter out traffic they are 100% certain is fraudulent to prevent \"False Positives\" (accidentally blocking an active buyer)."
-                }
-              ]
-            },
-            {
-              "type": "paragraph",
-              "children": [
-                {
-                  "type": "text",
-                  "text": "Clixerfy puts the control back into your hands. We provide an adjustable protection toggle that allows your security or marketing teams to dial in exactly how aggressively to shield your pipeline:"
-                }
-              ]
-            },
-            {
-              "type": "paragraph",
-              "children": [
-                {
-                  "type": "text",
-                  "text": ""
-                }
-              ]
-            }
-          ],
-          "items": [
-            {
-              "id": 35,
-              "title": "Low Protection",
-              "desc": "Blocks known, high-concurrency malicious botnets.",
-              "icon": {
-                "iconName": "carbon:manage-protection",
-                "iconData": "<path fill=\"currentColor\" d=\"m16 30l-6.176-3.293A10.98 10.98 0 0 1 4 17V4a2 2 0 0 1 2-2h20a2 2 0 0 1 2 2v13a10.98 10.98 0 0 1-5.824 9.707ZM6 4v13a8.99 8.99 0 0 0 4.766 7.942L16 27.733l5.234-2.79A8.99 8.99 0 0 0 26 17V4Z\"/><path fill=\"currentColor\" d=\"M16 25.277V6h8v10.805a7 7 0 0 1-3.7 6.173Z\"/>",
-                "width": 32,
-                "height": 32,
-                "isSvgEditable": false,
-                "isIconNameEditable": false
-              }
-            },
-            {
-              "id": 36,
-              "title": "Medium Protection (Recommended)",
-              "desc": "Filters out persistent repeat clickers, scrapers, and high-risk commercial VPNs.",
-              "icon": {
-                "iconName": "icon-park-outline:protect",
-                "iconData": "<g fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\" stroke-width=\"4\"><path d=\"M6 9.256L24.009 4L42 9.256v10.778A26.32 26.32 0 0 1 24.003 45A26.32 26.32 0 0 1 6 20.029z\"/><path stroke-linecap=\"round\" d=\"m15 23l7 7l12-12\"/></g>",
-                "width": 48,
-                "height": 48,
-                "isSvgEditable": false,
-                "isIconNameEditable": false
-              }
-            },
-            {
-              "id": 37,
-              "title": "High Protection",
-              "desc": "Restricts any suspicious behavioral deviations, ensuring your ad budget feeds purely verified human interactions.",
-              "icon": {
-                "iconName": "picon:protect",
-                "iconData": "<path fill=\"currentColor\" d=\"m0 1l1 1v3l1 1V4l1 1v3H2L0 6m8-5v5L6 8H5V5l1-1v2l1-1V2M2 2l2-2l2 2l-2 2\"/>",
-                "width": 8,
-                "height": 8,
-                "isSvgEditable": false,
-                "isIconNameEditable": false
-              }
-            }
-          ]
-        },
-        {
-          "id": 12,
-          "sectionTitle": "Designed for Enterprise Security, Built for Marketing ROI",
-          "body": [
-            {
-              "type": "paragraph",
-              "children": [
-                {
-                  "type": "text",
-                  "text": "Clixerfy bridges the gap between deep technical telemetry and clear business operations. While the platform runs complex cryptographic analysis under the hood, your management teams get absolute transparency through a simplified workspace."
-                }
-              ]
-            },
-            {
-              "type": "paragraph",
-              "children": [
-                {
-                  "type": "text",
-                  "text": ""
-                }
-              ]
-            }
-          ],
-          "items": [
-            {
-              "id": 38,
-              "title": "Unified Financial Dashboards",
-              "desc": "See exactly which threat vectors were stopped, where they originated, and precisely how much ad spend was preserved.",
-              "icon": {
-                "iconName": "material-symbols:dashboard-outline-rounded",
-                "iconData": "<path fill=\"currentColor\" d=\"M13 8V4q0-.425.288-.712T14 3h6q.425 0 .713.288T21 4v4q0 .425-.288.713T20 9h-6q-.425 0-.712-.288T13 8M3 12V4q0-.425.288-.712T4 3h6q.425 0 .713.288T11 4v8q0 .425-.288.713T10 13H4q-.425 0-.712-.288T3 12m10 8v-8q0-.425.288-.712T14 11h6q.425 0 .713.288T21 12v8q0 .425-.288.713T20 21h-6q-.425 0-.712-.288T13 20M3 20v-4q0-.425.288-.712T4 15h6q.425 0 .713.288T11 16v4q0 .425-.288.713T10 21H4q-.425 0-.712-.288T3 20m2-9h4V5H5zm10 8h4v-6h-4zm0-12h4V5h-4zM5 19h4v-2H5zm4-2\"/>",
-                "width": 24,
-                "height": 24,
-                "isSvgEditable": false,
-                "isIconNameEditable": false
-              }
-            },
-            {
-              "id": 39,
-              "title": "Enterprise Compliance & Auditing",
-              "desc": "Complete with strict Team-Based Access Controls (RBAC), internal audit logs, and data privacy tools (DSAR handling), making it fully compatible for fast-growing agencies and enterprise marketing networks.",
-              "icon": {
-                "iconName": "fluent-mdl2:compliance-audit",
-                "iconData": "<path fill=\"currentColor\" d=\"M1033 1280q-14 30-21 62t-13 66H384v-128zm-649 384v-128h613q5 33 14 65t23 63zm-128 256h1349l127 128H128V0h1115l549 549v568q-29-26-61-47t-67-37V640h-512V128H256zM1280 219v293h293zm24 805q-109 41-187 128H384v-128zM384 512h640v128H384zm1152 256v128H384V768zm512 1216q0 26-19 45t-45 19t-45-19l-291-290q-39 26-84 39t-92 14q-66 0-124-25t-102-68t-69-102t-25-125t25-124t68-101t102-69t125-26t124 25t101 69t69 102t26 124q0 47-13 92t-40 84l290 291q19 19 19 45m-768-512q0 40 15 75t41 61t61 41t75 15t75-15t61-41t41-61t15-75t-15-75t-41-61t-61-41t-75-15t-75 15t-61 41t-41 61t-15 75\"/>",
-                "width": 2048,
-                "height": 2048,
-                "isSvgEditable": false,
-                "isIconNameEditable": false
-              }
-            }
-          ]
-        }
-      ],
-      "cta": [
-        {
-          "id": 13,
-          "title": "Take Absolute Control of Your Ad Account Today",
-          "subtitle": "Stop letting fake clicks dictate your marketing performance. See exactly who is interacting with your campaigns and preserve your budget for real customers.\n",
-          "ctaLabel": "Request a Live Demo & Consultation",
-          "ctaHref": "/contact",
-          "__component": "shared.homepage-cta"
-        }
-      ],
-      "Richtext": [
-        {
-          "id": 8,
-          "title": "What We Block: The 4 Pillars of Click Fraud",
-          "subtitle": null,
-          "bodycontent": [
-            {
-              "type": "paragraph",
-              "children": [
-                {
-                  "type": "text",
-                  "text": "Whether it is an automated script or a human actor trying to sabotage your campaign, Clixerfy mitigates the risk across four core areas:"
-                }
-              ]
-            }
-          ],
-          "child": [
-            {
-              "id": 29,
-              "title": "1. Professional Competitor Attacks",
-              "subtitle": "In highly competitive industries (such as Legal, Real Estate, Locksmiths, and SaaS), rival companies frequently click your ads to intentionally deplete your daily budget and push your business out of the search auctions.",
-              "body": [
-                {
-                  "type": "paragraph",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "The Clixerfy Defense:",
-                      "bold": true
-                    },
-                    {
-                      "type": "text",
-                      "text": " We track unique device architecture and repeat clickers originating from the same corporate networks and office IPs. Once an entity crosses your custom threshold (e.g., 3 clicks within 24 hours), they are instantly restricted from seeing your ads."
-                    }
-                  ]
-                }
-              ],
-              "bgimage": null,
-              "icon": {
-                "iconName": "arcticons:radiant-defense",
-                "iconData": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M16.082 12.681c3.282 0 5.936 2.654 5.936 5.936s-2.654 5.935-5.936 5.935s-5.946-2.653-5.946-5.935s2.664-5.936 5.946-5.936M25.82 9.67c2.708-1.928 6.953-.585 9.499 2.99c2.556 3.574 2.426 8.036-.271 9.954c-2.697 1.928-6.954.584-9.5-2.99c-2.544-3.574-2.425-8.037.272-9.954\"/><path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M29.936 29.015v9.9c0 2.47 4.462 2.47 4.462 0V28.018q0-.985 1.484-.985c2.968 0 5.448-.986 4.95-5.936C38.85.301 9.15.301 7.168 21.097c-.498 4.95 1.982 5.936 4.95 5.936q1.484 0 1.484.986v10.896c0 2.47 4.462 2.47 4.462 0v-9.9c0-1.982 3.455-1.982 3.455 0v10.886c0 3.465 4.961 3.465 4.961 0V29.015c0-1.982 3.455-1.982 3.455 0\"/>",
-                "width": 48,
-                "height": 48,
-                "isSvgEditable": false,
-                "isIconNameEditable": false
-              }
-            },
-            {
-              "id": 30,
-              "title": "2. Sophisticated Botnets",
-              "subtitle": "Modern malicious bots don't just click links and leave; they are programmed to mimic human behavior by scrolling pages, pausing, and executing micro-movements with the mouse. They utilize residential proxies to blend in with genuine home users.",
-              "body": [
-                {
-                  "type": "paragraph",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "The Clixerfy Defense",
-                      "bold": true
-                    },
-                    {
-                      "type": "text",
-                      "text": ": Our Behavioral Biometrics Engine detects the mathematical perfection of automated interactions. Even if a bot tricks standard security scripts by routing through a local residential IP, its synthetic behavior instantly gives it away."
-                    }
-                  ]
-                }
-              ],
-              "bgimage": null,
-              "icon": {
-                "iconName": "emojione-monotone:spider-web",
-                "iconData": "<path fill=\"currentColor\" d=\"M62 31.082h-5.261c-6.813-4.749-11.146-12.705-11.618-21.336l2.63-4.825L46.247 4l-2.629 4.829a24.63 24.63 0 0 1-23.238-.002L17.751 4l-1.504.921l2.63 4.827c-.473 8.631-4.805 16.585-11.62 21.334H2v1.839h5.259c6.815 4.746 11.147 12.702 11.618 21.333l-2.63 4.828l1.504.918l2.631-4.829a24.64 24.64 0 0 1 23.234 0L46.247 60l1.504-.918l-2.63-4.826c.473-8.633 4.805-16.589 11.618-21.335H62zm-8.203 0h-5.158c-4.447-3.089-7.272-8.271-7.569-13.896l2.58-4.737c1.032 7.333 4.672 14.021 10.147 18.633M32 30.161l-2.149-3.945a9.4 9.4 0 0 0 2.114.252c.734 0 1.469-.093 2.19-.267zm3.651-3.026a10.6 10.6 0 0 0 2.164 3.947h-4.313zm-5.154 3.947h-4.298a10.65 10.65 0 0 0 2.141-3.961zm0 1.839l-2.148 3.943a10.7 10.7 0 0 0-2.164-3.943zm1.503.918l2.147 3.947a9.3 9.3 0 0 0-4.305.013zm1.502-.918h4.297a10.65 10.65 0 0 0-2.141 3.96zm6.959-1.839c-2.001-1.45-3.288-3.789-3.504-6.348l2.677-4.913c.78 4.373 2.951 8.354 6.132 11.261zm-4.982-7.31a7.71 7.71 0 0 1-6.936.043l-2.677-4.914A17.6 17.6 0 0 0 32 20.012c2.074 0 4.149-.376 6.132-1.111zm-8.461.92c-.185 2.564-1.452 4.913-3.435 6.39h-5.351c3.181-2.905 5.351-6.888 6.132-11.259zm-3.479 8.229c2.001 1.447 3.288 3.786 3.502 6.344l-2.677 4.914c-.781-4.371-2.949-8.354-6.13-11.258zm4.981 7.307a7.72 7.72 0 0 1 6.936-.043l2.676 4.912a17.6 17.6 0 0 0-12.263.003zm8.462-.918c.183-2.562 1.448-4.913 3.432-6.389h5.352c-3.181 2.904-5.352 6.887-6.132 11.26zM32 13.582a26.2 26.2 0 0 0 10.146-2.054l-2.579 4.738a16 16 0 0 1-15.136 0l-2.58-4.738A26.3 26.3 0 0 0 32 13.582m-11.651-1.131l2.58 4.736c-.298 5.625-3.122 10.811-7.567 13.895h-5.16c5.474-4.612 9.116-11.298 10.147-18.631m-10.146 20.47h5.158c4.445 3.086 7.27 8.271 7.567 13.894l-2.58 4.737c-1.03-7.334-4.67-14.022-10.145-18.631m11.648 19.551l2.582-4.738a16.01 16.01 0 0 1 15.134 0l2.579 4.738a26.23 26.23 0 0 0-20.295 0m21.798-.92l-2.58-4.737c.298-5.623 3.122-10.809 7.567-13.894h5.16c-5.474 4.609-9.116 11.297-10.147 18.631\"/>",
-                "width": 64,
-                "height": 64,
-                "isSvgEditable": false,
-                "isIconNameEditable": false
-              }
-            },
-            {
-              "id": 31,
-              "title": "3. Global Click Farms",
-              "subtitle": "Click farms employ low-wage workers to manually search for your keywords and interact with your paid ad placements. Because these are real humans sitting at real devices, traditional anti-bot software fails to flag them.",
-              "body": [
-                {
-                  "type": "paragraph",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "The Clixerfy Defense",
-                      "bold": true
-                    },
-                    {
-                      "type": "text",
-                      "text": ": Clixerfy monitors deep Device Fingerprints. If our network flags multiple supposedly unique users sharing identical hardware signatures, or originating from a known click-farm data center range, the entire sector is cleanly neutralized."
-                    }
-                  ]
-                }
-              ],
-              "bgimage": null,
-              "icon": {
-                "iconName": "boxicons:fingerprint-filled",
-                "iconData": "<path fill=\"currentColor\" d=\"M5.81 17.66c1.04 1.66 1.04 2.89 1.04 4.33h2c0-1.52 0-3.24-1.34-5.39zM4.5 16.01c.07.06.15.12.21.18l1.5-1.33c-.12-.14-.27-.27-.42-.39c-.07-.06-.15-.12-.21-.19c-1.66-1.71-2.51-6.02 0-8.61c2.53-2.61 8.07-1.58 9.78-.58c2.69 1.57 4.1 4.31 4.11 4.33l1.79-.89c-.07-.13-1.67-3.29-4.89-5.17C13.84 1.88 7.42.9 4.15 4.28c-3.37 3.48-2.25 9.07 0 11.39c.12.12.24.23.37.33Z\"/><path fill=\"currentColor\" d=\"M12.85 21.98c0-2.04 0-4.34-3.2-8.6c-.13-.18-.29-.37-.46-.58c-1.03-1.26-1.79-2.32-1.39-3.51c.26-.79.81-1.33 1.64-1.6c1.22-.41 2.92-.16 4.04.6l1.12-1.65c-1.65-1.12-3.98-1.46-5.8-.84c-1.41.48-2.44 1.49-2.89 2.87c-.78 2.33.8 4.25 1.74 5.4c.15.18.29.35.41.51c2.8 3.72 2.8 5.51 2.8 7.4h2Zm7.98-4.21c-.94-4.68-2.32-7.69-4.46-9.75l-1.39 1.44c1.83 1.76 3.03 4.45 3.89 8.7z\"/><path fill=\"currentColor\" d=\"M16.02 15.99c-1.3-4.58-4.47-6.75-4.61-6.84l-1.12 1.66s2.71 1.88 3.8 5.72l1.92-.54Zm.83 5.99c0-1.33-.11-2.61-.34-3.89l-1.97.35c.21 1.17.31 2.33.31 3.54z\"/>",
-                "width": 24,
-                "height": 24,
-                "isSvgEditable": false,
-                "isIconNameEditable": false
-              }
-            },
-            {
-              "id": 32,
-              "title": "4. Malicious Scrapers & Spiders",
-              "subtitle": "Competitors and scrapers use automated programs to crawl your landing pages via paid search or display ads to steal your pricing models, catalog information, and ad copies.",
-              "body": [
-                {
-                  "type": "paragraph",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "The Clixerfy Defense",
-                      "bold": true
-                    },
-                    {
-                      "type": "text",
-                      "text": ": We intelligently separate \"Good Bots\" (like Google’s indexer) from malicious scrapers. The platform allows authorized search spiders to crawl seamlessly while instantly zapping harmful data harvesters."
-                    }
-                  ]
-                },
-                {
-                  "type": "paragraph",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": ""
-                    }
-                  ]
-                }
-              ],
-              "bgimage": null,
-              "icon": {
-                "iconName": "lucide-lab:spider",
-                "iconData": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path d=\"M10 5v1m4 0V5m-4 5.4V8a2 2 0 1 1 4 0v2.4M7 15H4l-2 2.5m5.42-.5L5 20l1 2m2-10l-4-1l-2-3m7 3L5.5 6L7 2\"/><path d=\"M8 18a5 5 0 1 1 8 0s-2 3-4 4c-2-1-4-4-4-4\"/><path d=\"m15 11l3.5-5L17 2m-1 10l4-1l2-3m-5 7h3l2 2.5m-5.43-.5L19 20l-1 2\"/></g>",
-                "width": 24,
-                "height": 24,
-                "isSvgEditable": false,
-                "isIconNameEditable": false
-              }
-            }
-          ],
-          "__component": "shared.formattedrichtextgrid"
-        }
-      ],
-      "process": [
-        {
-          "id": 11,
-          "title": "How the Clixerfy Blocker Works",
-          "steps": [
-            {
-              "id": 59,
-              "title": "Step 1: Deep Structural Inspection",
-              "description": [
-                {
-                  "type": "paragraph",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "The moment a user clicks your advertisement, the lightweight Clixerfy script executes. In under 100 milliseconds, our edge-layer inspects:"
-                    }
-                  ]
-                },
-                {
-                  "type": "list",
-                  "format": "unordered",
-                  "children": [
-                    {
-                      "type": "list-item",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "Connection Architecture: Is the visitor masking their trace via a high-risk VPN, proxy, or hosting data center?"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "list",
-                  "format": "unordered",
-                  "children": [
-                    {
-                      "type": "list-item",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "Environment Integrity: Is the browser rendering via a headless environment (run by pure backend code rather than a consumer interface)?"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "list",
-                  "format": "unordered",
-                  "children": [
-                    {
-                      "type": "list-item",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "Global Reputation Data: Has this specific entity been previously blacklisted by our global network of thousands of protected sites?"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "paragraph",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": ""
-                    }
-                  ]
-                },
-                {
-                  "type": "paragraph",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": ""
-                    }
-                  ]
-                }
-              ],
-              "image": null
-            },
-            {
-              "id": 60,
-              "title": "Step 2: Automated Real-Time Neutralization",
-              "description": [
-                {
-                  "type": "paragraph",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "If a click is determined to be invalid, Clixerfy doesn't just flag it for an end-of-month report. Our backend system relies on a Direct API Sync to communicate instantly with your Google, Meta, or Microsoft Ads managers. The malicious IP address or placement is appended to your account's exclusion list dynamically, taking effect immediately."
-                    }
-                  ]
-                }
-              ],
-              "image": null
-            },
-            {
-              "id": 61,
-              "title": "Step 3: Proactive Budget Redirection",
-              "description": [
-                {
-                  "type": "paragraph",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "Once the blocker is active, the money previously wasted on digital noise is preserved. This \"saved\" capital is automatically utilized where it matters most: targeting high-intent human buyers. As a result, companies experience a visible lift in overall conversion rates because every click bought is a real opportunity."
-                    }
-                  ]
-                }
-              ],
-              "image": null
-            }
-          ],
-          "__component": "shared.sections-process"
-        }
-      ],
-      "faqs": [
-        {
-          "id": 3,
-          "title": "Frequently Asked Questions",
-          "faq": [
-            {
-              "id": 7,
-              "question": "How does Clixerfy integrate with my current website or landing pages?",
-              "answer": [
-                {
-                  "type": "paragraph",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "Integration is seamless. It requires placing a simple, optimized asynchronous JavaScript snippet on your landing pages or tag manager. It loads instantly without impacting page load speed or Core Web Vitals."
-                    }
-                  ]
-                },
-                {
-                  "type": "paragraph",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": ""
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "id": 8,
-              "question": "Will this block my legitimate users who happen to use VPNs?",
-              "answer": [
-                {
-                  "type": "paragraph",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "Our behavioral biometric analysis relies on multiple data markers. A user simply browsing over a commercial VPN will not be blocked unless their underlying environment displays automated bot traits, high-frequency repeat clicking, or headless browser configurations."
-                    }
-                  ]
-                },
-                {
-                  "type": "paragraph",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": ""
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "id": 9,
-              "question": "What ad networks do you support?",
-              "answer": [
-                {
-                  "type": "paragraph",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "Clixerfy integrates directly via secure APIs with Google Ads, Meta (Facebook & Instagram) Ads, and Microsoft (Bing) Ads, allowing real-time automated IP and placement exclusions across your active workspaces."
-                    }
-                  ]
-                },
-                {
-                  "type": "paragraph",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": ""
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "__component": "shared.faqs"
-        }
-      ],
-      "PricingTable": {
-        "id": 2,
-        "title": "Transparent, Predictable Pricing",
-        "subtitle": [
-          {
-            "type": "paragraph",
-            "children": [
-              {
-                "type": "text",
-                "text": "Clixerfy fits seamlessly into any budget framework, returning its cost multiple times over by salvaging your native ad spend. Select the tier tailored to your active ad click volume."
-              }
-            ]
-          }
-        ],
-        "plans": [
-          {
-            "id": 4,
-            "name": "Pro Blocker",
-            "monthlyPrice": "$99 / mo",
-            "annualPrice": "$84 / mo (billed annually)",
-            "featured": null,
-            "features": [
-              {
-                "id": 19,
-                "label": "Monthly Ad Click Volume",
-                "value": "Up to 10,000 clicks"
-              },
-              {
-                "id": 20,
-                "label": "Protected Domains",
-                "value": "1 Domain"
-              },
-              {
-                "id": 21,
-                "label": "Real-Time API Exclusions",
-                "value": "Included (Google)"
-              },
-              {
-                "id": 22,
-                "label": "Behavioral Biometrics",
-                "value": "Standard"
-              },
-              {
-                "id": 23,
-                "label": "Multi-Tenant Controls",
-                "value": "Personal Mode Only"
-              },
-              {
-                "id": 24,
-                "label": "Support SLA",
-                "value": "Email (24h)"
-              }
-            ]
-          },
-          {
-            "id": 5,
-            "name": "Agency Workspace",
-            "monthlyPrice": "$149 / mo",
-            "annualPrice": "$124 / mo (billed annually)",
-            "featured": true,
-            "features": [
-              {
-                "id": 25,
-                "label": "Monthly Ad Click Volume",
-                "value": "Up to 50,000 clicks"
-              },
-              {
-                "id": 26,
-                "label": "Protected Domains",
-                "value": "Up to 10 Domains"
-              },
-              {
-                "id": 27,
-                "label": "Real-Time API Exclusions",
-                "value": "Included (All Networks)"
-              },
-              {
-                "id": 28,
-                "label": "Behavioral Biometrics",
-                "value": "Advanced"
-              },
-              {
-                "id": 29,
-                "label": "Multi-Tenant Controls",
-                "value": "Agency Mode (RBAC)"
-              },
-              {
-                "id": 30,
-                "label": "Support SLA",
-                "value": "Priority Chat (2h)"
-              }
-            ]
-          },
-          {
-            "id": 6,
-            "name": "Enterprise Shield",
-            "monthlyPrice": "Contact Sales",
-            "annualPrice": "Contact Sales",
-            "featured": null,
-            "features": [
-              {
-                "id": 31,
-                "label": "Monthly Ad Click Volume",
-                "value": "Custom / Unlimited"
-              },
-              {
-                "id": 32,
-                "label": "Protected Domains",
-                "value": "Unlimited"
-              },
-              {
-                "id": 33,
-                "label": "Real-Time API Exclusions",
-                "value": "Dedicated API Channel"
-              },
-              {
-                "id": 34,
-                "label": "Behavioral Biometrics",
-                "value": "Custom ML Profiling"
-              },
-              {
-                "id": 35,
-                "label": "Multi-Tenant Controls",
-                "value": "Federated / SSO"
-              },
-              {
-                "id": 36,
-                "label": "Support SLA",
-                "value": "Dedicated TAM / 15m"
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
       "id": 14,
       "documentId": "k2kp3ihdjpeljxowl4ic79s8",
       "createdAt": "2026-07-08T11:43:11.941Z",
@@ -2077,37 +1400,67 @@
       }
     },
     {
-      "id": 20,
-      "documentId": "imz6y45u87ddr1ji4n146738",
-      "createdAt": "2026-07-08T12:31:13.639Z",
-      "updatedAt": "2026-07-08T12:55:02.082Z",
-      "publishedAt": "2026-07-08T12:55:02.104Z",
-      "title": "WP Monitor",
-      "slug": "wordpress-file-scanner",
-      "metaTitle": "Centralized WordPress File Scanner & Malware Monitor | Clixerfy WP Monitor",
-      "metaDescription": "Secure your WordPress infrastructure with centralized, zero-overhead security. Clixerfy WP Monitor uses off-server YARA scanning, file integrity checks, and user auditing.",
+      "id": 23,
+      "documentId": "veisjei5g4bmvjsoh6efpck0",
+      "createdAt": "2026-07-01T11:52:27.341Z",
+      "updatedAt": "2026-07-22T15:20:00.765Z",
+      "publishedAt": "2026-07-22T15:20:00.786Z",
+      "title": "The Clixerfy Fraudulent Click Blocker",
+      "slug": "ad-fraud-blocker",
+      "metaTitle": "Advanced Adfraud Blocker | Stop Fake Traffic & Save Ad Budget | Clixerfy",
+      "metaDescription": "Protect your ad spend from bots, competitors, and click farms. Clixerfy Adfraud Blocker stops invalid traffic in real-time with direct ad platform API sync.",
       "herosection": [
         {
-          "id": 31,
-          "titleText": "Clixerfy WP Monitor",
-          "subtitle": "Enterprise-Grade Server-Side WordPress Security",
+          "id": 40,
+          "titleText": "The Clixerfy Fraudulent Click Blocker: Complete Ad Immunity",
+          "subtitle": "Don’t Just Track Fraud. Terminate It.",
           "richtext": [
             {
-              "type": "heading",
+              "type": "paragraph",
               "children": [
                 {
                   "type": "text",
-                  "text": "Zero Site Overhead. Maximum Threat Detection."
+                  "text": "Most advertisers blindly rely on the basic \"Invalid Traffic\" filters provided natively by major ad networks. The problem? Those filters are built to protect the advertising platform's bottom line, not yours. While they catch basic, outdated bots, they leave your campaigns completely exposed to highly sophisticated, human-like click fraud."
                 }
-              ],
-              "level": 2
+              ]
             },
             {
               "type": "paragraph",
               "children": [
                 {
                   "type": "text",
-                  "text": "Traditional WordPress security plugins execute heavy scans directly on your web server, creating severe resource strain that degrades site speed and exposes a critical vulnerability—if an attacker drops a web shell, they can simply delete or mute the local plugin to blind your defenses. Clixerfy WP Monitor completely shifts this paradigm by utilizing a lightweight local agent solely to gather file hashes while safely offloading all resource-intensive file comparison, YARA signature matching, behavioral heuristics, and database auditing to our centralized cloud API servers. Because the analytical brain sits entirely outside the hacker's reach, this architecture delivers a completely tamper-proof, silent, and zero-overhead security ecosystem that protects your entire enterprise or agency portfolio without ever sacrificing site performance."
+                  "text": "Clixerfy is your proactive defense system. Our advanced Adfraud Blocker acts as a 24/7 digital sentry. By analyzing visitor behavior in less than 100 milliseconds, we identify malicious intent and block threats before fake traffic drains your daily marketing budget."
+                }
+              ]
+            }
+          ],
+          "bgimage": "https://clixerfy.com/wp-content/uploads/2026/07/The-Clixerfy-Fraudulent-Click-Blocker-Complete-Ad-Immunity.webp",
+          "featuredimage": "https://clixerfy.com/wp-content/uploads/2026/07/Complete-Ad-Immunity.jpg",
+          "CTAButtonText": null,
+          "CTAButtonLink": null,
+          "__component": "shared.sections-about-hero"
+        }
+      ],
+      "features": [
+        {
+          "id": 33,
+          "sectionTitle": "Why Standard Filters Aren't Enough",
+          "body": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Platform-native invalid traffic filters are naturally conservative. Ad networks only filter out traffic they are 100% certain is fraudulent to prevent \"False Positives\" (accidentally blocking an active buyer)."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Clixerfy puts the control back into your hands. We provide an adjustable protection toggle that allows your security or marketing teams to dial in exactly how aggressively to shield your pipeline:"
                 }
               ]
             },
@@ -2117,6 +1470,750 @@
                 {
                   "type": "text",
                   "text": ""
+                }
+              ]
+            }
+          ],
+          "items": [
+            {
+              "id": 108,
+              "title": "Low Protection",
+              "desc": "Blocks known, high-concurrency malicious botnets.",
+              "icon": {
+                "iconName": "carbon:manage-protection",
+                "iconData": "<path fill=\"currentColor\" d=\"m16 30l-6.176-3.293A10.98 10.98 0 0 1 4 17V4a2 2 0 0 1 2-2h20a2 2 0 0 1 2 2v13a10.98 10.98 0 0 1-5.824 9.707ZM6 4v13a8.99 8.99 0 0 0 4.766 7.942L16 27.733l5.234-2.79A8.99 8.99 0 0 0 26 17V4Z\"/><path fill=\"currentColor\" d=\"M16 25.277V6h8v10.805a7 7 0 0 1-3.7 6.173Z\"/>",
+                "width": 32,
+                "height": 32,
+                "isSvgEditable": false,
+                "isIconNameEditable": false
+              }
+            },
+            {
+              "id": 109,
+              "title": "Medium Protection (Recommended)",
+              "desc": "Filters out persistent repeat clickers, scrapers, and high-risk commercial VPNs.",
+              "icon": {
+                "iconName": "icon-park-outline:protect",
+                "iconData": "<g fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\" stroke-width=\"4\"><path d=\"M6 9.256L24.009 4L42 9.256v10.778A26.32 26.32 0 0 1 24.003 45A26.32 26.32 0 0 1 6 20.029z\"/><path stroke-linecap=\"round\" d=\"m15 23l7 7l12-12\"/></g>",
+                "width": 48,
+                "height": 48,
+                "isSvgEditable": false,
+                "isIconNameEditable": false
+              }
+            },
+            {
+              "id": 110,
+              "title": "High Protection",
+              "desc": "Restricts any suspicious behavioral deviations, ensuring your ad budget feeds purely verified human interactions.",
+              "icon": {
+                "iconName": "picon:protect",
+                "iconData": "<path fill=\"currentColor\" d=\"m0 1l1 1v3l1 1V4l1 1v3H2L0 6m8-5v5L6 8H5V5l1-1v2l1-1V2M2 2l2-2l2 2l-2 2\"/>",
+                "width": 8,
+                "height": 8,
+                "isSvgEditable": false,
+                "isIconNameEditable": false
+              }
+            }
+          ]
+        },
+        {
+          "id": 34,
+          "sectionTitle": "Designed for Enterprise Security, Built for Marketing ROI",
+          "body": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Clixerfy bridges the gap between deep technical telemetry and clear business operations. While the platform runs complex cryptographic analysis under the hood, your management teams get absolute transparency through a simplified workspace."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "text": ""
+                }
+              ]
+            }
+          ],
+          "items": [
+            {
+              "id": 111,
+              "title": "Unified Financial Dashboards",
+              "desc": "See exactly which threat vectors were stopped, where they originated, and precisely how much ad spend was preserved.",
+              "icon": {
+                "iconName": "material-symbols:dashboard-outline-rounded",
+                "iconData": "<path fill=\"currentColor\" d=\"M13 8V4q0-.425.288-.712T14 3h6q.425 0 .713.288T21 4v4q0 .425-.288.713T20 9h-6q-.425 0-.712-.288T13 8M3 12V4q0-.425.288-.712T4 3h6q.425 0 .713.288T11 4v8q0 .425-.288.713T10 13H4q-.425 0-.712-.288T3 12m10 8v-8q0-.425.288-.712T14 11h6q.425 0 .713.288T21 12v8q0 .425-.288.713T20 21h-6q-.425 0-.712-.288T13 20M3 20v-4q0-.425.288-.712T4 15h6q.425 0 .713.288T11 16v4q0 .425-.288.713T10 21H4q-.425 0-.712-.288T3 20m2-9h4V5H5zm10 8h4v-6h-4zm0-12h4V5h-4zM5 19h4v-2H5zm4-2\"/>",
+                "width": 24,
+                "height": 24,
+                "isSvgEditable": false,
+                "isIconNameEditable": false
+              }
+            },
+            {
+              "id": 112,
+              "title": "Enterprise Compliance & Auditing",
+              "desc": "Complete with strict Team-Based Access Controls (RBAC), internal audit logs, and data privacy tools (DSAR handling), making it fully compatible for fast-growing agencies and enterprise marketing networks.",
+              "icon": {
+                "iconName": "fluent-mdl2:compliance-audit",
+                "iconData": "<path fill=\"currentColor\" d=\"M1033 1280q-14 30-21 62t-13 66H384v-128zm-649 384v-128h613q5 33 14 65t23 63zm-128 256h1349l127 128H128V0h1115l549 549v568q-29-26-61-47t-67-37V640h-512V128H256zM1280 219v293h293zm24 805q-109 41-187 128H384v-128zM384 512h640v128H384zm1152 256v128H384V768zm512 1216q0 26-19 45t-45 19t-45-19l-291-290q-39 26-84 39t-92 14q-66 0-124-25t-102-68t-69-102t-25-125t25-124t68-101t102-69t125-26t124 25t101 69t69 102t26 124q0 47-13 92t-40 84l290 291q19 19 19 45m-768-512q0 40 15 75t41 61t61 41t75 15t75-15t61-41t41-61t15-75t-15-75t-41-61t-61-41t-75-15t-75 15t-61 41t-41 61t-15 75\"/>",
+                "width": 2048,
+                "height": 2048,
+                "isSvgEditable": false,
+                "isIconNameEditable": false
+              }
+            }
+          ]
+        }
+      ],
+      "cta": [
+        {
+          "id": 30,
+          "title": "Take Absolute Control of Your Ad Account Today",
+          "subtitle": "Stop letting fake clicks dictate your marketing performance. See exactly who is interacting with your campaigns and preserve your budget for real customers.\n",
+          "ctaLabel": "Request a Live Demo & Consultation",
+          "ctaHref": "/contact",
+          "__component": "shared.homepage-cta"
+        }
+      ],
+      "Richtext": [
+        {
+          "id": 20,
+          "title": "What We Block: The 4 Pillars of Click Fraud",
+          "subtitle": null,
+          "bodycontent": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Whether it is an automated script or a human actor trying to sabotage your campaign, Clixerfy mitigates the risk across four core areas:"
+                }
+              ]
+            }
+          ],
+          "child": [
+            {
+              "id": 72,
+              "title": "1. Professional Competitor Attacks",
+              "subtitle": "In highly competitive industries (such as Legal, Real Estate, Locksmiths, and SaaS), rival companies frequently click your ads to intentionally deplete your daily budget and push your business out of the search auctions.",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "The Clixerfy Defense:",
+                      "bold": true
+                    },
+                    {
+                      "type": "text",
+                      "text": " We track unique device architecture and repeat clickers originating from the same corporate networks and office IPs. Once an entity crosses your custom threshold (e.g., 3 clicks within 24 hours), they are instantly restricted from seeing your ads."
+                    }
+                  ]
+                }
+              ],
+              "bgimage": null,
+              "icon": {
+                "iconName": "arcticons:radiant-defense",
+                "iconData": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M16.082 12.681c3.282 0 5.936 2.654 5.936 5.936s-2.654 5.935-5.936 5.935s-5.946-2.653-5.946-5.935s2.664-5.936 5.946-5.936M25.82 9.67c2.708-1.928 6.953-.585 9.499 2.99c2.556 3.574 2.426 8.036-.271 9.954c-2.697 1.928-6.954.584-9.5-2.99c-2.544-3.574-2.425-8.037.272-9.954\"/><path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M29.936 29.015v9.9c0 2.47 4.462 2.47 4.462 0V28.018q0-.985 1.484-.985c2.968 0 5.448-.986 4.95-5.936C38.85.301 9.15.301 7.168 21.097c-.498 4.95 1.982 5.936 4.95 5.936q1.484 0 1.484.986v10.896c0 2.47 4.462 2.47 4.462 0v-9.9c0-1.982 3.455-1.982 3.455 0v10.886c0 3.465 4.961 3.465 4.961 0V29.015c0-1.982 3.455-1.982 3.455 0\"/>",
+                "width": 48,
+                "height": 48,
+                "isSvgEditable": false,
+                "isIconNameEditable": false
+              }
+            },
+            {
+              "id": 73,
+              "title": "2. Sophisticated Botnets",
+              "subtitle": "Modern malicious bots don't just click links and leave; they are programmed to mimic human behavior by scrolling pages, pausing, and executing micro-movements with the mouse. They utilize residential proxies to blend in with genuine home users.",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "The Clixerfy Defense",
+                      "bold": true
+                    },
+                    {
+                      "type": "text",
+                      "text": ": Our Behavioral Biometrics Engine detects the mathematical perfection of automated interactions. Even if a bot tricks standard security scripts by routing through a local residential IP, its synthetic behavior instantly gives it away."
+                    }
+                  ]
+                }
+              ],
+              "bgimage": null,
+              "icon": {
+                "iconName": "emojione-monotone:spider-web",
+                "iconData": "<path fill=\"currentColor\" d=\"M62 31.082h-5.261c-6.813-4.749-11.146-12.705-11.618-21.336l2.63-4.825L46.247 4l-2.629 4.829a24.63 24.63 0 0 1-23.238-.002L17.751 4l-1.504.921l2.63 4.827c-.473 8.631-4.805 16.585-11.62 21.334H2v1.839h5.259c6.815 4.746 11.147 12.702 11.618 21.333l-2.63 4.828l1.504.918l2.631-4.829a24.64 24.64 0 0 1 23.234 0L46.247 60l1.504-.918l-2.63-4.826c.473-8.633 4.805-16.589 11.618-21.335H62zm-8.203 0h-5.158c-4.447-3.089-7.272-8.271-7.569-13.896l2.58-4.737c1.032 7.333 4.672 14.021 10.147 18.633M32 30.161l-2.149-3.945a9.4 9.4 0 0 0 2.114.252c.734 0 1.469-.093 2.19-.267zm3.651-3.026a10.6 10.6 0 0 0 2.164 3.947h-4.313zm-5.154 3.947h-4.298a10.65 10.65 0 0 0 2.141-3.961zm0 1.839l-2.148 3.943a10.7 10.7 0 0 0-2.164-3.943zm1.503.918l2.147 3.947a9.3 9.3 0 0 0-4.305.013zm1.502-.918h4.297a10.65 10.65 0 0 0-2.141 3.96zm6.959-1.839c-2.001-1.45-3.288-3.789-3.504-6.348l2.677-4.913c.78 4.373 2.951 8.354 6.132 11.261zm-4.982-7.31a7.71 7.71 0 0 1-6.936.043l-2.677-4.914A17.6 17.6 0 0 0 32 20.012c2.074 0 4.149-.376 6.132-1.111zm-8.461.92c-.185 2.564-1.452 4.913-3.435 6.39h-5.351c3.181-2.905 5.351-6.888 6.132-11.259zm-3.479 8.229c2.001 1.447 3.288 3.786 3.502 6.344l-2.677 4.914c-.781-4.371-2.949-8.354-6.13-11.258zm4.981 7.307a7.72 7.72 0 0 1 6.936-.043l2.676 4.912a17.6 17.6 0 0 0-12.263.003zm8.462-.918c.183-2.562 1.448-4.913 3.432-6.389h5.352c-3.181 2.904-5.352 6.887-6.132 11.26zM32 13.582a26.2 26.2 0 0 0 10.146-2.054l-2.579 4.738a16 16 0 0 1-15.136 0l-2.58-4.738A26.3 26.3 0 0 0 32 13.582m-11.651-1.131l2.58 4.736c-.298 5.625-3.122 10.811-7.567 13.895h-5.16c5.474-4.612 9.116-11.298 10.147-18.631m-10.146 20.47h5.158c4.445 3.086 7.27 8.271 7.567 13.894l-2.58 4.737c-1.03-7.334-4.67-14.022-10.145-18.631m11.648 19.551l2.582-4.738a16.01 16.01 0 0 1 15.134 0l2.579 4.738a26.23 26.23 0 0 0-20.295 0m21.798-.92l-2.58-4.737c.298-5.623 3.122-10.809 7.567-13.894h5.16c-5.474 4.609-9.116 11.297-10.147 18.631\"/>",
+                "width": 64,
+                "height": 64,
+                "isSvgEditable": false,
+                "isIconNameEditable": false
+              }
+            },
+            {
+              "id": 74,
+              "title": "3. Global Click Farms",
+              "subtitle": "Click farms employ low-wage workers to manually search for your keywords and interact with your paid ad placements. Because these are real humans sitting at real devices, traditional anti-bot software fails to flag them.",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "The Clixerfy Defense",
+                      "bold": true
+                    },
+                    {
+                      "type": "text",
+                      "text": ": Clixerfy monitors deep Device Fingerprints. If our network flags multiple supposedly unique users sharing identical hardware signatures, or originating from a known click-farm data center range, the entire sector is cleanly neutralized."
+                    }
+                  ]
+                }
+              ],
+              "bgimage": null,
+              "icon": {
+                "iconName": "boxicons:fingerprint-filled",
+                "iconData": "<path fill=\"currentColor\" d=\"M5.81 17.66c1.04 1.66 1.04 2.89 1.04 4.33h2c0-1.52 0-3.24-1.34-5.39zM4.5 16.01c.07.06.15.12.21.18l1.5-1.33c-.12-.14-.27-.27-.42-.39c-.07-.06-.15-.12-.21-.19c-1.66-1.71-2.51-6.02 0-8.61c2.53-2.61 8.07-1.58 9.78-.58c2.69 1.57 4.1 4.31 4.11 4.33l1.79-.89c-.07-.13-1.67-3.29-4.89-5.17C13.84 1.88 7.42.9 4.15 4.28c-3.37 3.48-2.25 9.07 0 11.39c.12.12.24.23.37.33Z\"/><path fill=\"currentColor\" d=\"M12.85 21.98c0-2.04 0-4.34-3.2-8.6c-.13-.18-.29-.37-.46-.58c-1.03-1.26-1.79-2.32-1.39-3.51c.26-.79.81-1.33 1.64-1.6c1.22-.41 2.92-.16 4.04.6l1.12-1.65c-1.65-1.12-3.98-1.46-5.8-.84c-1.41.48-2.44 1.49-2.89 2.87c-.78 2.33.8 4.25 1.74 5.4c.15.18.29.35.41.51c2.8 3.72 2.8 5.51 2.8 7.4h2Zm7.98-4.21c-.94-4.68-2.32-7.69-4.46-9.75l-1.39 1.44c1.83 1.76 3.03 4.45 3.89 8.7z\"/><path fill=\"currentColor\" d=\"M16.02 15.99c-1.3-4.58-4.47-6.75-4.61-6.84l-1.12 1.66s2.71 1.88 3.8 5.72l1.92-.54Zm.83 5.99c0-1.33-.11-2.61-.34-3.89l-1.97.35c.21 1.17.31 2.33.31 3.54z\"/>",
+                "width": 24,
+                "height": 24,
+                "isSvgEditable": false,
+                "isIconNameEditable": false
+              }
+            },
+            {
+              "id": 75,
+              "title": "4. Malicious Scrapers & Spiders",
+              "subtitle": "Competitors and scrapers use automated programs to crawl your landing pages via paid search or display ads to steal your pricing models, catalog information, and ad copies.",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "The Clixerfy Defense",
+                      "bold": true
+                    },
+                    {
+                      "type": "text",
+                      "text": ": We intelligently separate \"Good Bots\" (like Google’s indexer) from malicious scrapers. The platform allows authorized search spiders to crawl seamlessly while instantly zapping harmful data harvesters."
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": ""
+                    }
+                  ]
+                }
+              ],
+              "bgimage": null,
+              "icon": {
+                "iconName": "lucide-lab:spider",
+                "iconData": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path d=\"M10 5v1m4 0V5m-4 5.4V8a2 2 0 1 1 4 0v2.4M7 15H4l-2 2.5m5.42-.5L5 20l1 2m2-10l-4-1l-2-3m7 3L5.5 6L7 2\"/><path d=\"M8 18a5 5 0 1 1 8 0s-2 3-4 4c-2-1-4-4-4-4\"/><path d=\"m15 11l3.5-5L17 2m-1 10l4-1l2-3m-5 7h3l2 2.5m-5.43-.5L19 20l-1 2\"/></g>",
+                "width": 24,
+                "height": 24,
+                "isSvgEditable": false,
+                "isIconNameEditable": false
+              }
+            }
+          ],
+          "__component": "shared.formattedrichtextgrid"
+        }
+      ],
+      "process": [
+        {
+          "id": 24,
+          "title": "How the Clixerfy Blocker Works",
+          "steps": [
+            {
+              "id": 101,
+              "title": "Step 1: Deep Structural Inspection",
+              "description": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "The moment a user clicks your advertisement, the lightweight Clixerfy script executes. In under 100 milliseconds, our edge-layer inspects:"
+                    }
+                  ]
+                },
+                {
+                  "type": "list",
+                  "format": "unordered",
+                  "children": [
+                    {
+                      "type": "list-item",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Connection Architecture: Is the visitor masking their trace via a high-risk VPN, proxy, or hosting data center?"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "list",
+                  "format": "unordered",
+                  "children": [
+                    {
+                      "type": "list-item",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Environment Integrity: Is the browser rendering via a headless environment (run by pure backend code rather than a consumer interface)?"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "list",
+                  "format": "unordered",
+                  "children": [
+                    {
+                      "type": "list-item",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Global Reputation Data: Has this specific entity been previously blacklisted by our global network of thousands of protected sites?"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": ""
+                    }
+                  ]
+                }
+              ],
+              "image": null
+            },
+            {
+              "id": 102,
+              "title": "Step 2: Automated Real-Time Neutralization",
+              "description": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "If a click is determined to be invalid, Clixerfy doesn't just flag it for an end-of-month report. Our backend system relies on a Direct API Sync to communicate instantly with your Google, Meta, or Microsoft Ads managers. The malicious IP address or placement is appended to your account's exclusion list dynamically, taking effect immediately."
+                    }
+                  ]
+                }
+              ],
+              "image": null
+            },
+            {
+              "id": 103,
+              "title": "Step 3: Proactive Budget Redirection",
+              "description": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Once the blocker is active, the money previously wasted on digital noise is preserved. This \"saved\" capital is automatically utilized where it matters most: targeting high-intent human buyers. As a result, companies experience a visible lift in overall conversion rates because every click bought is a real opportunity."
+                    }
+                  ]
+                }
+              ],
+              "image": null
+            }
+          ],
+          "__component": "shared.sections-process"
+        }
+      ],
+      "faqs": [
+        {
+          "id": 15,
+          "title": "Frequently Asked Questions",
+          "faq": [
+            {
+              "id": 43,
+              "question": "How does Clixerfy integrate with my current website or landing pages?",
+              "answer": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Integration is seamless. It requires placing a simple, optimized asynchronous JavaScript snippet on your landing pages or tag manager. It loads instantly without impacting page load speed or Core Web Vitals."
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": 44,
+              "question": "Will this block my legitimate users who happen to use VPNs?",
+              "answer": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Our behavioral biometric analysis relies on multiple data markers. A user simply browsing over a commercial VPN will not be blocked unless their underlying environment displays automated bot traits, high-frequency repeat clicking, or headless browser configurations."
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": 45,
+              "question": "What ad networks do you support?",
+              "answer": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Clixerfy integrates directly via secure APIs with Google Ads, Meta (Facebook & Instagram) Ads, and Microsoft (Bing) Ads, allowing real-time automated IP and placement exclusions across your active workspaces."
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "__component": "shared.faqs"
+        }
+      ],
+      "PricingTable": {
+        "id": 14,
+        "title": "Transparent, Predictable Pricing",
+        "subtitle": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "text": "Clixerfy fits seamlessly into any budget framework, returning its cost multiple times over by salvaging your native ad spend. Select the tier tailored to your active ad click volume."
+              }
+            ]
+          }
+        ],
+        "plans": [
+          {
+            "id": 45,
+            "name": "Starter",
+            "monthlyPrice": "$49 / month",
+            "annualPrice": "$499/year",
+            "featured": null,
+            "features": [
+              {
+                "id": 305,
+                "label": "Sites",
+                "value": "1"
+              },
+              {
+                "id": 306,
+                "label": "Monthly Clicks",
+                "value": "10,000"
+              },
+              {
+                "id": 307,
+                "label": "Team Members",
+                "value": "Single User"
+              },
+              {
+                "id": 308,
+                "label": "Data Retention ",
+                "value": "30 Days"
+              },
+              {
+                "id": 309,
+                "label": "Google Ads IP blocking",
+                "value": "Yes"
+              },
+              {
+                "id": 310,
+                "label": "Campaign Management",
+                "value": "Yes"
+              },
+              {
+                "id": 311,
+                "label": "Placement Exclusion",
+                "value": "No"
+              },
+              {
+                "id": 312,
+                "label": "Site-level Team Access",
+                "value": "No"
+              },
+              {
+                "id": 313,
+                "label": "Alerts (email)",
+                "value": "Basic"
+              },
+              {
+                "id": 314,
+                "label": "Audit Logs",
+                "value": "30 days"
+              },
+              {
+                "id": 315,
+                "label": "DSAR / Privacy Requests",
+                "value": "No"
+              },
+              {
+                "id": 316,
+                "label": "White label reports",
+                "value": "No"
+              },
+              {
+                "id": 317,
+                "label": "Dedicated Support",
+                "value": "Email"
+              }
+            ]
+          },
+          {
+            "id": 46,
+            "name": "Agency Workspace",
+            "monthlyPrice": "$99 / month",
+            "annualPrice": "$1188/year",
+            "featured": true,
+            "features": [
+              {
+                "id": 318,
+                "label": "Monthly Clicks",
+                "value": "50,000"
+              },
+              {
+                "id": 319,
+                "label": "Team Members",
+                "value": "5"
+              },
+              {
+                "id": 320,
+                "label": "Data Retention",
+                "value": "90 days"
+              },
+              {
+                "id": 321,
+                "label": "Google Ads IP blocking",
+                "value": "Yes"
+              },
+              {
+                "id": 322,
+                "label": "Campaign Management",
+                "value": "Yes"
+              },
+              {
+                "id": 323,
+                "label": "Placement Exclusion",
+                "value": "Yes"
+              },
+              {
+                "id": 324,
+                "label": "Site-level Team Access",
+                "value": "Yes"
+              },
+              {
+                "id": 325,
+                "label": "Alerts (email)",
+                "value": "Real-time"
+              },
+              {
+                "id": 326,
+                "label": "Audit Logs",
+                "value": "90 days"
+              },
+              {
+                "id": 327,
+                "label": "DSAR / Privacy Requests",
+                "value": "yes"
+              },
+              {
+                "id": 328,
+                "label": "White label reports",
+                "value": "No "
+              },
+              {
+                "id": 329,
+                "label": "Dedicated Support",
+                "value": "Priority Email"
+              }
+            ]
+          },
+          {
+            "id": 47,
+            "name": "Enterprise Shield",
+            "monthlyPrice": "$199 / month",
+            "annualPrice": "$2388/year",
+            "featured": null,
+            "features": [
+              {
+                "id": 330,
+                "label": "Sites",
+                "value": "20"
+              },
+              {
+                "id": 331,
+                "label": "Monthly Clicks",
+                "value": "200,000"
+              },
+              {
+                "id": 332,
+                "label": "Team Members",
+                "value": "Unlimited"
+              },
+              {
+                "id": 333,
+                "label": "Data Retention",
+                "value": "1 year"
+              },
+              {
+                "id": 334,
+                "label": "Google Ads IP blocking",
+                "value": "Yes"
+              },
+              {
+                "id": 335,
+                "label": "Campaign Management",
+                "value": "Yes"
+              },
+              {
+                "id": 336,
+                "label": "Placement Exclusion",
+                "value": "Yes"
+              },
+              {
+                "id": 337,
+                "label": "Site-level Team Access",
+                "value": "Yes"
+              },
+              {
+                "id": 338,
+                "label": "Alerts (email)",
+                "value": "Real-time + priority"
+              },
+              {
+                "id": 339,
+                "label": "Audit Logs",
+                "value": "Full retention"
+              },
+              {
+                "id": 340,
+                "label": "DSAR / Privacy Requests",
+                "value": "Yes"
+              },
+              {
+                "id": 341,
+                "label": "White label reports",
+                "value": "Yes"
+              },
+              {
+                "id": 342,
+                "label": "Dedicated Support",
+                "value": "Dedicated Account Manager"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 25,
+      "documentId": "imz6y45u87ddr1ji4n146738",
+      "createdAt": "2026-07-08T12:31:13.639Z",
+      "updatedAt": "2026-07-22T17:21:27.767Z",
+      "publishedAt": "2026-07-22T17:21:27.794Z",
+      "title": "WP Monitor",
+      "slug": "wordpress-file-scanner",
+      "metaTitle": "Centralized WordPress File Scanner & Malware Monitor | Clixerfy WP Monitor",
+      "metaDescription": "Secure your WordPress infrastructure with centralized, zero-overhead security. Clixerfy WP Monitor uses off-server YARA scanning, file integrity checks, and user auditing.",
+      "herosection": [
+        {
+          "id": 42,
+          "titleText": "Clixerfy WP Monitor",
+          "subtitle": "Enterprise-Grade Server-Side WordPress Security",
+          "richtext": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Advanced malware scanning, file integrity monitoring, and expert malware removal — without slowing down your website."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Traditional WordPress security plugins perform resource-intensive scans directly on your server, consuming CPU, memory, and storage while remaining vulnerable to attackers who can disable or remove the plugin after compromising a website."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Clixerfy WP Monitor takes a different approach. Lightweight monitoring runs on your WordPress site while advanced malware analysis, integrity verification, heuristic detection, and threat correlation are processed through Clixerfy's cloud security platform. This minimizes server overhead while providing centralized visibility into your website's security posture."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Protect your WordPress website with automated malware scanning, real-time monitoring, expert remediation, and enterprise-grade threat detection."
                 }
               ]
             }
@@ -2131,7 +2228,7 @@
       "features": [],
       "cta": [
         {
-          "id": 22,
+          "id": 32,
           "title": "Secure Your WordPress Portfolio Without Compromising Performance",
           "subtitle": "Offload heavy security analysis to our centralized monitoring engine. Get deep, silent, and zero-impact visibility across every single site you manage.\n",
           "ctaLabel": "Schedule Your Technical Portfolio Demo",
@@ -2141,7 +2238,7 @@
       ],
       "Richtext": [
         {
-          "id": 17,
+          "id": 22,
           "title": "Complete Feature Framework",
           "subtitle": null,
           "bodycontent": [
@@ -2166,8 +2263,8 @@
           ],
           "child": [
             {
-              "id": 60,
-              "title": "Advanced File Integrity Monitoring (FIM)",
+              "id": 84,
+              "title": "Cloud-First Malware Detection",
               "subtitle": null,
               "body": [
                 {
@@ -2175,16 +2272,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "text": "The client-side plugin generates cryptographic hashes of your WordPress core files, active themes, and plugins. These hashes are immediately compared against our baseline repository, which pulls pristine code copies directly from WordPress.org. The system instantly categorizes changes into modified, missing, or newly created files."
-                    }
-                  ]
-                },
-                {
-                  "type": "paragraph",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "To eliminate background noise, clean filters make sure translations, media uploads, and standard data files are omitted, focusing exclusively on executable logic like .php and .js files. When an alteration is flagged, our dashboard serves up a granular visual diff, matching the modified file line-by-line against a fresh baseline copy so your team can pinpoint unauthorized injections."
+                      "text": "Traditional security plugins perform resource-intensive scans on your hosting server. Clixerfy uses a lightweight monitoring approach while advanced malware analysis runs through our cloud security platform, minimizing performance impact without compromising protection."
                     }
                   ]
                 },
@@ -2200,54 +2288,8 @@
               ],
               "bgimage": null,
               "icon": {
-                "iconName": "rivet-icons:filter",
-                "iconData": "<path fill=\"currentColor\" d=\"M6 1a3 3 0 0 0-2.83 2H0v2h3.17a3.001 3.001 0 0 0 5.66 0H16V3H8.83A3 3 0 0 0 6 1M5 4a1 1 0 1 1 2 0a1 1 0 0 1-2 0m5 5a3 3 0 0 0-2.83 2H0v2h7.17a3.001 3.001 0 0 0 5.66 0H16v-2h-3.17A3 3 0 0 0 10 9m-1 3a1 1 0 1 1 2 0a1 1 0 0 1-2 0\"/>",
-                "width": 16,
-                "height": 16,
-                "isSvgEditable": false,
-                "isIconNameEditable": false
-              }
-            },
-            {
-              "id": 61,
-              "title": "Deep Database Audits & Permission Checks",
-              "subtitle": null,
-              "body": [
-                {
-                  "type": "paragraph",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "Attackers frequently bypass file scanners by injecting backdoors directly into your database or creating hidden administrative accounts. Clixerfy WP Monitor executes thorough database scans targeting key rows like wp_options, wp_posts, and wp_usermeta to spot unauthorized users or malicious code loops.",
-                      "bold": true
-                    }
-                  ]
-                },
-                {
-                  "type": "paragraph",
-                  "children": [
-                    {
-                      "type": "text",
-                      "bold": true,
-                      "text": "Concurrently, the scanner verifies your host file permissions, warning your administrators about insecure, world-writable files (777 permissions), loose config permissions (wp-config.php), or script components exposed in public-facing locations."
-                    }
-                  ]
-                },
-                {
-                  "type": "paragraph",
-                  "children": [
-                    {
-                      "type": "text",
-                      "bold": true,
-                      "text": ""
-                    }
-                  ]
-                }
-              ],
-              "bgimage": null,
-              "icon": {
-                "iconName": "mdi:database",
-                "iconData": "<path fill=\"currentColor\" d=\"M12 3C7.58 3 4 4.79 4 7s3.58 4 8 4s8-1.79 8-4s-3.58-4-8-4M4 9v3c0 2.21 3.58 4 8 4s8-1.79 8-4V9c0 2.21-3.58 4-8 4s-8-1.79-8-4m0 5v3c0 2.21 3.58 4 8 4s8-1.79 8-4v-3c0 2.21-3.58 4-8 4s-8-1.79-8-4\"/>",
+                "iconName": "ic:outline-cloud",
+                "iconData": "<path fill=\"currentColor\" d=\"M12 6c2.62 0 4.88 1.86 5.39 4.43l.3 1.5l1.53.11A2.98 2.98 0 0 1 22 15c0 1.65-1.35 3-3 3H6c-2.21 0-4-1.79-4-4c0-2.05 1.53-3.76 3.56-3.97l1.07-.11l.5-.95A5.47 5.47 0 0 1 12 6m0-2C9.11 4 6.6 5.64 5.35 8.04A5.994 5.994 0 0 0 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5c0-2.64-2.05-4.78-4.65-4.96A7.49 7.49 0 0 0 12 4\"/>",
                 "width": 24,
                 "height": 24,
                 "isSvgEditable": false,
@@ -2255,8 +2297,8 @@
               }
             },
             {
-              "id": 62,
-              "title": "Real-Time User Activity Auditing",
+              "id": 85,
+              "title": "Comprehensive Security Coverage",
               "subtitle": null,
               "body": [
                 {
@@ -2264,36 +2306,16 @@
                   "children": [
                     {
                       "type": "text",
-                      "text": "The system captures and centralizes internal system events to give you a complete, searchable log of user activity. It tracks successful log-ins, failed authentication attempts, role modifications, profile edits, and fresh user additions.",
-                      "bold": true
-                    }
-                  ]
-                },
-                {
-                  "type": "paragraph",
-                  "children": [
-                    {
-                      "type": "text",
                       "bold": true,
-                      "text": "Advanced pattern matching automatically recognizes brute-force trends. To prevent alert fatigue and inbox flooding, our notification system uses an intelligent cooldown cache (limiting standard login notifications to 15-minute windows and grouping brute-force logs into 30-minute blocks) while maintaining an easily filtered audit trail on your dashboard."
-                    }
-                  ]
-                },
-                {
-                  "type": "paragraph",
-                  "children": [
-                    {
-                      "type": "text",
-                      "bold": true,
-                      "text": ""
+                      "text": "Protect your WordPress website with automated daily malware scanning, unlimited on-demand scans, deep filesystem analysis, file integrity verification, real-time monitoring, and behavioral threat detection—all from a single security platform."
                     }
                   ]
                 }
               ],
               "bgimage": null,
               "icon": {
-                "iconName": "streamline-freehand:apps-monitor-user",
-                "iconData": "<path fill=\"currentColor\" d=\"M6.852 13a.3.3 0 0 0 .59 0a4.45 4.45 0 0 1 4.871-4.162a3.66 3.66 0 0 1 3.001 3.821a.342.342 0 0 0 .335.398a.34.34 0 0 0 .335-.398a4.57 4.57 0 0 0-2.47-4.571c1-.65 2.13-2 1.87-3.181a3.17 3.17 0 0 0-1.71-1.91c-1.8-1.061-1.61.26-1.11.26c.336.095.648.266.91.5c.64.48 1.29 1.12.94 1.84a.4.4 0 0 1-.05.08c-.12-.15-.46-.21-.76-.34c-.76-.32-.72-.55-.8-.8c-.57-1.63-2.381.48-3.672.94a2.32 2.32 0 0 1 1.73-2.36a.3.3 0 1 0-.08-.59a3.17 3.17 0 0 0-1.23 5.7A5.35 5.35 0 0 0 6.852 13m4.751-7.663c.9-.48.21.18 1.07.53a5.5 5.5 0 0 0 1.32.34c-1.27 1.7-4 2.07-4.75-.06a7.2 7.2 0 0 0 2.36-.82z\"/><path fill=\"currentColor\" d=\"M23.627 5.477c-.13-1.16-.07-3.501-.91-4.151c-1.921-1.48-6.132-1.09-8.813-1.2c-3.501-.13-7.162.14-10.614.24a.34.34 0 1 0 0 .68c3.452-.05 7.073-.28 10.574-.05c2.47.14 6.672-.14 8.252 1.13c.4.32.41 2.67.49 3.491c.342 2.913.369 5.854.08 8.773c-.048.98-.199 1.952-.45 2.9c-2.48 1.371-19.666 2.331-20.706.54a6.7 6.7 0 0 1-.35-1.67c.42-.06-.67.06 4.601 0c3.901.13 9.693-.32 14.635-.07c.4 0 .43-.65 0-.68c-5.352-.56-9.373-.65-18.156.09a6.3 6.3 0 0 0-1.21 0a42.8 42.8 0 0 1 0-10.603c0-.51.09-1 .16-1.54a7.8 7.8 0 0 1 .25-1.861a.3.3 0 0 0-.42-.42c-.42.42-.34 1.75-.41 2.22s-.14 1-.2 1.57a44.6 44.6 0 0 0-.37 8.473c.03 1.658.255 3.307.67 4.912c.81 1.47 5.911 1.57 7.642 1.59c-.56 1.33-1.26 2.551-.6 3.281a3 3 0 0 0 1.91.58c3.121.25 3.422.4 5.932-.32a.87.87 0 0 0 .5-.68a8.4 8.4 0 0 0-.67-3.11c2.094-.14 4.174-.44 6.222-.9c1.45-.401 1.69-.791 1.88-1.932a38.8 38.8 0 0 0 .08-11.283m-8.493 17.005c-2.44.48-3 .17-5.402.11c-1.74-.02-1.64.26-.74-2.74c2 0 4.001-.08 5.832-.22c.241.94.345 1.91.31 2.88z\"/>",
+                "iconName": "material-symbols:security",
+                "iconData": "<path fill=\"currentColor\" d=\"M12 22q-3.475-.875-5.738-3.988T4 11.1V5l8-3l8 3v6.1q0 3.8-2.262 6.913T12 22m0-2.1q2.425-.75 4.05-2.963T17.95 12H12V4.125l-6 2.25v5.175q0 .175.05.45H12z\"/>",
                 "width": 24,
                 "height": 24,
                 "isSvgEditable": false,
@@ -2301,8 +2323,8 @@
               }
             },
             {
-              "id": 63,
-              "title": "Encrypted, Compliant Quarantine & Remediation",
+              "id": 86,
+              "title": "Multi-Layer Threat Detection",
               "subtitle": null,
               "body": [
                 {
@@ -2310,25 +2332,33 @@
                   "children": [
                     {
                       "type": "text",
-                      "text": "When a malicious payload is found, administrators can take immediate action directly from the central dashboard—allowing you to quarantine threats, delete files, or completely restore a broken asset back to its verified default state. Every single action is tracked alongside critical system metadata, including original system permissions, file sizes, and cryptographic hashes."
+                      "bold": true,
+                      "text": "Detect both known and emerging threats using YARA signature matching, heuristic analysis, behavioral anomaly detection, location-based risk analysis, and composite threat scoring to identify suspicious activity before it becomes a security incident."
                     }
                   ]
-                },
+                }
+              ],
+              "bgimage": null,
+              "icon": {
+                "iconName": "fe:layer",
+                "iconData": "<path fill=\"currentColor\" d=\"m6 8l6 3l6-3l-6-3zm6.489-4.884l7.993 4.076c.486.248.661.81.391 1.257a.97.97 0 0 1-.39.359l-7.994 4.076a1.09 1.09 0 0 1-.978 0L3.518 8.808c-.486-.248-.661-.81-.391-1.257a.97.97 0 0 1 .39-.359l7.994-4.076c.304-.155.674-.155.978 0m0 13.766a1.07 1.07 0 0 1-.978 0l-7.993-4.147c-.486-.252-.661-.824-.391-1.278a1 1 0 0 1 .39-.365a.82.82 0 0 1 .755 0l7.24 3.755c.303.158.673.158.977 0l7.239-3.755a.82.82 0 0 1 .754 0c.486.252.661.824.391 1.278a1 1 0 0 1-.39.365zm0 4a1.07 1.07 0 0 1-.978 0l-7.993-4.147c-.486-.252-.661-.824-.391-1.278a1 1 0 0 1 .39-.365a.82.82 0 0 1 .755 0l7.24 3.755c.303.158.673.158.977 0l7.239-3.755a.82.82 0 0 1 .754 0c.486.252.661.824.391 1.278a1 1 0 0 1-.39.365z\"/>",
+                "width": 24,
+                "height": 24,
+                "isSvgEditable": false,
+                "isIconNameEditable": false
+              }
+            },
+            {
+              "id": 87,
+              "title": "Continuous File Integrity Monitoring",
+              "subtitle": null,
+              "body": [
                 {
                   "type": "paragraph",
                   "children": [
                     {
                       "type": "text",
-                      "text": "To stay compliant with GDPR and HIPAA guidelines, our system strips out sensitive consumer information (such as email strings, payment keys, phone numbers, or passwords) from the code fragments before storing the threat evidence. Furthermore, file path strings are fully pseudonymized using {WEBROOT} path tokens, and all threat evidence stored at rest is locked down using field-level AES-256-GCM encryption."
-                    }
-                  ]
-                },
-                {
-                  "type": "paragraph",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": ""
+                      "text": "Monitor WordPress core files, plugins, and critical system changes using SHA-256 hash verification, WordPress.org plugin validation, delta scanning, and real-time hook monitoring for file uploads, plugin updates, and editor changes."
                     }
                   ]
                 }
@@ -2342,6 +2372,56 @@
                 "isSvgEditable": false,
                 "isIconNameEditable": false
               }
+            },
+            {
+              "id": 88,
+              "title": "Security Auditing & Reporting",
+              "subtitle": null,
+              "body": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Track privilege escalation, administrator account creation, IP access, brute-force attempts, permission changes, and other security events. Receive detailed email reports with threat severity, evidence snippets, historical scan comparisons, and compliance-ready reporting."
+                    }
+                  ]
+                }
+              ],
+              "bgimage": null,
+              "icon": {
+                "iconName": "oui:app-reporting",
+                "iconData": "<g fill=\"currentColor\"><path d=\"M25 5h-.17v2H25a1 1 0 0 1 1 1v20a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h.17V5H7a3 3 0 0 0-3 3v20a3 3 0 0 0 3 3h18a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3\"/><path d=\"M23 3h-3V0h-8v3H9v6h14zm-2 4H11V5h3V2h4v3h3z\"/><path d=\"M10 13h12v2H10zm0 5h12v2H10zm0 5h12v2H10z\" class=\"ouiIcon__fillSecondary\"/></g>",
+                "width": 32,
+                "height": 32,
+                "isSvgEditable": false,
+                "isIconNameEditable": false
+              }
+            },
+            {
+              "id": 89,
+              "title": "Expert Malware Removal",
+              "subtitle": null,
+              "body": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "When malware is detected, our security specialists provide manual malware removal, quarantine logging, post-removal verification, root cause analysis, and hardening recommendations. Enterprise customers also receive priority response times."
+                    }
+                  ]
+                }
+              ],
+              "bgimage": null,
+              "icon": {
+                "iconName": "grommet-icons:user-expert",
+                "iconData": "<path fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" d=\"M8 11A5 5 0 1 0 8 1a5 5 0 0 0 0 10Zm6.643 4.696a6.75 6.75 0 0 0-1.62-2.673C11.772 11.76 10.013 11 8 11c-4 0-7 3-7 7v5h10m1-4.176L16.19 22L23 13\"/>",
+                "width": 24,
+                "height": 24,
+                "isSvgEditable": false,
+                "isIconNameEditable": false
+              }
             }
           ],
           "__component": "shared.formattedrichtextgrid"
@@ -2349,19 +2429,89 @@
       ],
       "process": [
         {
-          "id": 21,
-          "title": "4-Engine Multi-Layer Malware Detection",
+          "id": 26,
+          "title": "Multi-Layer Malware Detection Engine",
           "steps": [
             {
-              "id": 91,
-              "title": "Centralized YARA Signatures Engine",
+              "id": 108,
+              "title": "Engine 1 — YARA Signature Detection",
               "description": [
                 {
                   "type": "paragraph",
                   "children": [
                     {
                       "type": "text",
-                      "text": "The first defensive layer executes over 1,600 specialized, hot-reloadable YARA rules. This engine flags known bad fragments, web shells, rootkits, backdoors, obfuscated functions, code injectors, black-hat SEO spam scripts, and stealthy cryptocurrency miners. These rules can be updated instantly across our entire network via administrative APIs without forcing a plugin update on your sites."
+                      "text": "Detect known malware using continuously updated signature rules."
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Capabilities",
+                      "bold": true
+                    }
+                  ]
+                },
+                {
+                  "type": "list",
+                  "format": "unordered",
+                  "children": [
+                    {
+                      "type": "list-item",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "69 bundled YARA detection rules"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "list-item",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Access to 18,000+ community rules"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "list-item",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Web shell detection"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "list-item",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Backdoor detection"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "list-item",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Malware injections"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "list-item",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Suspicious scripts"
+                        }
+                      ]
                     }
                   ]
                 }
@@ -2369,15 +2519,85 @@
               "image": null
             },
             {
-              "id": 92,
-              "title": "Behavioral Heuristic Systems",
+              "id": 109,
+              "title": "Engine 2 — Heuristic Analysis",
               "description": [
                 {
                   "type": "paragraph",
                   "children": [
                     {
                       "type": "text",
-                      "text": "This module analyzes files for suspicious structural code logic rather than exact text strings. It evaluates raw file entropy and watches for high-risk execution pathways—such as dynamic code evaluation (eval), nested runtime data decoding (base64_decode), unverified file-system write commands, execution of external system commands, and malicious SQL strings. It includes intelligent exclusion filters to white-list known developer frameworks."
+                      "text": "Identify malicious code based on suspicious behavior rather than signatures alone."
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Capabilities",
+                      "bold": true
+                    }
+                  ]
+                },
+                {
+                  "type": "list",
+                  "format": "unordered",
+                  "children": [
+                    {
+                      "type": "list-item",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "12-method heuristic engine"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "list-item",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Entropy analysis"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "list-item",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Obfuscation chain detection"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "list-item",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Dangerous function combinations"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "list-item",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Hidden content detection"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "list-item",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Deserialization attack detection"
+                        }
+                      ]
                     }
                   ]
                 }
@@ -2385,15 +2605,94 @@
               "image": null
             },
             {
-              "id": 93,
-              "title": "Location Context Profiling",
+              "id": 110,
+              "title": "Engine 3 — Behavioral & Risk Analysis",
               "description": [
                 {
                   "type": "paragraph",
                   "children": [
                     {
                       "type": "text",
-                      "text": "This layer matches files against their deployment paths. For example, any standalone PHP script hiding inside your public /wp-content/uploads/ directory is automatically classified as a critical anomaly. This component also matches file extensions against actual file headers (MIME types) and references an active index of over 200 known malicious file names."
+                      "text": "Identify suspicious activity across your WordPress installation."
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Capabilities",
+                      "bold": true
+                    }
+                  ]
+                },
+                {
+                  "type": "list",
+                  "format": "unordered",
+                  "children": [
+                    {
+                      "type": "list-item",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Location-based risk analysis"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "list-item",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Behavioral anomaly detection"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "list-item",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Historical baseline comparison"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "list-item",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Hidden file detection"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "list-item",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Known malware filename detection"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "list-item",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Composite risk scoring (0–100)"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "list-item",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Critical / High / Medium / Low severity levels"
+                        }
+                      ]
                     }
                   ]
                 }
@@ -2401,15 +2700,130 @@
               "image": null
             },
             {
-              "id": 94,
-              "title": "Macro Anomaly Detection Engine",
+              "id": 111,
+              "title": "Engine 4 — File Integrity & Real-Time Monitoring",
               "description": [
                 {
                   "type": "paragraph",
                   "children": [
                     {
                       "type": "text",
-                      "text": "This scanner takes a broader view of the entire installation post-scan. Instead of looking at solitary items, it searches for sweeping system changes, such as synchronized mass code modifications, simultaneous file uploads across disconnected directories (coordinated dropping), or unprompted alterations to core system files without a valid WordPress core update."
+                      "text": "Continuously verify WordPress integrity and monitor security events."
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Capabilities",
+                      "bold": true
+                    }
+                  ]
+                },
+                {
+                  "type": "list",
+                  "format": "unordered",
+                  "children": [
+                    {
+                      "type": "list-item",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "WordPress core integrity verification"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "list-item",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "SHA-256 hash comparison"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "list-item",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "WordPress.org plugin verification"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "list-item",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Suspicious pattern detection"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "list-item",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Real-time hook monitoring"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "list-item",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "File upload monitoring"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "list-item",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Plugin & theme updates"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "list-item",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Editor save monitoring"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "list-item",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Delta scanning"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "list-item",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Audit event tracking"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "list-item",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Permission & access audits"
+                        }
+                      ]
                     }
                   ]
                 }
@@ -2422,11 +2836,11 @@
       ],
       "faqs": [
         {
-          "id": 12,
+          "id": 17,
           "title": "Frequently Asked Questions",
           "faq": [
             {
-              "id": 34,
+              "id": 49,
               "question": "How does off-server analysis protect my site performance?",
               "answer": [
                 {
@@ -2477,7 +2891,7 @@
               ]
             },
             {
-              "id": 35,
+              "id": 50,
               "question": "What happens if an attacker blocks communication with the API server?",
               "answer": [
                 {
@@ -2528,7 +2942,7 @@
               ]
             },
             {
-              "id": 36,
+              "id": 51,
               "question": "How does Clixerfy keep false positives from overwhelming my team?",
               "answer": [
                 {
@@ -2574,7 +2988,7 @@
         }
       ],
       "PricingTable": {
-        "id": 11,
+        "id": 16,
         "title": "Predictable Vulnerability Scanner Pricing Plans",
         "subtitle": [
           {
@@ -2616,124 +3030,150 @@
         ],
         "plans": [
           {
-            "id": 34,
-            "name": "Single Guard",
-            "monthlyPrice": "$49 / mo",
-            "annualPrice": "$39 / mo (billed annually)",
+            "id": 51,
+            "name": "Basic",
+            "monthlyPrice": "USD $200/year",
+            "annualPrice": "CAD $280/year",
             "featured": null,
             "features": [
               {
-                "id": 203,
-                "label": "Monitored WordPress Sites",
-                "value": "1 Site Workspace"
+                "id": 376,
+                "label": "Automated Malware Scanning",
+                "value": "Daily"
               },
               {
-                "id": 204,
-                "label": "Analysis Platform Model",
-                "value": "Managed Off-Server Cloud"
+                "id": 377,
+                "label": "On-Demand Scanning",
+                "value": "Yes"
               },
               {
-                "id": 205,
-                "label": "Core Core Integrity Checks",
-                "value": "Daily Scheduled Passes"
+                "id": 378,
+                "label": "Deep Filesystem Scanning",
+                "value": "Yes"
               },
               {
-                "id": 206,
-                "label": "YARA Signature Database",
-                "value": "Standard Threat Set"
+                "id": 379,
+                "label": "YARA Signature Detection",
+                "value": "69 Rules + 18,000+ Community Rules"
               },
               {
-                "id": 207,
-                "label": "User Activity Caching",
-                "value": "Standard Alerts"
+                "id": 380,
+                "label": "12-Method Heuristic Engine",
+                "value": "Yes"
               },
               {
-                "id": 208,
-                "label": "Administrative Access",
-                "value": "Single Admin Login"
+                "id": 381,
+                "label": "Behavioral Threat Analysis",
+                "value": "Yes"
+              },
+              {
+                "id": 382,
+                "label": "WordPress File Integrity Monitoring",
+                "value": "Yes"
+              },
+              {
+                "id": 383,
+                "label": "Real-Time Hook Monitoring",
+                "value": "Yes"
+              },
+              {
+                "id": 384,
+                "label": "Audit Event Tracking",
+                "value": "Yes"
+              },
+              {
+                "id": 385,
+                "label": "Security Reports",
+                "value": "Email Reports + Historical Trends"
+              },
+              {
+                "id": 386,
+                "label": "Manual Malware Removal",
+                "value": "Included"
+              },
+              {
+                "id": 387,
+                "label": "Response Time",
+                "value": "2 Business Days"
+              },
+              {
+                "id": 388,
+                "label": "Support",
+                "value": "Email + Knowledge Base"
               }
             ]
           },
           {
-            "id": 35,
-            "name": "Agency Suite",
-            "monthlyPrice": "$199 / mo",
-            "annualPrice": "$159 / mo (billed annually)",
+            "id": 52,
+            "name": "Enterprise",
+            "monthlyPrice": "Contact Us for Pricing",
+            "annualPrice": null,
             "featured": null,
             "features": [
               {
-                "id": 209,
-                "label": "Monitored WordPress Sites",
-                "value": "Up to 25 Sites"
+                "id": 389,
+                "label": "Automated Malware Scanning",
+                "value": "Daily"
               },
               {
-                "id": 210,
-                "label": "Analysis Platform Model",
-                "value": "Managed Off-Server Cloud"
+                "id": 390,
+                "label": "On-Demand Scanning",
+                "value": "Yes"
               },
               {
-                "id": 211,
-                "label": "Core Core Integrity Checks",
-                "value": "Daily / Configurable"
+                "id": 391,
+                "label": "Deep Filesystem Scanning",
+                "value": "Yes"
               },
               {
-                "id": 212,
-                "label": "YARA Signature Database",
-                "value": "Full 1,600+ Shell Rules"
+                "id": 392,
+                "label": "YARA Signature Detection",
+                "value": "Yes"
               },
               {
-                "id": 213,
-                "label": "User Activity Caching",
-                "value": "30-Day Audit Trail Logs"
+                "id": 393,
+                "label": "12-Method Heuristic Engine",
+                "value": "Yes"
               },
               {
-                "id": 214,
-                "label": "Administrative Access",
-                "value": "Organization Multi-Tenant"
-              }
-            ]
-          },
-          {
-            "id": 36,
-            "name": "Enterprise Network",
-            "monthlyPrice": "Contact Sales",
-            "annualPrice": "Custom Enterprise Quote",
-            "featured": null,
-            "features": [
-              {
-                "id": 215,
-                "label": "Monitored WordPress Sites",
-                "value": "Custom / Unlimited Sites"
+                "id": 394,
+                "label": "Behavioral Threat Analysis",
+                "value": "Yes"
               },
               {
-                "id": 216,
-                "label": "Analysis Platform Model",
-                "value": "Private API Server Option"
+                "id": 395,
+                "label": "WordPress File Integrity Monitoring",
+                "value": "Yes"
               },
               {
-                "id": 217,
-                "label": "Core Core Integrity Checks",
-                "value": "Real-Time Hook Analysis"
+                "id": 396,
+                "label": "Real-Time Hook Monitoring",
+                "value": "Yes"
               },
               {
-                "id": 218,
-                "label": "Core Core Integrity Checks",
-                "value": "Real-Time Hook Analysis"
+                "id": 397,
+                "label": "Audit Event Tracking",
+                "value": "Yes"
               },
               {
-                "id": 219,
-                "label": "YARA Signature Database",
-                "value": "Custom Rule Imports"
+                "id": 398,
+                "label": "Security Reports",
+                "value": "Advanced Reporting"
               },
               {
-                "id": 220,
-                "label": "User Activity Caching",
-                "value": "Permanent Audits + SIEM Sync"
+                "id": 399,
+                "label": "Manual Malware Removal",
+                "value": "Priority Response"
               },
               {
-                "id": 221,
-                "label": "Administrative Access",
-                "value": null
+                "id": 400,
+                "label": "Response Time",
+                "value": "Priority"
+              },
+              {
+                "id": 401,
+                "label": "Support",
+                "value": "Priority Support"
               }
             ]
           }
